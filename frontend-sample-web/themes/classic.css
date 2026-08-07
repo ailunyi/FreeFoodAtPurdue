@@ -1,0 +1,57 @@
+/* Classic theme — the original warm gold palette */
+:root {
+  /* Background layers */
+  --bg:              #ede8dc;
+  --bg-loading:      #f2ece0;
+  --bg-map:          #ede8dc;
+
+  /* Surfaces */
+  --surface:         #fffdf8;
+  --surface-card:    #fff;
+  --surface-light:   #f5f0e8;
+  --surface-hover:   #f0ead8;
+  --surface-input:   #f8f5ef;
+
+  /* Borders */
+  --border:          #d8d0c0;
+  --border-card:     #e4dcd0;
+  --border-light:    #ece4d8;
+  --border-btn:      #d0c8b8;
+  --border-input:    #c8b898;
+
+  /* Primary accent */
+  --accent:          #cfb87c;
+  --accent-strong:   #8b6914;
+  --accent-tag-bg:   #fff8e0;
+  --accent-tag-text: #8a6010;
+  --accent-tag-border:#e0c870;
+
+  /* Text */
+  --text-primary:    #3a2c18;
+  --text-body:       #6a5030;
+  --text-muted:      #9a8060;
+  --text-secondary:  #7a6040;
+  --text-desc:       #5a4a30;
+
+  /* Loading spinner */
+  --spinner-track:   #e0d8c8;
+  --spinner-head:    #9a7040;
+  --loading-text:    #7a5838;
+
+  /* Marker count badge */
+  --marker-count-bg: #c05020;
+
+  /* Dining */
+  --dining-border:   #c0a870;
+  --dining-stem:     #c0a870;
+
+  /* Overlays */
+  --overlay-bg:      rgba(40,28,16,.45);
+
+  /* FAB ghost */
+  --fab-ghost-bg:    rgba(207,184,124,.45);
+  --fab-ghost-border:#cfb87c;
+
+  /* Toast */
+  --toast-bg:        rgba(255,253,248,.96);
+}

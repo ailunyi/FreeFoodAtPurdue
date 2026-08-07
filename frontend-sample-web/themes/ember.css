@@ -1,0 +1,57 @@
+/* Ember theme — warm terracotta accent */
+:root {
+  /* Background layers */
+  --bg:              #FAF6EF;
+  --bg-loading:      #f5efe5;
+  --bg-map:          #e9e0d0;
+
+  /* Surfaces */
+  --surface:         #f0e9da;
+  --surface-card:    #f0e9da;
+  --surface-light:   #ede5d4;
+  --surface-hover:   #e5dbc8;
+  --surface-input:   #f5f0e6;
+
+  /* Borders */
+  --border:          #ddd0b8;
+  --border-card:     #ddd0b8;
+  --border-light:    #e5dac6;
+  --border-btn:      #d4c4a8;
+  --border-input:    #c8b898;
+
+  /* Primary accent */
+  --accent:          #C1440E;
+  --accent-strong:   #a03808;
+  --accent-tag-bg:   #f0d4c0;
+  --accent-tag-text: #8a3008;
+  --accent-tag-border:#e0a888;
+
+  /* Text */
+  --text-primary:    #2e1e0f;
+  --text-body:       #5a3e26;
+  --text-muted:      #9a7d62;
+  --text-secondary:  #7a5c3a;
+  --text-desc:       #5a3e26;
+
+  /* Loading spinner */
+  --spinner-track:   #ddd0b8;
+  --spinner-head:    #C1440E;
+  --loading-text:    #7a5838;
+
+  /* Marker count badge */
+  --marker-count-bg: #C1440E;
+
+  /* Dining */
+  --dining-border:   #c8a870;
+  --dining-stem:     #c8a870;
+
+  /* Overlays */
+  --overlay-bg:      rgba(46,30,15,.5);
+
+  /* FAB ghost */
+  --fab-ghost-bg:    rgba(193,68,14,.25);
+  --fab-ghost-border:#C1440E;
+
+  /* Toast */
+  --toast-bg:        rgba(240,233,218,.96);
+}

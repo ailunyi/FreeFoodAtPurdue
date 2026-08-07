@@ -1,0 +1,2898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Live map of free food events happening around Purdue's campus — pizza, snacks, and meals from student orgs and dining events, with dietary filters and RSVP."/>
+  <title>Free Food at Purdue</title>
+  <link rel="icon" type="image/png" sizes="336x336" href="/favicon.png"/>
+  <link rel="stylesheet" href="themes/ember.css"/>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    .mapboxgl-user-location { z-index: 2 !important; }
+    .mapboxgl-user-location-dot {
+      width: 18px !important; height: 18px !important;
+      background-color: #0078FF !important;
+      border-radius: 50% !important;
+      box-shadow: 0 0 0 4px rgba(0,120,255,.3) !important;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    .mapboxgl-user-location-dot::before {
+      width: 18px !important; height: 18px !important;
+      background-color: #0078FF !important;
+      border-radius: 50% !important;
+      display: block !important;
+    }
+    .mapboxgl-user-location-accuracy-circle {
+      display: block !important;
+      background-color: rgba(0,120,255,.1) !important;
+    }
+    .mapboxgl-user-location-show-heading .mapboxgl-user-location-heading {
+      display: block !important;
+    }
+    body {
+      font-family:'Segoe UI',system-ui,sans-serif;
+      background:var(--bg);
+      height:100vh; display:flex; flex-direction:column; overflow:hidden;
+    }
+
+    /* ── Header ── */
+    header {
+      padding:10px 20px; background:var(--surface);
+      display:flex; align-items:center; gap:12px;
+      z-index:100; border-bottom:1px solid var(--border); flex-shrink:0;
+      box-shadow:0 1px 6px rgba(0,0,0,.07);
+      animation:slideDown .4s ease;
+    }
+    @keyframes slideDown{from{transform:translateY(-100%);opacity:0}to{transform:translateY(0);opacity:1}}
+    .logo{height:28px;width:auto;display:inline-block;animation:wobble 5s ease-in-out infinite}
+    @keyframes wobble{
+      0%,100%{transform:rotate(0)}15%{transform:rotate(-13deg)}
+      30%{transform:rotate(10deg)}45%{transform:rotate(-6deg)}60%{transform:rotate(4deg)}
+    }
+    header h1{font-size:1.1rem;font-weight:700;color:var(--text-primary);letter-spacing:.04em}
+    .controls{margin-left:auto;display:flex;align-items:center;gap:10px}
+    .pill{background:var(--surface-light);border:1px solid var(--border-btn);color:var(--text-body);
+          padding:3px 11px;border-radius:999px;font-size:.75rem;font-weight:600}
+    .toggle-label{display:flex;align-items:center;gap:5px;
+                  font-size:.74rem;color:var(--text-secondary);cursor:pointer;user-select:none}
+
+    /* ── Dietary filter ── */
+    .diet-filter-btn {
+      background: var(--surface-light); border: 1px solid var(--border-btn);
+      color: var(--text-secondary); padding: 3px 11px; border-radius: 999px;
+      font-size: .74rem; font-weight: 600; cursor: pointer; position: relative;
+    }
+    .diet-filter-btn:hover { background: var(--surface-hover); }
+    .diet-filter-btn.active { border-color: var(--accent); color: var(--accent); }
+    #diet-dropdown {
+      display: none; position: absolute; top: 100%; right: 0; margin-top: 6px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 10px 14px; min-width: 200px;
+      box-shadow: 0 6px 24px rgba(0,0,0,.15); z-index: 200;
+    }
+    #diet-dropdown.show { display: block; }
+    #diet-dropdown label {
+      display: flex; align-items: center; gap: 6px;
+      font-size: .78rem; color: var(--text-body); padding: 3px 0; cursor: pointer;
+    }
+    #diet-dropdown .diet-section {
+      font-size: .7rem; font-weight: 700; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: .05em; margin-top: 8px; margin-bottom: 2px;
+    }
+    #diet-dropdown .diet-section:first-child { margin-top: 0; }
+
+    /* ── Map ── */
+    #map { flex:1; }
+
+    /* ── Food Markers ── */
+    .food-marker {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+    .food-marker .m-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      position: relative;
+    }
+    .food-marker .m-emoji {
+      font-size: 14px;
+      line-height: 1;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,.3));
+    }
+    .food-marker .m-dot {
+      width: 14px; height: 14px; border-radius: 50%;
+      background: var(--accent); border: 2px solid var(--surface);
+      box-shadow: 0 1px 4px rgba(0,0,0,.2);
+    }
+    .food-marker.paid .m-dot { background: #7ab8e8; border-color: var(--surface); }
+    .food-marker.paid .m-ring { border-color: #7ab8e8; }
+    .food-marker.upcoming .m-dot { background: #c8a8e8; border-color: var(--surface); }
+    .food-marker.upcoming .m-ring { border-color: #c8a8e8; }
+    .food-marker.expired .m-dot { background:#aaa090; border-color:#ece8e0; opacity:.55; }
+    .food-marker.expired .m-emoji { opacity:.45; }
+    .food-marker .m-count {
+      position: absolute;
+      top: -5px; right: -7px;
+      background: var(--marker-count-bg); color: #fff;
+      font-size: 9px; font-weight: 700; line-height: 1;
+      padding: 2px 4px; border-radius: 999px;
+      border: 1.5px solid var(--surface);
+      pointer-events: none;
+    }
+    .food-marker .m-ring {
+      position: absolute;
+      width: 26px; height: 26px; border-radius: 50%;
+      border: 2px solid var(--accent);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      animation: pulseRing 2s ease-out infinite;
+    }
+    @keyframes pulseRing {
+      0%   { transform:translate(-50%,-50%) scale(1); opacity:.7; }
+      100% { transform:translate(-50%,-50%) scale(3); opacity:0; }
+    }
+    @keyframes markerDrop {
+      0%   { transform:translateY(-20px) scale(0); opacity:0; }
+      70%  { transform:translateY(3px) scale(1.1); opacity:1; }
+      100% { transform:translateY(0) scale(1); opacity:1; }
+    }
+
+    /* ── Building hover tooltip (simple, no buttons) ── */
+    #tip {
+      position:fixed; background:var(--surface); border:1px solid var(--border);
+      border-radius:8px; padding:7px 11px; pointer-events:none;
+      z-index:200; opacity:0; transition:opacity .15s;
+      box-shadow:0 3px 10px rgba(0,0,0,.1); max-width:200px;
+    }
+    #tip.show{opacity:1}
+    .tt-bldg{font-weight:700;color:var(--text-primary);font-size:.82rem;margin-bottom:1px}
+    .tt-sub{color:var(--text-secondary);font-size:.72rem;margin-bottom:2px}
+    .tt-hint{color:var(--text-muted);font-size:.69rem;font-style:italic}
+    .tt-badge{display:inline-block;padding:2px 8px;border-radius:999px;
+              font-size:.68rem;font-weight:600;margin-top:4px}
+    .tt-badge.active{background:#e8f8d8;color:#4a8020;border:1px solid #b8d898}
+
+    /* ── Side Panel ── */
+    #side-panel {
+      position:fixed; top:0; left:0; bottom:0;
+      width:320px; background:var(--surface);
+      border-right:1px solid var(--border);
+      box-shadow:4px 0 20px rgba(0,0,0,.12);
+      z-index:250; display:flex; flex-direction:column;
+      transform:translateX(-100%);
+      transition:transform .3s cubic-bezier(.4,0,.2,1);
+      padding-top: 52px; /* below header */
+    }
+    #side-panel.open { transform:translateX(0); }
+    #sp-header {
+      padding:14px 16px 10px;
+      border-bottom:1px solid var(--border-light);
+      display:flex; align-items:flex-start; gap:10px; flex-shrink:0;
+    }
+    #sp-bldg-icon {
+      font-size:1.4rem; line-height:1; flex-shrink:0; margin-top:2px;
+    }
+    #sp-bldg-info { flex:1; min-width:0; }
+    #sp-bldg-name { font-weight:700; color:var(--text-primary); font-size:.95rem; line-height:1.3; }
+    #sp-bldg-abbr {
+      display:inline-block; margin-top:3px;
+      background:var(--surface-hover); border:1px solid var(--border);
+      color:var(--text-body); font-size:.68rem; font-weight:600;
+      padding:1px 7px; border-radius:999px;
+    }
+    #sp-close {
+      background:none; border:none; cursor:pointer;
+      color:var(--text-muted); font-size:1.1rem; padding:2px 4px;
+      border-radius:6px; line-height:1; flex-shrink:0;
+    }
+    #sp-close:hover { background:var(--surface-hover); color:var(--text-primary); }
+    #sp-back {
+      background:none; border:none; cursor:pointer;
+      color:var(--text-muted); font-size:1.3rem; font-weight:300; padding:2px 6px;
+      border-radius:6px; line-height:1; flex-shrink:0; display:none;
+    }
+    #sp-back:hover { background:var(--surface-hover); color:var(--text-primary); }
+    #sp-filter-bar {
+      display:flex; gap:6px; padding:8px 12px;
+      border-bottom:1px solid var(--border-light); flex-shrink:0;
+    }
+    .sp-filter-btn {
+      flex:1; padding:5px 0; font-size:.74rem; font-weight:600;
+      border-radius:999px; border:1px solid var(--border-btn);
+      background:var(--surface-light); color:var(--text-body); cursor:pointer;
+      transition:background .15s, color .15s;
+    }
+    .sp-filter-btn.selected { background:var(--accent-strong); color:#fff; border-color:var(--accent-strong); }
+    #sp-body { overflow-y:auto; flex:1; padding:10px 12px 16px; }
+    #sp-empty { text-align:center; color:var(--text-muted); font-size:.8rem; padding:32px 0; }
+    .sp-show-past { display:block; width:100%; padding:10px 0; margin-top:8px;
+                    background:var(--surface-light); border:1px solid var(--border-btn);
+                    border-radius:8px; font-size:.76rem; font-weight:600; color:var(--text-secondary);
+                    cursor:pointer; transition:background .15s; }
+    .sp-show-past:hover { background:var(--surface-hover); }
+    .sp-past-divider { text-align:center; color:var(--text-muted); font-size:.72rem;
+                       padding:10px 0 6px; border-top:1px solid var(--border-light); margin-top:8px; }
+    .sp-card-bldg {
+      color:var(--text-secondary); font-size:.70rem; margin-top:1px;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+
+    /* event cards */
+    .sp-card {
+      background:var(--surface-card); border:1px solid var(--border-card);
+      border-radius:10px; padding:11px 13px; margin-bottom:10px;
+    }
+    .sp-card.expired { opacity:.6; }
+    .sp-card-top { display:flex; align-items:flex-start; gap:8px; margin-bottom:6px; }
+    .sp-card-emoji { font-size:1.3rem; line-height:1; flex-shrink:0; }
+    .sp-card-info { flex:1; min-width:0; }
+    .sp-card-title { font-weight:700; color:var(--text-primary); font-size:.88rem; margin-bottom:1px; }
+    .sp-card-food { font-weight:600; color:var(--text-primary); font-size:.84rem; }
+    .sp-card-room { color:var(--text-secondary); font-size:.73rem; margin-top:1px; }
+    .sp-card-time { color:var(--text-muted); font-size:.70rem; margin-top:2px; }
+    .sp-card-desc { color:var(--text-desc); font-size:.75rem; margin-top:5px; line-height:1.4; }
+    .sp-boilerlink { display:inline-block; font-size:.73rem; color:var(--accent); margin-top:4px; text-decoration:none; }
+    .sp-boilerlink:hover { text-decoration:underline; }
+    .sp-badges { display:flex; gap:5px; flex-wrap:wrap; margin-bottom:7px; }
+    .sp-badge { display:inline-block; padding:2px 8px; border-radius:999px;
+                font-size:.67rem; font-weight:600; }
+    .sp-badge.active  { background:#e8f8d8; color:#4a8020; border:1px solid #b8d898; }
+    .sp-badge.upcoming{ background:#f0e8f8; color:#6030a0; border:1px solid #c8a8e8; }
+    .sp-badge.expired { background:var(--surface-light); color:var(--text-muted); border:1px solid var(--border-btn); }
+    .sp-badge.free    { background:var(--accent-tag-bg); color:var(--accent-tag-text); border:1px solid var(--accent-tag-border); }
+    .sp-badge.paid    { background:#e4f0fa; color:#2060a0; border:1px solid #90c0e0; }
+    .sp-badge.gone    { background:#fdeee8; color:#a03010; border:1px solid #f0b898; }
+    .sp-badge.testing { background:#f0e8f8; color:#6030a0; border:1px solid #c8a8e8; }
+    .sp-badge.source-bl   { background:#fff3e0; color:#a06000; border:1px solid #e0c080; }
+    .sp-badge.source-gm   { background:#e8f5e9; color:#2e7d32; border:1px solid #a5d6a7; }
+    .sp-badge.source-user { background:#e3f2fd; color:#1565c0; border:1px solid #90caf9; }
+    .sp-badge.rsvp    { background:#fff0f0; color:#c02040; border:1px solid #e8a0b0; }
+    .sp-rsvp-link { display:inline-block; margin-top:5px; font-size:.73rem; font-weight:600;
+                    color:#c02040; text-decoration:none; padding:3px 10px;
+                    border:1px solid #e8a0b0; border-radius:6px; background:#fff0f0; }
+    .sp-rsvp-link:hover { background:#f8e0e4; }
+    .sp-warning { font-size:.70rem; color:#a06020; margin-bottom:7px;
+                  background:#fff8e8; border:1px solid #e8d090;
+                  border-radius:6px; padding:3px 8px; }
+    .sp-actions { display:flex; gap:6px; }
+    .sp-btn { flex:1; padding:6px 0; border-radius:7px; border:1px solid;
+              font-size:.74rem; font-weight:600; cursor:pointer; transition:filter .15s; background:var(--surface-card); }
+    .sp-btn:hover { filter:brightness(.93); }
+    .sp-btn.going { background:#e8f8d8; color:#4a8020; border-color:#b8d898; }
+    .sp-btn.going.voted { background:#4a8020; color:#fff; border-color:#3a6818; }
+    .sp-btn.gone  { background:#fdeee8; color:#a03010; border-color:#f0b898; }
+    .sp-btn.gone.voted  { background:#a03010; color:#fff; border-color:#802008; }
+
+    /* ── Toast ── */
+    #toast {
+      position:fixed; bottom:20px; left:50%;
+      transform:translateX(-50%) translateY(50px);
+      background:var(--toast-bg); border:1px solid var(--border);
+      color:var(--text-primary); padding:7px 18px; border-radius:999px; font-size:.8rem;
+      z-index:300; transition:transform .4s cubic-bezier(.34,1.56,.64,1),opacity .4s;
+      opacity:0; box-shadow:0 3px 12px rgba(0,0,0,.1);
+    }
+    #toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+    /* ── Pantry / Resource Markers ── */
+    .pantry-marker {
+      position: absolute;
+      transform: translate(-50%, -100%);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      margin-top: -6px;
+    }
+    .pantry-marker.all-closed .pm-pin,
+    .market-marker.all-closed .mk-pin,
+    .pmu-marker.all-closed .pmu-pin,
+    .dining-marker.all-closed .dm-pin { opacity: .5; }
+    .pantry-marker.all-closed .pm-stem,
+    .market-marker.all-closed .mk-stem,
+    .pmu-marker.all-closed .pmu-stem,
+    .dining-marker.all-closed .dm-stem { opacity: .5; }
+    /* open/closed badges in side panel */
+    .sp-status-badge { display:inline-block; padding:2px 8px; border-radius:999px;
+                       font-size:.67rem; font-weight:600; margin-left:6px; }
+    .sp-status-badge.open  { background:#e8f8d8; color:#4a8020; border:1px solid #b8d898; }
+    .sp-status-badge.closed { background:#f4f0e8; color:#9a8060; border:1px solid #d4ccbc; }
+    .pantry-marker .pm-pin {
+      background: var(--surface);
+      border: 1.5px solid #6aa84f;
+      border-radius: 999px;
+      padding: 3px 7px;
+      font-size: 13px;
+      line-height: 1;
+      box-shadow: 0 2px 6px rgba(0,0,0,.18);
+      white-space: nowrap;
+    }
+    .pantry-marker .pm-stem {
+      width: 2px; height: 6px;
+      background: #6aa84f;
+      border-radius: 1px;
+    }
+
+    /* ── PMU Restaurant Marker ── */
+    .pmu-marker {
+      position: absolute;
+      transform: translate(-50%, -100%);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      margin-top: -6px;
+    }
+    .pmu-marker .pmu-pin {
+      background: var(--surface);
+      border: 1.5px solid #c0392b;
+      border-radius: 999px;
+      padding: 3px 7px;
+      font-size: 13px;
+      line-height: 1;
+      box-shadow: 0 2px 6px rgba(0,0,0,.18);
+      white-space: nowrap;
+    }
+    .pmu-marker .pmu-stem {
+      width: 2px; height: 6px;
+      background: #c0392b;
+      border-radius: 1px;
+    }
+
+    /* ── OTG Markers ── */
+    .otg-marker {
+      position: absolute;
+      transform: translate(-50%, -100%);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      margin-top: -6px;
+    }
+    .otg-marker .otg-pin {
+      background: var(--surface);
+      border: 1.5px solid #8e44ad;
+      border-radius: 999px;
+      padding: 3px 7px;
+      font-size: 13px;
+      line-height: 1;
+      box-shadow: 0 2px 6px rgba(0,0,0,.18);
+      white-space: nowrap;
+    }
+    .otg-marker .otg-stem {
+      width: 2px; height: 6px;
+      background: #8e44ad;
+      border-radius: 1px;
+    }
+
+    /* ── Market Markers ── */
+    .market-marker {
+      position: absolute;
+      transform: translate(-50%, -100%);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      margin-top: -6px;
+    }
+    .market-marker .mk-pin {
+      background: var(--surface);
+      border: 1.5px solid #e67e22;
+      border-radius: 999px;
+      padding: 3px 7px;
+      font-size: 13px;
+      line-height: 1;
+      box-shadow: 0 2px 6px rgba(0,0,0,.18);
+      white-space: nowrap;
+    }
+    .market-marker .mk-stem {
+      width: 2px; height: 6px;
+      background: #e67e22;
+      border-radius: 1px;
+    }
+
+    /* ── Dining Court Markers ── */
+    .dining-marker {
+      position: absolute;
+      transform: translate(-50%, -100%);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      margin-top: -6px;
+    }
+    .dining-marker .dm-pin {
+      background: var(--surface);
+      border: 1.5px solid var(--dining-border);
+      border-radius: 999px;
+      padding: 3px 7px;
+      font-size: 13px;
+      line-height: 1;
+      box-shadow: 0 2px 6px rgba(0,0,0,.18);
+      white-space: nowrap;
+    }
+    .dining-marker .dm-stem {
+      width: 2px; height: 6px;
+      background: var(--dining-stem);
+      border-radius: 1px;
+    }
+
+    /* ── Dining Modal ── */
+    #dining-overlay {
+      position:fixed; inset:0; background:var(--overlay-bg);
+      z-index:400; display:flex; align-items:center; justify-content:center;
+      opacity:0; pointer-events:none; transition:opacity .2s;
+    }
+    #dining-overlay.show { opacity:1; pointer-events:all; }
+    #dining-modal {
+      background:var(--surface); border:1px solid var(--border); border-radius:14px;
+      width:min(520px,92vw); max-height:80vh; display:flex; flex-direction:column;
+      box-shadow:0 8px 32px rgba(0,0,0,.18);
+      transform:translateY(16px) scale(.97); transition:transform .2s;
+    }
+    #dining-overlay.show #dining-modal { transform:translateY(0) scale(1); }
+    #dining-modal-header {
+      padding:14px 18px 10px; border-bottom:1px solid var(--border-light);
+      display:flex; align-items:center; gap:10px; flex-shrink:0;
+    }
+    #dining-modal-title { font-size:1rem; font-weight:700; color:var(--text-primary); flex:1; }
+    #dining-modal-date { font-size:.73rem; color:var(--text-muted); }
+    #dining-modal-close {
+      background:none; border:none; cursor:pointer; font-size:1.1rem;
+      color:var(--text-muted); padding:2px 6px; border-radius:6px; line-height:1;
+    }
+    #dining-modal-close:hover { background:var(--surface-hover); color:var(--text-primary); }
+    #dining-modal-body { overflow-y:auto; padding:12px 18px 18px; flex:1; }
+    .dm-meal { margin-bottom:18px; }
+    .dm-meal-header {
+      display:flex; align-items:baseline; gap:8px; margin-bottom:8px;
+      padding-bottom:5px; border-bottom:1px solid var(--border-light);
+    }
+    .dm-meal-name { font-weight:700; color:var(--text-primary); font-size:.9rem; }
+    .dm-meal-hours { font-size:.71rem; color:var(--text-muted); }
+    .dm-meal-status {
+      margin-left:auto; font-size:.68rem; font-weight:600;
+      padding:2px 8px; border-radius:999px;
+    }
+    .dm-meal-status.open  { background:#e8f8d8; color:#4a8020; border:1px solid #b8d898; }
+    .dm-meal-status.closed{ background:var(--surface-light); color:var(--text-muted); border:1px solid var(--border-btn); }
+    .dm-station { margin-bottom:10px; }
+    .dm-station-name {
+      font-size:.75rem; font-weight:600; color:var(--text-body);
+      text-transform:uppercase; letter-spacing:.06em; margin-bottom:4px;
+    }
+    .dm-items { display:flex; flex-wrap:wrap; gap:4px; }
+    .dm-item {
+      background:var(--surface-light); border:1px solid var(--border-btn); border-radius:6px;
+      padding:3px 8px; font-size:.74rem; color:var(--text-primary);
+    }
+    .dm-item.veg { border-color:#b8d898; background:#f0f8e8; }
+    .dining-preview-items { display:flex; flex-wrap:wrap; gap:4px; margin-top:6px; }
+    .dining-preview-chip {
+      background:var(--surface-light); border:1px solid var(--border-btn); border-radius:6px;
+      padding:2px 7px; font-size:.72rem; color:var(--text-primary);
+    }
+    .dining-preview-chip.more { background:transparent; border:1px dashed var(--border-btn); color:var(--text-muted); }
+    #dining-modal-loading { text-align:center; color:var(--text-muted); font-size:.82rem; padding:32px 0; }
+    #dining-modal-empty   { text-align:center; color:var(--text-muted); font-size:.82rem; padding:32px 0; }
+
+    /* ── Loading ── */
+    #loading {
+      position:fixed; inset:0; background:var(--bg-loading);
+      display:flex; flex-direction:column; align-items:center;
+      justify-content:center; gap:14px; z-index:500; transition:opacity .5s;
+    }
+    #loading.gone{opacity:0;pointer-events:none}
+    .ring{width:42px;height:42px;border:3px solid var(--spinner-track);
+          border-top-color:var(--spinner-head);border-radius:50%;animation:spin .8s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    #loading p{color:var(--loading-text);font-size:.82rem;letter-spacing:.06em}
+
+    /* ── Food Spotted FAB ── */
+    #spot-fab {
+      position: fixed;
+      bottom: 110px; right: 10px;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--surface);
+      box-shadow: 0 3px 12px rgba(0,0,0,.22);
+      font-size: 1.4rem; line-height: 1;
+      cursor: grab;
+      display: flex; align-items: center; justify-content: center;
+      z-index: 200;
+      transition: box-shadow .15s, transform .15s;
+      user-select: none;
+    }
+    #spot-fab:hover { box-shadow: 0 5px 18px rgba(0,0,0,.28); transform: scale(1.06); }
+    #spot-fab.dragging { cursor: grabbing; opacity: .85; box-shadow: 0 8px 24px rgba(0,0,0,.32); }
+    #spot-drop-ghost {
+      position: fixed;
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--fab-ghost-bg);
+      border: 2px dashed var(--fab-ghost-border);
+      pointer-events: none;
+      display: none;
+      transform: translate(-50%, -50%);
+      z-index: 199;
+    }
+
+    /* ── Spot Submit Modal ── */
+    #spot-overlay {
+      position: fixed; inset: 0; background: var(--overlay-bg);
+      z-index: 400; display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity .2s;
+    }
+    #spot-overlay.show { opacity: 1; pointer-events: all; }
+    #spot-modal {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      width: min(440px, 92vw);
+      box-shadow: 0 8px 32px rgba(0,0,0,.18);
+      transform: translateY(16px) scale(.97); transition: transform .2s;
+      padding: 20px 22px 18px;
+    }
+    #spot-overlay.show #spot-modal { transform: translateY(0) scale(1); }
+    #spot-modal h2 { font-size: .95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+    #spot-modal .spot-hint { font-size: .73rem; color: var(--text-muted); margin-bottom: 14px; }
+    .spot-hint .hint-name { color: #1565c0; font-weight: 600; }
+    .spot-hint .hint-location { color: #2e7d32; font-weight: 600; }
+    .spot-hint .hint-foodType { color: #e65100; font-weight: 600; }
+    .spot-hint .hint-time { color: #7b1fa2; font-weight: 600; }
+    .spot-hint .hint-missing { text-decoration: underline wavy #d32f2f; }
+    #spot-loc-hint { font-size: .7rem; color: var(--text-muted); margin-bottom: 12px; }
+    #spot-text {
+      width: 100%; min-height: 80px; resize: vertical;
+      border: 1px solid var(--border-btn); border-radius: 8px;
+      padding: 9px 11px; font-size: .84rem; color: var(--text-primary);
+      background: var(--surface-input); font-family: inherit;
+      box-sizing: border-box; margin-bottom: 10px;
+    }
+    #spot-text:focus { outline: none; border-color: var(--accent); }
+    #spot-image-label {
+      display: inline-block; cursor: pointer;
+      font-size: .74rem; color: var(--text-secondary);
+      border: 1px dashed var(--border-input); border-radius: 7px;
+      padding: 5px 12px;
+      background: var(--surface-light);
+    }
+    #spot-image-label:hover { background: var(--surface-hover); }
+    #spot-image-input { display: none; }
+    #spot-image-preview { font-size: .72rem; color: var(--text-body); margin-bottom: 10px; display: none; }
+    .spot-actions { display: flex; gap: 8px; justify-content: flex-end; }
+
+    /* ── Validation highlights ── */
+    #spot-suggestion { font-size: .73rem; color: var(--text-muted); margin-top: 6px; font-style: italic; }
+    #spot-loc-picker { margin-top: 10px; padding: 10px 12px; background: var(--surface-light); border-radius: 10px; border: 1px solid var(--border-btn); }
+    #spot-loc-picker-label { font-size: .8rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
+    #spot-loc-picker-btns { display: flex; flex-direction: column; gap: 6px; }
+    .loc-pick-btn {
+      background: var(--surface); border: 1.5px solid var(--border-btn); border-radius: 8px;
+      padding: 8px 12px; text-align: left; cursor: pointer; font-size: .82rem;
+      color: var(--text-primary); transition: background .15s, border-color .15s;
+    }
+    .loc-pick-btn:hover { background: var(--surface-hover); border-color: var(--accent); }
+    .loc-pick-btn .loc-pick-score { font-size: .7rem; color: var(--text-muted); margin-left: 6px; }
+    #spot-text-wrap { position: relative; margin-bottom: 10px; }
+    #spot-text-wrap #spot-text { margin-bottom: 0; }
+    #spot-highlighted {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      padding: 9px 11px;
+      border: 1px solid var(--accent); border-radius: 8px;
+      background: var(--surface-input); font-size: .84rem; line-height: 1.5;
+      color: var(--text-primary); cursor: text; display: none;
+      white-space: pre-wrap; word-wrap: break-word;
+      overflow-y: auto;
+    }
+    #spot-highlighted .hl-name { background: #bbdefb; border-radius: 3px; padding: 0 3px; }
+    #spot-highlighted .hl-location { background: #c8e6c9; border-radius: 3px; padding: 0 3px; }
+    #spot-highlighted .hl-foodType { background: #ffe0b2; border-radius: 3px; padding: 0 3px; }
+    #spot-highlighted .hl-time { background: #e1bee7; border-radius: 3px; padding: 0 3px; }
+    #spot-cancel {
+      background: none; border: 1px solid var(--border-btn); color: var(--text-secondary);
+      border-radius: 8px; padding: 7px 16px; font-size: .8rem; cursor: pointer;
+    }
+    #spot-cancel:hover { background: var(--surface-hover); }
+    #spot-submit {
+      background: var(--accent); border: none; color: #fff;
+      border-radius: 8px; padding: 7px 20px; font-size: .8rem;
+      font-weight: 600; cursor: pointer;
+    }
+    #spot-submit:hover { filter: brightness(.93); }
+    #spot-submit:disabled { opacity: .5; cursor: not-allowed; }
+
+    /* ── Attach + Voice row ── */
+    #spot-attach-row {
+      display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
+      width: 100%; box-sizing: border-box;
+    }
+    #spot-attach-row #spot-mic-btn { margin-left: auto; }
+    #spot-mic-btn {
+      display: flex; align-items: center; gap: 6px;
+      padding: 6px 14px; border-radius: 7px;
+      border: 1px solid var(--border-btn); background: var(--surface-light);
+      color: var(--text-body); font-size: .78rem; font-weight: 600;
+      cursor: pointer; transition: background .15s, border-color .15s;
+      white-space: nowrap;
+    }
+    #spot-mic-btn:hover { background: var(--surface-hover); }
+    #spot-mic-btn.listening {
+      background: #fdeee8; border-color: #f0b898; color: #a03010;
+      animation: micPulse 1.2s ease-in-out infinite;
+    }
+    #spot-mic-btn:disabled { opacity: .45; cursor: not-allowed; animation: none; }
+    @keyframes micPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(192,80,32,.3); }
+      50%       { box-shadow: 0 0 0 6px rgba(192,80,32,0); }
+    }
+    #spot-voice-status {
+      font-size: .71rem; color: var(--text-muted); font-style: italic; flex: 1;
+    }
+  </style>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="loading"><div class="ring"></div><p>Finding free food…</p></div>
+
+<header>
+  <img class="logo" src="images/Transparent%20P%20Cropped.png" alt="Free Food at Purdue logo"/>
+  <h1>Free Food at Purdue</h1>
+  <div class="controls">
+    <label class="toggle-label" style="opacity:.6">
+      <input type="checkbox" id="devMode"/> Dev mode
+    </label>
+    <div class="pill"><span id="event-count">—</span> events</div>
+    <div style="position:relative">
+      <button class="diet-filter-btn" id="diet-btn" onclick="toggleDietDropdown()">🥗 Dietary</button>
+      <div id="diet-dropdown">
+        <div class="diet-section">Restrictions</div>
+        <label><input type="checkbox" class="diet-cb" value="vegetarian"/> 🌱 Vegetarian</label>
+        <label><input type="checkbox" class="diet-cb" value="vegan"/> 🌿 Vegan</label>
+        <label><input type="checkbox" class="diet-cb" value="gluten-free"/> 🌾 Gluten-Free</label>
+        <label><input type="checkbox" class="diet-cb" value="halal"/> ☪ Halal</label>
+        <label><input type="checkbox" class="diet-cb" value="kosher"/> ✡ Kosher</label>
+        <div class="diet-section">Allergies</div>
+        <label><input type="checkbox" class="diet-cb" value="nut-free"/> 🥜 Nut-Free</label>
+        <label><input type="checkbox" class="diet-cb" value="dairy-free"/> 🥛 Dairy-Free</label>
+        <label><input type="checkbox" class="diet-cb" value="soy-free"/> 🫘 Soy-Free</label>
+        <label><input type="checkbox" class="diet-cb" value="egg-free"/> 🥚 Egg-Free</label>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div id="map"></div>
+
+<div id="tip">
+  <div class="tt-bldg" id="tt-bldg"></div>
+  <div class="tt-sub"  id="tt-sub"></div>
+  <div class="tt-hint" id="tt-hint"></div>
+  <div id="tt-badge" class="tt-badge" style="display:none"></div>
+</div>
+
+<div id="side-panel">
+  <div id="sp-header">
+    <button id="sp-back" onclick="openAllEventsPanel()" title="Back to all events">‹</button>
+    <div id="sp-bldg-icon">🍕</div>
+    <div id="sp-bldg-info">
+      <div id="sp-bldg-name">Food Events</div>
+      <span id="sp-bldg-abbr"></span>
+    </div>
+    <button id="sp-close" onclick="closePanel()">✕</button>
+  </div>
+  <div id="sp-filter-bar">
+    <button class="sp-filter-btn selected" data-filter="today" onclick="setPanelFilter('today')">Today</button>
+    <button class="sp-filter-btn" data-filter="upcoming" onclick="setPanelFilter('upcoming')">Next 3 Days</button>
+  </div>
+  <div id="sp-body"></div>
+</div>
+<div id="toast"></div>
+
+<!-- Food Spotted FAB -->
+<div id="spot-fab" title="Report food spotted!">🍕</div>
+<div id="spot-drop-ghost"></div>
+
+<!-- Food Spotted Submit Modal -->
+<div id="spot-overlay">
+  <div id="spot-modal">
+    <h2>🍕 Food Spotted!</h2>
+    <div class="spot-hint">Describe what you saw — <span class="hint-name">Event Name</span>, <span class="hint-location">Location</span>, <span class="hint-foodType">Food Type</span>, <span class="hint-time">Time</span></div>
+    <div id="spot-loc-hint"></div>
+    <div id="spot-text-wrap">
+      <textarea id="spot-text" placeholder="e.g. free pizza in the WALC lobby until 4pm"></textarea>
+      <div id="spot-highlighted"></div>
+    </div>
+    <div id="spot-attach-row">
+      <label id="spot-image-label" for="spot-image-input">📷 Attach a photo or flyer (optional)</label>
+      <button id="spot-mic-btn" onclick="toggleVoiceInput()" title="Speak your description">🎙 Speak</button>
+      <span id="spot-voice-status"></span>
+    </div>
+    <input type="file" id="spot-image-input" accept="image/*"/>
+    <div id="spot-image-preview"></div>
+    <div id="spot-suggestion"></div>
+    <div id="spot-loc-picker" style="display:none">
+      <div id="spot-loc-picker-label">📍 Where exactly did you see this?</div>
+      <div id="spot-loc-picker-btns"></div>
+    </div>
+    <div class="spot-actions">
+      <button id="spot-cancel" onclick="closeSpotModal()">Cancel</button>
+      <button id="spot-submit" onclick="submitSpot()">Submit</button>
+    </div>
+  </div>
+</div>
+
+<div id="dining-overlay">
+  <div id="dining-modal">
+    <div id="dining-modal-header">
+      <span style="font-size:1.2rem">🍽</span>
+      <div id="dining-modal-title">Dining Court</div>
+      <div id="dining-modal-date"></div>
+      <button id="dining-modal-close" onclick="closeDiningModal()">✕</button>
+    </div>
+    <div id="dining-modal-body">
+      <div id="dining-modal-loading">Loading menu…</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const API_BASE = 'https://api.freefoodatpurdue.com';
+
+// ── Unique user ID (persisted in localStorage) ──
+function getUserId() {
+  let uid = localStorage.getItem('fap_user_id');
+  if (!uid) {
+    uid = crypto.randomUUID();
+    localStorage.setItem('fap_user_id', uid);
+  }
+  return uid;
+}
+const USER_ID = getUserId();
+
+// ── User geolocation (updated by GeolocateControl) ──
+let _userLat = null, _userLng = null;
+
+function _distMeters(lat1, lng1, lat2, lng2) {
+  const R = 6371000, toRad = d => d * Math.PI / 180;
+  const dLat = toRad(lat2 - lat1), dLng = toRad(lng2 - lng1);
+  const a = Math.sin(dLat/2)**2 + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLng/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+/**
+ * Sort score for an event. Lower = shows first.
+ *
+ * Tiers (active always before inactive):
+ *   Tier 0: Happening now (started and not expired) — sorted by most recent first,
+ *           with a small proximity boost for nearby events.
+ *   Tier 1: Upcoming (starts in the future) — sorted by start time ascending
+ *           (soonest first), with a small proximity boost.
+ *   Tier 2: Inactive/expired — sorted by most recent first.
+ */
+function eventSortScore(ev) {
+  const now = Date.now();
+  const isActive = ev.is_active && (ev.gone_count || 0) < 2;
+  if (!isActive) return 2e9 - new Date(ev.created_at).getTime() / 60000;
+
+  const startsMs = ev.starts_at ? new Date(ev.starts_at).getTime() : 0;
+  const isUpcomingEv = startsMs > now;
+
+  // Distance bonus: closer = lower score (0–10 point range, capped at 2km)
+  let distBonus = 0;
+  if (_userLat != null && ev.lat && ev.lng) {
+    const dist = _distMeters(_userLat, _userLng, ev.lat, ev.lng);
+    distBonus = Math.min(dist / 200, 10); // 200m = 1 point, max 10
+  }
+
+  if (isUpcomingEv) {
+    // Tier 1: upcoming — sort by how soon it starts (soonest first)
+    const minsUntilStart = (startsMs - now) / 60000;
+    return 1e9 + minsUntilStart + distBonus;
+  }
+
+  // Tier 0: happening now — most recently created first, with distance tiebreak
+  const ageMinutes = (now - new Date(ev.created_at).getTime()) / 60000;
+  return ageMinutes + distBonus;
+}
+
+// ── Vote tracking (localStorage) ──
+function _voteKey(eventId, type) { return `fap_vote_${eventId}_${type}`; }
+function hasVoted(eventId, type) { return localStorage.getItem(_voteKey(eventId, type)) === '1'; }
+function setVote(eventId, type, active) {
+  if (active) localStorage.setItem(_voteKey(eventId, type), '1');
+  else localStorage.removeItem(_voteKey(eventId, type));
+}
+
+// ── Dining courts: building abbr → display name ──
+const DINING_COURTS = {
+  ERHT: 'Earhart',
+  FORD: 'Ford',
+  HILL: 'Hillenbrand',
+  WDCT: 'Wiley',
+  WDC:  'Windsor',
+};
+
+// ── ACE Food Pantry locations ──
+const FOOD_PANTRIES = [
+  {
+    name: 'ACE Campus Food Pantry (Main)',
+    location: 'The Found (Baptist Student Foundation)',
+    address: '200 N Russell St, West Lafayette',
+    lat: 40.4265,
+    lng: -86.9188,
+    hours: 'Tue 12–6 PM, Sun 5–8 PM',
+    description: 'Main pantry location for Purdue students, staff & faculty. Bring your PUID.',
+  },
+  {
+    name: 'ACE Pantry Pop-Up — LCC',
+    location: 'Latino Cultural Center',
+    address: '426 Waldron St',
+    lat: 40.4290,
+    lng: -86.9176,
+    hours: 'Mon 9 AM–5 PM',
+    description: 'Pop-up pantry at the Latino Cultural Center. Bring your PUID.',
+  },
+  {
+    name: 'ACE Pantry Pop-Up — CoRec',
+    location: 'Córdova Recreational Sports Center',
+    address: '355 N Martin Jischke Dr',
+    lat: 40.4283,
+    lng: -86.9223,
+    hours: 'Mon–Fri 6 AM–10 PM',
+    description: 'Pop-up pantry at the CoRec. Bring your PUID.',
+  },
+  {
+    name: 'ACE Pantry Pop-Up — Vet School',
+    location: 'Lynn Hall of Veterinary Medicine',
+    address: '625 Harrison St',
+    lat: 40.4195,
+    lng: -86.9147,
+    hours: 'Tue & Thu 11:30 AM–1:30 PM',
+    description: 'Pop-up pantry at the Veterinary School. Bring your PUID.',
+  },
+  {
+    name: 'ACE Pantry Pop-Up — Horizons',
+    location: 'Krach Leadership Center',
+    address: '1198 Third St',
+    lat: 40.4276,
+    lng: -86.9213,
+    hours: 'Mon–Fri 9 AM–5 PM',
+    description: 'Pop-up pantry at the Horizons office in Krach. Bring your PUID.',
+  },
+  {
+    name: 'ACE Pantry Pop-Up — LGBTQ+ Center',
+    location: 'Purdue Memorial Union',
+    address: 'PMU (location may rotate)',
+    lat: 40.4250,
+    lng: -86.9113,
+    hours: 'Check ACE website for schedule',
+    description: 'Pop-up pantry at the LGBTQ+ Center in the PMU. Bring your PUID.',
+  },
+  {
+    name: 'ACE Pantry Pop-Up — AAARCC',
+    location: 'Asian American and Asian Resource and Cultural Center',
+    address: 'AAARCC',
+    lat: 40.4291,
+    lng: -86.9177,
+    hours: 'Check ACE website for schedule',
+    description: 'Pop-up table at AAARCC. Bring your PUID.',
+  },
+];
+
+// ── Boilermaker Market locations ──
+const BOILER_MARKETS = [
+  {
+    name: 'Boilermaker Market @ Winifred Parker Hall',
+    location: 'Winifred Parker Residence Hall (3rd Street)',
+    lat: 40.4277,
+    lng: -86.9203,
+    hours: 'Open 24 hours (self-checkout)',
+    description: 'Convenience market with snacks, drinks, and essentials.',
+  },
+  {
+    name: 'Boilermaker Market @ Harrison Hall',
+    location: 'Benjamin Harrison Residence Hall',
+    lat: 40.4251,
+    lng: -86.9269,
+    hours: 'Open 24 hours (self-checkout)',
+    description: 'Convenience market with snacks, drinks, and essentials.',
+  },
+  {
+    name: 'Boilermaker Market @ Hillenbrand Hall',
+    location: 'Hillenbrand Residence Hall',
+    lat: 40.4267,
+    lng: -86.9267,
+    hours: 'Open 24 hours (self-checkout)',
+    description: 'Convenience market with snacks, drinks, and essentials.',
+  },
+  {
+    name: 'Boilermaker Market @ PMU',
+    location: 'Purdue Memorial Union',
+    lat: 40.4248,
+    lng: -86.9108,
+    hours: 'Mon–Fri 8 AM–8 PM',
+    description: 'Snacks, drinks, and supplies in the Union. Also offers Holy Bowls (Kosher grab-and-go).',
+  },
+  {
+    name: 'Boilermaker Market @ Burton Morgan',
+    location: 'Burton D. Morgan Center for Entrepreneurship',
+    lat: 40.4238,
+    lng: -86.9230,
+    hours: 'Mon–Fri 8 AM–5 PM',
+    description: 'Mini market with snacks and drinks near the entrepreneurship center.',
+  },
+  {
+    name: 'Boilermaker Market @ Chaney-Hale',
+    location: 'Chaney-Hale Hall of Science',
+    lat: 40.4285,
+    lng: -86.9155,
+    hours: 'Open 24 hours (self-checkout)',
+    description: 'New self-checkout convenience market in the science building.',
+  },
+];
+
+// ── On-the-GO! locations ──
+const ON_THE_GO = [
+  { abbr: 'EOTG', name: 'Earhart On-the-GO!', lat: 40.425797, lng: -86.924944, hours: 'Mon–Fri 6:30 AM–5 PM' },
+  { abbr: 'FOTG', name: 'Ford On-the-GO!',    lat: 40.432082, lng: -86.919644, hours: 'Mon–Fri 6:30 AM–5 PM' },
+  { abbr: 'LWSN', name: 'Lawson On-the-GO!',  lat: 40.427432, lng: -86.916988, hours: 'Mon–Fri 7:30 AM–5 PM' },
+  { abbr: 'WOTG', name: 'Windsor On-the-GO!', lat: 40.4268, lng: -86.9210, hours: 'Mon–Fri 6:30 AM–5 PM' },
+];
+
+// ── PMU Restaurants (Atlas Family Marketplace) ──
+const PMU_RESTAURANTS = [
+  { name: "Walk-On's Sports Bistreaux", type: 'Louisiana-inspired sports bar', hours: 'Mon–Sat 11 AM–9 PM' },
+  { name: 'Starbucks @ PMU', type: 'Coffee & drinks', hours: 'Mon–Fri 7 AM–12 AM, Sat–Sun 8 AM–12 AM' },
+  { name: 'Aatish', type: 'Halal foods', hours: '10:30 AM–8 PM' },
+  { name: 'Sushi Boss', type: 'Sushi', hours: '10:30 AM–8 PM' },
+  { name: 'Zen', type: 'Poke bowls', hours: '10:30 AM–8 PM' },
+  { name: 'Sol Toro', type: 'Mexican cuisine', hours: '10:30 AM–8 PM' },
+  { name: 'Pizza and Parm', type: 'Pizza', hours: '10:30 AM–8 PM' },
+  { name: 'BBQ District', type: 'Barbecue', hours: '10:30 AM–8 PM' },
+  { name: 'Fresh Fare', type: 'Salads & greens', hours: '10:30 AM–8 PM' },
+  { name: "Chef Bill Kim's", type: 'Asian dumplings & bowls', hours: '10:30 AM–8 PM' },
+  { name: 'Latin Inspired by Chef John Manion', type: 'Latin cuisine', hours: '10:30 AM–8 PM' },
+];
+const PMU_LAT = 40.4250;
+const PMU_LNG = -86.9113;
+
+// ── Dining modal ──
+function openDiningModal(abbr) {
+  dismissOverlays();
+  const overlay = document.getElementById('dining-overlay');
+  const body    = document.getElementById('dining-modal-body');
+  const title   = document.getElementById('dining-modal-title');
+  const dateEl  = document.getElementById('dining-modal-date');
+
+  title.textContent = DINING_COURTS[abbr] + ' Dining Court';
+  dateEl.textContent = '';
+  body.innerHTML = '<div id="dining-modal-loading">Loading menu…</div>';
+  overlay.classList.add('show');
+
+  fetch(`${API_BASE}/dining/${abbr}`)
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(data => renderDiningMenu(data, dateEl, body))
+    .catch(() => {
+      body.innerHTML = '<div id="dining-modal-empty">Menu unavailable right now.</div>';
+    });
+}
+
+function closeDiningModal() {
+  document.getElementById('dining-overlay').classList.remove('show');
+}
+
+document.getElementById('dining-overlay').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeDiningModal();
+});
+
+function fmt12(t) {
+  if (!t) return '';
+  const [h, m] = t.split(':').map(Number);
+  const ampm = h < 12 ? 'am' : 'pm';
+  return `${h % 12 || 12}:${String(m).padStart(2,'0')}${ampm}`;
+}
+
+function isMealOpen(start, end) {
+  if (!start || !end) return false;
+  const now = new Date();
+  const toMinutes = t => {
+    const [h, m] = t.split(':').map(Number);
+    return h * 60 + m;
+  };
+  const cur = now.getHours() * 60 + now.getMinutes();
+  return cur >= toMinutes(start) && cur < toMinutes(end);
+}
+
+/** Fetch dining menu and render a compact preview into the location panel card. */
+function fetchDiningPreview(abbr, cardId) {
+  fetch(`${API_BASE}/dining/${abbr}`)
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(data => {
+      const labelEl = document.getElementById(cardId);
+      const itemsEl = document.getElementById(cardId + '-items');
+      if (!labelEl || !itemsEl) return; // panel was closed
+
+      if (!data.meals || !data.meals.length) {
+        labelEl.textContent = 'No menu posted for today';
+        return;
+      }
+
+      // Find the current or next upcoming meal
+      const now = new Date();
+      const curMin = now.getHours() * 60 + now.getMinutes();
+      const toMin = t => { const [h, m] = t.split(':').map(Number); return h * 60 + m; };
+
+      let meal = data.meals.find(m => m.start && m.end && curMin >= toMin(m.start) && curMin < toMin(m.end));
+      let mealLabel = '';
+      if (meal) {
+        mealLabel = `Serving now · ${meal.name}`;
+        // Add open badge
+        const badge = document.querySelector(`#${cardId}`).closest('.sp-card').querySelector('.sp-status-badge');
+        if (!badge) {
+          const titleDiv = labelEl.previousElementSibling || labelEl.parentElement.querySelector('div:first-child');
+          if (titleDiv) titleDiv.insertAdjacentHTML('beforeend', ' <span class="sp-status-badge open">Open now</span>');
+        }
+      } else {
+        // Find next upcoming meal
+        meal = data.meals.find(m => m.start && toMin(m.start) > curMin);
+        if (meal) {
+          mealLabel = `Up next · ${meal.name} at ${fmt12(meal.start)}`;
+        } else {
+          // All meals passed — show the last meal
+          meal = data.meals[data.meals.length - 1];
+          mealLabel = meal ? `Last served · ${meal.name}` : 'Closed for today';
+        }
+        // Add closed badge if none
+        const card = document.getElementById(cardId)?.closest('.sp-card');
+        if (card && !card.querySelector('.sp-status-badge')) {
+          const titleDiv = card.querySelector('[style*="font-weight:700"]');
+          if (titleDiv) titleDiv.insertAdjacentHTML('beforeend', ` <span class="sp-status-badge closed">Closed</span>`);
+        }
+      }
+
+      labelEl.textContent = mealLabel;
+
+      if (meal && meal.stations) {
+        // Collect top items across stations (skip duplicates, limit to 6)
+        const seen = new Set();
+        const preview = [];
+        for (const st of meal.stations) {
+          for (const item of (st.items || [])) {
+            const key = item.name.toLowerCase();
+            if (!seen.has(key)) { seen.add(key); preview.push(item.name); }
+            if (preview.length >= 6) break;
+          }
+          if (preview.length >= 6) break;
+        }
+        if (preview.length) {
+          const more = meal.stations.reduce((n, s) => n + (s.items?.length || 0), 0) - preview.length;
+          itemsEl.innerHTML = preview.map(n =>
+            `<span class="dining-preview-chip">${n}</span>`
+          ).join('') + (more > 0 ? `<span class="dining-preview-chip more">+${more} more</span>` : '');
+        }
+      }
+    })
+    .catch(() => {
+      const el = document.getElementById(cardId);
+      if (el) el.textContent = 'Menu unavailable';
+    });
+}
+
+function renderDiningMenu(data, dateEl, body) {
+  dateEl.textContent = data.date || '';
+  if (!data.meals || !data.meals.length) {
+    body.innerHTML = '<div id="dining-modal-empty">No menu posted for today.</div>';
+    return;
+  }
+  body.innerHTML = data.meals.map(meal => {
+    const isOpen   = isMealOpen(meal.start, meal.end);
+    const hours    = (meal.start && meal.end) ? `${fmt12(meal.start)} – ${fmt12(meal.end)}` : '';
+    const stations = meal.stations.map(st => {
+      if (!st.items.length) return '';
+      const items = st.items.map(item =>
+        `<span class="dm-item${item.is_vegetarian ? ' veg' : ''}" title="${item.allergens.join(', ') || ''}">${item.name}</span>`
+      ).join('');
+      return `<div class="dm-station">
+        <div class="dm-station-name">${st.name}</div>
+        <div class="dm-items">${items}</div>
+      </div>`;
+    }).join('');
+    return `<div class="dm-meal">
+      <div class="dm-meal-header">
+        <span class="dm-meal-name">${meal.name}</span>
+        <span class="dm-meal-hours">${hours}</span>
+        <span class="dm-meal-status ${isOpen ? 'open' : 'closed'}">${isOpen ? 'Open' : 'Closed'}</span>
+      </div>
+      ${stations || '<div style="color:var(--text-muted);font-size:.75rem">No items listed.</div>'}
+    </div>`;
+  }).join('');
+}
+
+// ── Building colors by abbreviation ──
+const BLDG_STYLE = {
+  // Engineering / CS — blue-grey
+  WALC:{f:'#c4dcf0',s:'#7aaed0'}, LWSN:{f:'#cac8e8',s:'#8888c4'},
+  MSEE:{f:'#c4d4e8',s:'#7aa4c4'}, ARMS:{f:'#c4d4e0',s:'#84a4c0'},
+  WTHR:{f:'#ccd0e0',s:'#8c98b8'}, CIVL:{f:'#c8d0e0',s:'#849cb8'},
+  KNOY:{f:'#c4d0d8',s:'#84a0b0'}, MEEN:{f:'#c4d4e0',s:'#84a4c0'},
+  EE:  {f:'#c8d4e8',s:'#88acd0'}, FRNY:{f:'#c8d0e4',s:'#88a0c0'},
+  ME:  {f:'#c8d0dc',s:'#88a0b8'}, WANG:{f:'#c4cce4',s:'#8498c0'},
+  BHEE:{f:'#c8d4e0',s:'#84a4c0'}, YONG:{f:'#ccd4e0',s:'#8ca4c0'},
+  HAAS:{f:'#d4d8e4',s:'#9098b8'}, BIND:{f:'#ccd8e8',s:'#88a8c8'},
+  BIDC:{f:'#d0d8e8',s:'#88a0c4'}, BIRK:{f:'#ccd8e8',s:'#8898c4'},
+  HOCK:{f:'#c8d4ec',s:'#8098cc'}, GRIS:{f:'#c8d0e4',s:'#88a0c0'},
+  POTR:{f:'#c8d0e0',s:'#88a0b8'}, MJIS:{f:'#c8dce8',s:'#80a8c8'},
+  LYLE:{f:'#cce0e8',s:'#88b0c8'}, DRUG:{f:'#ccd8ec',s:'#88a8cc'},
+  // Science — green-grey
+  PHYS:{f:'#cce0cc',s:'#88b488'}, MATH:{f:'#d0e4cc',s:'#8cb88c'},
+  BCHM:{f:'#c8e0c4',s:'#84b480'}, LSPS:{f:'#cce0cc',s:'#88b488'},
+  CHAS:{f:'#cce4cc',s:'#88bc88'}, HANS:{f:'#c8e0c8',s:'#84b484'},
+  // Humanities / Social — warm tan
+  BRNG:{f:'#f0dcc8',s:'#c0987c'}, LILY:{f:'#f0d8c4',s:'#c09070'},
+  KRAN:{f:'#e4d8c4',s:'#b4a47c'}, ELLT:{f:'#ecd8c4',s:'#bc9870'},
+  BALY:{f:'#e8d4c4',s:'#bc9c74'}, RAWL:{f:'#e8d8c8',s:'#b8a07c'},
+  MRRT:{f:'#e8d8c4',s:'#b8a07c'}, PSYC:{f:'#e8d8c8',s:'#b4a07c'},
+  MANN:{f:'#e8d4c4',s:'#bc9c74'}, SC:  {f:'#e4d8c4',s:'#b4a07c'},
+  HOVD:{f:'#e8d4c0',s:'#bc9878'}, UNIV:{f:'#ead8c4',s:'#bca070'},
+  STON:{f:'#e4d8c4',s:'#b4a07c'},
+  // Union / Dining
+  PMU: {f:'#ead8c4',s:'#bca470'}, PMUC:{f:'#ecd8c4',s:'#bca470'},
+  STEW:{f:'#ecd8be',s:'#bc9c6c'}, FORD:{f:'#e8d4c0',s:'#b89870'},
+  WDCT:{f:'#e8d4c0',s:'#b89870'},
+  // Recreation / Athletics — green
+  CREC:{f:'#bce0cc',s:'#68b484'}, TREC:{f:'#c8e4cc',s:'#78b888'},
+  MACK:{f:'#d4ccbe',s:'#a49478'}, STDM:{f:'#d0c8bc',s:'#a09078'},
+  AQUA:{f:'#c0d8e8',s:'#70a8cc'}, MOLL:{f:'#c8d8e0',s:'#80a8b8'},
+  LAMB:{f:'#ccd8d0',s:'#84a894'}, SCHW:{f:'#c8dcd0',s:'#78a890'},
+  // Residential — light cream
+  CARY:{f:'#e4dcc8',s:'#b0a07c'}, HILL:{f:'#e4dcc8',s:'#b0a07c'},
+  HARR:{f:'#e4dcc8',s:'#b0a07c'}, ERHT:{f:'#e4dcc8',s:'#b0a07c'},
+  TARK:{f:'#e4dcc8',s:'#b0a07c'}, MRDH:{f:'#e4dcc8',s:'#b0a07c'},
+  MRDS:{f:'#e4dcc8',s:'#b0a07c'}, MCUT:{f:'#e4dcc8',s:'#b0a07c'},
+  SHRV:{f:'#e4dcc8',s:'#b0a07c'}, SHLY:{f:'#e4dcc8',s:'#b0a07c'},
+  WILY:{f:'#e4dcc8',s:'#b0a07c'}, WOOD:{f:'#e4dcc8',s:'#b0a07c'},
+  WARN:{f:'#e4dcc8',s:'#b0a07c'}, MTHW:{f:'#e4dcc8',s:'#b0a07c'},
+  HCRS:{f:'#e4dcc8',s:'#b0a07c'}, HCRN:{f:'#e4dcc8',s:'#b0a07c'},
+  // Library
+  HIKS:{f:'#d0e0d4',s:'#8cb498'},
+  // Health
+  PUSH:{f:'#e4ccd8',s:'#b48898'}, JNSN:{f:'#e0ccd8',s:'#b08898'},
+  // Agricultural — green
+  ABE: {f:'#d8e4cc',s:'#98b47c'}, AGAD:{f:'#d4e0cc',s:'#94b07c'},
+  ADDL:{f:'#d4e0c8',s:'#90b07c'}, CRTN:{f:'#d4e4c8',s:'#94b478'},
+  NLSN:{f:'#d4e0cc',s:'#94b07c'}, WSLR:{f:'#d0e0cc',s:'#90b07c'},
+  PFEN:{f:'#d4e0cc',s:'#94b07c'},
+  // Cultural centers — lavender
+  BCC: {f:'#dcc8d8',s:'#a888a0'}, AACC:{f:'#dcc8d8',s:'#a888a0'},
+  NACC:{f:'#dcc8d8',s:'#a888a0'}, LCCP:{f:'#dcc8d8',s:'#a888a0'},
+  // Discovery Park — steel blue
+  ADPA:{f:'#ccd8e8',s:'#8498c4'}, ADPB:{f:'#ccd8e8',s:'#8498c4'},
+  ADPC:{f:'#ccd8e8',s:'#8498c4'}, CONT:{f:'#ccd8e8',s:'#8498c4'},
+  CONV:{f:'#ccd8e8',s:'#8498c4'}, DLR: {f:'#ccd8e8',s:'#8498c4'},
+  DSAI:{f:'#ccd8e8',s:'#8498c4'}, MRGN:{f:'#ccd8e8',s:'#8498c4'},
+  KRCH:{f:'#ccd8e8',s:'#8498c4'}, DAUC:{f:'#ccd8e8',s:'#8498c4'},
+  // Default
+  _:   {f:'#dcd8cc',s:'#acaa9a'},
+};
+function bldgStyle(abbr){ return BLDG_STYLE[abbr] || BLDG_STYLE._; }
+
+// ── Building hover tooltip ──
+const tip    = document.getElementById('tip');
+const ttBldg = document.getElementById('tt-bldg');
+const ttSub  = document.getElementById('tt-sub');
+const ttHint = document.getElementById('tt-hint');
+const ttBadge = document.getElementById('tt-badge');
+
+function showBldgTip(mouseEvt, b) {
+  ttBldg.textContent = b.full_name || b.abbr;
+  ttSub.textContent  = b.full_name ? b.abbr : '';
+  ttHint.textContent = DINING_COURTS[b.abbr] ? 'Click to see today\'s menu' : '';
+  ttBadge.textContent = DINING_COURTS[b.abbr] ? 'Dining Court' : '';
+  ttBadge.style.display = DINING_COURTS[b.abbr] ? '' : 'none';
+  ttBadge.className = 'tt-badge active';
+  tip.classList.add('show');
+  moveTip(mouseEvt);
+}
+function moveTip(e) {
+  tip.style.left = Math.min(e.clientX + 14, window.innerWidth  - 210) + 'px';
+  tip.style.top  = Math.min(e.clientY - 10, window.innerHeight - 100) + 'px';
+}
+function hideTip() { tip.classList.remove('show'); }
+
+// ── Side panel ──
+let _allEvents = [];      // kept in sync by loadEvents
+let _panelMode = 'all';   // 'all' | 'building'
+let _panelFilter = 'today'; // 'today' | 'upcoming'
+
+/** Close all left-side overlays so they never stack on top of each other. */
+function dismissOverlays() {
+  document.getElementById('side-panel').classList.remove('open');
+  document.getElementById('dining-overlay').classList.remove('show');
+  document.getElementById('spot-overlay').classList.remove('show');
+}
+
+function setPanelFilter(f) {
+  _panelFilter = f;
+  document.querySelectorAll('.sp-filter-btn').forEach(btn =>
+    btn.classList.toggle('selected', btn.dataset.filter === f)
+  );
+  if (_panelMode === 'all') {
+    renderAllEventsBody();
+    renderMapPins();
+  }
+}
+
+function openAllEventsPanel() {
+  dismissOverlays();
+  _panelMode = 'all';
+  document.getElementById('sp-back').style.display = 'none';
+  document.getElementById('sp-bldg-icon').textContent = '🍕';
+  document.getElementById('sp-bldg-name').textContent = 'Food Events';
+  document.getElementById('sp-bldg-abbr').style.display = 'none';
+  document.getElementById('sp-filter-bar').style.display = 'flex';
+  renderAllEventsBody();
+  document.getElementById('side-panel').classList.add('open');
+}
+
+function filterByDateWindow(events) {
+  const now = new Date();
+  const cutoff = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 3 + 1);
+  const isReallyActive = e => e.is_active && (e.gone_count || 0) < 2;
+  return events.filter(e => {
+    const start = e.starts_at ? parseDate(e.starts_at) : null;
+    const expire = e.expires_at ? parseDate(e.expires_at) : null;
+    if (!start) return isReallyActive(e);
+    if (start <= cutoff && (!expire || expire >= now)) return true;
+    return false;
+  });
+}
+
+let _showPastEvents = false;
+
+function renderAllEventsBody() {
+  const isReallyActive = e => e.is_active && (e.gone_count || 0) < 2;
+  const now = new Date();
+  const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  let events;
+  let html = '';
+
+  if (_panelFilter === 'today') {
+    // Active events starting within the next 24 hours
+    const next24h = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+    events = _allEvents.filter(e => {
+      if (!isReallyActive(e)) return false;
+      if (e.starts_at) {
+        const start = parseDate(e.starts_at);
+        if (start >= next24h) return false;
+      }
+      return true;
+    });
+    const dietFilters = getActiveDietFilters();
+    if (dietFilters.length) events = events.filter(e => eventMatchesDiet(e, dietFilters));
+    events = events.sort((a, b) => eventSortScore(a) - eventSortScore(b));
+
+    if (!events.length) {
+      html = '<div id="sp-empty">No events right now — check back soon!</div>';
+    } else {
+      html = events.map(ev => buildEventCard(ev, true)).join('');
+    }
+
+    // Past events — expired events from the last 48 hours
+    const past48h = new Date(now.getTime() - 48 * 60 * 60 * 1000);
+    const pastEvents = _allEvents.filter(e => {
+      if (isReallyActive(e)) return false;
+      const ref = e.starts_at ? parseDate(e.starts_at) : parseDate(e.created_at);
+      return ref >= past48h && ref <= now;
+    });
+    const filteredPast = dietFilters && dietFilters.length
+      ? pastEvents.filter(e => eventMatchesDiet(e, dietFilters))
+      : pastEvents;
+
+    if (filteredPast.length > 0) {
+      if (_showPastEvents) {
+        const sorted = filteredPast.sort((a, b) => eventSortScore(a) - eventSortScore(b));
+        html += '<div class="sp-past-divider">Past events</div>';
+        html += sorted.map(ev => buildEventCard(ev, true)).join('');
+        html += `<button class="sp-show-past" onclick="_showPastEvents=false;renderAllEventsBody()">Hide past events</button>`;
+      } else {
+        html += `<button class="sp-show-past" onclick="_showPastEvents=true;renderAllEventsBody()">Show ${filteredPast.length} past event${filteredPast.length > 1 ? 's' : ''}</button>`;
+      }
+    }
+  } else {
+    // "Next 3 Days" — events starting 24h to 72h from now
+    const after24h = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+    const after72h = new Date(now.getTime() + 72 * 60 * 60 * 1000);
+    events = _allEvents.filter(e => {
+      if (!e.starts_at) return false;
+      const start = parseDate(e.starts_at);
+      return start >= after24h && start <= after72h;
+    });
+    const dietFilters = getActiveDietFilters();
+    if (dietFilters.length) events = events.filter(e => eventMatchesDiet(e, dietFilters));
+    events = events.sort((a, b) => eventSortScore(a) - eventSortScore(b));
+
+    if (!events.length) {
+      html = '<div id="sp-empty">No upcoming events in the next 3 days.</div>';
+    } else {
+      html = events.map(ev => buildEventCard(ev, true)).join('');
+    }
+  }
+
+  document.getElementById('sp-body').innerHTML = html;
+}
+
+function openPanel(building, abbr, eventsForBuilding) {
+  dismissOverlays();
+  _panelMode = 'building';
+  document.getElementById('sp-back').style.display = '';
+  document.getElementById('sp-bldg-icon').textContent = DINING_COURTS[abbr] ? '🍽' : '🏛';
+  document.getElementById('sp-bldg-name').textContent = building || abbr || 'Unknown Building';
+  document.getElementById('sp-bldg-abbr').textContent = abbr || '';
+  document.getElementById('sp-bldg-abbr').style.display = abbr ? '' : 'none';
+  document.getElementById('sp-filter-bar').style.display = 'none';
+  renderPanelEvents(eventsForBuilding);
+  document.getElementById('side-panel').classList.add('open');
+}
+
+function closePanel() {
+  if (_panelMode === 'building') {
+    openAllEventsPanel();
+  } else {
+    document.getElementById('side-panel').classList.remove('open');
+  }
+}
+
+function renderPanelEvents(events) {
+  const body = document.getElementById('sp-body');
+  if (!events.length) {
+    body.innerHTML = '<div id="sp-empty">No events recorded here.</div>';
+    return;
+  }
+  body.innerHTML = events.map(ev => buildEventCard(ev, false)).join('');
+}
+
+function buildEventCard(ev, showBuilding = false) {
+  const goneCount  = ev.gone_count  || 0;
+  const goingCount = ev.going_count || 0;
+  const isActive   = ev.is_active && goneCount < 2;
+  const isFree     = ev.is_free === undefined ? true : !!ev.is_free;
+  const upcoming   = isUpcoming(ev);
+
+  let statusBadge;
+  if (upcoming) {
+    statusBadge = `<span class="sp-badge upcoming">🕐 Starts ${formatStartTime(ev.starts_at)}</span>`;
+  } else if (isActive) {
+    statusBadge = '<span class="sp-badge active">Active now</span>';
+  } else {
+    statusBadge = `<span class="sp-badge expired">${goneCount >= 2 ? "Food's gone" : 'Expired'}</span>`;
+  }
+  const freeBadge = isFree
+    ? '<span class="sp-badge free">🆓 Free</span>'
+    : '<span class="sp-badge paid">💰 Paid</span>';
+  const testBadge = ev.is_testing ? '<span class="sp-badge testing">🧪 Test</span>' : '';
+  const rsvpBadge = ev.rsvp_required ? '<span class="sp-badge rsvp">📋 RSVP Required</span>' : '';
+  // Show all sources if cross-posted, otherwise just the single source
+  const sourceLabels = { groupme: '💬 GroupMe', boilerlink: '📋 BoilerLink', user: '📱 User', testing: '🧪 Test' };
+  const sourceClasses = { groupme: 'source-gm', boilerlink: 'source-bl', user: 'source-user', testing: 'testing' };
+  let sources = [];
+  try { sources = ev.sources ? JSON.parse(ev.sources) : []; } catch {}
+  if (!sources.length) sources = [ev.source || 'groupme'];
+  const sourceBadge = sources.map(s =>
+    `<span class="sp-badge ${sourceClasses[s] || 'source-gm'}">${sourceLabels[s] || s}</span>`
+  ).join('');
+
+  const warning = goneCount >= 2
+    ? `<div class="sp-warning">🚫 Food's gone — reported by multiple people</div>`
+    : goneCount === 1
+      ? `<div class="sp-warning">⚠️ Someone reported food may be gone</div>`
+      : '';
+
+  const showActions = isActive && !upcoming;
+  const goingVoted = hasVoted(ev.id, 'going');
+  const goneVoted = hasVoted(ev.id, 'gone');
+  const actions = showActions ? `
+    <div class="sp-actions">
+      <button class="sp-btn going${goingVoted ? ' voted' : ''}" onclick="panelGoing(${ev.id})">
+        🙋 ${goingVoted ? 'Going' : "I'm Going"}${goingCount > 0 ? ` (${goingCount})` : ''}
+      </button>
+      <button class="sp-btn gone${goneVoted ? ' voted' : ''}" onclick="panelGone(${ev.id})">
+        🚫 ${goneVoted ? 'Reported' : "Food's Gone"}
+      </button>
+    </div>` : '';
+
+  const room = ev.room ? `<div class="sp-card-room">Room ${ev.room}</div>` : '';
+  const bldg = showBuilding && (ev.building || ev.building_abbr)
+    ? `<div class="sp-card-bldg">📍 ${ev.building || ev.building_abbr}</div>` : '';
+  const title = ev.name ? `<div class="sp-card-title">${ev.name}</div>` : '';
+  const desc  = ev.description ? `<div class="sp-card-desc">${ev.description}</div>` : '';
+  const cardEmoji = upcoming ? '🕐' : foodEmoji(ev.food_type);
+  const cardClass = upcoming ? '' : (isActive ? '' : ' expired');
+
+  return `
+    <div class="sp-card${cardClass}" id="sp-card-${ev.id}">
+      <div class="sp-card-top">
+        <div class="sp-card-emoji">${cardEmoji}</div>
+        <div class="sp-card-info">
+          ${title}
+          <div class="sp-card-food">${ev.food_type || 'Food'}</div>
+          ${bldg}${room}
+          <div class="sp-card-time">${ev.starts_at ? formatEventTime(ev) : 'Posted ' + timeSince(ev.created_at)}</div>
+        </div>
+      </div>
+      ${desc}
+      ${ev.message_id && ev.message_id.startsWith('boilerlink_')
+        ? `<a class="sp-boilerlink" href="https://boilerlink.purdue.edu/event/${ev.message_id.replace('boilerlink_','')}" target="_blank" rel="noopener">View on BoilerLink ↗</a>`
+        : ''}
+      ${ev.rsvp_required && ev.rsvp_link
+        ? `<a class="sp-rsvp-link" href="${ev.rsvp_link}" target="_blank" rel="noopener">📋 RSVP Here ↗</a>`
+        : ''}
+      <div class="sp-badges">${statusBadge}${freeBadge}${rsvpBadge}${sourceBadge}${testBadge}</div>
+      ${warning}
+      ${actions}
+    </div>`;
+}
+
+function panelGoing(eventId) {
+  const ev = _allEvents.find(e => e.id === eventId);
+  if (!ev) return;
+  fetch(`${API_BASE}/events/${eventId}/going`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ user_id: USER_ID }),
+  })
+    .then(r => r.json())
+    .then(d => {
+      ev.going_count = d.going_count;
+      setVote(eventId, 'going', d.active);
+      refreshCard(ev);
+      if (d.active) {
+        toast(`${d.going_count} ${d.going_count === 1 ? 'person' : 'people'} heading there!`);
+      } else {
+        toast("You're no longer marked as going.");
+      }
+    });
+}
+
+function panelGone(eventId) {
+  const ev = _allEvents.find(e => e.id === eventId);
+  if (!ev) return;
+  fetch(`${API_BASE}/events/${eventId}/gone`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ user_id: USER_ID }),
+  })
+    .then(r => r.json())
+    .then(d => {
+      ev.gone_count = d.gone_count;
+      setVote(eventId, 'gone', d.active);
+      refreshCard(ev);
+      if (d.active) {
+        if (d.gone_count >= 2) {
+          toast("Food marked as gone.");
+          loadEvents();
+        } else {
+          toast('Thanks for the report!');
+        }
+      } else {
+        toast("You've removed your report.");
+        loadEvents();
+      }
+    });
+}
+
+function refreshCard(ev) {
+  const card = document.getElementById(`sp-card-${ev.id}`);
+  if (card) card.outerHTML = buildEventCard(ev);
+}
+
+// ── Toast ──
+function toast(msg, ms = 3000) {
+  const el = document.getElementById('toast');
+  el.textContent = msg; el.classList.add('show');
+  clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove('show'), ms);
+}
+
+// ── Food Spotted FAB ──
+let _spotLat = null, _spotLng = null;
+let _spotImageBase64 = null, _spotImageMime = null;
+let _spotBuildingAbbr = null, _spotOutsideBuilding = false;
+let _spotValidated = false;
+
+function detectBuildingAtPoint(screenX, screenY) {
+  // Use Mapbox queryRenderedFeatures for instant hit-testing
+  const canvas = map.getCanvas();
+  const rect = canvas.getBoundingClientRect();
+  const point = [screenX - rect.left, screenY - rect.top];
+
+  // Check if the point lands inside a building polygon
+  const hits = map.queryRenderedFeatures(point, { layers: ['buildings-fill'] });
+  if (hits.length > 0) {
+    const props = hits[0].properties;
+    return { abbr: props.abbr, name: props.full_name, inside: true };
+  }
+
+  // Check a 50px radius for nearby buildings ("outside" detection)
+  const pad = 50;
+  const bbox = [[point[0] - pad, point[1] - pad], [point[0] + pad, point[1] + pad]];
+  const nearby = map.queryRenderedFeatures(bbox, { layers: ['buildings-fill'] });
+  if (nearby.length > 0) {
+    // Pick the closest one by center distance
+    const lnglat = map.unproject(point);
+    let best = null, bestDist = Infinity;
+    for (const f of nearby) {
+      const bLat = allBuildings.find(b => b.abbr === f.properties.abbr)?.lat;
+      const bLng = allBuildings.find(b => b.abbr === f.properties.abbr)?.lng;
+      if (bLat == null) continue;
+      const d = Math.hypot(bLat - lnglat.lat, bLng - lnglat.lng);
+      if (d < bestDist) { bestDist = d; best = f.properties; }
+    }
+    if (best) return { abbr: best.abbr, name: best.full_name, inside: false };
+  }
+  return null;
+}
+
+const _fab   = document.getElementById('spot-fab');
+const _ghost = document.getElementById('spot-drop-ghost');
+
+_fab.addEventListener('mousedown', e => {
+  e.preventDefault();
+  let dragging = false;
+  const startX = e.clientX, startY = e.clientY;
+
+  function onMove(ev) {
+    const dx = ev.clientX - startX, dy = ev.clientY - startY;
+    if (!dragging && Math.sqrt(dx*dx + dy*dy) > 6) {
+      dragging = true;
+      _fab.classList.add('dragging');
+      _ghost.style.display = 'block';
+    }
+    if (dragging) {
+      _ghost.style.left = ev.clientX + 'px';
+      _ghost.style.top  = ev.clientY  + 'px';
+    }
+  }
+
+  function onUp(ev) {
+    document.removeEventListener('mousemove', onMove);
+    document.removeEventListener('mouseup',   onUp);
+    _fab.classList.remove('dragging');
+    _ghost.style.display = 'none';
+
+    if (dragging) {
+      const canvas = map.getCanvas();
+      const rect   = canvas.getBoundingClientRect();
+      const lnglat = map.unproject([ev.clientX - rect.left, ev.clientY - rect.top]);
+      _spotLat = lnglat.lat;
+      _spotLng = lnglat.lng;
+
+      const bldg = detectBuildingAtPoint(ev.clientX, ev.clientY);
+      if (bldg) {
+        _spotBuildingAbbr = bldg.abbr;
+        _spotOutsideBuilding = !bldg.inside;
+        const label = bldg.inside ? bldg.name : `Outside ${bldg.name}`;
+        openSpotModal(label);
+      } else {
+        _spotBuildingAbbr = null;
+        _spotOutsideBuilding = false;
+        openSpotModal('Pinned location on map');
+      }
+    } else {
+      _spotLat = null;
+      _spotLng = null;
+      _spotBuildingAbbr = null;
+      _spotOutsideBuilding = false;
+      openSpotModal(null);
+    }
+  }
+
+  document.addEventListener('mousemove', onMove);
+  document.addEventListener('mouseup',   onUp);
+});
+
+_fab.addEventListener('touchstart', e => {
+  e.preventDefault();
+  let moved = false;
+
+  function onTMove(ev) {
+    moved = true;
+    const t = ev.touches[0];
+    _ghost.style.display = 'block';
+    _ghost.style.left = t.clientX + 'px';
+    _ghost.style.top  = t.clientY  + 'px';
+  }
+
+  function onTEnd(ev) {
+    _fab.removeEventListener('touchmove', onTMove);
+    _fab.removeEventListener('touchend',  onTEnd);
+    _ghost.style.display = 'none';
+
+    if (moved) {
+      const t = ev.changedTouches[0];
+      const canvas = map.getCanvas();
+      const rect   = canvas.getBoundingClientRect();
+      const lnglat = map.unproject([t.clientX - rect.left, t.clientY - rect.top]);
+      _spotLat = lnglat.lat;
+      _spotLng = lnglat.lng;
+
+      const bldg = detectBuildingAtPoint(t.clientX, t.clientY);
+      if (bldg) {
+        _spotBuildingAbbr = bldg.abbr;
+        _spotOutsideBuilding = !bldg.inside;
+        const label = bldg.inside ? bldg.name : `Outside ${bldg.name}`;
+        openSpotModal(label);
+      } else {
+        _spotBuildingAbbr = null;
+        _spotOutsideBuilding = false;
+        openSpotModal('Pinned location on map');
+      }
+    } else {
+      _spotLat = null;
+      _spotLng = null;
+      _spotBuildingAbbr = null;
+      _spotOutsideBuilding = false;
+      openSpotModal(null);
+    }
+  }
+
+  _fab.addEventListener('touchmove', onTMove, { passive: false });
+  _fab.addEventListener('touchend',  onTEnd);
+}, { passive: false });
+
+function openSpotModal(locHintText) {
+  dismissOverlays();
+  _validationCache = null;
+  document.getElementById('spot-text').value = '';
+  document.getElementById('spot-highlighted').style.display = 'none';
+
+  _spotValidated = false;
+  document.getElementById('spot-image-preview').style.display = 'none';
+  document.getElementById('spot-image-preview').textContent = '';
+  document.getElementById('spot-image-input').value = '';
+  _spotImageBase64 = null;
+  _spotImageMime   = null;
+
+  const locHintEl = document.getElementById('spot-loc-hint');
+  if (locHintText) {
+    locHintEl.textContent = '📍 ' + locHintText;
+    locHintEl.style.display = '';
+  } else {
+    locHintEl.style.display = '';
+
+    // Reuse a lat/lng by projecting back to the map canvas and running the same
+    // building hit-test as the drag-and-drop path, so the hint and the submitted
+    // pin reflect "Inside X" / "Outside X" exactly like dragging would.
+    const applyBldgHint = (lat, lng) => {
+      const p = map.project([lng, lat]);
+      const rect = map.getCanvas().getBoundingClientRect();
+      const bldg = detectBuildingAtPoint(p.x + rect.left, p.y + rect.top);
+      if (bldg) {
+        _spotBuildingAbbr = bldg.abbr;
+        _spotOutsideBuilding = !bldg.inside;
+        locHintEl.textContent = '📍 ' + (bldg.inside ? bldg.name : `Outside ${bldg.name}`);
+      } else {
+        _spotBuildingAbbr = null;
+        _spotOutsideBuilding = false;
+        locHintEl.textContent = '📍 Using your current location';
+      }
+    };
+
+    if (_userLat != null && _userLng != null) {
+      // Mapbox GeolocateControl is already watching at high accuracy — reuse
+      // that fix. It's the only location source we trust.
+      _spotLat = _userLat;
+      _spotLng = _userLng;
+      applyBldgHint(_userLat, _userLng);
+    } else {
+      _spotLat = null;
+      _spotLng = null;
+      _spotBuildingAbbr = null;
+      _spotOutsideBuilding = false;
+      locHintEl.textContent = '📍 Tap the locate button on the map first, or drag the 🍕 to drop a pin';
+    }
+  }
+
+  document.getElementById('spot-overlay').classList.add('show');
+  setTimeout(() => document.getElementById('spot-text').focus(), 250);
+}
+
+function closeSpotModal() {
+  document.getElementById('spot-overlay').classList.remove('show');
+  document.getElementById('spot-highlighted').style.display = 'none';
+  document.getElementById('spot-loc-picker').style.display = 'none';
+  document.getElementById('spot-loc-picker-btns').innerHTML = '';
+}
+
+document.getElementById('spot-overlay').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeSpotModal();
+});
+
+document.getElementById('spot-image-input').addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    const dataUrl = ev.target.result;
+    const commaIdx = dataUrl.indexOf(',');
+    _spotImageBase64 = dataUrl.slice(commaIdx + 1);
+    _spotImageMime   = file.type || 'image/jpeg';
+    const preview = document.getElementById('spot-image-preview');
+    preview.textContent = `📎 ${file.name}`;
+    preview.style.display = '';
+  };
+  reader.readAsDataURL(file);
+});
+
+const FIELD_COLORS = {
+  name: { label: 'Event Name', cls: 'hl-name', emoji: '📌' },
+  location: { label: 'Location', cls: 'hl-location', emoji: '📍' },
+  foodType: { label: 'Food Type', cls: 'hl-foodType', emoji: '🍽' },
+  time: { label: 'Time', cls: 'hl-time', emoji: '🕐' },
+};
+
+function _showHighlights(text, fields) {
+  let highlighted = text;
+  const spans = [];
+  for (const [key, info] of Object.entries(FIELD_COLORS)) {
+    const f = fields[key];
+    if (f && f.found && f.span) {
+      spans.push({ span: f.span, cls: info.cls });
+    }
+  }
+  spans.sort((a, b) => b.span.length - a.span.length);
+  for (const s of spans) {
+    const escaped = s.span.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    highlighted = highlighted.replace(new RegExp(escaped, 'i'), m => `<span class="${s.cls}">${m}</span>`);
+  }
+  const hlDiv = document.getElementById('spot-highlighted');
+  hlDiv.innerHTML = highlighted;
+  hlDiv.style.display = 'block';
+  _spotValidated = true;
+}
+
+function _clearHighlights() {
+  document.getElementById('spot-highlighted').style.display = 'none';
+
+  document.querySelectorAll('.hint-missing').forEach(el => el.classList.remove('hint-missing'));
+  _spotValidated = false;
+  document.getElementById('spot-text').focus();
+}
+
+// Click on the highlight overlay to dismiss and edit
+document.getElementById('spot-highlighted').addEventListener('click', _clearHighlights);
+
+// Typing in the textarea clears validation state
+document.getElementById('spot-text').addEventListener('input', () => {
+  if (_spotValidated) _clearHighlights();
+});
+
+function _currentTimeString() {
+  const now = new Date();
+  let h = now.getHours(), m = now.getMinutes();
+  const ampm = h >= 12 ? 'pm' : 'am';
+  h = h % 12 || 12;
+  return `${h}:${m.toString().padStart(2, '0')}${ampm}`;
+}
+
+let _forceBuildingAbbr = null; // set after user picks from ambiguity UI
+let _validationCache = null;   // { text, result } — avoid re-calling Gemini for same input
+
+async function submitSpot(forceBuildingAbbr = null) {
+  const ta = document.getElementById('spot-text');
+  const text = ta.value.trim();
+  if (!text && !_spotImageBase64) {
+    toast('Please describe the food or attach a photo.');
+    return;
+  }
+
+  const btn = document.getElementById('spot-submit');
+  btn.disabled = true;
+  btn.textContent = 'Validating…';
+
+  try {
+    // Step 1: Validate — use cached result if text hasn't changed
+    let valData;
+    if (_validationCache && _validationCache.text === text) {
+      valData = _validationCache.result;
+    } else {
+      const valRes = await fetch(`${API_BASE}/events/validate`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text }),
+      });
+      valData = await valRes.json();
+      if (!valRes.ok) { toast(valData.detail || 'Validation failed.'); return; }
+      _validationCache = { text, result: valData };
+    }
+
+    const fields = valData.fields || {};
+    let autoFilled = false;
+
+    // Auto-fill missing time
+    if (!fields.time || !fields.time.found) {
+      const timeStr = _currentTimeString();
+      const timeSuffix = `(starting now, ${timeStr})`;
+      ta.value = ta.value.trimEnd() + ' ' + timeSuffix;
+      fields.time = { found: true, value: timeStr, span: timeSuffix };
+      autoFilled = true;
+    }
+
+    // Auto-fill missing location from pin
+    const hasPin = _spotLat !== null && _spotLng !== null;
+    if ((!fields.location || !fields.location.found) && hasPin) {
+      const pinLabel = _spotBuildingAbbr
+        ? (_spotOutsideBuilding ? `Outside ${_spotBuildingAbbr}` : _spotBuildingAbbr)
+        : 'pin location';
+      const locSuffix = `(at ${pinLabel})`;
+      ta.value = ta.value.trimEnd() + ' ' + locSuffix;
+      fields.location = { found: true, value: pinLabel, span: locSuffix };
+      autoFilled = true;
+    }
+
+    // Check which fields are found and highlight missing ones in the hint text
+    let allFound = true;
+    for (const key of Object.keys(FIELD_COLORS)) {
+      const f = fields[key];
+      const found = f && f.found;
+      if (!found) allFound = false;
+      const hintEl = document.querySelector(`.hint-${key}`);
+      if (hintEl) hintEl.classList.toggle('hint-missing', !found);
+    }
+
+    const sugEl = document.getElementById('spot-suggestion');
+
+    if (!allFound) {
+      sugEl.textContent = valData.suggestion || 'Please add the missing details and try again.';
+      _showHighlights(ta.value.trim(), fields);
+      return;
+    }
+
+    // All fields found — show highlights
+    sugEl.textContent = '';
+    _showHighlights(ta.value.trim(), fields);
+
+    // If we auto-filled, pause 2s so user sees the additions before submitting
+    if (autoFilled) {
+      btn.textContent = 'Submitting…';
+      await new Promise(r => setTimeout(r, 2000));
+    } else {
+      btn.textContent = 'Submitting…';
+    }
+
+    // Submit
+    const body = { text: ta.value.trim() };
+    if (_spotImageBase64) { body.image_base64 = _spotImageBase64; body.image_mime = _spotImageMime; }
+    if (_spotLat !== null) { body.lat = _spotLat; body.lng = _spotLng; }
+    if (_spotBuildingAbbr) { body.building_abbr = _spotBuildingAbbr; body.outside_building = _spotOutsideBuilding; }
+    if (forceBuildingAbbr) { body.force_building_abbr = forceBuildingAbbr; }
+    body.is_testing = document.getElementById('devMode').checked;
+
+    const res = await fetch(`${API_BASE}/events/submit`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    const data = await res.json();
+    if (!res.ok) {
+      toast(data.detail || 'Submission failed — try again.');
+    } else if (data.status === 'ambiguous') {
+      // Show location picker — don't close modal
+      _showLocationPicker(data.candidates);
+      btn.disabled = false;
+      btn.textContent = 'Submit';
+      return;
+    } else {
+      closeSpotModal();
+      toast(`Got it! ${data.foodType || 'Food event'} added.`);
+      await loadEvents();
+      // Pan map to the event location
+      const lat = data.lat, lng = data.lng;
+      if (lat && lng) {
+        map.flyTo({ center: [lng, lat], zoom: 17, speed: 1.2, curve: 1.4, essential: true });
+      }
+    }
+  } catch {
+    toast('Network error — please try again.');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Submit';
+  }
+}
+
+function _showLocationPicker(candidates) {
+  const picker  = document.getElementById('spot-loc-picker');
+  const btnWrap = document.getElementById('spot-loc-picker-btns');
+  picker.style.display = 'block';
+  btnWrap.innerHTML = candidates.map(c => `
+    <button class="loc-pick-btn" onclick="_pickLocation('${c.abbr}')">
+      🏛 ${c.full_name}
+      <span class="loc-pick-score">${Math.round(c.score * 100)}% match</span>
+    </button>
+  `).join('') + `
+    <button class="loc-pick-btn" onclick="_pickLocation(null)" style="color:var(--text-muted)">
+      ❓ None of these / Unknown location
+    </button>`;
+  // Scroll to the picker
+  picker.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+async function _pickLocation(abbr) {
+  document.getElementById('spot-loc-picker').style.display = 'none';
+  await submitSpot(abbr);
+}
+
+// ── Helpers ──
+function parseDate(iso) {
+  if (!iso) return new Date(NaN);
+  // Handle both "2026-04-07 05:11:20" (sqlite, treat as UTC) and "2026-04-08T14:00:00+00:00" (ISO)
+  if (iso.includes('+') || iso.includes('Z') || iso.endsWith('-00:00')) return new Date(iso);
+  return new Date(iso.replace(' ', 'T') + 'Z');
+}
+
+function timeSince(iso) {
+  const m = Math.floor((Date.now() - parseDate(iso)) / 60000);
+  if (m < 1)  return 'just now';
+  if (m < 60) return `${m}m ago`;
+  return `${Math.floor(m/60)}h ${m%60}m ago`;
+}
+function foodEmoji(t) {
+  if (!t) return '🍴';
+  t = t.toLowerCase();
+  if (t.includes('pizza'))   return '🍕';
+  if (t.includes('taco'))    return '🌮';
+  if (t.includes('burger'))  return '🍔';
+  if (t.includes('chick-fil') || t.includes('chickfila')) return '🍗';
+  if (t.includes('chicken')) return '🍗';
+  if (t.includes('bak') || t.includes('cake') || t.includes('dessert')) return '🎂';
+  if (t.includes('coffee'))  return '☕';
+  if (t.includes('sub') || t.includes('sandwich')) return '🥪';
+  if (t.includes('soda') || t.includes('drink'))   return '🥤';
+  if (t.includes('salad'))   return '🥗';
+  return '🍽';
+}
+
+// ── Location open/closed checker ──
+function isLocationOpen(hours) {
+  if (!hours) return false;
+  if (hours.toLowerCase().includes('24 hour')) return true;
+  if (hours.toLowerCase().includes('check ')) return false;
+
+  const now = new Date();
+  const currentDay = now.getDay(); // 0=Sun,1=Mon,...6=Sat
+  const currentMin = now.getHours() * 60 + now.getMinutes();
+
+  const DAY_MAP = { sun:0, mon:1, tue:2, wed:3, thu:4, fri:5, sat:6 };
+
+  // Parse time like "12:00 PM", "6 PM", "11:30 AM", "5 PM"
+  function parseTime(s) {
+    s = s.trim();
+    const m = s.match(/^(\d{1,2})(?::(\d{2}))?\s*(AM|PM)$/i);
+    if (!m) return null;
+    let h = parseInt(m[1]);
+    const min = m[2] ? parseInt(m[2]) : 0;
+    const ampm = m[3].toUpperCase();
+    if (ampm === 'PM' && h !== 12) h += 12;
+    if (ampm === 'AM' && h === 12) h = 0;
+    return h * 60 + min;
+  }
+
+  // Split by comma for multiple schedule blocks (e.g. "Tue 12–6 PM, Sun 5–8 PM")
+  const blocks = hours.split(',');
+  for (const block of blocks) {
+    const b = block.trim();
+
+    // Try pattern with day prefix: "Mon–Fri 8 AM–5 PM", "Tue & Thu 11:30 AM–1:30 PM"
+    let m = b.match(/^([A-Za-z &–\-]+?)\s+(\d{1,2}(?::\d{2})?\s*(?:AM|PM))\s*[–\-]\s*(\d{1,2}(?::\d{2})?\s*(?:AM|PM))$/i);
+    // Also try time-only pattern: "10:30 AM–8 PM" (treat as every day)
+    let dayPart = null;
+    if (!m) {
+      m = b.match(/^(\d{1,2}(?::\d{2})?\s*(?:AM|PM))\s*[–\-]\s*(\d{1,2}(?::\d{2})?\s*(?:AM|PM))$/i);
+      if (!m) continue;
+      // Shift captures: m[1]=start, m[2]=end (no day part)
+      m = [null, null, m[1], m[2]];
+      dayPart = 'every';
+    }
+
+    if (!dayPart) dayPart = m[1].trim().toLowerCase();
+    const startTime = parseTime(m[2]);
+    const endTime = parseTime(m[3]);
+    if (startTime === null || endTime === null) continue;
+
+    // Resolve which days this covers
+    let days = [];
+    if (dayPart === 'every') {
+      days = [0,1,2,3,4,5,6];
+    } else
+    if (dayPart.includes('–') || dayPart.includes('-')) {
+      // Range: "Mon–Fri", "Mon-Sat"
+      const parts = dayPart.split(/[–\-]/).map(d => d.trim().slice(0,3));
+      const from = DAY_MAP[parts[0]];
+      const to = DAY_MAP[parts[1]];
+      if (from !== undefined && to !== undefined) {
+        for (let d = from; d !== (to + 1) % 7; d = (d + 1) % 7) days.push(d);
+        days.push(to);
+        days = [...new Set(days)];
+      }
+    } else if (dayPart.includes('&')) {
+      // List: "Tue & Thu"
+      dayPart.split('&').forEach(d => {
+        const key = d.trim().slice(0,3);
+        if (DAY_MAP[key] !== undefined) days.push(DAY_MAP[key]);
+      });
+    } else {
+      // Single day: "Mon", "Tue"
+      const key = dayPart.slice(0,3);
+      if (DAY_MAP[key] !== undefined) days.push(DAY_MAP[key]);
+    }
+
+    // Handle end time of midnight (12 AM = 0) meaning end of day
+    const effectiveEnd = endTime === 0 ? 1440 : endTime;
+    if (days.includes(currentDay) && currentMin >= startTime && currentMin < effectiveEnd) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function formatEventTime(ev) {
+  const start = parseDate(ev.starts_at);
+  const end = ev.expires_at ? parseDate(ev.expires_at) : null;
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const evDay = new Date(start.getFullYear(), start.getMonth(), start.getDate());
+  const diffDays = Math.round((evDay - today) / 86400000);
+
+  const timeOpts = { hour: 'numeric', minute: '2-digit' };
+  const startStr = start.toLocaleTimeString([], timeOpts);
+  const endStr = end ? ' – ' + end.toLocaleTimeString([], timeOpts) : '';
+
+  if (diffDays === 0) return `Today ${startStr}${endStr}`;
+  if (diffDays === 1) return `Tomorrow ${startStr}${endStr}`;
+  if (diffDays === -1) return `Yesterday ${startStr}${endStr}`;
+  const dateStr = start.toLocaleDateString([], { month: 'short', day: 'numeric' });
+  return `${dateStr} ${startStr}${endStr}`;
+}
+
+function isUpcoming(ev) {
+  if (!ev.starts_at) return false;
+  return parseDate(ev.starts_at) > new Date();
+}
+
+function formatStartTime(iso) {
+  if (!iso) return '';
+  const d = parseDate(iso);
+  const now = new Date();
+  const diffMs = d - now;
+  const diffMin = Math.round(diffMs / 60000);
+  const timeStr = d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+  if (diffMin < 60) return `in ${diffMin}m (${timeStr})`;
+  if (diffMin < 1440) return `in ${Math.floor(diffMin / 60)}h ${diffMin % 60}m (${timeStr})`;
+  return timeStr;
+}
+
+// ── State ──
+let map;
+let foodMarkers    = [];
+let diningMarkers  = [];
+let pantryMarkers  = [];
+let marketMarkers  = [];
+let otgMarkers     = [];
+let pmuMarker      = null;
+let allBuildings   = [];
+// _allEvents is declared in the panel section above
+
+function renderMapPins() {
+  const isReallyActive = e => e.is_active && (e.gone_count || 0) < 2;
+  const now = new Date();
+  let events;
+
+  if (_panelFilter === 'today') {
+    // Active events starting within the next 24 hours
+    const next24h = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+    events = _allEvents.filter(e => {
+      if (!isReallyActive(e) || !e.lat || !e.lng) return false;
+      if (e.starts_at) {
+        const start = parseDate(e.starts_at);
+        if (start >= next24h) return false;
+      }
+      return true;
+    });
+  } else {
+    // Next 3 Days — tomorrow through 3 days out
+    // 24h to 72h from now
+    const after24h = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+    const after72h = new Date(now.getTime() + 72 * 60 * 60 * 1000);
+    events = _allEvents.filter(e => {
+      if (!e.starts_at || !e.lat || !e.lng) return false;
+      const start = parseDate(e.starts_at);
+      return start >= after24h && start <= after72h;
+    });
+  }
+
+  const dietFilters = getActiveDietFilters();
+  if (dietFilters.length) events = events.filter(e => eventMatchesDiet(e, dietFilters));
+
+  foodMarkers.forEach(m => m.remove());
+  foodMarkers = [];
+
+  const groups = new Map();
+  events.forEach(ev => {
+    const key = ev.building_abbr || ev.building || `${ev.lat},${ev.lng}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(ev);
+  });
+
+  let markerIndex = 0;
+  groups.forEach((evs, key) => {
+    const sorted = [...evs].sort((a, b) => eventSortScore(a) - eventSortScore(b));
+    const rep    = sorted[0];
+    const count  = evs.length;
+    const active = rep.is_active && (rep.gone_count || 0) < 2;
+    const upcoming = isUpcoming(rep);
+    const isFree = rep.is_free === undefined ? true : !!rep.is_free;
+    const i      = markerIndex++;
+
+    const outer = document.createElement('div');
+    let markerClass = 'food-marker';
+    if (upcoming) markerClass += ' upcoming';
+    else if (!active) markerClass += ' expired';
+    if (!isFree) markerClass += ' paid';
+    outer.className = markerClass;
+
+    const inner = document.createElement('div');
+    inner.className = 'm-inner';
+    inner.style.animation = `markerDrop .45s cubic-bezier(.34,1.56,.64,1) ${i * .12}s both`;
+
+    if (active || upcoming) {
+      const ring = document.createElement('div');
+      ring.className = 'm-ring';
+      ring.style.animationDelay = `${i * .3}s`;
+      inner.appendChild(ring);
+    }
+
+    const allEmojis = [...new Set(evs.map(e => foodEmoji(e.food_type)))];
+    const emoji = document.createElement('span');
+    emoji.className = 'm-emoji';
+    emoji.textContent = allEmojis.join('');
+
+    const dot = document.createElement('div');
+    dot.className = 'm-dot';
+
+    inner.appendChild(emoji);
+    inner.appendChild(dot);
+
+    if (count >= 2) {
+      const badge = document.createElement('div');
+      badge.className = 'm-count';
+      badge.textContent = count;
+      inner.appendChild(badge);
+    }
+
+    outer.appendChild(inner);
+
+    outer.addEventListener('click', e => {
+      e.stopPropagation();
+      const bldgEvents = _allEvents.filter(e2 =>
+        (rep.building_abbr && e2.building_abbr === rep.building_abbr) ||
+        (!rep.building_abbr && e2.building === rep.building)
+      );
+      bldgEvents.sort((a, b) => eventSortScore(a) - eventSortScore(b));
+      openPanel(rep.building, rep.building_abbr, bldgEvents);
+    });
+
+    const marker = new mapboxgl.Marker({ element: outer, anchor: 'center' })
+      .setLngLat([rep.lng, rep.lat])
+      .addTo(map);
+    foodMarkers.push(marker);
+  });
+}
+
+// ── Load buildings ──
+async function loadBuildings() {
+  await applyBuildingFilter();
+}
+
+async function applyBuildingFilter() {
+  const keyOnly = false;
+  // map_only=true always: only show ArcGIS campus footprints (show_on_map=1), never Google Places pins
+  const params = new URLSearchParams({ map_only: 'true', key_only: keyOnly });
+  try {
+    const res = await fetch(`${API_BASE}/buildings?${params}`);
+    if (!res.ok) throw new Error(res.status);
+    allBuildings = await res.json();
+    renderBuildings(allBuildings);
+  } catch (err) {
+    console.warn('Buildings unavailable:', err);
+  }
+}
+
+function renderBuildings(buildings) {
+  // Remove old dining markers
+  diningMarkers.forEach(m => m.remove());
+  diningMarkers = [];
+
+  const features = buildings
+    .filter(b => b.polygon && b.polygon.length && b.polygon[0].length)
+    .map(b => {
+      const st = bldgStyle(b.abbr);
+      return {
+        type: 'Feature',
+        geometry: { type: 'Polygon', coordinates: b.polygon },
+        properties: {
+          abbr: b.abbr, full_name: b.full_name,
+          fillColor: st.f, strokeColor: st.s,
+          isDining: !!DINING_COURTS[b.abbr],
+        },
+      };
+    });
+
+  const geojson = { type: 'FeatureCollection', features };
+
+  if (map.getSource('buildings')) {
+    map.getSource('buildings').setData(geojson);
+  } else {
+    map.addSource('buildings', { type: 'geojson', data: geojson });
+    map.addLayer({
+      id: 'buildings-fill', type: 'fill', source: 'buildings',
+      paint: { 'fill-color': ['get', 'fillColor'], 'fill-opacity': 0.82 },
+    });
+    map.addLayer({
+      id: 'buildings-line', type: 'line', source: 'buildings',
+      paint: { 'line-color': ['get', 'strokeColor'], 'line-width': 0.8, 'line-opacity': 0.9 },
+    });
+
+    map.on('mousemove', 'buildings-fill', e => {
+      map.getCanvas().style.cursor = e.features[0].properties.isDining ? 'pointer' : '';
+      showBldgTip(e.originalEvent, e.features[0].properties);
+    });
+    map.on('mouseleave', 'buildings-fill', () => {
+      map.getCanvas().style.cursor = '';
+      hideTip();
+    });
+    map.on('click', 'buildings-fill', e => {
+      if (e.features[0].properties.isDining) {
+        hideTip();
+        openDiningModal(e.features[0].properties.abbr);
+      }
+    });
+  }
+
+  // Add unified location markers (dining, OTG, markets, pantries, PMU)
+  diningMarkers.forEach(m => m.remove());  diningMarkers = [];
+  pantryMarkers.forEach(m => m.remove());  pantryMarkers = [];
+  marketMarkers.forEach(m => m.remove());  marketMarkers = [];
+  otgMarkers.forEach(m => m.remove());     otgMarkers = [];
+  if (pmuMarker) { pmuMarker.remove(); pmuMarker = null; }
+
+  const locGroups = buildLocationGroups();
+  locGroups.forEach(group => {
+    const emojis = [...new Set(group.services.map(s => s.emoji))].join('');
+    const anyOpen = group.services.some(s => s.open === true || s.open === undefined);
+    // Pick marker style based on primary service
+    const primary = group.services[0].type;
+    const el = document.createElement('div');
+    let pinClass, pinInner, stemClass;
+    if (primary === 'dining')  { pinClass = 'dining-marker'; pinInner = `<div class="dm-pin">${emojis}</div><div class="dm-stem"></div>`; }
+    else if (primary === 'pantry') { pinClass = 'pantry-marker'; pinInner = `<div class="pm-pin">${emojis}</div><div class="pm-stem"></div>`; }
+    else if (primary === 'pmu')    { pinClass = 'pmu-marker'; pinInner = `<div class="pmu-pin">${emojis}</div><div class="pmu-stem"></div>`; }
+    else                           { pinClass = 'market-marker'; pinInner = `<div class="mk-pin">${emojis}</div><div class="mk-stem"></div>`; }
+
+    el.className = pinClass + (anyOpen ? '' : ' all-closed');
+    el.innerHTML = pinInner;
+
+    // Tooltip
+    el.addEventListener('mouseenter', e => {
+      const labels = group.services.map(s => s.label).join(' · ');
+      ttBldg.textContent = group.name;
+      ttSub.textContent  = labels.length > 60 ? labels.slice(0,57) + '…' : labels;
+      ttHint.textContent = 'Click for details';
+      tip.classList.add('show');
+      moveTip(e);
+    });
+    el.addEventListener('mousemove', moveTip);
+    el.addEventListener('mouseleave', hideTip);
+    el.addEventListener('click', e => { e.stopPropagation(); hideTip(); openLocationPanel(group); });
+
+    const marker = new mapboxgl.Marker({ element: el, anchor: 'bottom' })
+      .setLngLat([group.lng, group.lat])
+      .addTo(map);
+    diningMarkers.push(marker); // reuse array for cleanup
+  });
+}
+
+// ── Unified building services ──
+// Map approximate lat/lng to a group key for co-located services
+function _locKey(lat, lng) { return `${lat.toFixed(3)},${lng.toFixed(3)}`; }
+
+function buildLocationGroups() {
+  const groups = new Map(); // key -> { name, lat, lng, services: [{type, data, open}] }
+
+  // Dining courts
+  allBuildings.forEach(b => {
+    if (!DINING_COURTS[b.abbr] || !b.lat || !b.lng) return;
+    const key = _locKey(b.lat, b.lng);
+    if (!groups.has(key)) groups.set(key, { name: b.full_name || b.abbr, lat: b.lat, lng: b.lng, services: [] });
+    groups.get(key).services.push({ type: 'dining', data: b, emoji: '🍽', label: DINING_COURTS[b.abbr] + ' Dining Court' });
+  });
+
+  // On-the-GO
+  ON_THE_GO.forEach(otg => {
+    const key = _locKey(otg.lat, otg.lng);
+    if (!groups.has(key)) groups.set(key, { name: otg.name, lat: otg.lat, lng: otg.lng, services: [] });
+    const g = groups.get(key);
+    g.services.push({ type: 'otg', data: otg, emoji: '🏪', label: otg.name, open: isLocationOpen(otg.hours) });
+  });
+
+  // Boilermaker Markets
+  BOILER_MARKETS.forEach(bm => {
+    const key = _locKey(bm.lat, bm.lng);
+    if (!groups.has(key)) groups.set(key, { name: bm.name, lat: bm.lat, lng: bm.lng, services: [] });
+    const g = groups.get(key);
+    g.services.push({ type: 'market', data: bm, emoji: '🏪', label: bm.name, open: isLocationOpen(bm.hours) });
+  });
+
+  // ACE Pantries
+  FOOD_PANTRIES.forEach(p => {
+    const key = _locKey(p.lat, p.lng);
+    if (!groups.has(key)) groups.set(key, { name: p.name, lat: p.lat, lng: p.lng, services: [] });
+    const g = groups.get(key);
+    g.services.push({ type: 'pantry', data: p, emoji: '🥫', label: p.name, open: isLocationOpen(p.hours) });
+  });
+
+  // PMU Restaurants
+  const pmuKey = _locKey(PMU_LAT, PMU_LNG);
+  if (!groups.has(pmuKey)) groups.set(pmuKey, { name: 'Purdue Memorial Union', lat: PMU_LAT, lng: PMU_LNG, services: [] });
+  const pmuOpen = PMU_RESTAURANTS.some(r => isLocationOpen(r.hours));
+  groups.get(pmuKey).services.push({ type: 'pmu', data: PMU_RESTAURANTS, emoji: '🍴', label: 'Atlas Family Marketplace', open: pmuOpen });
+
+  return groups;
+}
+
+function openLocationPanel(group) {
+  dismissOverlays();
+  const panelBody = document.getElementById('sp-body');
+  const titleEl   = document.getElementById('sp-bldg-name');
+  const abbrEl    = document.getElementById('sp-bldg-abbr');
+  const iconEl    = document.getElementById('sp-bldg-icon');
+  const backBtn   = document.getElementById('sp-back');
+
+  const emojis = [...new Set(group.services.map(s => s.emoji))].join('');
+  iconEl.textContent  = emojis;
+  titleEl.textContent = group.name;
+  abbrEl.textContent  = '';
+  abbrEl.style.display = 'none';
+  backBtn.style.display = 'inline-block';
+
+  let html = '';
+  for (const svc of group.services) {
+    const open = svc.open;
+    const statusBadge = open === undefined ? '' :
+      `<span class="sp-status-badge ${open ? 'open' : 'closed'}">${open ? 'Open now' : 'Closed'}</span>`;
+
+    if (svc.type === 'dining') {
+      const cardId = `dining-preview-${svc.data.abbr}`;
+      html += `
+        <div class="sp-card" style="border-left:3px solid var(--dining-border);cursor:pointer" onclick="openDiningModal('${svc.data.abbr}')">
+          <div class="sp-card-top">
+            <span style="font-size:1.3rem">🍽</span>
+            <div>
+              <div style="font-weight:700;color:var(--text-primary)">${svc.label}${statusBadge}</div>
+              <div id="${cardId}" style="font-size:.78rem;color:var(--text-muted)">Loading menu…</div>
+            </div>
+          </div>
+          <div id="${cardId}-items" class="dining-preview-items"></div>
+          <div style="font-size:.7rem;color:var(--text-muted);margin-top:4px">Tap for full menu</div>
+        </div>`;
+      // Fetch menu preview asynchronously
+      fetchDiningPreview(svc.data.abbr, cardId);
+    } else if (svc.type === 'otg') {
+      html += `
+        <div class="sp-card" style="border-left:3px solid #e67e22;cursor:pointer" onclick="openOtgModal('${svc.data.abbr}')">
+          <div class="sp-card-top">
+            <span style="font-size:1.3rem">🏪</span>
+            <div>
+              <div style="font-weight:700;color:var(--text-primary)">${svc.label}${statusBadge}</div>
+              <div style="font-size:.78rem;color:var(--text-muted)">${svc.data.hours}</div>
+              <div style="font-size:.78rem;color:var(--text-muted)">Click to see today's menu</div>
+            </div>
+          </div>
+        </div>`;
+    } else if (svc.type === 'market') {
+      html += `
+        <div class="sp-card" style="border-left:3px solid #e67e22">
+          <div class="sp-card-top">
+            <span style="font-size:1.3rem">🏪</span>
+            <div>
+              <div style="font-weight:700;color:var(--text-primary)">${svc.label}${statusBadge}</div>
+              <div style="font-size:.82rem;color:var(--text-secondary)">${svc.data.location}</div>
+            </div>
+          </div>
+          <div style="margin-top:6px;font-size:.84rem;color:var(--text-body)">${svc.data.description}</div>
+          <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap">
+            <span class="sp-badge" style="background:#fdebd0;color:#7e5109">🕐 ${svc.data.hours}</span>
+            <span class="sp-badge" style="background:#fdebd0;color:#7e5109">💳 Dining Dollars & BoilerExpress</span>
+          </div>
+        </div>`;
+    } else if (svc.type === 'pantry') {
+      html += `
+        <div class="sp-card" style="border-left:3px solid #6aa84f">
+          <div class="sp-card-top">
+            <span style="font-size:1.3rem">🥫</span>
+            <div>
+              <div style="font-weight:700;color:var(--text-primary)">${svc.label}${statusBadge}</div>
+              <div style="font-size:.82rem;color:var(--text-secondary)">${svc.data.location}</div>
+              <div style="font-size:.8rem;color:var(--text-muted)">${svc.data.address}</div>
+            </div>
+          </div>
+          <div style="margin-top:6px;font-size:.84rem;color:var(--text-body)">${svc.data.description}</div>
+          <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap">
+            <span class="sp-badge" style="background:#e8f8d8;color:#2d5016">🕐 ${svc.data.hours}</span>
+            <span class="sp-badge" style="background:#e8f8d8;color:#2d5016">🆓 Free with PUID</span>
+          </div>
+        </div>`;
+    } else if (svc.type === 'pmu') {
+      svc.data.forEach(r => {
+        const rOpen = isLocationOpen(r.hours);
+        const rBadge = `<span class="sp-status-badge ${rOpen ? 'open' : 'closed'}">${rOpen ? 'Open' : 'Closed'}</span>`;
+        html += `
+          <div class="sp-card" style="border-left:3px solid #c0392b">
+            <div class="sp-card-top">
+              <span style="font-size:1.2rem">🍴</span>
+              <div>
+                <div style="font-weight:700;color:var(--text-primary)">${r.name}${rBadge}</div>
+                <div style="font-size:.8rem;color:var(--text-secondary)">${r.type}</div>
+                <div style="font-size:.78rem;color:var(--text-muted)">🕐 ${r.hours}</div>
+              </div>
+            </div>
+          </div>`;
+      });
+    }
+  }
+
+  // Also show any food events at this location
+  const foodHere = _allEvents.filter(e => {
+    if (!e.lat || !e.lng) return false;
+    return _locKey(e.lat, e.lng) === _locKey(group.lat, group.lng);
+  });
+  if (foodHere.length) {
+    html += '<div style="margin-top:10px;font-size:.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em">Food Events</div>';
+    foodHere.forEach(ev => { html += buildEventCard(ev, false); });
+  }
+
+  panelBody.innerHTML = html;
+  _panelMode = 'building';
+  document.getElementById('side-panel').classList.add('open');
+}
+
+function openPmuPanel() {
+  dismissOverlays();
+  const panelBody = document.getElementById('sp-body');
+  const titleEl   = document.getElementById('sp-bldg-name');
+  const abbrEl    = document.getElementById('sp-bldg-abbr');
+  const iconEl    = document.getElementById('sp-bldg-icon');
+  const backBtn   = document.getElementById('sp-back');
+
+  titleEl.textContent = 'PMU Atlas Family Marketplace';
+  abbrEl.textContent  = 'Purdue Memorial Union';
+  iconEl.textContent  = '🍴';
+  backBtn.style.display = 'inline-block';
+
+  let html = '';
+  PMU_RESTAURANTS.forEach(r => {
+    html += `
+      <div class="sp-card" style="border-left:3px solid #c0392b">
+        <div class="sp-card-top">
+          <span style="font-size:1.2rem">🍴</span>
+          <div>
+            <div style="font-weight:700;color:var(--text-primary)">${r.name}</div>
+            <div style="font-size:.8rem;color:var(--text-secondary)">${r.type}</div>
+          </div>
+        </div>
+        <div style="margin-top:4px;display:flex;gap:6px;flex-wrap:wrap">
+          <span class="sp-badge" style="background:#fadbd8;color:#922b21">🕐 ${r.hours}</span>
+        </div>
+      </div>
+    `;
+  });
+  panelBody.innerHTML = html;
+
+  _panelMode = 'building';
+  document.getElementById('side-panel').classList.add('open');
+}
+
+async function openOtgModal(abbr) {
+  dismissOverlays();
+  const overlay = document.getElementById('dining-overlay');
+  const body    = document.getElementById('dining-modal-body');
+  const title   = document.getElementById('dining-modal-title');
+  const dateEl  = document.getElementById('dining-modal-date');
+  const otg = ON_THE_GO.find(o => o.abbr === abbr);
+  title.textContent = otg ? otg.name : abbr;
+  dateEl.textContent = '';
+  body.innerHTML = '<div id="dining-modal-loading">Loading menu…</div>';
+  overlay.classList.add('show');
+
+  try {
+    const res = await fetch(`${API_BASE}/otg/${abbr}`);
+    if (!res.ok) throw new Error('Failed');
+    const data = await res.json();
+    dateEl.textContent = data.date || '';
+    if (!data.meals || data.meals.length === 0) {
+      body.innerHTML = '<p style="color:var(--text-muted);padding:12px">No menu available today.</p>';
+      return;
+    }
+    let html = '';
+    data.meals.forEach(meal => {
+      html += `<div style="margin-bottom:14px">`;
+      html += `<div style="font-weight:700;font-size:.88rem;color:var(--text-primary);margin-bottom:4px">${meal.name}`;
+      if (meal.start && meal.end) html += ` <span style="font-weight:400;font-size:.76rem;color:var(--text-muted)">${meal.start}–${meal.end}</span>`;
+      html += `</div>`;
+      (meal.stations || []).forEach(st => {
+        html += `<div style="font-size:.8rem;font-weight:600;color:var(--text-secondary);margin:6px 0 2px">${st.name}</div>`;
+        (st.items || []).forEach(item => {
+          const veg = item.is_vegetarian ? ' 🌱' : '';
+          html += `<div style="font-size:.78rem;color:var(--text-body);padding:1px 0">${item.name}${veg}</div>`;
+        });
+      });
+      html += `</div>`;
+    });
+    body.innerHTML = html;
+  } catch {
+    body.innerHTML = '<p style="color:var(--text-muted);padding:12px">Could not load menu.</p>';
+  }
+}
+
+function openMarketPanel(bm) {
+  const panelBody = document.getElementById('sp-body');
+  const titleEl   = document.getElementById('sp-bldg-name');
+  const abbrEl    = document.getElementById('sp-bldg-abbr');
+  const iconEl    = document.getElementById('sp-bldg-icon');
+  const backBtn   = document.getElementById('sp-back');
+
+  titleEl.textContent = bm.name;
+  abbrEl.textContent  = bm.location;
+  iconEl.textContent  = '🏪';
+  backBtn.style.display = 'inline-block';
+
+  panelBody.innerHTML = `
+    <div class="sp-card" style="border-left:3px solid #e67e22">
+      <div class="sp-card-top">
+        <span style="font-size:1.6rem">🏪</span>
+        <div>
+          <div style="font-weight:700;color:var(--text-primary)">${bm.name}</div>
+          <div style="font-size:.82rem;color:var(--text-secondary)">${bm.location}</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;font-size:.85rem;color:var(--text-body)">${bm.description}</div>
+      <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap">
+        <span class="sp-badge" style="background:#fdebd0;color:#7e5109">🕐 ${bm.hours}</span>
+        <span class="sp-badge" style="background:#fdebd0;color:#7e5109">💳 Dining Dollars & BoilerExpress accepted</span>
+      </div>
+    </div>
+  `;
+
+  _panelMode = 'building';
+  document.getElementById('side-panel').classList.add('open');
+}
+
+function openPantryPanel(p) {
+  const panelBody = document.getElementById('sp-body');
+  const titleEl   = document.getElementById('sp-bldg-name');
+  const abbrEl    = document.getElementById('sp-bldg-abbr');
+  const iconEl    = document.getElementById('sp-bldg-icon');
+  const backBtn   = document.getElementById('sp-back');
+
+  titleEl.textContent = p.name;
+  abbrEl.textContent  = p.location;
+  iconEl.textContent  = '🥫';
+  backBtn.style.display = 'inline-block';
+
+  panelBody.innerHTML = `
+    <div class="sp-card" style="border-left:3px solid #6aa84f">
+      <div class="sp-card-top">
+        <span style="font-size:1.6rem">🥫</span>
+        <div>
+          <div style="font-weight:700;color:var(--text-primary)">${p.name}</div>
+          <div style="font-size:.82rem;color:var(--text-secondary)">${p.location}</div>
+          <div style="font-size:.8rem;color:var(--text-muted)">${p.address}</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;font-size:.85rem;color:var(--text-body)">${p.description}</div>
+      <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap">
+        <span class="sp-badge" style="background:#e8f8d8;color:#2d5016">🕐 ${p.hours}</span>
+        <span class="sp-badge" style="background:#e8f8d8;color:#2d5016">🆓 Free with PUID</span>
+      </div>
+    </div>
+  `;
+
+  _panelMode = 'building';
+  document.getElementById('side-panel').classList.add('open');
+}
+
+// ── Load food events ──
+async function loadEvents() {
+  let all;
+  try {
+    const devMode = document.getElementById('devMode').checked;
+    const res = await fetch(`${API_BASE}/food_events?include_expired=true&include_testing=${devMode}`);
+    all = await res.json();
+  } catch {
+    toast('Could not reach the server.');
+    document.getElementById('loading').classList.add('gone');
+    return;
+  }
+
+  _allEvents = all;
+
+  // Refresh panel content if in all-events mode (keeps it live on poll interval)
+  if (_panelMode === 'all') renderAllEventsBody();
+
+  const isReallyActive = e => e.is_active && (e.gone_count || 0) < 2;
+  const activeCount = all.filter(isReallyActive).length;
+
+  document.getElementById('event-count').textContent =
+    activeCount > 0 ? `${activeCount} active` : `${all.length} (none active)`;
+
+  renderMapPins();
+
+  if (activeCount > 0) toast(`${activeCount} active food spot${activeCount > 1 ? 's' : ''}!`);
+  else toast('No active events right now.');
+
+  document.getElementById('loading').classList.add('gone');
+}
+
+// ── Init ──
+async function initMap() {
+  mapboxgl.accessToken = 'pk.eyJ1IjoiYWxhbnlpIiwiYSI6ImNtbmlpdWR0YjA0OXIyc3B0bWk5MGNocnIifQ.wYXekbKdMxp--6nGdBZC4Q';
+
+  // ~3 miles around Purdue's center (40.4284, -86.9151)
+  const purdueCenter = [-86.9151, 40.4284];
+  const maxBounds = [
+    [purdueCenter[0] - 0.058, purdueCenter[1] - 0.043], // SW
+    [purdueCenter[0] + 0.058, purdueCenter[1] + 0.043], // NE
+  ];
+
+  map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/alanyi/cmnqen00p001301s8hw3qfoff/draft',
+    center: purdueCenter,
+    zoom: 15.5,
+    maxBounds: maxBounds,
+    attributionControl: false,
+  });
+
+  map.addControl(new mapboxgl.AttributionControl({ compact: true }));
+  map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'bottom-right');
+  const geolocate = new mapboxgl.GeolocateControl({
+    positionOptions: { enableHighAccuracy: true },
+    trackUserLocation: true,
+    showUserHeading: true,
+    showAccuracyCircle: true,
+    fitBoundsOptions: { maxZoom: 15.5 },
+  });
+  map.addControl(geolocate, 'bottom-right');
+  geolocate.on('geolocate', e => {
+    _userLat = e.coords.latitude;
+    _userLng = e.coords.longitude;
+  });
+  geolocate.on('error', e => {
+    console.error('[geolocate] error code:', e.code, 'message:', e.message);
+  });
+  geolocate.on('trackuserlocationstart', () => {
+    console.log('[geolocate] tracking started');
+  });
+  geolocate.on('trackuserlocationend', () => {
+    console.log('[geolocate] tracking ended');
+  });
+
+  // Close side panel when clicking empty map
+  map.on('click', e => {
+    const hit = map.queryRenderedFeatures(e.point, { layers: ['buildings-fill'] });
+    if (!hit.length) closePanel();
+  });
+
+  map.on('load', async () => {
+    await loadBuildings();
+    await loadEvents();
+    openAllEventsPanel();   // show all events by default on page load
+    setInterval(loadEvents, 60_000);
+    // Auto-trigger geolocation after map and data are loaded
+    geolocate.trigger();
+  });
+}
+
+document.getElementById('devMode').addEventListener('change', loadEvents);
+
+// ── Dietary restriction filters ──
+function getActiveDietFilters() {
+  return Array.from(document.querySelectorAll('.diet-cb:checked')).map(cb => cb.value);
+}
+
+function saveDietFilters() {
+  localStorage.setItem('dietFilters', JSON.stringify(getActiveDietFilters()));
+}
+
+function loadDietFilters() {
+  try {
+    const saved = JSON.parse(localStorage.getItem('dietFilters') || '[]');
+    document.querySelectorAll('.diet-cb').forEach(cb => {
+      cb.checked = saved.includes(cb.value);
+    });
+    updateDietBtnState();
+  } catch { /* ignore */ }
+}
+
+function updateDietBtnState() {
+  const active = getActiveDietFilters();
+  const btn = document.getElementById('diet-btn');
+  if (active.length > 0) {
+    btn.classList.add('active');
+    btn.textContent = `🥗 Dietary (${active.length})`;
+  } else {
+    btn.classList.remove('active');
+    btn.textContent = '🥗 Dietary';
+  }
+}
+
+function toggleDietDropdown() {
+  document.getElementById('diet-dropdown').classList.toggle('show');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', e => {
+  const dd = document.getElementById('diet-dropdown');
+  const btn = document.getElementById('diet-btn');
+  if (!dd.contains(e.target) && e.target !== btn) {
+    dd.classList.remove('show');
+  }
+});
+
+// When dietary checkboxes change, save and reload
+document.querySelectorAll('.diet-cb').forEach(cb => {
+  cb.addEventListener('change', () => {
+    saveDietFilters();
+    updateDietBtnState();
+    loadEvents();
+    if (_panelMode === 'all') renderAllEventsBody();
+  });
+});
+
+// Allergen name mapping: filter value -> allergen names in HFS API
+const ALLERGEN_MAP = {
+  'nut-free':    ['Tree Nuts', 'Peanuts'],
+  'dairy-free':  ['Milk'],
+  'soy-free':    ['Soy'],
+  'egg-free':    ['Eggs'],
+  'gluten-free': ['Wheat', 'Gluten'],
+};
+
+// Filter dining items based on dietary restrictions
+function filterDiningItems(items, filters) {
+  if (!filters.length) return items;
+  return items.filter(item => {
+    const allergens = (item.allergens || []).map(a => a.toLowerCase());
+    for (const f of filters) {
+      if (f === 'vegetarian' && !item.is_vegetarian) return false;
+      if (f === 'vegan' && !item.is_vegetarian) return false; // approximate: vegan requires vegetarian at minimum
+      if (ALLERGEN_MAP[f]) {
+        for (const allergenName of ALLERGEN_MAP[f]) {
+          if (allergens.includes(allergenName.toLowerCase())) return false;
+        }
+      }
+    }
+    return true;
+  });
+}
+
+// Map checkbox values to dietary_info JSON keys
+const DIET_KEY_MAP = {
+  'vegetarian': 'vegetarian', 'vegan': 'vegan',
+  'gluten-free': 'glutenFree', 'halal': 'halal', 'kosher': 'kosher',
+  'nut-free': 'nutFree', 'dairy-free': 'dairyFree',
+  'soy-free': 'soyFree', 'egg-free': 'eggFree',
+};
+
+// Filter food events using structured dietary_info from Gemini
+// Only hides events that are explicitly incompatible (false). Unknown (null) passes through.
+function eventMatchesDiet(event, filters) {
+  if (!filters.length) return true;
+  const diet = event.dietary_info;
+  if (!diet) return true; // no dietary data — don't filter out
+  for (const f of filters) {
+    const key = DIET_KEY_MAP[f];
+    if (key && diet[key] === false) return false;
+  }
+  return true;
+}
+
+// Load saved filters on startup
+loadDietFilters();
+
+// ── Voice input (Web Speech API) ──
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+let _recognition = null;
+let _isListening = false;
+
+function toggleVoiceInput() {
+  if (!SpeechRecognition) {
+    toast('Speech recognition not supported in this browser. Try Chrome or Edge.');
+    return;
+  }
+  if (_isListening) {
+    _recognition.stop();
+    return;
+  }
+
+  _recognition = new SpeechRecognition();
+  _recognition.lang = 'en-US';
+  _recognition.interimResults = true;
+  _recognition.maxAlternatives = 1;
+
+  const btn    = document.getElementById('spot-mic-btn');
+  const status = document.getElementById('spot-voice-status');
+  const ta     = document.getElementById('spot-text');
+  const existingText = ta.value.trim();
+
+  _recognition.onstart = () => {
+    _isListening = true;
+    btn.classList.add('listening');
+    btn.textContent = '⏹ Stop';
+    status.textContent = 'Listening…';
+  };
+
+  // Keep a snapshot of existing text so interim results don't stomp it
+  let interim = '';
+  _recognition.onresult = e => {
+    interim = '';
+    let final = '';
+    for (const result of e.results) {
+      if (result.isFinal) final += result[0].transcript;
+      else interim += result[0].transcript;
+    }
+    ta.value = existingText
+      ? existingText + ' ' + (final || interim)
+      : (final || interim);
+  };
+
+  _recognition.onerror = e => {
+    const msgs = { 'no-speech': 'No speech detected.', 'not-allowed': 'Microphone access denied.', 'network': 'Network error.' };
+    status.textContent = msgs[e.error] || `Error: ${e.error}`;
+  };
+
+  _recognition.onend = () => {
+    _isListening = false;
+    btn.classList.remove('listening');
+    btn.textContent = '🎙 Speak';
+    if (!status.textContent.startsWith('Error') && !status.textContent.startsWith('No speech')) {
+      status.textContent = '';
+    }
+  };
+
+  _recognition.start();
+}
+
+// Stop recognition when the spot modal closes
+const _origCloseSpotModal = closeSpotModal;
+closeSpotModal = function() {
+  if (_recognition && _isListening) _recognition.stop();
+  _origCloseSpotModal();
+};
+</script>
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.js"></script>
+<script>initMap();</script>
+</body>
+</html>
