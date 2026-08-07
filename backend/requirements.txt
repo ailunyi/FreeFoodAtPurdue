@@ -1,0 +1,8 @@
+fastapi==0.135.2
+google-cloud-logging==3.12.1
+google-generativeai==0.8.6
+instaloader==4.15.1
+numpy==2.4.4
+python-dotenv==1.2.2
+requests==2.32.3
+uvicorn==0.42.0

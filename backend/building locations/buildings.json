@@ -1,0 +1,7632 @@
+{
+  "GMF": {
+    "full_name": "Grounds Maintenance Facility",
+    "lat": 40.4154636,
+    "lng": -86.9191887,
+    "aliases": [
+      "gmf",
+      "rgs",
+      "grounds maintenance facility"
+    ]
+  },
+  "A8041": {
+    "full_name": "Baker Grain Bin 1",
+    "lat": 40.4952468,
+    "lng": -87.0145794,
+    "aliases": [
+      "a8041",
+      "b804",
+      "baker grain bin 1"
+    ]
+  },
+  "A8042": {
+    "full_name": "Baker Grain Bin 2",
+    "lat": 40.4951906,
+    "lng": -87.0145242,
+    "aliases": [
+      "a8042",
+      "b804",
+      "baker grain bin 2"
+    ]
+  },
+  "A8043": {
+    "full_name": "Baker Grain Bin 3",
+    "lat": 40.4951226,
+    "lng": -87.0145194,
+    "aliases": [
+      "a8043",
+      "b804",
+      "baker grain bin 3"
+    ]
+  },
+  "A8044": {
+    "full_name": "Baker Grain Bin 4",
+    "lat": 40.4950621,
+    "lng": -87.0145707,
+    "aliases": [
+      "a8044",
+      "b804",
+      "baker grain bin 4"
+    ]
+  },
+  "A714": {
+    "full_name": "Large Swine Slurry Store",
+    "lat": 40.4978406,
+    "lng": -87.0195555,
+    "aliases": [
+      "a714",
+      "b714",
+      "large swine slurry store"
+    ]
+  },
+  "AF104": {
+    "full_name": "Aquaculture Lagoon Equipment Building",
+    "lat": 40.5040019,
+    "lng": -87.0165931,
+    "aliases": [
+      "af104",
+      "aquaculture lagoon equipment building"
+    ]
+  },
+  "A314": {
+    "full_name": "Ossabaw Slurry 1",
+    "lat": 40.5123156,
+    "lng": -87.0212815,
+    "aliases": [
+      "a314",
+      "cb125",
+      "ossabaw slurry 1"
+    ]
+  },
+  "A121": {
+    "full_name": "Beef Lagoon Pumping Station",
+    "lat": 40.5225957,
+    "lng": -87.0192632,
+    "aliases": [
+      "a121",
+      "cb121",
+      "beef lagoon pumping station"
+    ]
+  },
+  "AC28": {
+    "full_name": "Bin 5",
+    "lat": 40.4714862,
+    "lng": -86.9902524,
+    "aliases": [
+      "ac28",
+      "bin 5"
+    ]
+  },
+  "AC27": {
+    "full_name": "Bin 12",
+    "lat": 40.4716481,
+    "lng": -86.9900832,
+    "aliases": [
+      "ac27",
+      "bin 12"
+    ]
+  },
+  "AC26": {
+    "full_name": "Bin 11",
+    "lat": 40.4716518,
+    "lng": -86.989975,
+    "aliases": [
+      "ac26",
+      "bin 11"
+    ]
+  },
+  "AC34": {
+    "full_name": "Bin 10",
+    "lat": 40.4715679,
+    "lng": -86.9899798,
+    "aliases": [
+      "ac34",
+      "bin 10"
+    ]
+  },
+  "AC24": {
+    "full_name": "Bin 8",
+    "lat": 40.4715654,
+    "lng": -86.9900745,
+    "aliases": [
+      "ac24",
+      "bin 8"
+    ]
+  },
+  "AC33a": {
+    "full_name": "Bin 9a",
+    "lat": 40.4715061,
+    "lng": -86.9899667,
+    "aliases": [
+      "ac33a",
+      "bin 9a"
+    ]
+  },
+  "AC29": {
+    "full_name": "Bin 7",
+    "lat": 40.4714871,
+    "lng": -86.9900865,
+    "aliases": [
+      "ac29",
+      "bin 7"
+    ]
+  },
+  "AC33b": {
+    "full_name": "Bin 9b",
+    "lat": 40.4714514,
+    "lng": -86.989964,
+    "aliases": [
+      "ac33b",
+      "bin 9b"
+    ]
+  },
+  "TM17": {
+    "full_name": "Throckmorton 17",
+    "lat": 40.2958913,
+    "lng": -86.9027356,
+    "aliases": [
+      "tm17",
+      "throckmorton 17"
+    ]
+  },
+  "TM16": {
+    "full_name": "Throckmorton 16",
+    "lat": 40.2959609,
+    "lng": -86.9027333,
+    "aliases": [
+      "tm16",
+      "throckmorton 16"
+    ]
+  },
+  "TM10": {
+    "full_name": "Throckmorton 10",
+    "lat": 40.2960479,
+    "lng": -86.9027257,
+    "aliases": [
+      "tm10",
+      "throckmorton 10"
+    ]
+  },
+  "TM35": {
+    "full_name": "Throckmorton 35",
+    "lat": 40.2959373,
+    "lng": -86.9022166,
+    "aliases": [
+      "tm35",
+      "throckmorton 35"
+    ]
+  },
+  "LISO": {
+    "full_name": "Limestone Silo",
+    "lat": 40.4169865,
+    "lng": -86.9134827,
+    "aliases": [
+      "liso",
+      "limestone silo"
+    ]
+  },
+  "ASSO": {
+    "full_name": "ASH SILO",
+    "lat": 40.4169857,
+    "lng": -86.9133399,
+    "aliases": [
+      "asso",
+      "ash silo"
+    ]
+  },
+  "TANK2": {
+    "full_name": "Fuel Oil Tank",
+    "lat": 40.4153355,
+    "lng": -86.9117263,
+    "aliases": [
+      "tank2",
+      "fuel oil tank"
+    ]
+  },
+  "TANK1": {
+    "full_name": "Waste Water Retention Tank",
+    "lat": 40.4156688,
+    "lng": -86.9117235,
+    "aliases": [
+      "tank1",
+      "waste water retention tank"
+    ]
+  },
+  "WCV": {
+    "full_name": "Water Cooling Vent",
+    "lat": 40.4155516,
+    "lng": -86.912567,
+    "aliases": [
+      "wcv",
+      "water cooling vent"
+    ]
+  },
+  "OHCN": {
+    "full_name": "Overhead Conveyor",
+    "lat": 40.4161893,
+    "lng": -86.9129526,
+    "aliases": [
+      "ohcn",
+      "overhead conveyor"
+    ]
+  },
+  "UGCN": {
+    "full_name": "U/G Conveyer",
+    "lat": 40.4150887,
+    "lng": -86.9130788,
+    "aliases": [
+      "ugcn",
+      "u/g conveyer"
+    ]
+  },
+  "AF103": {
+    "full_name": "Aquaculture Lagoons",
+    "lat": 40.5040054,
+    "lng": -87.0154839,
+    "aliases": [
+      "af103",
+      "aquaculture lagoons"
+    ]
+  },
+  "WCVA": {
+    "full_name": "Water Cooling Vent Tower A",
+    "lat": 40.4152123,
+    "lng": -86.9124183,
+    "aliases": [
+      "wcva",
+      "wcv",
+      "water cooling vent tower a"
+    ]
+  },
+  "WCVB": {
+    "full_name": "Water Cooling Vent Tower B",
+    "lat": 40.4153706,
+    "lng": -86.9124218,
+    "aliases": [
+      "wcvb",
+      "wcv",
+      "water cooling vent tower b"
+    ]
+  },
+  "WCVC": {
+    "full_name": "Water Cooling Vent Tower C",
+    "lat": 40.4155201,
+    "lng": -86.9124248,
+    "aliases": [
+      "wcvc",
+      "wcv",
+      "water cooling vent tower c"
+    ]
+  },
+  "WCVE": {
+    "full_name": "Water Cooling Vent Tower E",
+    "lat": 40.4158143,
+    "lng": -86.9124114,
+    "aliases": [
+      "wcve",
+      "wcv",
+      "water cooling vent tower e"
+    ]
+  },
+  "WCVF": {
+    "full_name": "Water Cooling Vent Tower F",
+    "lat": 40.4159601,
+    "lng": -86.9124158,
+    "aliases": [
+      "wcvf",
+      "wcv",
+      "water cooling vent tower f"
+    ]
+  },
+  "A604": {
+    "full_name": "Grain Bin-42 Ft",
+    "lat": 40.4985346,
+    "lng": -87.0125675,
+    "aliases": [
+      "a604",
+      "b603",
+      "grain bin-42 ft"
+    ]
+  },
+  "A605": {
+    "full_name": "Grain Bin-30 Ft",
+    "lat": 40.4985239,
+    "lng": -87.0127342,
+    "aliases": [
+      "a605",
+      "b603",
+      "grain bin-30 ft"
+    ]
+  },
+  "WCVD": {
+    "full_name": "Water Cooling Vent Tower D",
+    "lat": 40.415669,
+    "lng": -86.9124168,
+    "aliases": [
+      "wcvd",
+      "wcv",
+      "water cooling vent tower d"
+    ]
+  },
+  "A307": {
+    "full_name": "Lagoon",
+    "lat": 40.5085466,
+    "lng": -87.0224051,
+    "aliases": [
+      "a307",
+      "sd307",
+      "lagoon"
+    ]
+  },
+  "LMSA": {
+    "full_name": "Laboratory Materials Storage Annex",
+    "lat": 40.4176672,
+    "lng": -86.9387452,
+    "aliases": [
+      "lmsa",
+      "laboratory materials storage annex"
+    ]
+  },
+  "EHSA": {
+    "full_name": "Equine Health Sciences Annex",
+    "lat": 40.4175538,
+    "lng": -86.9142145,
+    "aliases": [
+      "ehsa",
+      "equine health sciences annex"
+    ]
+  },
+  "FRNY": {
+    "full_name": "Forney Hall Of Chemical Engineering",
+    "lat": 40.4295551,
+    "lng": -86.9140803,
+    "aliases": [
+      "frny",
+      "forney hall of chemical engineering"
+    ]
+  },
+  "PFSB": {
+    "full_name": "Physical Facilities Service Building",
+    "lat": 40.4145199,
+    "lng": -86.9164068,
+    "aliases": [
+      "pfsb",
+      "physical facilities service building"
+    ]
+  },
+  "KRAN": {
+    "full_name": "Krannert Building",
+    "lat": 40.4236725,
+    "lng": -86.9109226,
+    "aliases": [
+      "kran",
+      "krannert building"
+    ]
+  },
+  "BTV": {
+    "full_name": "Boiler Television Building",
+    "lat": 40.4368965,
+    "lng": -86.920078,
+    "aliases": [
+      "btv",
+      "urts",
+      "boiler television building"
+    ]
+  },
+  "SC": {
+    "full_name": "Stanley Coulter Hall",
+    "lat": 40.4265023,
+    "lng": -86.9144014,
+    "aliases": [
+      "sc",
+      "stanley coulter hall"
+    ]
+  },
+  "MCUT": {
+    "full_name": "John T. Mccutcheon Residence Hall",
+    "lat": 40.4250716,
+    "lng": -86.9279962,
+    "aliases": [
+      "mcut",
+      "john t. mccutcheon residence hall"
+    ]
+  },
+  "SCHW": {
+    "full_name": "Dennis J. & Mary Lou Schwartz Tennis Center",
+    "lat": 40.436629,
+    "lng": -86.9377834,
+    "aliases": [
+      "schw",
+      "dennis j. & mary lou schwartz tennis center"
+    ]
+  },
+  "LWSN": {
+    "full_name": "Richard & Patricia Lawson Computer Science Building",
+    "lat": 40.4277031,
+    "lng": -86.9169122,
+    "aliases": [
+      "lwsn",
+      "richard & patricia lawson computer science building"
+    ]
+  },
+  "CQW": {
+    "full_name": "Franklin Levering Cary Quadrangle (West)",
+    "lat": 40.4325077,
+    "lng": -86.918979,
+    "aliases": [
+      "cqw",
+      "franklin levering cary quadrangle (west)"
+    ]
+  },
+  "ERHT": {
+    "full_name": "Amelia Earhart Residence Hall",
+    "lat": 40.425716,
+    "lng": -86.9249651,
+    "aliases": [
+      "erht",
+      "amelia earhart residence hall",
+      "earhart",
+      "earhart hall",
+      "earhart dining"
+    ]
+  },
+  "SPUR": {
+    "full_name": "Tom Spurgeon Golf Training Center",
+    "lat": 40.4392169,
+    "lng": -86.9273129,
+    "aliases": [
+      "spur",
+      "tom spurgeon golf training center"
+    ]
+  },
+  "WARN": {
+    "full_name": "Martha E. & Eugene K. Warren Residence Hall",
+    "lat": 40.4265538,
+    "lng": -86.9207248,
+    "aliases": [
+      "warn",
+      "martha e. & eugene k. warren residence hall"
+    ]
+  },
+  "WOOD": {
+    "full_name": "Elizabeth G. & William R. Wood Residence Hall",
+    "lat": 40.4263223,
+    "lng": -86.921406,
+    "aliases": [
+      "wood",
+      "elizabeth g. & william r. wood residence hall"
+    ]
+  },
+  "VAWT": {
+    "full_name": "Everett B. Vawter Residence Hall",
+    "lat": 40.4270132,
+    "lng": -86.9207459,
+    "aliases": [
+      "vawt",
+      "everett b. vawter residence hall"
+    ]
+  },
+  "WDC": {
+    "full_name": "Windsor Dining Court",
+    "lat": 40.4267748,
+    "lng": -86.9209875,
+    "aliases": [
+      "wdc",
+      "windsor dining court"
+    ]
+  },
+  "OLMN": {
+    "full_name": "Melvin L. Ollman Golf Cart Barn",
+    "lat": 40.4400384,
+    "lng": -86.9271161,
+    "aliases": [
+      "olmn",
+      "melvin l. ollman golf cart barn"
+    ]
+  },
+  "WTL": {
+    "full_name": "Water Tower",
+    "lat": 40.4338073,
+    "lng": -86.9247088,
+    "aliases": [
+      "wtl",
+      "water tower"
+    ]
+  },
+  "RAWL": {
+    "full_name": "Jerry S. Rawls Hall",
+    "lat": 40.42376,
+    "lng": -86.9097898,
+    "aliases": [
+      "rawl",
+      "jerry s. rawls hall"
+    ]
+  },
+  "YONG": {
+    "full_name": "Ernest C. Young Hall",
+    "lat": 40.4228811,
+    "lng": -86.9107447,
+    "aliases": [
+      "yong",
+      "ernest c. young hall"
+    ]
+  },
+  "DAUC": {
+    "full_name": "Dick & Sandy Dauch Alumni Center",
+    "lat": 40.4218519,
+    "lng": -86.9109036,
+    "aliases": [
+      "dauc",
+      "dick & sandy dauch alumni center"
+    ]
+  },
+  "PAO": {
+    "full_name": "Yue-Kong Pao Hall of Visual And Performing Arts",
+    "lat": 40.4224728,
+    "lng": -86.9129994,
+    "aliases": [
+      "pao",
+      "yue-kong pao hall of visual and performing arts"
+    ]
+  },
+  "CTEB": {
+    "full_name": "Cooling Tower Equipment Building",
+    "lat": 40.4158328,
+    "lng": -86.9128776,
+    "aliases": [
+      "cteb",
+      "cooling tower equipment building"
+    ]
+  },
+  "NWCP": {
+    "full_name": "Northwest Chiller Plant",
+    "lat": 40.4291971,
+    "lng": -86.9253491,
+    "aliases": [
+      "nwcp",
+      "northwest chiller plant"
+    ]
+  },
+  "RALR": {
+    "full_name": "Ross-Ade Stadium Locker Room",
+    "lat": 40.4334648,
+    "lng": -86.9189242,
+    "aliases": [
+      "ralr",
+      "ross-ade stadium locker room"
+    ]
+  },
+  "HGR7": {
+    "full_name": "Hangar No. 7",
+    "lat": 40.4143254,
+    "lng": -86.9348218,
+    "aliases": [
+      "hgr7",
+      "hangar no. 7"
+    ]
+  },
+  "CSF": {
+    "full_name": "Coal Storage Facility",
+    "lat": 40.4142107,
+    "lng": -86.9135758,
+    "aliases": [
+      "csf",
+      "coal storage facility"
+    ]
+  },
+  "VMIF": {
+    "full_name": "Veterinary Medicine Isolation Facility",
+    "lat": 40.4180196,
+    "lng": -86.9151389,
+    "aliases": [
+      "vmif",
+      "veterinary medicine isolation facility"
+    ]
+  },
+  "OWEN": {
+    "full_name": "Richard Owen Residence Hall",
+    "lat": 40.432266,
+    "lng": -86.9207144,
+    "aliases": [
+      "owen",
+      "richard owen residence hall"
+    ]
+  },
+  "MRGN": {
+    "full_name": "Burton D. Morgan Center For Entrepreneurship",
+    "lat": 40.4237873,
+    "lng": -86.9229526,
+    "aliases": [
+      "mrgn",
+      "burton d. morgan center for entrepreneurship"
+    ]
+  },
+  "FORD": {
+    "full_name": "Fred And Mary Ford Dining Court",
+    "lat": 40.4320976,
+    "lng": -86.9196732,
+    "aliases": [
+      "ford",
+      "fred and mary ford dining court"
+    ]
+  },
+  "PFEN": {
+    "full_name": "David C. Pfendler Hall of Agriculture",
+    "lat": 40.4235516,
+    "lng": -86.9154374,
+    "aliases": [
+      "pfen",
+      "david c. pfendler hall of agriculture"
+    ]
+  },
+  "HAWK": {
+    "full_name": "George A. Hawkins Hall",
+    "lat": 40.4227576,
+    "lng": -86.9116397,
+    "aliases": [
+      "hawk",
+      "george a. hawkins hall"
+    ]
+  },
+  "WSLR": {
+    "full_name": "Roy L. Whistler Hall Of Agricultural Research",
+    "lat": 40.422763,
+    "lng": -86.9155275,
+    "aliases": [
+      "wslr",
+      "roy l. whistler hall of agricultural research"
+    ]
+  },
+  "HARR": {
+    "full_name": "Benjamin Harrison Residence Hall",
+    "lat": 40.4250555,
+    "lng": -86.9268647,
+    "aliases": [
+      "harr",
+      "benjamin harrison residence hall"
+    ]
+  },
+  "SSWB": {
+    "full_name": "Self Storage Warehouse B",
+    "lat": 40.4119161,
+    "lng": -86.9182862,
+    "aliases": [
+      "sswb",
+      "self storage warehouse b"
+    ]
+  },
+  "NWSS": {
+    "full_name": "Northwest Campus Substation",
+    "lat": 40.4306311,
+    "lng": -86.9269067,
+    "aliases": [
+      "nwss",
+      "northwest campus substation"
+    ]
+  },
+  "GAS": {
+    "full_name": "Gas Meter (at Airport)",
+    "lat": 40.4165352,
+    "lng": -86.9313454,
+    "aliases": [
+      "gas",
+      "gas meter (at airport)"
+    ]
+  },
+  "LINS": {
+    "full_name": "Line Shack (at Airport)",
+    "lat": 40.4160631,
+    "lng": -86.9295978,
+    "aliases": [
+      "lins",
+      "line shack (at airport)"
+    ]
+  },
+  "ZS04": {
+    "full_name": "Zucrow Storage Shed 4",
+    "lat": 40.415463,
+    "lng": -86.9410651,
+    "aliases": [
+      "zs04",
+      "zucrow storage shed 4"
+    ]
+  },
+  "VSPB": {
+    "full_name": "Varsity Softball Press Box",
+    "lat": 40.4305694,
+    "lng": -86.9267899,
+    "aliases": [
+      "vspb",
+      "varsity softball press box"
+    ]
+  },
+  "PIT1": {
+    "full_name": "Purdue International Teleport Building 1",
+    "lat": 40.4199017,
+    "lng": -86.9180681,
+    "aliases": [
+      "pit1",
+      "purdue international teleport building 1"
+    ]
+  },
+  "ZS10": {
+    "full_name": "Zucrow Storage Shed 10",
+    "lat": 40.4146046,
+    "lng": -86.9385664,
+    "aliases": [
+      "zs10",
+      "zucrow storage shed 10"
+    ]
+  },
+  "ZS09": {
+    "full_name": "Zucrow Storage Shed 9",
+    "lat": 40.4150267,
+    "lng": -86.9385698,
+    "aliases": [
+      "zs09",
+      "zucrow storage shed 9"
+    ]
+  },
+  "MMS3": {
+    "full_name": "Materials Management Storage Building 3",
+    "lat": 40.4144873,
+    "lng": -86.9188624,
+    "aliases": [
+      "mms3",
+      "materials management storage building 3"
+    ]
+  },
+  "MMS2": {
+    "full_name": "Materials Management Storage Building 2",
+    "lat": 40.4145674,
+    "lng": -86.9188628,
+    "aliases": [
+      "mms2",
+      "materials management storage building 2"
+    ]
+  },
+  "TPB": {
+    "full_name": "Track Press Box",
+    "lat": 40.4298625,
+    "lng": -86.9232762,
+    "aliases": [
+      "tpb",
+      "track press box"
+    ]
+  },
+  "ZS05": {
+    "full_name": "Zucrow Vacuum Pump Shelter 5",
+    "lat": 40.4152946,
+    "lng": -86.9411424,
+    "aliases": [
+      "zs05",
+      "zucrow vacuum pump shelter 5"
+    ]
+  },
+  "SAT": {
+    "full_name": "University Residence Halls Satellite Transportation Building",
+    "lat": 40.4199463,
+    "lng": -86.9176999,
+    "aliases": [
+      "sat",
+      "university residence halls satellite transportation building"
+    ]
+  },
+  "ZL6": {
+    "full_name": "Fuel Conditioning Building",
+    "lat": 40.4157893,
+    "lng": -86.940306,
+    "aliases": [
+      "zl6",
+      "fuel conditioning building"
+    ]
+  },
+  "WH7": {
+    "full_name": "Well House No. 7",
+    "lat": 40.4275351,
+    "lng": -86.9264147,
+    "aliases": [
+      "wh7",
+      "well house no. 7"
+    ]
+  },
+  "WH8": {
+    "full_name": "Well House No. 8",
+    "lat": 40.4299157,
+    "lng": -86.9235335,
+    "aliases": [
+      "wh8",
+      "well house no. 8"
+    ]
+  },
+  "WH4": {
+    "full_name": "Well House No. 4",
+    "lat": 40.4179037,
+    "lng": -86.9136237,
+    "aliases": [
+      "wh4",
+      "well house no. 4"
+    ]
+  },
+  "BMSW": {
+    "full_name": "Byproduct Material Storage Building - West",
+    "lat": 40.4172954,
+    "lng": -86.9388485,
+    "aliases": [
+      "bmsw",
+      "byproduct material storage building - west"
+    ]
+  },
+  "WH5": {
+    "full_name": "Well House No. 5",
+    "lat": 40.4276059,
+    "lng": -86.9254261,
+    "aliases": [
+      "wh5",
+      "well house no. 5"
+    ]
+  },
+  "TTS": {
+    "full_name": "Track Toilet + Storage Building",
+    "lat": 40.4294446,
+    "lng": -86.9224997,
+    "aliases": [
+      "tts",
+      "track toilet + storage building"
+    ]
+  },
+  "RAIL": {
+    "full_name": "American Railway Building",
+    "lat": 40.4280101,
+    "lng": -86.9126586,
+    "aliases": [
+      "rail",
+      "american railway building"
+    ]
+  },
+  "ME": {
+    "full_name": "Mechanical Engineering Building",
+    "lat": 40.4280919,
+    "lng": -86.9132094,
+    "aliases": [
+      "me",
+      "mechanical engineering building"
+    ]
+  },
+  "BHEE": {
+    "full_name": "Max W & Maileen Brown Family Hall",
+    "lat": 40.4285456,
+    "lng": -86.9120293,
+    "aliases": [
+      "bhee",
+      "max w & maileen brown family hall"
+    ]
+  },
+  "HGRH": {
+    "full_name": "Horticultural Greenhouse",
+    "lat": 40.421003,
+    "lng": -86.9144301,
+    "aliases": [
+      "hgrh",
+      "horticultural greenhouse"
+    ]
+  },
+  "844S3": {
+    "full_name": "844 South River Road 3",
+    "lat": 40.4122389,
+    "lng": -86.9134527,
+    "aliases": [
+      "844s3",
+      "844 south river road 3"
+    ]
+  },
+  "844S2": {
+    "full_name": "844 South River Road 2",
+    "lat": 40.4121593,
+    "lng": -86.9133331,
+    "aliases": [
+      "844s2",
+      "844 south river road 2"
+    ]
+  },
+  "844S1": {
+    "full_name": "844 South River Road 1",
+    "lat": 40.4123999,
+    "lng": -86.9132325,
+    "aliases": [
+      "844s1",
+      "844 south river road 1"
+    ]
+  },
+  "AF105": {
+    "full_name": "Aquaculture Storage Facility",
+    "lat": 40.5033602,
+    "lng": -87.0138485,
+    "aliases": [
+      "af105",
+      "aquaculture storage facility"
+    ]
+  },
+  "AC53A": {
+    "full_name": "BIN A",
+    "lat": 40.4717727,
+    "lng": -86.9909275,
+    "aliases": [
+      "ac53a",
+      "bin a"
+    ]
+  },
+  "AC53B": {
+    "full_name": "BIN B",
+    "lat": 40.4717675,
+    "lng": -86.9908785,
+    "aliases": [
+      "ac53b",
+      "bin b"
+    ]
+  },
+  "AC53C": {
+    "full_name": "BIN C",
+    "lat": 40.4717668,
+    "lng": -86.9908329,
+    "aliases": [
+      "ac53c",
+      "bin c"
+    ]
+  },
+  "AC53D": {
+    "full_name": "BIN D",
+    "lat": 40.4717651,
+    "lng": -86.9907863,
+    "aliases": [
+      "ac53d",
+      "bin d"
+    ]
+  },
+  "AC53E": {
+    "full_name": "BIN E",
+    "lat": 40.4717689,
+    "lng": -86.9907429,
+    "aliases": [
+      "ac53e",
+      "bin e"
+    ]
+  },
+  "AC53K": {
+    "full_name": "BIN K",
+    "lat": 40.4716493,
+    "lng": -86.9909332,
+    "aliases": [
+      "ac53k",
+      "bin k"
+    ]
+  },
+  "AC53L": {
+    "full_name": "BIN L",
+    "lat": 40.4716459,
+    "lng": -86.9908896,
+    "aliases": [
+      "ac53l",
+      "bin l"
+    ]
+  },
+  "AC53M": {
+    "full_name": "BIN M",
+    "lat": 40.4716485,
+    "lng": -86.9908456,
+    "aliases": [
+      "ac53m",
+      "bin m"
+    ]
+  },
+  "AC53N": {
+    "full_name": "BIN N",
+    "lat": 40.4716482,
+    "lng": -86.9908051,
+    "aliases": [
+      "ac53n",
+      "bin n"
+    ]
+  },
+  "AC53O": {
+    "full_name": "BIN O",
+    "lat": 40.4716484,
+    "lng": -86.9907578,
+    "aliases": [
+      "ac53o",
+      "bin o"
+    ]
+  },
+  "AC53P": {
+    "full_name": "BIN P",
+    "lat": 40.471649,
+    "lng": -86.9906036,
+    "aliases": [
+      "ac53p",
+      "bin p"
+    ]
+  },
+  "AC53Q": {
+    "full_name": "BIN Q",
+    "lat": 40.4716488,
+    "lng": -86.9905617,
+    "aliases": [
+      "ac53q",
+      "bin q"
+    ]
+  },
+  "AC53R": {
+    "full_name": "BIN R",
+    "lat": 40.4716481,
+    "lng": -86.9905213,
+    "aliases": [
+      "ac53r",
+      "bin r"
+    ]
+  },
+  "AC53S": {
+    "full_name": "BIN S",
+    "lat": 40.4716485,
+    "lng": -86.9904783,
+    "aliases": [
+      "ac53s",
+      "bin s"
+    ]
+  },
+  "AC53G": {
+    "full_name": "BIN G",
+    "lat": 40.4717687,
+    "lng": -86.9906228,
+    "aliases": [
+      "ac53g",
+      "bin g"
+    ]
+  },
+  "AC53H": {
+    "full_name": "BIN H",
+    "lat": 40.4717675,
+    "lng": -86.9905764,
+    "aliases": [
+      "ac53h",
+      "bin h"
+    ]
+  },
+  "AC53I": {
+    "full_name": "BIN I",
+    "lat": 40.4717688,
+    "lng": -86.9905348,
+    "aliases": [
+      "ac53i",
+      "bin i"
+    ]
+  },
+  "AC53J": {
+    "full_name": "BIN J",
+    "lat": 40.4717691,
+    "lng": -86.9904897,
+    "aliases": [
+      "ac53j",
+      "bin j"
+    ]
+  },
+  "AC33c": {
+    "full_name": "Bin 6",
+    "lat": 40.4715875,
+    "lng": -86.9902566,
+    "aliases": [
+      "ac33c",
+      "ac29",
+      "bin 6"
+    ]
+  },
+  "A807": {
+    "full_name": "Small Grain Bin",
+    "lat": 40.4955028,
+    "lng": -87.0144941,
+    "aliases": [
+      "a807",
+      "b807",
+      "small grain bin"
+    ]
+  },
+  "5": {
+    "full_name": "Dairy Silo-5",
+    "lat": 40.5104266,
+    "lng": -87.0213296,
+    "aliases": [
+      "5",
+      "dairy silo-5"
+    ]
+  },
+  "4": {
+    "full_name": "Dairy Silo-4",
+    "lat": 40.5104266,
+    "lng": -87.0213913,
+    "aliases": [
+      "4",
+      "dairy silo-4"
+    ]
+  },
+  "3": {
+    "full_name": "Dairy Silo 3",
+    "lat": 40.5102713,
+    "lng": -87.0214832,
+    "aliases": [
+      "3",
+      "dairy silo 3"
+    ]
+  },
+  "2": {
+    "full_name": "Sheep Silo 2",
+    "lat": 40.4976497,
+    "lng": -87.016994,
+    "aliases": [
+      "2",
+      "b715",
+      "sheep silo 2"
+    ]
+  },
+  "1": {
+    "full_name": "Sheep Silo 1",
+    "lat": 40.497726,
+    "lng": -87.0169927,
+    "aliases": [
+      "1",
+      "b715",
+      "sheep silo 1"
+    ]
+  },
+  "11": {
+    "full_name": "Beef Silo 11",
+    "lat": 40.5247108,
+    "lng": -87.0199461,
+    "aliases": [
+      "11",
+      "cbsk",
+      "beef silo 11"
+    ]
+  },
+  "10": {
+    "full_name": "Beef Silo 10",
+    "lat": 40.5247606,
+    "lng": -87.019946,
+    "aliases": [
+      "10",
+      "cbsj",
+      "beef silo 10"
+    ]
+  },
+  "9": {
+    "full_name": "Beef Silo 9",
+    "lat": 40.5248081,
+    "lng": -87.019946,
+    "aliases": [
+      "9",
+      "cbsi",
+      "beef silo 9"
+    ]
+  },
+  "8": {
+    "full_name": "Beef Silo 8",
+    "lat": 40.5248565,
+    "lng": -87.0199467,
+    "aliases": [
+      "8",
+      "cbsh",
+      "beef silo 8"
+    ]
+  },
+  "7": {
+    "full_name": "Dairy Silo-7",
+    "lat": 40.5104265,
+    "lng": -87.021206,
+    "aliases": [
+      "7",
+      "dairy silo-7"
+    ]
+  },
+  "6": {
+    "full_name": "Dairy Silo-6",
+    "lat": 40.5104265,
+    "lng": -87.0212663,
+    "aliases": [
+      "6",
+      "dairy silo-6"
+    ]
+  },
+  "A125": {
+    "full_name": "Grain Bin #1",
+    "lat": 40.525646,
+    "lng": -87.0228413,
+    "aliases": [
+      "a125",
+      "cb106",
+      "grain bin #1"
+    ]
+  },
+  "A126": {
+    "full_name": "Grain Bin #2",
+    "lat": 40.525646,
+    "lng": -87.0227772,
+    "aliases": [
+      "a126",
+      "cb106",
+      "grain bin #2"
+    ]
+  },
+  "A127": {
+    "full_name": "Grain Bin #3",
+    "lat": 40.5256459,
+    "lng": -87.0227083,
+    "aliases": [
+      "a127",
+      "cb106",
+      "grain bin #3"
+    ]
+  },
+  "A128": {
+    "full_name": "Grain Bin, Large  #4",
+    "lat": 40.5251545,
+    "lng": -87.0233031,
+    "aliases": [
+      "a128",
+      "cb106",
+      "grain bin, large  #4"
+    ]
+  },
+  "A821": {
+    "full_name": "Grain Bin 1",
+    "lat": 40.5066375,
+    "lng": -87.0259379,
+    "aliases": [
+      "a821",
+      "sf813",
+      "grain bin 1"
+    ]
+  },
+  "A822": {
+    "full_name": "Grain Bin 2",
+    "lat": 40.5066638,
+    "lng": -87.0258177,
+    "aliases": [
+      "a822",
+      "sf813",
+      "grain bin 2"
+    ]
+  },
+  "A823": {
+    "full_name": "Grain Bin 3",
+    "lat": 40.5065159,
+    "lng": -87.0257704,
+    "aliases": [
+      "a823",
+      "sf814",
+      "grain bin 3"
+    ]
+  },
+  "NWCT": {
+    "full_name": "Northwest Chiller Cooling Towers",
+    "lat": 40.4291045,
+    "lng": -86.9249023,
+    "aliases": [
+      "nwct",
+      "nwcp",
+      "northwest chiller cooling towers"
+    ]
+  },
+  "AAR11": {
+    "full_name": "Array 11",
+    "lat": 40.3428507,
+    "lng": -86.8836266,
+    "aliases": [
+      "aar11",
+      "array 11"
+    ]
+  },
+  "AAR1": {
+    "full_name": "Array 1",
+    "lat": 40.3425328,
+    "lng": -86.8833612,
+    "aliases": [
+      "aar1",
+      "array 1"
+    ]
+  },
+  "AAR12": {
+    "full_name": "Array 12",
+    "lat": 40.3425023,
+    "lng": -86.8828311,
+    "aliases": [
+      "aar12",
+      "array 12"
+    ]
+  },
+  "AAR13": {
+    "full_name": "Array 13",
+    "lat": 40.34215,
+    "lng": -86.8836306,
+    "aliases": [
+      "aar13",
+      "array 13"
+    ]
+  },
+  "AAR21": {
+    "full_name": "Array 21",
+    "lat": 40.3417257,
+    "lng": -86.8838499,
+    "aliases": [
+      "aar21",
+      "array 21"
+    ]
+  },
+  "AAR2": {
+    "full_name": "Array 2",
+    "lat": 40.3414139,
+    "lng": -86.8835832,
+    "aliases": [
+      "aar2",
+      "array 2"
+    ]
+  },
+  "AAR22": {
+    "full_name": "Array 22",
+    "lat": 40.3413834,
+    "lng": -86.8830531,
+    "aliases": [
+      "aar22",
+      "array 22"
+    ]
+  },
+  "AAR23": {
+    "full_name": "Array 23",
+    "lat": 40.3410359,
+    "lng": -86.8838644,
+    "aliases": [
+      "aar23",
+      "array 23"
+    ]
+  },
+  "AAR31": {
+    "full_name": "Array 31",
+    "lat": 40.3406209,
+    "lng": -86.8840911,
+    "aliases": [
+      "aar31",
+      "array 31"
+    ]
+  },
+  "AAR3": {
+    "full_name": "Array 3",
+    "lat": 40.3403092,
+    "lng": -86.8838244,
+    "aliases": [
+      "aar3",
+      "array 3"
+    ]
+  },
+  "AAR32": {
+    "full_name": "Array 32",
+    "lat": 40.3402786,
+    "lng": -86.8832944,
+    "aliases": [
+      "aar32",
+      "array 32"
+    ]
+  },
+  "AAR33": {
+    "full_name": "Array 33",
+    "lat": 40.3399191,
+    "lng": -86.8840796,
+    "aliases": [
+      "aar33",
+      "array 33"
+    ]
+  },
+  "BMSE": {
+    "full_name": "Byproduct Material Storage Building - East",
+    "lat": 40.4173453,
+    "lng": -86.9386937,
+    "aliases": [
+      "bmse",
+      "byproduct material storage building - east"
+    ]
+  },
+  "ZS01": {
+    "full_name": "Zucrow Storage Shed 1",
+    "lat": 40.416564,
+    "lng": -86.9415514,
+    "aliases": [
+      "zs01",
+      "zucrow storage shed 1"
+    ]
+  },
+  "HA23": {
+    "full_name": "Hilltop Apartment 23",
+    "lat": 40.4342121,
+    "lng": -86.9219191,
+    "aliases": [
+      "ha23",
+      "hilltop apartment 23"
+    ]
+  },
+  "HA26": {
+    "full_name": "Hilltop Apartment 26",
+    "lat": 40.4336602,
+    "lng": -86.9215573,
+    "aliases": [
+      "ha26",
+      "hilltop apartment 26"
+    ]
+  },
+  "HA24": {
+    "full_name": "Hilltop Apartment 24",
+    "lat": 40.4341256,
+    "lng": -86.9215696,
+    "aliases": [
+      "ha24",
+      "hilltop apartment 24"
+    ]
+  },
+  "HA25": {
+    "full_name": "Hilltop Apartment 25",
+    "lat": 40.4339021,
+    "lng": -86.9213216,
+    "aliases": [
+      "ha25",
+      "hilltop apartment 25"
+    ]
+  },
+  "HA27": {
+    "full_name": "Hilltop Apartment 27",
+    "lat": 40.4336943,
+    "lng": -86.921944,
+    "aliases": [
+      "ha27",
+      "hilltop apartment 27"
+    ]
+  },
+  "HA10": {
+    "full_name": "Hilltop Apartment 10",
+    "lat": 40.4345161,
+    "lng": -86.9200951,
+    "aliases": [
+      "ha10",
+      "hilltop apartment 10"
+    ]
+  },
+  "HA09": {
+    "full_name": "Hilltop Apartment 9",
+    "lat": 40.434849,
+    "lng": -86.9201004,
+    "aliases": [
+      "ha09",
+      "hilltop apartment 9"
+    ]
+  },
+  "HA15": {
+    "full_name": "Hilltop Apartment 15",
+    "lat": 40.4341435,
+    "lng": -86.9211688,
+    "aliases": [
+      "ha15",
+      "hilltop apartment 15"
+    ]
+  },
+  "HA20": {
+    "full_name": "Hilltop Apartment 20",
+    "lat": 40.4362527,
+    "lng": -86.9204409,
+    "aliases": [
+      "ha20",
+      "hilltop apartment 20"
+    ]
+  },
+  "HA08": {
+    "full_name": "Hilltop Apartment 8",
+    "lat": 40.4352255,
+    "lng": -86.9200693,
+    "aliases": [
+      "ha08",
+      "hilltop apartment 8"
+    ]
+  },
+  "HA17": {
+    "full_name": "Hilltop Apartment 17",
+    "lat": 40.4348801,
+    "lng": -86.9210961,
+    "aliases": [
+      "ha17",
+      "hilltop apartment 17"
+    ]
+  },
+  "HA16": {
+    "full_name": "Hilltop Apartment 16",
+    "lat": 40.4345654,
+    "lng": -86.9210618,
+    "aliases": [
+      "ha16",
+      "hilltop apartment 16"
+    ]
+  },
+  "COMP": {
+    "full_name": "Composites Laboratory",
+    "lat": 40.4161597,
+    "lng": -86.9289198,
+    "aliases": [
+      "comp",
+      "composites laboratory"
+    ]
+  },
+  "HA07": {
+    "full_name": "Hilltop Apartment 7",
+    "lat": 40.4354978,
+    "lng": -86.9202183,
+    "aliases": [
+      "ha07",
+      "hilltop apartment 7"
+    ]
+  },
+  "VLAB": {
+    "full_name": "Veterinary Laboratory Animal Building",
+    "lat": 40.4186765,
+    "lng": -86.9151719,
+    "aliases": [
+      "vlab",
+      "veterinary laboratory animal building"
+    ]
+  },
+  "HA14": {
+    "full_name": "Hilltop Apartment 14",
+    "lat": 40.433918,
+    "lng": -86.9208479,
+    "aliases": [
+      "ha14",
+      "hilltop apartment 14"
+    ]
+  },
+  "HA05": {
+    "full_name": "Hilltop Apartment 5",
+    "lat": 40.4358151,
+    "lng": -86.9207203,
+    "aliases": [
+      "ha05",
+      "hilltop apartment 5"
+    ]
+  },
+  "HA13": {
+    "full_name": "Hilltop Apartment 13",
+    "lat": 40.4336178,
+    "lng": -86.9205893,
+    "aliases": [
+      "ha13",
+      "hilltop apartment 13"
+    ]
+  },
+  "HA18": {
+    "full_name": "Hilltop Apartment 18",
+    "lat": 40.4352257,
+    "lng": -86.921202,
+    "aliases": [
+      "ha18",
+      "hilltop apartment 18"
+    ]
+  },
+  "HA03": {
+    "full_name": "Hilltop Apartment 3",
+    "lat": 40.4350465,
+    "lng": -86.9206014,
+    "aliases": [
+      "ha03",
+      "hilltop apartment 3"
+    ]
+  },
+  "HA19": {
+    "full_name": "Hilltop Apartment 19",
+    "lat": 40.4361255,
+    "lng": -86.9207759,
+    "aliases": [
+      "ha19",
+      "hilltop apartment 19"
+    ]
+  },
+  "HA04": {
+    "full_name": "Hilltop Apartment 4",
+    "lat": 40.4355115,
+    "lng": -86.9206614,
+    "aliases": [
+      "ha04",
+      "hilltop apartment 4"
+    ]
+  },
+  "HA02": {
+    "full_name": "Hilltop Apartment 2",
+    "lat": 40.4346469,
+    "lng": -86.9205294,
+    "aliases": [
+      "ha02",
+      "hilltop apartment 2"
+    ]
+  },
+  "ZL5": {
+    "full_name": "Turbomachinery Fluid Dynamics Laboratory",
+    "lat": 40.4166836,
+    "lng": -86.9417318,
+    "aliases": [
+      "zl5",
+      "turbomachinery fluid dynamics laboratory"
+    ]
+  },
+  "DSAI": {
+    "full_name": "Hall of Data Science and AI",
+    "lat": 40.4289832,
+    "lng": -86.9147659,
+    "aliases": [
+      "dsai",
+      "dscb",
+      "hall of data science and ai"
+    ]
+  },
+  "HIKS": {
+    "full_name": "John W. Hicks Undergraduate Library",
+    "lat": 40.4245478,
+    "lng": -86.9126638,
+    "aliases": [
+      "hiks",
+      "john w. hicks undergraduate library"
+    ]
+  },
+  "ZL2": {
+    "full_name": "Gas Dynamics Research Laboratory",
+    "lat": 40.4162629,
+    "lng": -86.9414789,
+    "aliases": [
+      "zl2",
+      "gas dynamics research laboratory"
+    ]
+  },
+  "TEL": {
+    "full_name": "Telecommunications Building",
+    "lat": 40.4260317,
+    "lng": -86.9169375,
+    "aliases": [
+      "tel",
+      "telecommunications building"
+    ]
+  },
+  "CHAF": {
+    "full_name": "Chaffee Hall",
+    "lat": 40.4161259,
+    "lng": -86.9427134,
+    "aliases": [
+      "chaf",
+      "chaffee hall"
+    ]
+  },
+  "TH2": {
+    "full_name": "Tee-hangar No. 2",
+    "lat": 40.4158865,
+    "lng": -86.9347539,
+    "aliases": [
+      "th2",
+      "tee-hangar no. 2"
+    ]
+  },
+  "TH3": {
+    "full_name": "Tee-hangar No. 3",
+    "lat": 40.4156648,
+    "lng": -86.9350106,
+    "aliases": [
+      "th3",
+      "tee-hangar no. 3"
+    ]
+  },
+  "HA29": {
+    "full_name": "Hilltop Apartment 29",
+    "lat": 40.4334421,
+    "lng": -86.9226337,
+    "aliases": [
+      "ha29",
+      "hilltop apartment 29"
+    ]
+  },
+  "HA30": {
+    "full_name": "Hilltop Apartment 30",
+    "lat": 40.4338631,
+    "lng": -86.9226277,
+    "aliases": [
+      "ha30",
+      "hilltop apartment 30"
+    ]
+  },
+  "HA32": {
+    "full_name": "Hilltop Apartment 32",
+    "lat": 40.4348231,
+    "lng": -86.9220249,
+    "aliases": [
+      "ha32",
+      "hilltop apartment 32"
+    ]
+  },
+  "HA28": {
+    "full_name": "Hilltop Apartment 28",
+    "lat": 40.433329,
+    "lng": -86.9219266,
+    "aliases": [
+      "ha28",
+      "hilltop apartment 28"
+    ]
+  },
+  "HA31": {
+    "full_name": "Hilltop Apartment 31",
+    "lat": 40.4343668,
+    "lng": -86.9223357,
+    "aliases": [
+      "ha31",
+      "hilltop apartment 31"
+    ]
+  },
+  "DANL": {
+    "full_name": "William H. Daniel Turfgrass Research & Diagnostic Court",
+    "lat": 40.4419656,
+    "lng": -86.929949,
+    "aliases": [
+      "danl",
+      "william h. daniel turfgrass research & diagnostic court"
+    ]
+  },
+  "ASB": {
+    "full_name": "Airport Service Building",
+    "lat": 40.4151709,
+    "lng": -86.9347675,
+    "aliases": [
+      "asb",
+      "airport service building"
+    ]
+  },
+  "INSS": {
+    "full_name": "Intramural Storage Shed",
+    "lat": 40.4302958,
+    "lng": -86.9260455,
+    "aliases": [
+      "inss",
+      "intramural storage shed"
+    ]
+  },
+  "DMNT": {
+    "full_name": "Clayton W. Dement Fire Station",
+    "lat": 40.427695,
+    "lng": -86.924002,
+    "aliases": [
+      "dmnt",
+      "clayton w. dement fire station"
+    ]
+  },
+  "EHSB": {
+    "full_name": "Equine Health Sciences Building",
+    "lat": 40.4186372,
+    "lng": -86.9149378,
+    "aliases": [
+      "ehsb",
+      "equine health sciences building"
+    ]
+  },
+  "UNIV": {
+    "full_name": "University Hall",
+    "lat": 40.4252787,
+    "lng": -86.915198,
+    "aliases": [
+      "univ",
+      "university hall"
+    ]
+  },
+  "DOYL": {
+    "full_name": "Leo Philip Doyle Laboratory",
+    "lat": 40.4186637,
+    "lng": -86.9154348,
+    "aliases": [
+      "doyl",
+      "leo philip doyle laboratory"
+    ]
+  },
+  "MMS1": {
+    "full_name": "Materials Management Storage Building 1",
+    "lat": 40.4148066,
+    "lng": -86.9189301,
+    "aliases": [
+      "mms1",
+      "materials management storage building 1"
+    ]
+  },
+  "PRCE": {
+    "full_name": "Peirce Hall",
+    "lat": 40.4266235,
+    "lng": -86.9151022,
+    "aliases": [
+      "prce",
+      "peirce hall"
+    ]
+  },
+  "SIML": {
+    "full_name": "Holleman-Niswonger Simulator Center",
+    "lat": 40.4167268,
+    "lng": -86.9351245,
+    "aliases": [
+      "siml",
+      "holleman-niswonger simulator center"
+    ]
+  },
+  "JNSN": {
+    "full_name": "Helen R. Johnson Hall Of Nursing",
+    "lat": 40.4293933,
+    "lng": -86.9155322,
+    "aliases": [
+      "jnsn",
+      "helen r. johnson hall of nursing"
+    ]
+  },
+  "EEL": {
+    "full_name": "Entomology Environmental Lab",
+    "lat": 40.4228211,
+    "lng": -86.914654,
+    "aliases": [
+      "eel",
+      "entomology environmental lab"
+    ]
+  },
+  "VPTH": {
+    "full_name": "Veterinary Pathology Building",
+    "lat": 40.4200625,
+    "lng": -86.9154598,
+    "aliases": [
+      "vpth",
+      "veterinary pathology building"
+    ]
+  },
+  "HGR5": {
+    "full_name": "Hangar No. 5",
+    "lat": 40.4165787,
+    "lng": -86.9333046,
+    "aliases": [
+      "hgr5",
+      "hangar no. 5"
+    ]
+  },
+  "TH4": {
+    "full_name": "Tee-hangar No. 4",
+    "lat": 40.4162854,
+    "lng": -86.9358015,
+    "aliases": [
+      "th4",
+      "tee-hangar no. 4"
+    ]
+  },
+  "FORS": {
+    "full_name": "Forestry Building",
+    "lat": 40.4227173,
+    "lng": -86.9141388,
+    "aliases": [
+      "fors",
+      "forestry building"
+    ]
+  },
+  "SCHM": {
+    "full_name": "Helen B. Schleman Hall",
+    "lat": 40.4258222,
+    "lng": -86.9152296,
+    "aliases": [
+      "schm",
+      "rec",
+      "helen b. schleman hall"
+    ]
+  },
+  "SMLY": {
+    "full_name": "John C. Smalley Center For Housing & Food Service Administration",
+    "lat": 40.4270242,
+    "lng": -86.92316,
+    "aliases": [
+      "smly",
+      "john c. smalley center for housing & food service administration"
+    ]
+  },
+  "TH6": {
+    "full_name": "Tee-hangar No. 6",
+    "lat": 40.4159347,
+    "lng": -86.9358977,
+    "aliases": [
+      "th6",
+      "tee-hangar no. 6"
+    ]
+  },
+  "MATH": {
+    "full_name": "Mathematical Sciences Building",
+    "lat": 40.4262042,
+    "lng": -86.9158629,
+    "aliases": [
+      "math",
+      "mathematical sciences building"
+    ]
+  },
+  "SCPA": {
+    "full_name": "Slayter Center of Performing Arts",
+    "lat": 40.4319634,
+    "lng": -86.9226383,
+    "aliases": [
+      "scpa",
+      "slayter center of performing arts"
+    ]
+  },
+  "HGR8": {
+    "full_name": "Hangar No. 8",
+    "lat": 40.4145785,
+    "lng": -86.9364491,
+    "aliases": [
+      "hgr8",
+      "hangar no. 8"
+    ]
+  },
+  "CL50": {
+    "full_name": "Class of 1950 Lecture Hall",
+    "lat": 40.4262757,
+    "lng": -86.9150779,
+    "aliases": [
+      "cl50",
+      "class of 1950 lecture hall"
+    ]
+  },
+  "LSA": {
+    "full_name": "Life Science Animal Building",
+    "lat": 40.4225043,
+    "lng": -86.9177275,
+    "aliases": [
+      "lsa",
+      "life science animal building"
+    ]
+  },
+  "HORT": {
+    "full_name": "Horticulture Building",
+    "lat": 40.4217447,
+    "lng": -86.9144216,
+    "aliases": [
+      "hort",
+      "horticulture building"
+    ]
+  },
+  "HAAS": {
+    "full_name": "Felix Haas Hall",
+    "lat": 40.4268457,
+    "lng": -86.9162364,
+    "aliases": [
+      "haas",
+      "felix haas hall"
+    ]
+  },
+  "MTHW": {
+    "full_name": "Matthews Hall",
+    "lat": 40.4248583,
+    "lng": -86.9163814,
+    "aliases": [
+      "mthw",
+      "matthews hall"
+    ]
+  },
+  "GRIS": {
+    "full_name": "Grissom Hall",
+    "lat": 40.426444,
+    "lng": -86.9109085,
+    "aliases": [
+      "gris",
+      "grissom hall"
+    ]
+  },
+  "HANS": {
+    "full_name": "Arthur G. Hansen Life Sciences Research Building",
+    "lat": 40.4222667,
+    "lng": -86.916986,
+    "aliases": [
+      "hans",
+      "arthur g. hansen life sciences research building"
+    ]
+  },
+  "BCHM": {
+    "full_name": "Biochemistry Building",
+    "lat": 40.4228166,
+    "lng": -86.9165152,
+    "aliases": [
+      "bchm",
+      "biochemistry building"
+    ]
+  },
+  "PSYC": {
+    "full_name": "Psychological Sciences Building",
+    "lat": 40.4269637,
+    "lng": -86.9150285,
+    "aliases": [
+      "psyc",
+      "psychological sciences building"
+    ]
+  },
+  "STON": {
+    "full_name": "Winthrop E. Stone Hall",
+    "lat": 40.4246754,
+    "lng": -86.9153944,
+    "aliases": [
+      "ston",
+      "winthrop e. stone hall"
+    ]
+  },
+  "ADDL": {
+    "full_name": "Willie M. Reed Animal Disease Diagnostic Laboratory",
+    "lat": 40.4181639,
+    "lng": -86.9160579,
+    "aliases": [
+      "addl",
+      "willie m. reed animal disease diagnostic laboratory"
+    ]
+  },
+  "SOIL": {
+    "full_name": "Soil Erosion Lab",
+    "lat": 40.4213508,
+    "lng": -86.9200708,
+    "aliases": [
+      "soil",
+      "soil erosion lab"
+    ]
+  },
+  "KNOY": {
+    "full_name": "Maurice G. Knoy Hall of Technology",
+    "lat": 40.4278257,
+    "lng": -86.9111835,
+    "aliases": [
+      "knoy",
+      "maurice g. knoy hall of technology"
+    ]
+  },
+  "HGR6": {
+    "full_name": "Hangar No. 6",
+    "lat": 40.4166007,
+    "lng": -86.9341474,
+    "aliases": [
+      "hgr6",
+      "hangar no. 6"
+    ]
+  },
+  "AERO": {
+    "full_name": "Aerospace Science Lab (hangar No. 3)",
+    "lat": 40.416352,
+    "lng": -86.9282684,
+    "aliases": [
+      "aero",
+      "aerospace science lab (hangar no. 3)"
+    ]
+  },
+  "HERL": {
+    "full_name": "Herrick Acoustics",
+    "lat": 40.4229743,
+    "lng": -86.9209219,
+    "aliases": [
+      "herl",
+      "herrick acoustics"
+    ]
+  },
+  "BRWN": {
+    "full_name": "Herbert C. Brown Laboratory of Chemistry",
+    "lat": 40.426582,
+    "lng": -86.9119457,
+    "aliases": [
+      "brwn",
+      "herbert c. brown laboratory of chemistry"
+    ]
+  },
+  "TERM": {
+    "full_name": "Terminal Building (Hangar No. 2)",
+    "lat": 40.4162634,
+    "lng": -86.930982,
+    "aliases": [
+      "term",
+      "terminal building (hangar no. 2)"
+    ]
+  },
+  "SMTH": {
+    "full_name": "Smith Hall",
+    "lat": 40.4234428,
+    "lng": -86.9169491,
+    "aliases": [
+      "smth",
+      "smith hall"
+    ]
+  },
+  "NLSN": {
+    "full_name": "Philip E. Nelson Hall of Food Science",
+    "lat": 40.4216708,
+    "lng": -86.9154328,
+    "aliases": [
+      "nlsn",
+      "philip e. nelson hall of food science"
+    ]
+  },
+  "BRNG": {
+    "full_name": "Steven C. Beering Hall of Liberal Arts & Education",
+    "lat": 40.4255057,
+    "lng": -86.9158817,
+    "aliases": [
+      "brng",
+      "steven c. beering hall of liberal arts & education"
+    ]
+  },
+  "HGR4": {
+    "full_name": "Hangar No. 4",
+    "lat": 40.415282,
+    "lng": -86.9328071,
+    "aliases": [
+      "hgr4",
+      "hangar no. 4"
+    ]
+  },
+  "MRDH": {
+    "full_name": "Virginia C. Meredith Residence Hall",
+    "lat": 40.4263132,
+    "lng": -86.923376,
+    "aliases": [
+      "mrdh",
+      "virginia c. meredith residence hall"
+    ]
+  },
+  "PGW": {
+    "full_name": "Wood Street Parking Garage",
+    "lat": 40.4229204,
+    "lng": -86.9101329,
+    "aliases": [
+      "pgw",
+      "wood street parking garage"
+    ]
+  },
+  "BRES": {
+    "full_name": "Drew & Brittany Brees Student Athletic Center",
+    "lat": 40.434065,
+    "lng": -86.9167291,
+    "aliases": [
+      "bres",
+      "drew & brittany brees student athletic center"
+    ]
+  },
+  "AR": {
+    "full_name": "Armory",
+    "lat": 40.4280981,
+    "lng": -86.9162183,
+    "aliases": [
+      "ar",
+      "armory"
+    ]
+  },
+  "WTHR": {
+    "full_name": "Richard Benbridge Wetherill Lab Of Chemistry",
+    "lat": 40.4265071,
+    "lng": -86.9130678,
+    "aliases": [
+      "wthr",
+      "richard benbridge wetherill lab of chemistry"
+    ]
+  },
+  "SHRV": {
+    "full_name": "Eleanor B. Shreve Residence Hall",
+    "lat": 40.4267738,
+    "lng": -86.9249773,
+    "aliases": [
+      "shrv",
+      "eleanor b. shreve residence hall"
+    ]
+  },
+  "HILL": {
+    "full_name": "Hillenbrand Residence Hall",
+    "lat": 40.426687,
+    "lng": -86.9266818,
+    "aliases": [
+      "hill",
+      "hillenbrand residence hall"
+    ]
+  },
+  "PGU": {
+    "full_name": "University Street Parking Garage",
+    "lat": 40.4267073,
+    "lng": -86.9172846,
+    "aliases": [
+      "pgu",
+      "university street parking garage"
+    ]
+  },
+  "LAMB": {
+    "full_name": "Ward L. Lambert Field House & Gymnasium",
+    "lat": 40.4321948,
+    "lng": -86.9159668,
+    "aliases": [
+      "lamb",
+      "ward l. lambert field house & gymnasium"
+    ]
+  },
+  "STEW": {
+    "full_name": "Stewart Center",
+    "lat": 40.4251415,
+    "lng": -86.9124309,
+    "aliases": [
+      "stew",
+      "stewart center"
+    ]
+  },
+  "FPRD": {
+    "full_name": "Forest Products Building",
+    "lat": 40.4231221,
+    "lng": -86.9151428,
+    "aliases": [
+      "fprd",
+      "forest products building"
+    ]
+  },
+  "PGG": {
+    "full_name": "Grant Street Parking Garage",
+    "lat": 40.4251573,
+    "lng": -86.9098996,
+    "aliases": [
+      "pgg",
+      "grant street parking garage"
+    ]
+  },
+  "SSWA": {
+    "full_name": "Self Storage Warehouse A",
+    "lat": 40.4119175,
+    "lng": -86.9176485,
+    "aliases": [
+      "sswa",
+      "self storage warehouse a"
+    ]
+  },
+  "AHF": {
+    "full_name": "Animal Holding Facility",
+    "lat": 40.4184432,
+    "lng": -86.9142369,
+    "aliases": [
+      "ahf",
+      "animal holding facility"
+    ]
+  },
+  "AGAD": {
+    "full_name": "Agricultural Administration Building",
+    "lat": 40.4234039,
+    "lng": -86.9144693,
+    "aliases": [
+      "agad",
+      "agricultural administration building"
+    ]
+  },
+  "PIT2": {
+    "full_name": "Purdue International Teleport Building 2",
+    "lat": 40.4198796,
+    "lng": -86.9181175,
+    "aliases": [
+      "pit2",
+      "purdue international teleport building 2"
+    ]
+  },
+  "PIT3": {
+    "full_name": "Purdue International Teleport Building 3",
+    "lat": 40.4198777,
+    "lng": -86.9181562,
+    "aliases": [
+      "pit3",
+      "purdue international teleport building 3"
+    ]
+  },
+  "WH6": {
+    "full_name": "Well House No. 6",
+    "lat": 40.4288033,
+    "lng": -86.925452,
+    "aliases": [
+      "wh6",
+      "well house no. 6"
+    ]
+  },
+  "HAMP": {
+    "full_name": "Delon and Elizabeth Hampton Hall of Civil Engineering",
+    "lat": 40.4302603,
+    "lng": -86.9147582,
+    "aliases": [
+      "hamp",
+      "delon and elizabeth hampton hall of civil engineering"
+    ]
+  },
+  "PHYS": {
+    "full_name": "Physics Building",
+    "lat": 40.4301342,
+    "lng": -86.913502,
+    "aliases": [
+      "phys",
+      "physics building"
+    ]
+  },
+  "PUSH": {
+    "full_name": "Purdue University Student Health Center",
+    "lat": 40.4303664,
+    "lng": -86.9161127,
+    "aliases": [
+      "push",
+      "purdue university student health center"
+    ]
+  },
+  "TERY": {
+    "full_name": "Oliver Perkins Terry House",
+    "lat": 40.4222563,
+    "lng": -86.9222205,
+    "aliases": [
+      "tery",
+      "oliver perkins terry house"
+    ]
+  },
+  "TER1": {
+    "full_name": "Oliver Perkins Terry Garage",
+    "lat": 40.4220918,
+    "lng": -86.9223835,
+    "aliases": [
+      "ter1",
+      "oliver perkins terry garage"
+    ]
+  },
+  "SHLY": {
+    "full_name": "Frances M. Shealy Residence Hall",
+    "lat": 40.4260456,
+    "lng": -86.9207165,
+    "aliases": [
+      "shly",
+      "frances m. shealy residence hall"
+    ]
+  },
+  "DUHM": {
+    "full_name": "Ophelia Duhme Residence Hall",
+    "lat": 40.4255805,
+    "lng": -86.9207065,
+    "aliases": [
+      "duhm",
+      "ophelia duhme residence hall"
+    ]
+  },
+  "GSMB": {
+    "full_name": "Golf Storage Maintenance Barn",
+    "lat": 40.43804,
+    "lng": -86.9287199,
+    "aliases": [
+      "gsmb",
+      "golf storage maintenance barn"
+    ]
+  },
+  "GCMB": {
+    "full_name": "Golf Course Maintenance Barn",
+    "lat": 40.4384302,
+    "lng": -86.9287311,
+    "aliases": [
+      "gcmb",
+      "golf course maintenance barn"
+    ]
+  },
+  "VOIN": {
+    "full_name": "Samuel Voinoff Golf Pavillion",
+    "lat": 40.4395084,
+    "lng": -86.9268406,
+    "aliases": [
+      "voin",
+      "samuel voinoff golf pavillion"
+    ]
+  },
+  "DYE": {
+    "full_name": "Pete Dye Clubhouse",
+    "lat": 40.4404403,
+    "lng": -86.9266013,
+    "aliases": [
+      "dye",
+      "pete dye clubhouse"
+    ]
+  },
+  "WGLR": {
+    "full_name": "Women's Golf Locker Room",
+    "lat": 40.4393623,
+    "lng": -86.9246313,
+    "aliases": [
+      "wglr",
+      "women's golf locker room"
+    ]
+  },
+  "PWF": {
+    "full_name": "Purdue West - Building F",
+    "lat": 40.4260218,
+    "lng": -86.9294709,
+    "aliases": [
+      "pwf",
+      "purdue west - building f"
+    ]
+  },
+  "HA11": {
+    "full_name": "Hilltop Apartment 11",
+    "lat": 40.4341228,
+    "lng": -86.9201939,
+    "aliases": [
+      "ha11",
+      "hilltop apartment 11"
+    ]
+  },
+  "HA12": {
+    "full_name": "Hilltop Apartment 12",
+    "lat": 40.4332846,
+    "lng": -86.9203036,
+    "aliases": [
+      "ha12",
+      "hilltop apartment 12"
+    ]
+  },
+  "HA01": {
+    "full_name": "Hilltop Apartment 1",
+    "lat": 40.4342807,
+    "lng": -86.9205287,
+    "aliases": [
+      "ha01",
+      "hilltop apartment 1"
+    ]
+  },
+  "VCPR": {
+    "full_name": "Center For Paralysis Research",
+    "lat": 40.4186588,
+    "lng": -86.9145294,
+    "aliases": [
+      "vcpr",
+      "center for paralysis research"
+    ]
+  },
+  "HA21": {
+    "full_name": "Hilltop Apartment 21",
+    "lat": 40.4338827,
+    "lng": -86.9199004,
+    "aliases": [
+      "ha21",
+      "hilltop apartment 21"
+    ]
+  },
+  "BELL": {
+    "full_name": "Bell Tower",
+    "lat": 40.4272824,
+    "lng": -86.9140579,
+    "aliases": [
+      "bell",
+      "bell tower"
+    ]
+  },
+  "HA06": {
+    "full_name": "Hilltop Apartment 6",
+    "lat": 40.435835,
+    "lng": -86.9201635,
+    "aliases": [
+      "ha06",
+      "hilltop apartment 6"
+    ]
+  },
+  "FOPN": {
+    "full_name": "Flight Operations Building",
+    "lat": 40.4164909,
+    "lng": -86.9302866,
+    "aliases": [
+      "fopn",
+      "flight operations building"
+    ]
+  },
+  "BMSN": {
+    "full_name": "Byproduct Material Storage Building - North",
+    "lat": 40.4176203,
+    "lng": -86.9388185,
+    "aliases": [
+      "bmsn",
+      "byproduct material storage building - north"
+    ]
+  },
+  "HA22": {
+    "full_name": "Hilltop Apartment 22",
+    "lat": 40.4334209,
+    "lng": -86.9198845,
+    "aliases": [
+      "ha22",
+      "hilltop apartment 22"
+    ]
+  },
+  "UPOF": {
+    "full_name": "Utility Plant Office Facility",
+    "lat": 40.4179097,
+    "lng": -86.9123871,
+    "aliases": [
+      "upof",
+      "utility plant office facility"
+    ]
+  },
+  "LMSB": {
+    "full_name": "Laboratory Materials Storage Building",
+    "lat": 40.4154594,
+    "lng": -86.9111516,
+    "aliases": [
+      "lmsb",
+      "laboratory materials storage building"
+    ]
+  },
+  "AC51": {
+    "full_name": "Weather Station Complex",
+    "lat": 40.4751814,
+    "lng": -86.9921085,
+    "aliases": [
+      "ac51",
+      "weather station complex"
+    ]
+  },
+  "CAI": {
+    "full_name": "Center for Aging Infrastructure Research Equipment Storage Building",
+    "lat": 40.4085429,
+    "lng": -86.9479405,
+    "aliases": [
+      "cai",
+      "center for aging infrastructure research equipment storage building"
+    ]
+  },
+  "AC41": {
+    "full_name": "Grain Drying Complex 316-041",
+    "lat": 40.4715816,
+    "lng": -86.9901776,
+    "aliases": [
+      "ac41",
+      "grain drying complex 316-041"
+    ]
+  },
+  "AC42": {
+    "full_name": "Scale House 316-042",
+    "lat": 40.4713375,
+    "lng": -86.9900817,
+    "aliases": [
+      "ac42",
+      "scale house 316-042"
+    ]
+  },
+  "AC19": {
+    "full_name": "Machine Storage 316-019",
+    "lat": 40.4713701,
+    "lng": -86.9907446,
+    "aliases": [
+      "ac19",
+      "machine storage 316-019"
+    ]
+  },
+  "AC22": {
+    "full_name": "Field Research Building 316-022",
+    "lat": 40.4713127,
+    "lng": -86.9911084,
+    "aliases": [
+      "ac22",
+      "field research building 316-022"
+    ]
+  },
+  "AC15": {
+    "full_name": "Farm Repair And Wood Shop 316-015",
+    "lat": 40.4708236,
+    "lng": -86.9911119,
+    "aliases": [
+      "ac15",
+      "farm repair and wood shop 316-015"
+    ]
+  },
+  "AC55": {
+    "full_name": "66' wide Storage Barn",
+    "lat": 40.4708777,
+    "lng": -86.9907068,
+    "aliases": [
+      "ac55",
+      "66' wide storage barn"
+    ]
+  },
+  "AC54": {
+    "full_name": "CDTC Building",
+    "lat": 40.4717151,
+    "lng": -86.9894341,
+    "aliases": [
+      "ac54",
+      "cdtc building"
+    ]
+  },
+  "AC45": {
+    "full_name": "V.A.R. Test Building 316-045",
+    "lat": 40.4714419,
+    "lng": -86.9888491,
+    "aliases": [
+      "ac45",
+      "v.a.r. test building 316-045"
+    ]
+  },
+  "AC39": {
+    "full_name": "Crops Extension Building 316-039",
+    "lat": 40.4714492,
+    "lng": -86.9892031,
+    "aliases": [
+      "ac39",
+      "crops extension building 316-039"
+    ]
+  },
+  "AC08": {
+    "full_name": "Wheat Seed Storage 316-008",
+    "lat": 40.4712482,
+    "lng": -86.9894511,
+    "aliases": [
+      "ac08",
+      "wheat seed storage 316-008"
+    ]
+  },
+  "AC07": {
+    "full_name": "Corn Seed Storage 316-007",
+    "lat": 40.4712484,
+    "lng": -86.9896029,
+    "aliases": [
+      "ac07",
+      "corn seed storage 316-007"
+    ]
+  },
+  "AC50": {
+    "full_name": "USDA Storage Garage",
+    "lat": 40.471161,
+    "lng": -86.9898184,
+    "aliases": [
+      "ac50",
+      "usda storage garage"
+    ]
+  },
+  "AC23": {
+    "full_name": "Sorghum Seed Storage 316-023",
+    "lat": 40.4710544,
+    "lng": -86.9895309,
+    "aliases": [
+      "ac23",
+      "sorghum seed storage 316-023"
+    ]
+  },
+  "AC21": {
+    "full_name": "USDA IPM Storage Shed",
+    "lat": 40.4710594,
+    "lng": -86.9893284,
+    "aliases": [
+      "ac21",
+      "usda ipm storage shed"
+    ]
+  },
+  "AC36": {
+    "full_name": "Large Machinery Building 316-036",
+    "lat": 40.4710423,
+    "lng": -86.9890825,
+    "aliases": [
+      "ac36",
+      "large machinery building 316-036"
+    ]
+  },
+  "AC49": {
+    "full_name": "USDA IPM Building Brown",
+    "lat": 40.4710447,
+    "lng": -86.9885708,
+    "aliases": [
+      "ac49",
+      "usda ipm building brown"
+    ]
+  },
+  "AC48": {
+    "full_name": "USDA Storage Barn",
+    "lat": 40.4708606,
+    "lng": -86.9880435,
+    "aliases": [
+      "ac48",
+      "usda storage barn"
+    ]
+  },
+  "AC43": {
+    "full_name": "USDA Soybean Lab",
+    "lat": 40.470851,
+    "lng": -86.9894052,
+    "aliases": [
+      "ac43",
+      "usda soybean lab"
+    ]
+  },
+  "AC58": {
+    "full_name": "Northeast Storage Barn",
+    "lat": 40.4704222,
+    "lng": -86.9900249,
+    "aliases": [
+      "ac58",
+      "northeast storage barn"
+    ]
+  },
+  "AC35": {
+    "full_name": "Pest Lab And Storage 316-035",
+    "lat": 40.470421,
+    "lng": -86.9894816,
+    "aliases": [
+      "ac35",
+      "pest lab and storage 316-035"
+    ]
+  },
+  "AC25": {
+    "full_name": "Soils Extension Building 316-025",
+    "lat": 40.4704222,
+    "lng": -86.9890452,
+    "aliases": [
+      "ac25",
+      "soils extension building 316-025"
+    ]
+  },
+  "AC57": {
+    "full_name": "East Storage Barn",
+    "lat": 40.4701943,
+    "lng": -86.9900343,
+    "aliases": [
+      "ac57",
+      "east storage barn"
+    ]
+  },
+  "AC18": {
+    "full_name": "Fertilizer Storage 316-018",
+    "lat": 40.4699734,
+    "lng": -86.9904108,
+    "aliases": [
+      "ac18",
+      "fertilizer storage 316-018"
+    ]
+  },
+  "AC44": {
+    "full_name": "USDA Rainulator Building Soil Erosion",
+    "lat": 40.470044,
+    "lng": -86.9888974,
+    "aliases": [
+      "ac44",
+      "usda rainulator building soil erosion"
+    ]
+  },
+  "AC46": {
+    "full_name": "Arc Headqrtrs, Shop, & Cpl Annex 316-046",
+    "lat": 40.4701247,
+    "lng": -86.9919505,
+    "aliases": [
+      "ac46",
+      "arc headqrtrs, shop, & cpl annex 316-046"
+    ]
+  },
+  "AC56": {
+    "full_name": "West Barn 72'x181'",
+    "lat": 40.4701523,
+    "lng": -86.9935274,
+    "aliases": [
+      "ac56",
+      "west barn 72'x181'"
+    ]
+  },
+  "AC47": {
+    "full_name": "Crop Protection Laboratory 316-047",
+    "lat": 40.4701815,
+    "lng": -86.9927888,
+    "aliases": [
+      "ac47",
+      "crop protection laboratory 316-047"
+    ]
+  },
+  "AC20": {
+    "full_name": "Superintendent Dwelling",
+    "lat": 40.4694023,
+    "lng": -86.9905974,
+    "aliases": [
+      "ac20",
+      "superintendent dwelling"
+    ]
+  },
+  "AC04": {
+    "full_name": "Welsh Farm Pole Barn",
+    "lat": 40.4906204,
+    "lng": -86.9958212,
+    "aliases": [
+      "ac04",
+      "welsh farm pole barn"
+    ]
+  },
+  "AC05": {
+    "full_name": "Welsh Farm Dwelling",
+    "lat": 40.4910203,
+    "lng": -86.9950616,
+    "aliases": [
+      "ac05",
+      "welsh farm dwelling"
+    ]
+  },
+  "AF02": {
+    "full_name": "Aquaculture Storage Facility",
+    "lat": 40.5036643,
+    "lng": -87.0138373,
+    "aliases": [
+      "af02",
+      "af102",
+      "aquaculture storage facility"
+    ]
+  },
+  "A202": {
+    "full_name": "Open Front Pen",
+    "lat": 40.5040842,
+    "lng": -87.0123169,
+    "aliases": [
+      "a202",
+      "b202",
+      "open front pen"
+    ]
+  },
+  "A201": {
+    "full_name": "Swine Evaluation",
+    "lat": 40.5043889,
+    "lng": -87.012746,
+    "aliases": [
+      "a201",
+      "b201",
+      "swine evaluation"
+    ]
+  },
+  "A601": {
+    "full_name": "Feedmill Storage",
+    "lat": 40.4990166,
+    "lng": -87.0127382,
+    "aliases": [
+      "a601",
+      "b601",
+      "feedmill storage"
+    ]
+  },
+  "A602": {
+    "full_name": "Feed Mill",
+    "lat": 40.498687,
+    "lng": -87.0126857,
+    "aliases": [
+      "a602",
+      "b602",
+      "feed mill"
+    ]
+  },
+  "A603": {
+    "full_name": "Grain Handling Building",
+    "lat": 40.4983823,
+    "lng": -87.0127784,
+    "aliases": [
+      "a603",
+      "b603",
+      "grain handling building"
+    ]
+  },
+  "A710": {
+    "full_name": "Wetland Sampling Building",
+    "lat": 40.4985089,
+    "lng": -87.0120831,
+    "aliases": [
+      "a710",
+      "b710",
+      "wetland sampling building"
+    ]
+  },
+  "A709": {
+    "full_name": "Swine Isolation",
+    "lat": 40.4987694,
+    "lng": -87.0120702,
+    "aliases": [
+      "a709",
+      "swine isolation"
+    ]
+  },
+  "A901": {
+    "full_name": "ASREC Teaching Center Classroom",
+    "lat": 40.4985045,
+    "lng": -87.0136337,
+    "aliases": [
+      "a901",
+      "asrec teaching center classroom"
+    ]
+  },
+  "A805": {
+    "full_name": "Well House #1",
+    "lat": 40.5010507,
+    "lng": -87.014323,
+    "aliases": [
+      "a805",
+      "well house #1"
+    ]
+  },
+  "A701": {
+    "full_name": "Swine Office Metabolism",
+    "lat": 40.5004617,
+    "lng": -87.0129029,
+    "aliases": [
+      "a701",
+      "swine office metabolism"
+    ]
+  },
+  "A702": {
+    "full_name": "Swine Grow/Finish 3",
+    "lat": 40.5002147,
+    "lng": -87.0117722,
+    "aliases": [
+      "a702",
+      "swine grow/finish 3"
+    ]
+  },
+  "A703": {
+    "full_name": "Swine Farrowing & Nursery 1",
+    "lat": 40.4998548,
+    "lng": -87.0127994,
+    "aliases": [
+      "a703",
+      "swine farrowing & nursery 1"
+    ]
+  },
+  "A704": {
+    "full_name": "Swine Farrowing & Nursery 2",
+    "lat": 40.4998546,
+    "lng": -87.0123632,
+    "aliases": [
+      "a704",
+      "swine farrowing & nursery 2"
+    ]
+  },
+  "A705": {
+    "full_name": "Swine Gestation Research 1",
+    "lat": 40.4998215,
+    "lng": -87.0118126,
+    "aliases": [
+      "a705",
+      "swine gestation research 1"
+    ]
+  },
+  "A706": {
+    "full_name": "Swine Gestation Research 2",
+    "lat": 40.4998022,
+    "lng": -87.0109628,
+    "aliases": [
+      "a706",
+      "swine gestation research 2"
+    ]
+  },
+  "A712": {
+    "full_name": "Swine Lagoon Pump Station",
+    "lat": 40.4995479,
+    "lng": -87.0114144,
+    "aliases": [
+      "a712",
+      "b712",
+      "swine lagoon pump station"
+    ]
+  },
+  "A707": {
+    "full_name": "Swine Grow/Finish 2",
+    "lat": 40.4995437,
+    "lng": -87.012596,
+    "aliases": [
+      "a707",
+      "swine grow/finish 2"
+    ]
+  },
+  "A708": {
+    "full_name": "Swine Grow/Finish 1",
+    "lat": 40.4993735,
+    "lng": -87.0125972,
+    "aliases": [
+      "a708",
+      "swine grow/finish 1"
+    ]
+  },
+  "A817": {
+    "full_name": "Swine Storage",
+    "lat": 40.4951909,
+    "lng": -87.0141525,
+    "aliases": [
+      "a817",
+      "swine storage"
+    ]
+  },
+  "A801": {
+    "full_name": "ASREC Farm Shop/Headquarters",
+    "lat": 40.4978967,
+    "lng": -87.0147906,
+    "aliases": [
+      "a801",
+      "asrec farm shop/headquarters"
+    ]
+  },
+  "A802": {
+    "full_name": "Machine Shed",
+    "lat": 40.4980095,
+    "lng": -87.0139572,
+    "aliases": [
+      "a802",
+      "machine shed"
+    ]
+  },
+  "A402": {
+    "full_name": "Poultry Storage",
+    "lat": 40.4968807,
+    "lng": -87.0145736,
+    "aliases": [
+      "a402",
+      "poultry storage"
+    ]
+  },
+  "A403": {
+    "full_name": "Poultry Management 1",
+    "lat": 40.4972153,
+    "lng": -87.0136748,
+    "aliases": [
+      "a403",
+      "poultry management 1"
+    ]
+  },
+  "A404": {
+    "full_name": "Poultry Grower",
+    "lat": 40.4968263,
+    "lng": -87.0137094,
+    "aliases": [
+      "a404",
+      "poultry grower"
+    ]
+  },
+  "A405": {
+    "full_name": "Poultry Management 2",
+    "lat": 40.4972283,
+    "lng": -87.0126161,
+    "aliases": [
+      "a405",
+      "poultry management 2"
+    ]
+  },
+  "A406": {
+    "full_name": "Poultry Layer",
+    "lat": 40.4968335,
+    "lng": -87.0125162,
+    "aliases": [
+      "a406",
+      "poultry layer"
+    ]
+  },
+  "A407": {
+    "full_name": "Poultry Lift Station",
+    "lat": 40.4964421,
+    "lng": -87.0122895,
+    "aliases": [
+      "a407",
+      "poultry lift station"
+    ]
+  },
+  "B504": {
+    "full_name": "Temp Sheep Structure 2",
+    "lat": 40.4966518,
+    "lng": -87.0116593,
+    "aliases": [
+      "b504",
+      "temp sheep structure 2"
+    ]
+  },
+  "A501": {
+    "full_name": "Sheep Research/Teaching",
+    "lat": 40.4976995,
+    "lng": -87.0164029,
+    "aliases": [
+      "a501",
+      "sheep research/teaching"
+    ]
+  },
+  "A502": {
+    "full_name": "Sheep Pole Barn",
+    "lat": 40.4977278,
+    "lng": -87.0174858,
+    "aliases": [
+      "a502",
+      "sheep pole barn"
+    ]
+  },
+  "A713": {
+    "full_name": "Enviromental Research Building",
+    "lat": 40.4973677,
+    "lng": -87.0194388,
+    "aliases": [
+      "a713",
+      "b713",
+      "enviromental research building"
+    ]
+  },
+  "A820": {
+    "full_name": "Baker Residence",
+    "lat": 40.4952294,
+    "lng": -87.0150213,
+    "aliases": [
+      "a820",
+      "b803",
+      "baker residence"
+    ]
+  },
+  "A803": {
+    "full_name": "Baker Residence",
+    "lat": 40.4954455,
+    "lng": -87.014955,
+    "aliases": [
+      "a803",
+      "b803",
+      "baker residence"
+    ]
+  },
+  "A806": {
+    "full_name": "Baker Small Utility Shed",
+    "lat": 40.4955513,
+    "lng": -87.0144835,
+    "aliases": [
+      "a806",
+      "b806",
+      "baker small utility shed"
+    ]
+  },
+  "A810": {
+    "full_name": "Slayton Farmstead Managers Residence",
+    "lat": 40.5060933,
+    "lng": -87.0265934,
+    "aliases": [
+      "a810",
+      "sf810",
+      "slayton farmstead managers residence"
+    ]
+  },
+  "A809": {
+    "full_name": "Garage And Tool Shed 8-0900",
+    "lat": 40.5063392,
+    "lng": -87.0264034,
+    "aliases": [
+      "a809",
+      "sf811",
+      "garage and tool shed 8-0900"
+    ]
+  },
+  "A812": {
+    "full_name": "Quonset Hut 8-1200",
+    "lat": 40.5063348,
+    "lng": -87.0261071,
+    "aliases": [
+      "a812",
+      "sf812",
+      "quonset hut 8-1200"
+    ]
+  },
+  "A815": {
+    "full_name": "Barn 8-1500",
+    "lat": 40.5062739,
+    "lng": -87.0258074,
+    "aliases": [
+      "a815",
+      "sf815",
+      "barn 8-1500"
+    ]
+  },
+  "A716": {
+    "full_name": "Nursery Building - South",
+    "lat": 40.5062804,
+    "lng": -87.0254292,
+    "aliases": [
+      "a716",
+      "sf816",
+      "nursery building - south"
+    ]
+  },
+  "A717": {
+    "full_name": "Nursery Building - Center",
+    "lat": 40.5061965,
+    "lng": -87.0253948,
+    "aliases": [
+      "a717",
+      "sf817",
+      "nursery building - center"
+    ]
+  },
+  "A718": {
+    "full_name": "Nursery Building - North",
+    "lat": 40.506082,
+    "lng": -87.0253912,
+    "aliases": [
+      "a718",
+      "sf818",
+      "nursery building - north"
+    ]
+  },
+  "A814": {
+    "full_name": "Wet Holding Shed 8-1400",
+    "lat": 40.5064981,
+    "lng": -87.0258585,
+    "aliases": [
+      "a814",
+      "sf814",
+      "wet holding shed 8-1400"
+    ]
+  },
+  "A813": {
+    "full_name": "Grain Shed 8-1300",
+    "lat": 40.5065885,
+    "lng": -87.0260172,
+    "aliases": [
+      "a813",
+      "sf813",
+      "grain shed 8-1300"
+    ]
+  },
+  "A301": {
+    "full_name": "Calf Research Unit 3-0100",
+    "lat": 40.5109537,
+    "lng": -87.0234731,
+    "aliases": [
+      "a301",
+      "sd301",
+      "calf research unit 3-0100"
+    ]
+  },
+  "A302": {
+    "full_name": "Dairy Research Unit 3-0200",
+    "lat": 40.5109573,
+    "lng": -87.0225018,
+    "aliases": [
+      "a302",
+      "sd302",
+      "dairy research unit 3-0200"
+    ]
+  },
+  "A303": {
+    "full_name": "Herd Barn",
+    "lat": 40.5104203,
+    "lng": -87.0225126,
+    "aliases": [
+      "a303",
+      "sd303",
+      "herd barn"
+    ]
+  },
+  "A305": {
+    "full_name": "Feed Center 3-0500",
+    "lat": 40.5103937,
+    "lng": -87.0214814,
+    "aliases": [
+      "a305",
+      "sd305",
+      "feed center 3-0500"
+    ]
+  },
+  "A304": {
+    "full_name": "Well House 3-0400",
+    "lat": 40.5109697,
+    "lng": -87.0210776,
+    "aliases": [
+      "a304",
+      "sd304",
+      "well house 3-0400"
+    ]
+  },
+  "A306": {
+    "full_name": "Waste Handling Facility 3-0600",
+    "lat": 40.509658,
+    "lng": -87.0223851,
+    "aliases": [
+      "a306",
+      "sd306",
+      "waste handling facility 3-0600"
+    ]
+  },
+  "A308": {
+    "full_name": "Heifer Barn 3-0800",
+    "lat": 40.5095468,
+    "lng": -87.0227841,
+    "aliases": [
+      "a308",
+      "sd308",
+      "heifer barn 3-0800"
+    ]
+  },
+  "A309": {
+    "full_name": "Feed Center Bunker Silos",
+    "lat": 40.5098457,
+    "lng": -87.0212862,
+    "aliases": [
+      "a309",
+      "sd309",
+      "feed center bunker silos"
+    ]
+  },
+  "A310": {
+    "full_name": "Hay Storage Shed",
+    "lat": 40.5094159,
+    "lng": -87.0212761,
+    "aliases": [
+      "a310",
+      "sd310",
+      "hay storage shed"
+    ]
+  },
+  "A101": {
+    "full_name": "Managers Residence",
+    "lat": 40.5263642,
+    "lng": -87.0241843,
+    "aliases": [
+      "a101",
+      "cb101",
+      "managers residence"
+    ]
+  },
+  "A102": {
+    "full_name": "Wood Frame Garage 1-0200",
+    "lat": 40.5258275,
+    "lng": -87.0242406,
+    "aliases": [
+      "a102",
+      "cb102",
+      "wood frame garage 1-0200"
+    ]
+  },
+  "A103": {
+    "full_name": "Steel Quonset Garage 1-0300",
+    "lat": 40.5255336,
+    "lng": -87.0238107,
+    "aliases": [
+      "a103",
+      "cb103",
+      "steel quonset garage 1-0300"
+    ]
+  },
+  "A105": {
+    "full_name": "Steel Quonset Implement Shed 1-0500",
+    "lat": 40.5256403,
+    "lng": -87.0232278,
+    "aliases": [
+      "a105",
+      "cb105",
+      "steel quonset implement shed 1-0500"
+    ]
+  },
+  "A108": {
+    "full_name": "Steel Quonset Storage Shed 1-0800",
+    "lat": 40.5253844,
+    "lng": -87.0230415,
+    "aliases": [
+      "a108",
+      "cb108",
+      "steel quonset storage shed 1-0800"
+    ]
+  },
+  "A109": {
+    "full_name": "Well House 1-0900",
+    "lat": 40.525677,
+    "lng": -87.0206109,
+    "aliases": [
+      "a109",
+      "cb109",
+      "well house 1-0900"
+    ]
+  },
+  "A110": {
+    "full_name": "Beef Metabolism (Headquarters) 1-1000",
+    "lat": 40.5251806,
+    "lng": -87.0209268,
+    "aliases": [
+      "a110",
+      "cb110",
+      "beef metabolism (headquarters) 1-1000"
+    ]
+  },
+  "A111": {
+    "full_name": "Handling Facility 1-1100",
+    "lat": 40.5244572,
+    "lng": -87.0217828,
+    "aliases": [
+      "a111",
+      "cb111",
+      "handling facility 1-1100"
+    ]
+  },
+  "A112": {
+    "full_name": "Individual Feeding Barn 1-1200",
+    "lat": 40.5248459,
+    "lng": -87.0209467,
+    "aliases": [
+      "a112",
+      "cb112",
+      "individual feeding barn 1-1200"
+    ]
+  },
+  "A114": {
+    "full_name": "Management/Teaching Barn 1-1400",
+    "lat": 40.5243225,
+    "lng": -87.0209652,
+    "aliases": [
+      "a114",
+      "cb114",
+      "management/teaching barn 1-1400"
+    ]
+  },
+  "A113": {
+    "full_name": "Individual Feeding Barn 1-1300",
+    "lat": 40.5245953,
+    "lng": -87.0209469,
+    "aliases": [
+      "a113",
+      "cb113",
+      "individual feeding barn 1-1300"
+    ]
+  },
+  "A115": {
+    "full_name": "Management/Teaching Barn 1-1500",
+    "lat": 40.5240309,
+    "lng": -87.0209655,
+    "aliases": [
+      "a115",
+      "cb115",
+      "management/teaching barn 1-1500"
+    ]
+  },
+  "A116": {
+    "full_name": "Beef Feed Center",
+    "lat": 40.5248778,
+    "lng": -87.0200657,
+    "aliases": [
+      "a116",
+      "cb116",
+      "beef feed center"
+    ]
+  },
+  "A117": {
+    "full_name": "Individual Feeding Barn 1-1700",
+    "lat": 40.5248721,
+    "lng": -87.0195767,
+    "aliases": [
+      "a117",
+      "cb117",
+      "individual feeding barn 1-1700"
+    ]
+  },
+  "A119": {
+    "full_name": "Cattle Finishing 1-1900",
+    "lat": 40.5240833,
+    "lng": -87.0197841,
+    "aliases": [
+      "a119",
+      "cb119",
+      "cattle finishing 1-1900"
+    ]
+  },
+  "A118": {
+    "full_name": "Handling Facility (Scale House) 1-1800",
+    "lat": 40.524425,
+    "lng": -87.0191854,
+    "aliases": [
+      "a118",
+      "cb118",
+      "handling facility (scale house) 1-1800"
+    ]
+  },
+  "A120": {
+    "full_name": "Cattle Finishing 1-2000",
+    "lat": 40.5240831,
+    "lng": -87.0193616,
+    "aliases": [
+      "a120",
+      "cb120",
+      "cattle finishing 1-2000"
+    ]
+  },
+  "VA2": {
+    "full_name": "Veterinary Animal Isolation Building 2",
+    "lat": 40.4188453,
+    "lng": -86.916075,
+    "aliases": [
+      "va2",
+      "veterinary animal isolation building 2"
+    ]
+  },
+  "VA1": {
+    "full_name": "Veterinary Animal Isolation Building 1",
+    "lat": 40.4192149,
+    "lng": -86.9160635,
+    "aliases": [
+      "va1",
+      "veterinary animal isolation building 1"
+    ]
+  },
+  "VPRB": {
+    "full_name": "Veterinary Pathobiology Research Building",
+    "lat": 40.419702,
+    "lng": -86.9160701,
+    "aliases": [
+      "vprb",
+      "veterinary pathobiology research building"
+    ]
+  },
+  "CHAS": {
+    "full_name": "Chaney-Hale Hall of Science",
+    "lat": 40.4285373,
+    "lng": -86.9155059,
+    "aliases": [
+      "chas",
+      "stem",
+      "chaney-hale hall of science"
+    ]
+  },
+  "CONV": {
+    "full_name": "Convergence",
+    "lat": 40.423647,
+    "lng": -86.927028,
+    "aliases": [
+      "conv",
+      "convergence"
+    ]
+  },
+  "HNLY": {
+    "full_name": "Bill & Sally Hanley Human Development Institute",
+    "lat": 40.4246773,
+    "lng": -86.9228887,
+    "aliases": [
+      "hnly",
+      "bill & sally hanley human development institute"
+    ]
+  },
+  "BUC": {
+    "full_name": "Beta Upsilon Chi",
+    "lat": 40.4321135,
+    "lng": -86.9270967,
+    "aliases": [
+      "buc",
+      "beta upsilon chi"
+    ]
+  },
+  "DEVO": {
+    "full_name": "Devonshire Coop",
+    "lat": 40.424406,
+    "lng": -86.9047666,
+    "aliases": [
+      "devo",
+      "devonshire coop"
+    ]
+  },
+  "ABE": {
+    "full_name": "Agricultural And Biological Engineering",
+    "lat": 40.4215652,
+    "lng": -86.9165374,
+    "aliases": [
+      "abe",
+      "agricultural and biological engineering"
+    ]
+  },
+  "MJIS": {
+    "full_name": "Martin C. Jischke Hall of Biomedical Engineering",
+    "lat": 40.4221292,
+    "lng": -86.9209848,
+    "aliases": [
+      "mjis",
+      "bmed",
+      "martin c. jischke hall of biomedical engineering"
+    ]
+  },
+  "CONT": {
+    "full_name": "Continuum Discovery Park",
+    "lat": 40.423619,
+    "lng": -86.9282002,
+    "aliases": [
+      "cont",
+      "continuum discovery park"
+    ]
+  },
+  "BRFM": {
+    "full_name": "David and Bonnie Brunner Farm Animal Hospital",
+    "lat": 40.4181379,
+    "lng": -86.9110612,
+    "aliases": [
+      "brfm",
+      "david and bonnie brunner farm animal hospital"
+    ]
+  },
+  "PKRF": {
+    "full_name": "Frieda Parker Residence Hall",
+    "lat": 40.4283967,
+    "lng": -86.9196006,
+    "aliases": [
+      "pkrf",
+      "frieda parker residence hall"
+    ]
+  },
+  "MRDS": {
+    "full_name": "Virginia C. Meredith Residence Hall South",
+    "lat": 40.4255943,
+    "lng": -86.923237,
+    "aliases": [
+      "mrds",
+      "virginia c. meredith residence hall south"
+    ]
+  },
+  "BALY": {
+    "full_name": "Ralph and Bettye Bailey Hall",
+    "lat": 40.4271991,
+    "lng": -86.9100807,
+    "aliases": [
+      "baly",
+      "ralph and bettye bailey hall"
+    ]
+  },
+  "ZL1A": {
+    "full_name": "Combustion Research Laboratory Addition",
+    "lat": 40.4154015,
+    "lng": -86.9416014,
+    "aliases": [
+      "zl1a",
+      "combustion research laboratory addition"
+    ]
+  },
+  "HGR6A": {
+    "full_name": "Hangar No. 6 Addition",
+    "lat": 40.4167455,
+    "lng": -86.9346741,
+    "aliases": [
+      "hgr6a",
+      "hangar no. 6 addition"
+    ]
+  },
+  "LG": {
+    "full_name": "Lambert Green Dining",
+    "lat": 40.4318847,
+    "lng": -86.9151047,
+    "aliases": [
+      "lg",
+      "lambert green dining"
+    ]
+  },
+  "A811": {
+    "full_name": "Garage And Tool Shed 8-1100",
+    "lat": 40.5064586,
+    "lng": -87.0263613,
+    "aliases": [
+      "a811",
+      "sf811",
+      "garage and tool shed 8-1100"
+    ]
+  },
+  "A808": {
+    "full_name": "Well House #3",
+    "lat": 40.5045748,
+    "lng": -87.0203575,
+    "aliases": [
+      "a808",
+      "well house #3"
+    ]
+  },
+  "A819": {
+    "full_name": "ASREC Water Tower",
+    "lat": 40.5040782,
+    "lng": -87.0202419,
+    "aliases": [
+      "a819",
+      "asrec water tower"
+    ]
+  },
+  "A818": {
+    "full_name": "Wellhouse",
+    "lat": 40.5032254,
+    "lng": -87.0202929,
+    "aliases": [
+      "a818",
+      "wellhouse"
+    ]
+  },
+  "HAGL": {
+    "full_name": "Marc and Sharon Hagle Hall",
+    "lat": 40.427108,
+    "lng": -86.918875,
+    "aliases": [
+      "hagl",
+      "marc and sharon hagle hall"
+    ]
+  },
+  "HULL": {
+    "full_name": "Bob & Trudy Marching Band Complex",
+    "lat": 40.4281104,
+    "lng": -86.9242401,
+    "aliases": [
+      "hull",
+      "bob & trudy marching band complex"
+    ]
+  },
+  "DUDL": {
+    "full_name": "Dudley Hall",
+    "lat": 40.4270702,
+    "lng": -86.9113175,
+    "aliases": [
+      "dudl",
+      "dudley hall"
+    ]
+  },
+  "LMBS": {
+    "full_name": "Lambertus Hall",
+    "lat": 40.4277155,
+    "lng": -86.9116793,
+    "aliases": [
+      "lmbs",
+      "lambertus hall"
+    ]
+  },
+  "BREQ": {
+    "full_name": "David and Bonnie Brunner Equine Hospital",
+    "lat": 40.4187774,
+    "lng": -86.9129326,
+    "aliases": [
+      "breq",
+      "david and bonnie brunner equine hospital"
+    ]
+  },
+  "BRUN": {
+    "full_name": "David and Bonnie Brunner Small Animal Hospital",
+    "lat": 40.4196316,
+    "lng": -86.9132186,
+    "aliases": [
+      "brun",
+      "david and bonnie brunner small animal hospital"
+    ]
+  },
+  "144": {
+    "full_name": "Building E",
+    "lat": 40.4232499,
+    "lng": -86.9325745,
+    "aliases": [
+      "144",
+      "building e"
+    ]
+  },
+  "145": {
+    "full_name": "Building D",
+    "lat": 40.4237811,
+    "lng": -86.9327833,
+    "aliases": [
+      "145",
+      "building d"
+    ]
+  },
+  "165": {
+    "full_name": "Building C",
+    "lat": 40.4239974,
+    "lng": -86.9320117,
+    "aliases": [
+      "165",
+      "building c"
+    ]
+  },
+  "164": {
+    "full_name": "Building B",
+    "lat": 40.4239964,
+    "lng": -86.9312071,
+    "aliases": [
+      "164",
+      "building b"
+    ]
+  },
+  "163": {
+    "full_name": "Building A",
+    "lat": 40.4235222,
+    "lng": -86.9308811,
+    "aliases": [
+      "163",
+      "building a"
+    ]
+  },
+  "143": {
+    "full_name": "Building F",
+    "lat": 40.4232838,
+    "lng": -86.9319834,
+    "aliases": [
+      "143",
+      "building f"
+    ]
+  },
+  "140": {
+    "full_name": "Building G",
+    "lat": 40.4232766,
+    "lng": -86.9314468,
+    "aliases": [
+      "140",
+      "building g"
+    ]
+  },
+  "161": {
+    "full_name": "Building I",
+    "lat": 40.4220501,
+    "lng": -86.9308435,
+    "aliases": [
+      "161",
+      "building i"
+    ]
+  },
+  "162": {
+    "full_name": "Building H",
+    "lat": 40.4226643,
+    "lng": -86.9308481,
+    "aliases": [
+      "162",
+      "building h"
+    ]
+  },
+  "TM38": {
+    "full_name": "Throckmorton 38",
+    "lat": 40.298052,
+    "lng": -86.9029867,
+    "aliases": [
+      "tm38",
+      "throckmorton 38"
+    ]
+  },
+  "WERF": {
+    "full_name": "Wildlife Ecology Research Facility",
+    "lat": 40.4464517,
+    "lng": -87.0537477,
+    "aliases": [
+      "werf",
+      "wildlife ecology research facility"
+    ]
+  },
+  "PWA4": {
+    "full_name": "West Red Barn",
+    "lat": 40.4466238,
+    "lng": -87.0547199,
+    "aliases": [
+      "pwa4",
+      "pwc4",
+      "west red barn"
+    ]
+  },
+  "PWA1": {
+    "full_name": "Animal Kennel",
+    "lat": 40.4468209,
+    "lng": -87.0547083,
+    "aliases": [
+      "pwa1",
+      "pwc4",
+      "animal kennel"
+    ]
+  },
+  "SEL": {
+    "full_name": "Switzer Engineering Laboratories",
+    "lat": 40.4272908,
+    "lng": -86.9413741,
+    "aliases": [
+      "sel",
+      "switzer engineering laboratories"
+    ]
+  },
+  "ADPB": {
+    "full_name": "Aspire at Discovery Park Building B",
+    "lat": 40.4235402,
+    "lng": -86.9248966,
+    "aliases": [
+      "adpb",
+      "aspire at discovery park building b"
+    ]
+  },
+  "ADPC": {
+    "full_name": "Aspire at Discovery Park Building C",
+    "lat": 40.4240287,
+    "lng": -86.923919,
+    "aliases": [
+      "adpc",
+      "aspire at discovery park building c"
+    ]
+  },
+  "WRIT": {
+    "full_name": "John S. Wright Forestry Center",
+    "lat": 40.4323027,
+    "lng": -87.0389103,
+    "aliases": [
+      "writ",
+      "mrtl",
+      "john s. wright forestry center"
+    ]
+  },
+  "PJEC": {
+    "full_name": "Patty Jischke Early Care & Education Center",
+    "lat": 40.456986,
+    "lng": -86.9266264,
+    "aliases": [
+      "pjec",
+      "patty jischke early care & education center"
+    ]
+  },
+  "STDM": {
+    "full_name": "Ross-Ade Stadium",
+    "lat": 40.4347558,
+    "lng": -86.918383,
+    "aliases": [
+      "stdm",
+      "ross-ade stadium"
+    ]
+  },
+  "RAD": {
+    "full_name": "Ross-Ade Dining",
+    "lat": 40.4358189,
+    "lng": -86.9181947,
+    "aliases": [
+      "rad",
+      "ross-ade dining"
+    ]
+  },
+  "PGNW": {
+    "full_name": "Northwestern Avenue Parking Garage",
+    "lat": 40.4296661,
+    "lng": -86.9113524,
+    "aliases": [
+      "pgnw",
+      "northwestern avenue parking garage"
+    ]
+  },
+  "CHAO": {
+    "full_name": "The Chao Center",
+    "lat": 40.463327,
+    "lng": -86.9299799,
+    "aliases": [
+      "chao",
+      "the chao center"
+    ]
+  },
+  "ROSS": {
+    "full_name": "Ross Enterprise Center",
+    "lat": 40.4665336,
+    "lng": -86.932312,
+    "aliases": [
+      "ross",
+      "ross enterprise center"
+    ]
+  },
+  "TRAM": {
+    "full_name": "Transmitter Building WBAA Radio AM",
+    "lat": 40.341404,
+    "lng": -86.8838791,
+    "aliases": [
+      "tram",
+      "transmitter building wbaa radio am"
+    ]
+  },
+  "TM33": {
+    "full_name": "Throckmorton 33",
+    "lat": 40.2975278,
+    "lng": -86.9026527,
+    "aliases": [
+      "tm33",
+      "throckmorton 33"
+    ]
+  },
+  "TM29": {
+    "full_name": "Throckmorton 29",
+    "lat": 40.297085,
+    "lng": -86.9026307,
+    "aliases": [
+      "tm29",
+      "throckmorton 29"
+    ]
+  },
+  "TM11": {
+    "full_name": "Throckmorton 11",
+    "lat": 40.2971973,
+    "lng": -86.9030395,
+    "aliases": [
+      "tm11",
+      "throckmorton 11"
+    ]
+  },
+  "TM31": {
+    "full_name": "Throckmorton 31",
+    "lat": 40.2967726,
+    "lng": -86.9030336,
+    "aliases": [
+      "tm31",
+      "throckmorton 31"
+    ]
+  },
+  "TM30": {
+    "full_name": "Throckmorton 30",
+    "lat": 40.2967694,
+    "lng": -86.9029144,
+    "aliases": [
+      "tm30",
+      "throckmorton 30"
+    ]
+  },
+  "TM02": {
+    "full_name": "Throckmorton 02",
+    "lat": 40.2961881,
+    "lng": -86.9030785,
+    "aliases": [
+      "tm02",
+      "throckmorton 02"
+    ]
+  },
+  "TM14": {
+    "full_name": "Throckmorton 14",
+    "lat": 40.2958594,
+    "lng": -86.9032879,
+    "aliases": [
+      "tm14",
+      "throckmorton 14"
+    ]
+  },
+  "TM34": {
+    "full_name": "Throckmorton 34",
+    "lat": 40.2955579,
+    "lng": -86.9026194,
+    "aliases": [
+      "tm34",
+      "throckmorton 34"
+    ]
+  },
+  "TM05": {
+    "full_name": "Throckmorton 05",
+    "lat": 40.2954253,
+    "lng": -86.9028599,
+    "aliases": [
+      "tm05",
+      "throckmorton 05"
+    ]
+  },
+  "TRFM": {
+    "full_name": "Transmitter Building WBAA Radio FM",
+    "lat": 40.2969888,
+    "lng": -86.9010596,
+    "aliases": [
+      "trfm",
+      "transmitter building wbaa radio fm"
+    ]
+  },
+  "M07": {
+    "full_name": "Meigs Pole Barn",
+    "lat": 40.2694374,
+    "lng": -86.8831017,
+    "aliases": [
+      "m07",
+      "meigs pole barn"
+    ]
+  },
+  "M06": {
+    "full_name": "Meigs Garage",
+    "lat": 40.2696993,
+    "lng": -86.8832471,
+    "aliases": [
+      "m06",
+      "tm15",
+      "meigs garage"
+    ]
+  },
+  "TM03": {
+    "full_name": "Crops Research Support Building",
+    "lat": 40.2975632,
+    "lng": -86.9030133,
+    "aliases": [
+      "tm03",
+      "tm36",
+      "crops research support building"
+    ]
+  },
+  "M01": {
+    "full_name": "Meigs Office and Horticulture Office",
+    "lat": 40.2877302,
+    "lng": -86.8841102,
+    "aliases": [
+      "m01",
+      "tm08",
+      "meigs office and horticulture office"
+    ]
+  },
+  "M02": {
+    "full_name": "Meigs Pesticide Research Storage",
+    "lat": 40.2874762,
+    "lng": -86.8839737,
+    "aliases": [
+      "m02",
+      "tm09",
+      "meigs pesticide research storage"
+    ]
+  },
+  "FNR1": {
+    "full_name": "FNR Cunningham",
+    "lat": 40.2473416,
+    "lng": -86.8285417,
+    "aliases": [
+      "fnr1",
+      "fnr cunningham"
+    ]
+  },
+  "FNR3": {
+    "full_name": "FNR Cunningham",
+    "lat": 40.2473749,
+    "lng": -86.8286829,
+    "aliases": [
+      "fnr3",
+      "fnr cunningham"
+    ]
+  },
+  "FNR4": {
+    "full_name": "FNR Cunningham",
+    "lat": 40.2474315,
+    "lng": -86.8288737,
+    "aliases": [
+      "fnr4",
+      "fnr cunningham"
+    ]
+  },
+  "FABL": {
+    "full_name": "USDA Farm Animal Behavior Lab",
+    "lat": 40.5261249,
+    "lng": -87.0261156,
+    "aliases": [
+      "fabl",
+      "usda farm animal behavior lab"
+    ]
+  },
+  "USDA1": {
+    "full_name": "USDA Building",
+    "lat": 40.5263981,
+    "lng": -87.0260823,
+    "aliases": [
+      "usda1",
+      "usda building"
+    ]
+  },
+  "USDA2": {
+    "full_name": "USDA Storage Shed",
+    "lat": 40.5260133,
+    "lng": -87.0257203,
+    "aliases": [
+      "usda2",
+      "usda storage shed"
+    ]
+  },
+  "A107": {
+    "full_name": "Storage Shed",
+    "lat": 40.5232107,
+    "lng": -87.0224808,
+    "aliases": [
+      "a107",
+      "cb07",
+      "storage shed"
+    ]
+  },
+  "HRTP": {
+    "full_name": "Horticulture Park Barn",
+    "lat": 40.4264682,
+    "lng": -86.9354853,
+    "aliases": [
+      "hrtp",
+      "horticulture park barn"
+    ]
+  },
+  "WADE": {
+    "full_name": "Walter W. Wade Utility Plant",
+    "lat": 40.4172242,
+    "lng": -86.9125502,
+    "aliases": [
+      "wade",
+      "walter w. wade utility plant"
+    ]
+  },
+  "UPOB": {
+    "full_name": "Utility Plant Office Building",
+    "lat": 40.4172339,
+    "lng": -86.9118156,
+    "aliases": [
+      "upob",
+      "utility plant office building"
+    ]
+  },
+  "AVPB": {
+    "full_name": "Ash Vac Pump Building",
+    "lat": 40.4170666,
+    "lng": -86.9134177,
+    "aliases": [
+      "avpb",
+      "ash vac pump building"
+    ]
+  },
+  "UPSB": {
+    "full_name": "Utility Plant Storage Building",
+    "lat": 40.4172223,
+    "lng": -86.9133523,
+    "aliases": [
+      "upsb",
+      "utility plant storage building"
+    ]
+  },
+  "AC59": {
+    "full_name": "Agronomy Farm Barn",
+    "lat": 40.4760983,
+    "lng": -87.001691,
+    "aliases": [
+      "ac59",
+      "agronomy farm barn"
+    ]
+  },
+  "JPB": {
+    "full_name": "John Purdue Block Building",
+    "lat": 40.4176743,
+    "lng": -86.8956523,
+    "aliases": [
+      "jpb",
+      "john purdue block building"
+    ]
+  },
+  "LILY": {
+    "full_name": "Lilly Hall of Life Sciences",
+    "lat": 40.4233211,
+    "lng": -86.9182508,
+    "aliases": [
+      "lily",
+      "lilly hall of life sciences"
+    ]
+  },
+  "PWA7": {
+    "full_name": "Observation Overlook East",
+    "lat": 40.4471176,
+    "lng": -87.0542086,
+    "aliases": [
+      "pwa7",
+      "pwc1",
+      "observation overlook east"
+    ]
+  },
+  "PWA6": {
+    "full_name": "Observation Overlook West",
+    "lat": 40.4471246,
+    "lng": -87.0549914,
+    "aliases": [
+      "pwa6",
+      "pwc3",
+      "observation overlook west"
+    ]
+  },
+  "PWA3": {
+    "full_name": "White Pole Barn",
+    "lat": 40.4465309,
+    "lng": -87.0549458,
+    "aliases": [
+      "pwa3",
+      "pwc2",
+      "white pole barn"
+    ]
+  },
+  "PWA5": {
+    "full_name": "Purdue Wildlife Storage East",
+    "lat": 40.4464869,
+    "lng": -87.0544565,
+    "aliases": [
+      "pwa5",
+      "pwc4",
+      "purdue wildlife storage east"
+    ]
+  },
+  "PWA2": {
+    "full_name": "Animal Care Storage",
+    "lat": 40.446712,
+    "lng": -87.0543585,
+    "aliases": [
+      "pwa2",
+      "pwc5",
+      "animal care storage"
+    ]
+  },
+  "PWA8": {
+    "full_name": "Boiler Astro Observatory Shed",
+    "lat": 40.446925,
+    "lng": -87.054551,
+    "aliases": [
+      "pwa8",
+      "pwc6",
+      "boiler astro observatory shed"
+    ]
+  },
+  "AC31": {
+    "full_name": "Pump House 316-031",
+    "lat": 40.4697108,
+    "lng": -86.9969117,
+    "aliases": [
+      "ac31",
+      "pump house 316-031"
+    ]
+  },
+  "AC32": {
+    "full_name": "Open Shed",
+    "lat": 40.4691665,
+    "lng": -86.9970695,
+    "aliases": [
+      "ac32",
+      "open shed"
+    ]
+  },
+  "AC30": {
+    "full_name": "Forage Animal House 316-030B",
+    "lat": 40.4693766,
+    "lng": -86.9969249,
+    "aliases": [
+      "ac30",
+      "ac30b",
+      "forage animal house 316-030b"
+    ]
+  },
+  "AC30A": {
+    "full_name": "Sheep Barn 316-030A",
+    "lat": 40.4693232,
+    "lng": -86.9970169,
+    "aliases": [
+      "ac30a",
+      "sheep barn 316-030a"
+    ]
+  },
+  "AC52A": {
+    "full_name": "Water Quality Complex A",
+    "lat": 40.4975696,
+    "lng": -86.9976606,
+    "aliases": [
+      "ac52a",
+      "water quality complex a"
+    ]
+  },
+  "AC52B": {
+    "full_name": "Water Quality Complex B",
+    "lat": 40.4975758,
+    "lng": -86.9970966,
+    "aliases": [
+      "ac52b",
+      "water quality complex b"
+    ]
+  },
+  "AC52C": {
+    "full_name": "Water Quality Complex C",
+    "lat": 40.4981319,
+    "lng": -86.9977285,
+    "aliases": [
+      "ac52c",
+      "water quality complex c"
+    ]
+  },
+  "AC52D": {
+    "full_name": "Water Quality Complex D",
+    "lat": 40.4981515,
+    "lng": -86.9971754,
+    "aliases": [
+      "ac52d",
+      "water quality complex d"
+    ]
+  },
+  "AC52E": {
+    "full_name": "Water Quality Complex E",
+    "lat": 40.498704,
+    "lng": -86.9978387,
+    "aliases": [
+      "ac52e",
+      "water quality complex e"
+    ]
+  },
+  "AC52F": {
+    "full_name": "Water Quality Complex F",
+    "lat": 40.4987168,
+    "lng": -86.997013,
+    "aliases": [
+      "ac52f",
+      "water quality complex f"
+    ]
+  },
+  "AC52G": {
+    "full_name": "Water Quality Complex G",
+    "lat": 40.4992817,
+    "lng": -86.9978549,
+    "aliases": [
+      "ac52g",
+      "water quality complex g"
+    ]
+  },
+  "AC52H": {
+    "full_name": "Water Quality Complex H",
+    "lat": 40.4992912,
+    "lng": -86.9970228,
+    "aliases": [
+      "ac52h",
+      "water quality complex h"
+    ]
+  },
+  "AC52I": {
+    "full_name": "Water Quality Complex I",
+    "lat": 40.4998529,
+    "lng": -86.9978685,
+    "aliases": [
+      "ac52i",
+      "water quality complex i"
+    ]
+  },
+  "AC52J": {
+    "full_name": "Water Quality Complex J",
+    "lat": 40.499864,
+    "lng": -86.9970438,
+    "aliases": [
+      "ac52j",
+      "water quality complex j"
+    ]
+  },
+  "AC52K": {
+    "full_name": "Water Quality Complex K",
+    "lat": 40.5004269,
+    "lng": -86.9978766,
+    "aliases": [
+      "ac52k",
+      "water quality complex k"
+    ]
+  },
+  "AC52L": {
+    "full_name": "Water Quality Complex L",
+    "lat": 40.5004398,
+    "lng": -86.9970451,
+    "aliases": [
+      "ac52l",
+      "water quality complex l"
+    ]
+  },
+  "BRK": {
+    "full_name": "Birck Nanotechnology Center",
+    "lat": 40.4228792,
+    "lng": -86.9246892,
+    "aliases": [
+      "brk",
+      "birck nanotechnology center"
+    ]
+  },
+  "BIND": {
+    "full_name": "Bindley Bioscience Center",
+    "lat": 40.4228592,
+    "lng": -86.9234123,
+    "aliases": [
+      "bind",
+      "bindley bioscience center"
+    ]
+  },
+  "RHPH": {
+    "full_name": "Robert E. Heine Pharmacy Building",
+    "lat": 40.4295309,
+    "lng": -86.9161859,
+    "aliases": [
+      "rhph",
+      "robert e. heine pharmacy building"
+    ]
+  },
+  "FWLR": {
+    "full_name": "Harriet O. & James M. Fowler Jr. Memorial House",
+    "lat": 40.4249269,
+    "lng": -86.9223385,
+    "aliases": [
+      "fwlr",
+      "harriet o. & james m. fowler jr. memorial house"
+    ]
+  },
+  "COHP": {
+    "full_name": "Coal Hopper",
+    "lat": 40.4145877,
+    "lng": -86.9130763,
+    "aliases": [
+      "cohp",
+      "coal hopper"
+    ]
+  },
+  "PCHF": {
+    "full_name": "Purdue Coal Handling Facility",
+    "lat": 40.4152529,
+    "lng": -86.9130768,
+    "aliases": [
+      "pchf",
+      "purdue coal handling facility"
+    ]
+  },
+  "CTUN": {
+    "full_name": "Conveyer Tunnel",
+    "lat": 40.4147291,
+    "lng": -86.9130702,
+    "aliases": [
+      "ctun",
+      "conveyer tunnel"
+    ]
+  },
+  "FAA": {
+    "full_name": "FAA Tower",
+    "lat": 40.4147703,
+    "lng": -86.9333511,
+    "aliases": [
+      "faa",
+      "faa tower"
+    ]
+  },
+  "A129": {
+    "full_name": "Beef Ossabaw Slurry 2",
+    "lat": 40.5212226,
+    "lng": -87.0201108,
+    "aliases": [
+      "a129",
+      "cb124",
+      "beef ossabaw slurry 2"
+    ]
+  },
+  "ZL1": {
+    "full_name": "Combustion Research Laboratory",
+    "lat": 40.415467,
+    "lng": -86.941257,
+    "aliases": [
+      "zl1",
+      "combustion research laboratory"
+    ]
+  },
+  "ZL4": {
+    "full_name": "Propulsion Research Laboratory",
+    "lat": 40.4157796,
+    "lng": -86.9406693,
+    "aliases": [
+      "zl4",
+      "propulsion research laboratory"
+    ]
+  },
+  "WWG": {
+    "full_name": "Westwood Manor Garage",
+    "lat": 40.4295841,
+    "lng": -86.9338608,
+    "aliases": [
+      "wwg",
+      "westwood manor garage"
+    ]
+  },
+  "WEST": {
+    "full_name": "Westwood Manor",
+    "lat": 40.4293891,
+    "lng": -86.9338165,
+    "aliases": [
+      "west",
+      "westwood manor"
+    ]
+  },
+  "ELLT": {
+    "full_name": "Edward C. Elliott Hall of Music",
+    "lat": 40.4277911,
+    "lng": -86.9151688,
+    "aliases": [
+      "ellt",
+      "edward c. elliott hall of music"
+    ]
+  },
+  "HOVD": {
+    "full_name": "Frederick L. Hovde Hall of Administration",
+    "lat": 40.4282212,
+    "lng": -86.9144484,
+    "aliases": [
+      "hovd",
+      "frederick l. hovde hall of administration"
+    ]
+  },
+  "TURF": {
+    "full_name": "Intercollegiate Athletic Sports Turf Building",
+    "lat": 40.4377008,
+    "lng": -86.928823,
+    "aliases": [
+      "turf",
+      "intercollegiate athletic sports turf building"
+    ]
+  },
+  "VULC": {
+    "full_name": "Vulcan Building",
+    "lat": 40.408434,
+    "lng": -86.943453,
+    "aliases": [
+      "vulc",
+      "pfz9",
+      "vulcan building"
+    ]
+  },
+  "BOWN": {
+    "full_name": "Robert L. & Terry L. Bowen Laboratory",
+    "lat": 40.4102502,
+    "lng": -86.9174201,
+    "aliases": [
+      "bown",
+      "robert l. & terry l. bowen laboratory"
+    ]
+  },
+  "A401": {
+    "full_name": "Poultry Hatchery",
+    "lat": 40.496586,
+    "lng": -87.0150417,
+    "aliases": [
+      "a401",
+      "poultry hatchery"
+    ]
+  },
+  "AF08": {
+    "full_name": "Aquaculture Wellhouse #8",
+    "lat": 40.503797,
+    "lng": -87.0134903,
+    "aliases": [
+      "af08",
+      "af108",
+      "aquaculture wellhouse #8"
+    ]
+  },
+  "AC53": {
+    "full_name": "Post Harvest Center Complex",
+    "lat": 40.471792,
+    "lng": -86.9906794,
+    "aliases": [
+      "ac53",
+      "post harvest center complex"
+    ]
+  },
+  "MTLA": {
+    "full_name": "Martell Forest Research Office Building",
+    "lat": 40.4312961,
+    "lng": -87.0379147,
+    "aliases": [
+      "mtla",
+      "mrtl",
+      "martell forest research office building"
+    ]
+  },
+  "MTLC": {
+    "full_name": "Martell Forest Research Building C",
+    "lat": 40.4311344,
+    "lng": -87.0388266,
+    "aliases": [
+      "mtlc",
+      "mrtl",
+      "martell forest research building c"
+    ]
+  },
+  "MTLD": {
+    "full_name": "Martell Forest Research Building D",
+    "lat": 40.4315355,
+    "lng": -87.0384276,
+    "aliases": [
+      "mtld",
+      "mrtl",
+      "martell forest research building d"
+    ]
+  },
+  "WDLD": {
+    "full_name": "Martell Forest Woodland Operations",
+    "lat": 40.4316135,
+    "lng": -87.0381704,
+    "aliases": [
+      "wdld",
+      "mrtl",
+      "martell forest woodland operations"
+    ]
+  },
+  "WILD": {
+    "full_name": "Martell Forest Wild Research",
+    "lat": 40.4316888,
+    "lng": -87.0383454,
+    "aliases": [
+      "wild",
+      "mrtl",
+      "martell forest wild research"
+    ]
+  },
+  "MTLE": {
+    "full_name": "Martell Forest Research Building E",
+    "lat": 40.4315187,
+    "lng": -87.0377688,
+    "aliases": [
+      "mtle",
+      "mrtl",
+      "martell forest research building e"
+    ]
+  },
+  "MTLF": {
+    "full_name": "Martell Forest Research Building F",
+    "lat": 40.4325833,
+    "lng": -87.0385019,
+    "aliases": [
+      "mtlf",
+      "mrtl",
+      "martell forest research building f"
+    ]
+  },
+  "MTLG": {
+    "full_name": "Martell Forest Research Building G",
+    "lat": 40.4326663,
+    "lng": -87.0400919,
+    "aliases": [
+      "mtlg",
+      "mrtl",
+      "martell forest research building g"
+    ]
+  },
+  "MTLH": {
+    "full_name": "Martell Forest Research Building H",
+    "lat": 40.432629,
+    "lng": -87.040707,
+    "aliases": [
+      "mtlh",
+      "mrtl",
+      "martell forest research building h"
+    ]
+  },
+  "MTLB": {
+    "full_name": "Martell Forest Research Building B",
+    "lat": 40.4310153,
+    "lng": -87.0390509,
+    "aliases": [
+      "mtlb",
+      "mrtl",
+      "martell forest research building b"
+    ]
+  },
+  "MANN": {
+    "full_name": "Gerald D. and Edna E. Mann Hall",
+    "lat": 40.4229652,
+    "lng": -86.9226781,
+    "aliases": [
+      "mann",
+      "gerald d. and edna e. mann hall"
+    ]
+  },
+  "PTC": {
+    "full_name": "Purdue Technology Center",
+    "lat": 40.4618753,
+    "lng": -86.9296662,
+    "aliases": [
+      "ptc",
+      "purdue technology center"
+    ]
+  },
+  "MMDC": {
+    "full_name": "Materials Management & Distribution Center",
+    "lat": 40.415232,
+    "lng": -86.9179923,
+    "aliases": [
+      "mmdc",
+      "materials management & distribution center"
+    ]
+  },
+  "SRPL": {
+    "full_name": "Surplus Operations Building",
+    "lat": 40.4152844,
+    "lng": -86.9172526,
+    "aliases": [
+      "srpl",
+      "surplus operations building"
+    ]
+  },
+  "CQNE": {
+    "full_name": "Franklin Levering Cary Quadrangle (NE)",
+    "lat": 40.4327221,
+    "lng": -86.9176138,
+    "aliases": [
+      "cqne",
+      "franklin levering cary quadrangle (ne)"
+    ]
+  },
+  "CQE": {
+    "full_name": "Franklin Levering Cary Quadrangle (East)",
+    "lat": 40.4324003,
+    "lng": -86.9169677,
+    "aliases": [
+      "cqe",
+      "franklin levering cary quadrangle (east)"
+    ]
+  },
+  "AIDC": {
+    "full_name": "Agricultural Information Distrubution Center",
+    "lat": 40.4142957,
+    "lng": -86.8947349,
+    "aliases": [
+      "aidc",
+      "agricultural information distrubution center"
+    ]
+  },
+  "LYNN": {
+    "full_name": "Charles J. Lynn Hall of Veterinary Medicine",
+    "lat": 40.4194786,
+    "lng": -86.9146603,
+    "aliases": [
+      "lynn",
+      "charles j. lynn hall of veterinary medicine"
+    ]
+  },
+  "ARMS": {
+    "full_name": "Neil Armstrong Hall of Engineering",
+    "lat": 40.4308977,
+    "lng": -86.9152708,
+    "aliases": [
+      "arms",
+      "neil armstrong hall of engineering"
+    ]
+  },
+  "PGMD": {
+    "full_name": "McCutcheon Drive Parking Garage",
+    "lat": 40.4264823,
+    "lng": -86.9281764,
+    "aliases": [
+      "pgmd",
+      "mccutcheon drive parking garage"
+    ]
+  },
+  "PMU": {
+    "full_name": "Purdue Memorial Union",
+    "lat": 40.4249697,
+    "lng": -86.9112887,
+    "aliases": [
+      "pmu",
+      "purdue memorial union",
+      "the union",
+      "union"
+    ]
+  },
+  "BCC": {
+    "full_name": "Black Cultural Center",
+    "lat": 40.4274627,
+    "lng": -86.9194506,
+    "aliases": [
+      "bcc",
+      "black cultural center"
+    ]
+  },
+  "MSEE": {
+    "full_name": "Materials And Electrical Engineering",
+    "lat": 40.4293777,
+    "lng": -86.9127567,
+    "aliases": [
+      "msee",
+      "materials and electrical engineering"
+    ]
+  },
+  "CQNW": {
+    "full_name": "Franklin Levering Cary Quadrangle (NW)",
+    "lat": 40.4327291,
+    "lng": -86.9183905,
+    "aliases": [
+      "cqnw",
+      "franklin levering cary quadrangle (nw)"
+    ]
+  },
+  "844S": {
+    "full_name": "844 South River Road",
+    "lat": 40.4122325,
+    "lng": -86.9129515,
+    "aliases": [
+      "844s",
+      "844 south river road"
+    ]
+  },
+  "WDCT": {
+    "full_name": "Wiley Dinning Court",
+    "lat": 40.4285421,
+    "lng": -86.9208612,
+    "aliases": [
+      "wdct",
+      "wiley dinning court"
+    ]
+  },
+  "BECK": {
+    "full_name": "Beck Agricultural Center",
+    "lat": 40.469341,
+    "lng": -86.9926361,
+    "aliases": [
+      "beck",
+      "beck agricultural center"
+    ]
+  },
+  "FSTE": {
+    "full_name": "First Street Towers Eastern",
+    "lat": 40.4248779,
+    "lng": -86.9237934,
+    "aliases": [
+      "fste",
+      "rshe",
+      "first street towers eastern"
+    ]
+  },
+  "ZL8": {
+    "full_name": "High Pressure Laboratory Annex",
+    "lat": 40.4148548,
+    "lng": -86.9396258,
+    "aliases": [
+      "zl8",
+      "zl7",
+      "high pressure laboratory annex"
+    ]
+  },
+  "CQS": {
+    "full_name": "Franklin Levering Cary Quadrangle (South)",
+    "lat": 40.4319067,
+    "lng": -86.9179689,
+    "aliases": [
+      "cqs",
+      "franklin levering cary quadrangle (south)"
+    ]
+  },
+  "AF01": {
+    "full_name": "Aquaculture Research Facility 1-0100",
+    "lat": 40.5042143,
+    "lng": -87.0138855,
+    "aliases": [
+      "af01",
+      "af101",
+      "aquaculture research facility 1-0100"
+    ]
+  },
+  "PEST": {
+    "full_name": "Pesticide Applicator Training Facility",
+    "lat": 40.4383464,
+    "lng": -86.9288926,
+    "aliases": [
+      "pest",
+      "pesticide applicator training facility"
+    ]
+  },
+  "STDM2": {
+    "full_name": "Ross-Ade Stadium 2",
+    "lat": 40.4333956,
+    "lng": -86.9184112,
+    "aliases": [
+      "stdm2",
+      "ross-ade stadium 2"
+    ]
+  },
+  "STDM1": {
+    "full_name": "Ross-Ade Stadium 1",
+    "lat": 40.4334647,
+    "lng": -86.9180803,
+    "aliases": [
+      "stdm1",
+      "ross-ade stadium 1"
+    ]
+  },
+  "STDM4": {
+    "full_name": "Ross-Ade Stadium 4",
+    "lat": 40.4335095,
+    "lng": -86.9179143,
+    "aliases": [
+      "stdm4",
+      "ross-ade stadium 4"
+    ]
+  },
+  "STDM3": {
+    "full_name": "Ross-Ade Stadium 3",
+    "lat": 40.433529,
+    "lng": -86.9177576,
+    "aliases": [
+      "stdm3",
+      "ross-ade stadium 3"
+    ]
+  },
+  "ASB1": {
+    "full_name": "Airport Storage Building No. 1",
+    "lat": 40.415779,
+    "lng": -86.9327382,
+    "aliases": [
+      "asb1",
+      "airport storage building no. 1"
+    ]
+  },
+  "WILY": {
+    "full_name": "Harvey W. Wiley Residence Hall",
+    "lat": 40.4295253,
+    "lng": -86.9207551,
+    "aliases": [
+      "wily",
+      "harvey w. wiley residence hall"
+    ]
+  },
+  "TARK": {
+    "full_name": "Newton Booth Tarkington Residence Hall",
+    "lat": 40.43056,
+    "lng": -86.9207526,
+    "aliases": [
+      "tark",
+      "newton booth tarkington residence hall"
+    ]
+  },
+  "PMUC": {
+    "full_name": "Purdue Memorial Union Club",
+    "lat": 40.425267,
+    "lng": -86.9106988,
+    "aliases": [
+      "pmuc",
+      "purdue memorial union club"
+    ]
+  },
+  "FSTC": {
+    "full_name": "First Street Towers Central",
+    "lat": 40.4249261,
+    "lng": -86.9245329,
+    "aliases": [
+      "fstc",
+      "rshc",
+      "first street towers central"
+    ]
+  },
+  "ZL3": {
+    "full_name": "High Pressure Research Laboratory",
+    "lat": 40.4149549,
+    "lng": -86.9391693,
+    "aliases": [
+      "zl3",
+      "high pressure research laboratory"
+    ]
+  },
+  "TH5": {
+    "full_name": "Tee-hangar No. 5",
+    "lat": 40.4166047,
+    "lng": -86.9359002,
+    "aliases": [
+      "th5",
+      "tee-hangar no. 5"
+    ]
+  },
+  "SCHO": {
+    "full_name": "Schowe House",
+    "lat": 40.4392746,
+    "lng": -86.9182926,
+    "aliases": [
+      "scho",
+      "schowe house"
+    ]
+  },
+  "COAL": {
+    "full_name": "Coal Handling Control/Fire Pump Bldg",
+    "lat": 40.4148915,
+    "lng": -86.9129257,
+    "aliases": [
+      "coal",
+      "coal handling control/fire pump bldg"
+    ]
+  },
+  "HOCK": {
+    "full_name": "Hockmeyer Hall of Structural Biology",
+    "lat": 40.4211019,
+    "lng": -86.9212682,
+    "aliases": [
+      "hock",
+      "hockmeyer hall of structural biology"
+    ]
+  },
+  "DLR": {
+    "full_name": "Hall for Discovery and Learning Research",
+    "lat": 40.4212226,
+    "lng": -86.922407,
+    "aliases": [
+      "dlr",
+      "dlc",
+      "hall for discovery and learning research"
+    ]
+  },
+  "PRF1": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4020159,
+    "lng": -86.9417822,
+    "aliases": [
+      "prf1",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PRF2": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4019152,
+    "lng": -86.9416969,
+    "aliases": [
+      "prf2",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PRF8": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4028419,
+    "lng": -86.9416261,
+    "aliases": [
+      "prf8",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PRF7": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4030636,
+    "lng": -86.9416217,
+    "aliases": [
+      "prf7",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PRF4": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4016098,
+    "lng": -86.9415598,
+    "aliases": [
+      "prf4",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PRF3": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4018242,
+    "lng": -86.9415316,
+    "aliases": [
+      "prf3",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PRF5": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4015889,
+    "lng": -86.9410772,
+    "aliases": [
+      "prf5",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR10": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4028283,
+    "lng": -86.9408719,
+    "aliases": [
+      "pr10",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PRF9": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4029323,
+    "lng": -86.9409308,
+    "aliases": [
+      "prf9",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PRF6": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4013067,
+    "lng": -86.9407663,
+    "aliases": [
+      "prf6",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR11": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4027368,
+    "lng": -86.9397885,
+    "aliases": [
+      "pr11",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR12": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4027871,
+    "lng": -86.9394594,
+    "aliases": [
+      "pr12",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR18": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4043112,
+    "lng": -86.9380087,
+    "aliases": [
+      "pr18",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR19": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4043963,
+    "lng": -86.938065,
+    "aliases": [
+      "pr19",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR17": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4042179,
+    "lng": -86.9380351,
+    "aliases": [
+      "pr17",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR20": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4046271,
+    "lng": -86.9379956,
+    "aliases": [
+      "pr20",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR16": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4039184,
+    "lng": -86.9379504,
+    "aliases": [
+      "pr16",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR21": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4048766,
+    "lng": -86.9379178,
+    "aliases": [
+      "pr21",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR22": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4047984,
+    "lng": -86.9378489,
+    "aliases": [
+      "pr22",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR13": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4028408,
+    "lng": -86.9378167,
+    "aliases": [
+      "pr13",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR15": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4031273,
+    "lng": -86.9378516,
+    "aliases": [
+      "pr15",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR14": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4029531,
+    "lng": -86.9377449,
+    "aliases": [
+      "pr14",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR23": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4048912,
+    "lng": -86.9374349,
+    "aliases": [
+      "pr23",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR25": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4047693,
+    "lng": -86.9373113,
+    "aliases": [
+      "pr25",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR24": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4049069,
+    "lng": -86.9373207,
+    "aliases": [
+      "pr24",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR28": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4053892,
+    "lng": -86.9372021,
+    "aliases": [
+      "pr28",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR26": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4046241,
+    "lng": -86.9366215,
+    "aliases": [
+      "pr26",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR27": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4045863,
+    "lng": -86.9366163,
+    "aliases": [
+      "pr27",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR34": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.40543,
+    "lng": -86.9365598,
+    "aliases": [
+      "pr34",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR32": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4053239,
+    "lng": -86.9363618,
+    "aliases": [
+      "pr32",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR33": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4051186,
+    "lng": -86.9363618,
+    "aliases": [
+      "pr33",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR35": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.405431,
+    "lng": -86.9363324,
+    "aliases": [
+      "pr35",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR36": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.405518,
+    "lng": -86.9363067,
+    "aliases": [
+      "pr36",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR29": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4047051,
+    "lng": -86.9361731,
+    "aliases": [
+      "pr29",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR30": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4047108,
+    "lng": -86.9361009,
+    "aliases": [
+      "pr30",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR31": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4048153,
+    "lng": -86.9359651,
+    "aliases": [
+      "pr31",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "P144": {
+    "full_name": "1580\u00a0W\u00a0State\u00a0Street",
+    "lat": 40.4281775,
+    "lng": -86.9338623,
+    "aliases": [
+      "p144",
+      "1580\u00a0w\u00a0state\u00a0street"
+    ]
+  },
+  "PR37": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.4027041,
+    "lng": -86.9337391,
+    "aliases": [
+      "pr37",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR38": {
+    "full_name": "S\u00a0RIVER\u00a0RD",
+    "lat": 40.402725,
+    "lng": -86.9336838,
+    "aliases": [
+      "pr38",
+      "s\u00a0river\u00a0rd"
+    ]
+  },
+  "P143": {
+    "full_name": "P143",
+    "lat": 40.4267411,
+    "lng": -86.931362,
+    "aliases": [
+      "p143",
+      "p143"
+    ]
+  },
+  "PWC": {
+    "full_name": "Purdue West - Building C",
+    "lat": 40.4254829,
+    "lng": -86.9294405,
+    "aliases": [
+      "pwc",
+      "p138",
+      "purdue west - building c"
+    ]
+  },
+  "523R": {
+    "full_name": "523 Russell Street",
+    "lat": 40.4300221,
+    "lng": -86.919508,
+    "aliases": [
+      "523r",
+      "523 russell street"
+    ]
+  },
+  "525R": {
+    "full_name": "525 Russell Street",
+    "lat": 40.430172,
+    "lng": -86.9195255,
+    "aliases": [
+      "525r",
+      "525 russell street"
+    ]
+  },
+  "412R": {
+    "full_name": "412R",
+    "lat": 40.4287353,
+    "lng": -86.9188708,
+    "aliases": [
+      "412r",
+      "pr99",
+      "412r"
+    ]
+  },
+  "P127": {
+    "full_name": "Garage for 600 Russell Street",
+    "lat": 40.4305748,
+    "lng": -86.9186233,
+    "aliases": [
+      "p127",
+      "600r",
+      "garage for 600 russell street"
+    ]
+  },
+  "P100": {
+    "full_name": "Garage for 412 Russell",
+    "lat": 40.4287113,
+    "lng": -86.9185969,
+    "aliases": [
+      "p100",
+      "garage for 412 russell"
+    ]
+  },
+  "P104": {
+    "full_name": "Garage for 425 Waldron",
+    "lat": 40.4291565,
+    "lng": -86.9185013,
+    "aliases": [
+      "p104",
+      "garage for 425 waldron"
+    ]
+  },
+  "1007F": {
+    "full_name": "1007F",
+    "lat": 40.4250497,
+    "lng": -86.9184516,
+    "aliases": [
+      "1007f",
+      "pr92",
+      "1007f"
+    ]
+  },
+  "425W": {
+    "full_name": "425W",
+    "lat": 40.429134,
+    "lng": -86.918226,
+    "aliases": [
+      "425w",
+      "p105",
+      "425w"
+    ]
+  },
+  "122W": {
+    "full_name": "122W",
+    "lat": 40.4259404,
+    "lng": -86.9176411,
+    "aliases": [
+      "122w",
+      "pr93",
+      "122w"
+    ]
+  },
+  "130W": {
+    "full_name": "130W",
+    "lat": 40.426102,
+    "lng": -86.9176328,
+    "aliases": [
+      "130w",
+      "pr94",
+      "130w"
+    ]
+  },
+  "P110": {
+    "full_name": "Garage for 915 W 5th street",
+    "lat": 40.4291581,
+    "lng": -86.9173863,
+    "aliases": [
+      "p110",
+      "garage for 915 w 5th street"
+    ]
+  },
+  "P109": {
+    "full_name": "Garage for 426 Waldron",
+    "lat": 40.4290257,
+    "lng": -86.917364,
+    "aliases": [
+      "p109",
+      "garage for 426 waldron"
+    ]
+  },
+  "P111": {
+    "full_name": "Garage for 903 W 5th street",
+    "lat": 40.4291519,
+    "lng": -86.917244,
+    "aliases": [
+      "p111",
+      "garage for 903 w 5th street"
+    ]
+  },
+  "PR46": {
+    "full_name": "904\u00a0S\u00a0RIVER\u00a0RD OUT BUILDING",
+    "lat": 40.4115779,
+    "lng": -86.9140533,
+    "aliases": [
+      "pr46",
+      "904\u00a0s\u00a0river\u00a0rd out building"
+    ]
+  },
+  "PR48": {
+    "full_name": "904\u00a0S\u00a0RIVER\u00a0RD",
+    "lat": 40.4113904,
+    "lng": -86.9138842,
+    "aliases": [
+      "pr48",
+      "904\u00a0s\u00a0river\u00a0rd"
+    ]
+  },
+  "PR47": {
+    "full_name": "904\u00a0S\u00a0RIVER\u00a0RD OUTBUILDING",
+    "lat": 40.4115761,
+    "lng": -86.9138737,
+    "aliases": [
+      "pr47",
+      "904\u00a0s\u00a0river\u00a0rd outbuilding"
+    ]
+  },
+  "PR81": {
+    "full_name": "256\u00a0MARSTELLAR\u00a0ST",
+    "lat": 40.4205278,
+    "lng": -86.9135582,
+    "aliases": [
+      "pr81",
+      "256\u00a0marstellar\u00a0st"
+    ]
+  },
+  "PR80": {
+    "full_name": "530\u00a0HARRISON\u00a0ST",
+    "lat": 40.4205294,
+    "lng": -86.9131272,
+    "aliases": [
+      "pr80",
+      "530\u00a0harrison\u00a0st"
+    ]
+  },
+  "PR83": {
+    "full_name": "231\u00a0SHEETZ\u00a0ST",
+    "lat": 40.421211,
+    "lng": -86.912552,
+    "aliases": [
+      "pr83",
+      "231\u00a0sheetz\u00a0st"
+    ]
+  },
+  "PR84": {
+    "full_name": "215\u00a0SHEETZ\u00a0ST",
+    "lat": 40.4216941,
+    "lng": -86.9126228,
+    "aliases": [
+      "pr84",
+      "215\u00a0sheetz\u00a0st"
+    ]
+  },
+  "PR77": {
+    "full_name": "241/253\u00a0SHEETZ\u00a0ST",
+    "lat": 40.4207956,
+    "lng": -86.9124655,
+    "aliases": [
+      "pr77",
+      "241/253\u00a0sheetz\u00a0st"
+    ]
+  },
+  "PR62": {
+    "full_name": "442\u00a0STEELY\u00a0ST",
+    "lat": 40.4194733,
+    "lng": -86.911589,
+    "aliases": [
+      "pr62",
+      "442\u00a0steely\u00a0st"
+    ]
+  },
+  "PR69": {
+    "full_name": "442\u00a0STEELY\u00a0ST GARAGE",
+    "lat": 40.4197458,
+    "lng": -86.9116534,
+    "aliases": [
+      "pr69",
+      "442\u00a0steely\u00a0st garage"
+    ]
+  },
+  "PR70": {
+    "full_name": "432\u00a0STEELY\u00a0ST GARAGE",
+    "lat": 40.4197153,
+    "lng": -86.9114828,
+    "aliases": [
+      "pr70",
+      "432\u00a0steely\u00a0st garage"
+    ]
+  },
+  "PR61": {
+    "full_name": "432\u00a0STEELY\u00a0ST",
+    "lat": 40.4194663,
+    "lng": -86.9114078,
+    "aliases": [
+      "pr61",
+      "432\u00a0steely\u00a0st"
+    ]
+  },
+  "PR71": {
+    "full_name": "422\u00a0STEELY\u00a0ST GARAGE",
+    "lat": 40.4197178,
+    "lng": -86.911318,
+    "aliases": [
+      "pr71",
+      "422\u00a0steely\u00a0st garage"
+    ]
+  },
+  "PR60": {
+    "full_name": "422\u00a0STEELY\u00a0ST",
+    "lat": 40.4194607,
+    "lng": -86.9112348,
+    "aliases": [
+      "pr60",
+      "422\u00a0steely\u00a0st"
+    ]
+  },
+  "PR59": {
+    "full_name": "410\u00a0STEELY\u00a0ST",
+    "lat": 40.4194779,
+    "lng": -86.910858,
+    "aliases": [
+      "pr59",
+      "410\u00a0steely\u00a0st"
+    ]
+  },
+  "PR58": {
+    "full_name": "333\u00a0S\u00a0GRANT\u00a0ST",
+    "lat": 40.4196087,
+    "lng": -86.9104996,
+    "aliases": [
+      "pr58",
+      "333\u00a0s\u00a0grant\u00a0st"
+    ]
+  },
+  "PR86": {
+    "full_name": "155-157\u00a0PIERCE\u00a0ST",
+    "lat": 40.4222813,
+    "lng": -86.9094007,
+    "aliases": [
+      "pr86",
+      "155-157\u00a0pierce\u00a0st"
+    ]
+  },
+  "PWB": {
+    "full_name": "Purdue West - Building B",
+    "lat": 40.4247889,
+    "lng": -86.9295924,
+    "aliases": [
+      "pwb",
+      "pwst",
+      "purdue west - building b"
+    ]
+  },
+  "PWD": {
+    "full_name": "Purdue West - Building D",
+    "lat": 40.4252782,
+    "lng": -86.9299384,
+    "aliases": [
+      "pwd",
+      "purdue west - building d"
+    ]
+  },
+  "ASA": {
+    "full_name": "Administrative Services Annex",
+    "lat": 40.4239225,
+    "lng": -86.9422829,
+    "aliases": [
+      "asa",
+      "administrative services annex"
+    ]
+  },
+  "LCC": {
+    "full_name": "Latino Cultural Center",
+    "lat": 40.4305179,
+    "lng": -86.9189079,
+    "aliases": [
+      "lcc",
+      "600r",
+      "latino cultural center"
+    ]
+  },
+  "SOFSR": {
+    "full_name": "Phi Sigma Rho",
+    "lat": 40.4291429,
+    "lng": -86.9188542,
+    "aliases": [
+      "sofsr",
+      "phi sigma rho"
+    ]
+  },
+  "P134": {
+    "full_name": "Purdue North Golf Course Lindberg Road",
+    "lat": 40.4455874,
+    "lng": -86.9262999,
+    "aliases": [
+      "p134",
+      "purdue north golf course lindberg road"
+    ]
+  },
+  "P139": {
+    "full_name": "na",
+    "lat": 40.4260112,
+    "lng": -86.9301479,
+    "aliases": [
+      "p139",
+      "na"
+    ]
+  },
+  "PR82": {
+    "full_name": "252-254\u00a0MARSTELLAR\u00a0ST",
+    "lat": 40.4206456,
+    "lng": -86.9135563,
+    "aliases": [
+      "pr82",
+      "252-254\u00a0marstellar\u00a0st"
+    ]
+  },
+  "SOZY": {
+    "full_name": "Zeta Psi",
+    "lat": 40.4345189,
+    "lng": -86.9246195,
+    "aliases": [
+      "sozy",
+      "zeta psi"
+    ]
+  },
+  "P133": {
+    "full_name": "818\u00a0Northwestern\u00a0Avenue",
+    "lat": 40.4338688,
+    "lng": -86.9150006,
+    "aliases": [
+      "p133",
+      "818\u00a0northwestern\u00a0avenue"
+    ]
+  },
+  "PR76": {
+    "full_name": "224\u00a0SHEETZ\u00a0ST",
+    "lat": 40.4213689,
+    "lng": -86.911807,
+    "aliases": [
+      "pr76",
+      "224\u00a0sheetz\u00a0st"
+    ]
+  },
+  "SODU": {
+    "full_name": "Delta Upsilon",
+    "lat": 40.4318613,
+    "lng": -86.9261371,
+    "aliases": [
+      "sodu",
+      "delta upsilon"
+    ]
+  },
+  "SODZ": {
+    "full_name": "Delta Zeta",
+    "lat": 40.434017,
+    "lng": -86.9234814,
+    "aliases": [
+      "sodz",
+      "delta zeta"
+    ]
+  },
+  "SODDD": {
+    "full_name": "Delta Delta Delta",
+    "lat": 40.4336028,
+    "lng": -86.9237972,
+    "aliases": [
+      "soddd",
+      "delta delta delta"
+    ]
+  },
+  "SOCF": {
+    "full_name": "Chi Phi",
+    "lat": 40.4360273,
+    "lng": -86.9248792,
+    "aliases": [
+      "socf",
+      "chi phi"
+    ]
+  },
+  "SOES": {
+    "full_name": "Evans Scholars",
+    "lat": 40.4351737,
+    "lng": -86.9232092,
+    "aliases": [
+      "soes",
+      "evans scholars"
+    ]
+  },
+  "SOAOP": {
+    "full_name": "Alpha Omicron Pi",
+    "lat": 40.4355157,
+    "lng": -86.9254337,
+    "aliases": [
+      "soaop",
+      "alpha omicron pi"
+    ]
+  },
+  "SOAGD": {
+    "full_name": "Alpha Gamma Delta",
+    "lat": 40.4353968,
+    "lng": -86.9240221,
+    "aliases": [
+      "soagd",
+      "alpha gamma delta"
+    ]
+  },
+  "SOSN": {
+    "full_name": "Sigma Nu",
+    "lat": 40.4329832,
+    "lng": -86.9253909,
+    "aliases": [
+      "sosn",
+      "sigma nu"
+    ]
+  },
+  "SOGFB": {
+    "full_name": "Gamma Phi Beta",
+    "lat": 40.433754,
+    "lng": -86.9258499,
+    "aliases": [
+      "sogfb",
+      "gamma phi beta"
+    ]
+  },
+  "SOHC": {
+    "full_name": "Theta Chi",
+    "lat": 40.4335341,
+    "lng": -86.9263845,
+    "aliases": [
+      "sohc",
+      "theta chi"
+    ]
+  },
+  "CPCOP": {
+    "full_name": "Circle Pines",
+    "lat": 40.4349393,
+    "lng": -86.9243777,
+    "aliases": [
+      "cpcop",
+      "circle pines"
+    ]
+  },
+  "SOFKH": {
+    "full_name": "Phi Kappa Theta",
+    "lat": 40.4341861,
+    "lng": -86.9252146,
+    "aliases": [
+      "sofkh",
+      "phi kappa theta"
+    ]
+  },
+  "SOASF": {
+    "full_name": "Alpha Sigma Phi",
+    "lat": 40.4350685,
+    "lng": -86.9257471,
+    "aliases": [
+      "soasf",
+      "alpha sigma phi"
+    ]
+  },
+  "SOAF": {
+    "full_name": "Alpha Phi",
+    "lat": 40.4342566,
+    "lng": -86.9268904,
+    "aliases": [
+      "soaf",
+      "alpha phi"
+    ]
+  },
+  "SOACO": {
+    "full_name": "Alpha Chi Omega",
+    "lat": 40.4347876,
+    "lng": -86.9263798,
+    "aliases": [
+      "soaco",
+      "alpha chi omega"
+    ]
+  },
+  "SOTP": {
+    "full_name": "Twin Pines",
+    "lat": 40.4280521,
+    "lng": -86.9176347,
+    "aliases": [
+      "sotp",
+      "twin pines"
+    ]
+  },
+  "SOFSK": {
+    "full_name": "Phi Sigma Kappa",
+    "lat": 40.427449,
+    "lng": -86.9175864,
+    "aliases": [
+      "sofsk",
+      "phi sigma kappa"
+    ]
+  },
+  "SO115": {
+    "full_name": "SO115",
+    "lat": 40.4255179,
+    "lng": -86.9181944,
+    "aliases": [
+      "so115",
+      "so115"
+    ]
+  },
+  "SOBSF": {
+    "full_name": "Baptist Student Foundation",
+    "lat": 40.4264808,
+    "lng": -86.9188316,
+    "aliases": [
+      "sobsf",
+      "baptist student foundation"
+    ]
+  },
+  "SOCCH": {
+    "full_name": "Christian Campus House",
+    "lat": 40.4245718,
+    "lng": -86.9182506,
+    "aliases": [
+      "socch",
+      "christian campus house"
+    ]
+  },
+  "SOMSA": {
+    "full_name": "Muslim Student Association",
+    "lat": 40.4254931,
+    "lng": -86.9187189,
+    "aliases": [
+      "somsa",
+      "muslim student association"
+    ]
+  },
+  "SOFM": {
+    "full_name": "Phi Mu",
+    "lat": 40.4265398,
+    "lng": -86.9183006,
+    "aliases": [
+      "sofm",
+      "phi mu"
+    ]
+  },
+  "SOZTA": {
+    "full_name": "Zeta Tau Alpha",
+    "lat": 40.4257245,
+    "lng": -86.9175221,
+    "aliases": [
+      "sozta",
+      "zeta tau alpha"
+    ]
+  },
+  "SOPBF": {
+    "full_name": "Pi Beta Phi",
+    "lat": 40.4245277,
+    "lng": -86.9187693,
+    "aliases": [
+      "sopbf",
+      "pi beta phi"
+    ]
+  },
+  "SOACR": {
+    "full_name": "Alpha Chi Rho",
+    "lat": 40.4250431,
+    "lng": -86.9195208,
+    "aliases": [
+      "soacr",
+      "alpha chi rho"
+    ]
+  },
+  "SOSP": {
+    "full_name": "Sigma Pi",
+    "lat": 40.4259354,
+    "lng": -86.9188093,
+    "aliases": [
+      "sosp",
+      "sigma pi"
+    ]
+  },
+  "SOTRI": {
+    "full_name": "Triangle",
+    "lat": 40.4253924,
+    "lng": -86.9171185,
+    "aliases": [
+      "sotri",
+      "triangle"
+    ]
+  },
+  "SOFH": {
+    "full_name": "Farmhouse",
+    "lat": 40.424535,
+    "lng": -86.9194842,
+    "aliases": [
+      "sofh",
+      "farmhouse"
+    ]
+  },
+  "SOLDS": {
+    "full_name": "Lds Institute of Religion",
+    "lat": 40.4248158,
+    "lng": -86.917553,
+    "aliases": [
+      "solds",
+      "lds institute of religion"
+    ]
+  },
+  "SOSK": {
+    "full_name": "Sigma Kappa",
+    "lat": 40.4290399,
+    "lng": -86.9195302,
+    "aliases": [
+      "sosk",
+      "sigma kappa"
+    ]
+  },
+  "SOCO": {
+    "full_name": "Chi Omega",
+    "lat": 40.4285645,
+    "lng": -86.917559,
+    "aliases": [
+      "soco",
+      "chi omega"
+    ]
+  },
+  "SOKKG": {
+    "full_name": "Kappa Kappa Gamma",
+    "lat": 40.427969,
+    "lng": -86.9183288,
+    "aliases": [
+      "sokkg",
+      "kappa kappa gamma"
+    ]
+  },
+  "SODG": {
+    "full_name": "Delta Gamma",
+    "lat": 40.4275268,
+    "lng": -86.9182332,
+    "aliases": [
+      "sodg",
+      "delta gamma"
+    ]
+  },
+  "SOAKL": {
+    "full_name": "Alpha Kappa Lambda",
+    "lat": 40.4287035,
+    "lng": -86.9182909,
+    "aliases": [
+      "soakl",
+      "alpha kappa lambda"
+    ]
+  },
+  "SOATO": {
+    "full_name": "Alpha Tau Omega",
+    "lat": 40.4280339,
+    "lng": -86.9187598,
+    "aliases": [
+      "soato",
+      "alpha tau omega"
+    ]
+  },
+  "SOKAT": {
+    "full_name": "Kappa Alpha Theta",
+    "lat": 40.4305366,
+    "lng": -86.9194997,
+    "aliases": [
+      "sokat",
+      "kappa alpha theta"
+    ]
+  },
+  "SOFGD": {
+    "full_name": "Phi Gamma Delta",
+    "lat": 40.4311074,
+    "lng": -86.9187293,
+    "aliases": [
+      "sofgd",
+      "phi gamma delta"
+    ]
+  },
+  "SOAXD": {
+    "full_name": "Alpha Xi Delta",
+    "lat": 40.4297302,
+    "lng": -86.9170801,
+    "aliases": [
+      "soaxd",
+      "alpha xi delta"
+    ]
+  },
+  "SOSFE": {
+    "full_name": "Sigma Phi Epsilon",
+    "lat": 40.4309617,
+    "lng": -86.9174772,
+    "aliases": [
+      "sosfe",
+      "sigma phi epsilon"
+    ]
+  },
+  "SOPKA": {
+    "full_name": "Pi Kappa Alpha",
+    "lat": 40.4310498,
+    "lng": -86.9169449,
+    "aliases": [
+      "sopka",
+      "pi kappa alpha"
+    ]
+  },
+  "SOA": {
+    "full_name": "Acacia",
+    "lat": 40.4305934,
+    "lng": -86.9175317,
+    "aliases": [
+      "soa",
+      "acacia"
+    ]
+  },
+  "SOAGR": {
+    "full_name": "Alpha Gamma Rho",
+    "lat": 40.4305295,
+    "lng": -86.9170061,
+    "aliases": [
+      "soagr",
+      "alpha gamma rho"
+    ]
+  },
+  "SOBSY": {
+    "full_name": "Beta Sigma Psi",
+    "lat": 40.4299672,
+    "lng": -86.9170584,
+    "aliases": [
+      "sobsy",
+      "beta sigma psi"
+    ]
+  },
+  "SOGL": {
+    "full_name": "Glenwood",
+    "lat": 40.4294306,
+    "lng": -86.9169885,
+    "aliases": [
+      "sogl",
+      "glenwood"
+    ]
+  },
+  "SOSA": {
+    "full_name": "Sigma Alpha",
+    "lat": 40.4205338,
+    "lng": -86.9096055,
+    "aliases": [
+      "sosa",
+      "sigma alpha"
+    ]
+  },
+  "SOFDH": {
+    "full_name": "Phi Delta Theta",
+    "lat": 40.423747,
+    "lng": -86.9126064,
+    "aliases": [
+      "sofdh",
+      "phi delta theta"
+    ]
+  },
+  "UC": {
+    "full_name": "University Church",
+    "lat": 40.4261535,
+    "lng": -86.9099877,
+    "aliases": [
+      "uc",
+      "soccn",
+      "university church"
+    ]
+  },
+  "SODSF": {
+    "full_name": "Delta Sigma Phi",
+    "lat": 40.426746,
+    "lng": -86.9095462,
+    "aliases": [
+      "sodsf",
+      "delta sigma phi"
+    ]
+  },
+  "SOPKF": {
+    "full_name": "Pi Kappa Phi",
+    "lat": 40.4267141,
+    "lng": -86.910037,
+    "aliases": [
+      "sopkf",
+      "pi kappa phi"
+    ]
+  },
+  "SOSH": {
+    "full_name": "Shoemaker",
+    "lat": 40.4269446,
+    "lng": -86.909617,
+    "aliases": [
+      "sosh",
+      "shoemaker"
+    ]
+  },
+  "SOKDR": {
+    "full_name": "Kappa Delta Rho",
+    "lat": 40.4365977,
+    "lng": -86.9148228,
+    "aliases": [
+      "sokdr",
+      "kappa delta rho"
+    ]
+  },
+  "SOST": {
+    "full_name": "Stewart",
+    "lat": 40.4336134,
+    "lng": -86.9149225,
+    "aliases": [
+      "sost",
+      "stewart"
+    ]
+  },
+  "SOHIL": {
+    "full_name": "Hillel Foundation",
+    "lat": 40.4244209,
+    "lng": -86.9175292,
+    "aliases": [
+      "sohil",
+      "hillel foundation"
+    ]
+  },
+  "SOKS": {
+    "full_name": "Kappa Sigma",
+    "lat": 40.4261127,
+    "lng": -86.9092703,
+    "aliases": [
+      "soks",
+      "kappa sigma"
+    ]
+  },
+  "SOC": {
+    "full_name": "Chauncey",
+    "lat": 40.4215237,
+    "lng": -86.9081296,
+    "aliases": [
+      "soc",
+      "chauncey"
+    ]
+  },
+  "INOV": {
+    "full_name": "Innovation Center",
+    "lat": 40.4632179,
+    "lng": -86.9311197,
+    "aliases": [
+      "inov",
+      "innovation center"
+    ]
+  },
+  "TPRL": {
+    "full_name": "Thermo Physical Properties Research Lab",
+    "lat": 40.4637952,
+    "lng": -86.9299836,
+    "aliases": [
+      "tprl",
+      "thermo physical properties research lab"
+    ]
+  },
+  "COOK": {
+    "full_name": "Cook Biotech Inc",
+    "lat": 40.4621401,
+    "lng": -86.9316727,
+    "aliases": [
+      "cook",
+      "cook biotech inc"
+    ]
+  },
+  "AQS": {
+    "full_name": "Abaqus Center",
+    "lat": 40.4629743,
+    "lng": -86.9331909,
+    "aliases": [
+      "aqs",
+      "abaqus center"
+    ]
+  },
+  "PEFHQ": {
+    "full_name": "Purdue Employee Federal Credit Union HQ",
+    "lat": 40.4634848,
+    "lng": -86.9347903,
+    "aliases": [
+      "pefhq",
+      "purdue employee federal credit union hq"
+    ]
+  },
+  "ITC": {
+    "full_name": "International Technology Center",
+    "lat": 40.4659045,
+    "lng": -86.9299027,
+    "aliases": [
+      "itc",
+      "international technology center"
+    ]
+  },
+  "IMED": {
+    "full_name": "Med Institute",
+    "lat": 40.4612778,
+    "lng": -86.931273,
+    "aliases": [
+      "imed",
+      "med institute"
+    ]
+  },
+  "MDBS": {
+    "full_name": "Micro Database System Inc",
+    "lat": 40.4600226,
+    "lng": -86.9307589,
+    "aliases": [
+      "mdbs",
+      "micro database system inc"
+    ]
+  },
+  "NCSC": {
+    "full_name": "North Central Superpave Center",
+    "lat": 40.4580102,
+    "lng": -86.9257057,
+    "aliases": [
+      "ncsc",
+      "north central superpave center"
+    ]
+  },
+  "YEAG": {
+    "full_name": "2655 Yeager Road",
+    "lat": 40.4560523,
+    "lng": -86.9252326,
+    "aliases": [
+      "yeag",
+      "2655 yeager road"
+    ]
+  },
+  "BASi": {
+    "full_name": "Bioanalytical Systems Inc",
+    "lat": 40.4586492,
+    "lng": -86.9304407,
+    "aliases": [
+      "basi",
+      "bioanalytical systems inc"
+    ]
+  },
+  "2550": {
+    "full_name": "2550 Northwestern",
+    "lat": 40.4564256,
+    "lng": -86.9283343,
+    "aliases": [
+      "2550",
+      "stfrm",
+      "2550 northwestern"
+    ]
+  },
+  "YEAG2": {
+    "full_name": "Lafayette Community Bank",
+    "lat": 40.4539856,
+    "lng": -86.9250919,
+    "aliases": [
+      "yeag2",
+      "yeag2",
+      "lafayette community bank"
+    ]
+  },
+  "INOK": {
+    "full_name": "INOK Investments Warehouse",
+    "lat": 40.4514049,
+    "lng": -86.8787643,
+    "aliases": [
+      "inok",
+      "inok investments warehouse"
+    ]
+  },
+  "SOHT": {
+    "full_name": "Theta Tau",
+    "lat": 40.4282379,
+    "lng": -86.9066963,
+    "aliases": [
+      "soht",
+      "theta tau"
+    ]
+  },
+  "SOAEP": {
+    "full_name": "Alpha Epsilon Pi",
+    "lat": 40.4277074,
+    "lng": -86.9064103,
+    "aliases": [
+      "soaep",
+      "alpha epsilon pi"
+    ]
+  },
+  "SOMC": {
+    "full_name": "Maclure",
+    "lat": 40.4268686,
+    "lng": -86.906751,
+    "aliases": [
+      "somc",
+      "maclure"
+    ]
+  },
+  "SOF": {
+    "full_name": "Fairway",
+    "lat": 40.4273695,
+    "lng": -86.9085274,
+    "aliases": [
+      "sof",
+      "fairway"
+    ]
+  },
+  "SOAT": {
+    "full_name": "Ann Tweedale",
+    "lat": 40.4236881,
+    "lng": -86.9052789,
+    "aliases": [
+      "soat",
+      "ann tweedale"
+    ]
+  },
+  "SOG": {
+    "full_name": "Gemini",
+    "lat": 40.4243637,
+    "lng": -86.9038648,
+    "aliases": [
+      "sog",
+      "gemini"
+    ]
+  },
+  "SOBTP": {
+    "full_name": "Beta Theta Pi",
+    "lat": 40.4238525,
+    "lng": -86.9040944,
+    "aliases": [
+      "sobtp",
+      "beta theta pi"
+    ]
+  },
+  "SOM": {
+    "full_name": "Marwood",
+    "lat": 40.4233668,
+    "lng": -86.9042813,
+    "aliases": [
+      "som",
+      "marwood"
+    ]
+  },
+  "SOSC": {
+    "full_name": "Sigma Chi",
+    "lat": 40.424993,
+    "lng": -86.9032731,
+    "aliases": [
+      "sosc",
+      "sigma chi"
+    ]
+  },
+  "SOFKS": {
+    "full_name": "Phi Kappa Sigma",
+    "lat": 40.4256154,
+    "lng": -86.9031544,
+    "aliases": [
+      "sofks",
+      "phi kappa sigma"
+    ]
+  },
+  "CTS": {
+    "full_name": "CTS Microelecronics",
+    "lat": 40.4597126,
+    "lng": -86.9250678,
+    "aliases": [
+      "cts",
+      "cts microelecronics"
+    ]
+  },
+  "1495": {
+    "full_name": "1495 Cumberland Avenue",
+    "lat": 40.4601355,
+    "lng": -86.9273825,
+    "aliases": [
+      "1495",
+      "1495 cumberland avenue"
+    ]
+  },
+  "SPHY": {
+    "full_name": "Specialty Hybrid",
+    "lat": 40.4602415,
+    "lng": -86.9263521,
+    "aliases": [
+      "sphy",
+      "specialty hybrid"
+    ]
+  },
+  "UTEC": {
+    "full_name": "Utility Test Equiptment Company",
+    "lat": 40.4591068,
+    "lng": -86.9263306,
+    "aliases": [
+      "utec",
+      "utility test equiptment company"
+    ]
+  },
+  "WSCN": {
+    "full_name": "West Side Commons North",
+    "lat": 40.4564886,
+    "lng": -86.9265354,
+    "aliases": [
+      "wscn",
+      "wsc",
+      "west side commons north"
+    ]
+  },
+  "SOBCM": {
+    "full_name": "Baptist Collegiate Ministry",
+    "lat": 40.4295845,
+    "lng": -86.9182586,
+    "aliases": [
+      "sobcm",
+      "baptist collegiate ministry"
+    ]
+  },
+  "621W": {
+    "full_name": "621W",
+    "lat": 40.4310873,
+    "lng": -86.9183351,
+    "aliases": [
+      "621w",
+      "621w"
+    ]
+  },
+  "506W": {
+    "full_name": "506W",
+    "lat": 40.4295694,
+    "lng": -86.917647,
+    "aliases": [
+      "506w",
+      "506w"
+    ]
+  },
+  "318W": {
+    "full_name": "318W",
+    "lat": 40.4278162,
+    "lng": -86.9176113,
+    "aliases": [
+      "318w",
+      "318w"
+    ]
+  },
+  "219W": {
+    "full_name": "219W",
+    "lat": 40.4269618,
+    "lng": -86.9182769,
+    "aliases": [
+      "219w",
+      "219w"
+    ]
+  },
+  "221W": {
+    "full_name": "221W",
+    "lat": 40.4268428,
+    "lng": -86.9182901,
+    "aliases": [
+      "221w",
+      "221w"
+    ]
+  },
+  "1012W": {
+    "full_name": "Pi Beta Phi",
+    "lat": 40.4249269,
+    "lng": -86.9188367,
+    "aliases": [
+      "1012w",
+      "sopbf",
+      "pi beta phi"
+    ]
+  },
+  "23W": {
+    "full_name": "23W",
+    "lat": 40.4248374,
+    "lng": -86.9184049,
+    "aliases": [
+      "23w",
+      "23w"
+    ]
+  },
+  "27W": {
+    "full_name": "27W",
+    "lat": 40.4250599,
+    "lng": -86.9181995,
+    "aliases": [
+      "27w",
+      "27w"
+    ]
+  },
+  "24R": {
+    "full_name": "24R",
+    "lat": 40.4250816,
+    "lng": -86.9188407,
+    "aliases": [
+      "24r",
+      "24r"
+    ]
+  },
+  "115W": {
+    "full_name": "115W",
+    "lat": 40.4257834,
+    "lng": -86.918265,
+    "aliases": [
+      "115w",
+      "115w"
+    ]
+  },
+  "210R": {
+    "full_name": "Baptist Student Foundation",
+    "lat": 40.4266852,
+    "lng": -86.9188395,
+    "aliases": [
+      "210r",
+      "sobsf",
+      "baptist student foundation"
+    ]
+  },
+  "SODC": {
+    "full_name": "SODC",
+    "lat": 40.429543,
+    "lng": -86.9195418,
+    "aliases": [
+      "sodc",
+      "sodc"
+    ]
+  },
+  "IFCU": {
+    "full_name": "Industrial Federal Credit Union",
+    "lat": 40.4600844,
+    "lng": -86.9280464,
+    "aliases": [
+      "ifcu",
+      "industrial federal credit union"
+    ]
+  },
+  "270K": {
+    "full_name": "2700 Kent Avenue",
+    "lat": 40.458969,
+    "lng": -86.9283328,
+    "aliases": [
+      "270k",
+      "nxtr",
+      "2700 kent avenue"
+    ]
+  },
+  "SOSAE": {
+    "full_name": "Sigma Alpha Epsilon",
+    "lat": 40.4281111,
+    "lng": -86.9019414,
+    "aliases": [
+      "sosae",
+      "sigma alpha epsilon"
+    ]
+  },
+  "LP": {
+    "full_name": "Levee Plaza",
+    "lat": 40.4235333,
+    "lng": -86.9004606,
+    "aliases": [
+      "lp",
+      "levee plaza"
+    ]
+  },
+  "CMBR": {
+    "full_name": "1231 Cumberland Avenue",
+    "lat": 40.4595974,
+    "lng": -86.9279041,
+    "aliases": [
+      "cmbr",
+      "1231 cumberland avenue"
+    ]
+  },
+  "SOTAC": {
+    "full_name": "St. Thomas Aquinas Center",
+    "lat": 40.4237182,
+    "lng": -86.9133732,
+    "aliases": [
+      "sotac",
+      "st. thomas aquinas center"
+    ]
+  },
+  "WSCS": {
+    "full_name": "West Side Commons South",
+    "lat": 40.4562318,
+    "lng": -86.9264089,
+    "aliases": [
+      "wscs",
+      "west side commons south"
+    ]
+  },
+  "P135": {
+    "full_name": "Purdue North Golf Course Lindberg Road",
+    "lat": 40.448273,
+    "lng": -86.9274982,
+    "aliases": [
+      "p135",
+      "purdue north golf course lindberg road"
+    ]
+  },
+  "SOFKT": {
+    "full_name": "Phi Kappa Tau",
+    "lat": 40.4328319,
+    "lng": -86.92687,
+    "aliases": [
+      "sofkt",
+      "phi kappa tau"
+    ]
+  },
+  "FSTW": {
+    "full_name": "First Street Towers, Western",
+    "lat": 40.42488,
+    "lng": -86.9253347,
+    "aliases": [
+      "fstw",
+      "rshw",
+      "first street towers, western"
+    ]
+  },
+  "GMGF": {
+    "full_name": "Grounds Maintenance Greenhouse Facilities",
+    "lat": 40.415121,
+    "lng": -86.9198557,
+    "aliases": [
+      "gmgf",
+      "grounds maintenance greenhouse facilities"
+    ]
+  },
+  "GMPS": {
+    "full_name": "Grounds Maintenance Pesticide Storage Facility",
+    "lat": 40.4148087,
+    "lng": -86.9198656,
+    "aliases": [
+      "gmps",
+      "grounds maintenance pesticide storage facility"
+    ]
+  },
+  "MRRT": {
+    "full_name": "Marriott Hall",
+    "lat": 40.4244768,
+    "lng": -86.9169656,
+    "aliases": [
+      "mrrt",
+      "marriott hall"
+    ]
+  },
+  "TREC": {
+    "full_name": "Turf Recreation Center",
+    "lat": 40.4287108,
+    "lng": -86.924227,
+    "aliases": [
+      "trec",
+      "turf recreation center"
+    ]
+  },
+  "POTR": {
+    "full_name": "A. A. Potter Engineering Center",
+    "lat": 40.4274801,
+    "lng": -86.9123244,
+    "aliases": [
+      "potr",
+      "a. a. potter engineering center"
+    ]
+  },
+  "SLT": {
+    "full_name": "Salt Storage",
+    "lat": 40.4139468,
+    "lng": -86.9143805,
+    "aliases": [
+      "slt",
+      "salt storage"
+    ]
+  },
+  "HESB": {
+    "full_name": "Heavy Equipment Storage",
+    "lat": 40.4143396,
+    "lng": -86.9143571,
+    "aliases": [
+      "hesb",
+      "heavy equipment storage"
+    ]
+  },
+  "EFOB": {
+    "full_name": "Entomology Operations Base",
+    "lat": 40.4287667,
+    "lng": -86.9488658,
+    "aliases": [
+      "efob",
+      "entomology operations base"
+    ]
+  },
+  "WH9": {
+    "full_name": "Well House No. 9",
+    "lat": 40.429991,
+    "lng": -86.9253731,
+    "aliases": [
+      "wh9",
+      "well house no. 9"
+    ]
+  },
+  "ADM": {
+    "full_name": "Agricultural Innovation Center",
+    "lat": 40.4162612,
+    "lng": -86.9196631,
+    "aliases": [
+      "adm",
+      "0",
+      "agricultural innovation center"
+    ]
+  },
+  "NISW": {
+    "full_name": "Niswonger Aviation Technology Building",
+    "lat": 40.4164418,
+    "lng": -86.9294687,
+    "aliases": [
+      "nisw",
+      "niswonger aviation technology building"
+    ]
+  },
+  "TSWF": {
+    "full_name": "Transportation Service Wash Facility",
+    "lat": 40.4134873,
+    "lng": -86.9146099,
+    "aliases": [
+      "tswf",
+      "transportation service wash facility"
+    ]
+  },
+  "CREW": {
+    "full_name": "Purdue Crew Boathouse\r\nPurdue Crew Boathouse",
+    "lat": 40.4230947,
+    "lng": -86.8980686,
+    "aliases": [
+      "crew",
+      "purdue crew boathouse\r\npurdue crew boathouse"
+    ]
+  },
+  "MACK": {
+    "full_name": "Guy J. Mackey Arena",
+    "lat": 40.4337881,
+    "lng": -86.9158039,
+    "aliases": [
+      "mack",
+      "guy j. mackey arena"
+    ]
+  },
+  "BBPB": {
+    "full_name": "Purdue Baseball Press Box",
+    "lat": 40.4373245,
+    "lng": -86.9418324,
+    "aliases": [
+      "bbpb",
+      "nwbw",
+      "purdue baseball press box"
+    ]
+  },
+  "BBCH": {
+    "full_name": "Purdue Baseball Clubhouse",
+    "lat": 40.4380335,
+    "lng": -86.9420008,
+    "aliases": [
+      "bbch",
+      "purdue baseball clubhouse"
+    ]
+  },
+  "SOCC": {
+    "full_name": "Purdue Women\u2019s Soccer Building",
+    "lat": 40.4377412,
+    "lng": -86.9392659,
+    "aliases": [
+      "socc",
+      "nwsf",
+      "purdue women\u2019s soccer building"
+    ]
+  },
+  "SCHG": {
+    "full_name": "Schowe House Garage",
+    "lat": 40.4392934,
+    "lng": -86.9185441,
+    "aliases": [
+      "schg",
+      "schowe house garage"
+    ]
+  },
+  "HLAB": {
+    "full_name": "Herrick Laboratories",
+    "lat": 40.4222739,
+    "lng": -86.9199562,
+    "aliases": [
+      "hlab",
+      "herrick laboratories"
+    ]
+  },
+  "PKRW": {
+    "full_name": "Winifred Parker Residence Hall",
+    "lat": 40.4277373,
+    "lng": -86.9202791,
+    "aliases": [
+      "pkrw",
+      "winifred parker residence hall"
+    ]
+  },
+  "BLE1": {
+    "full_name": "Bowen Labs Equipment 1",
+    "lat": 40.4095913,
+    "lng": -86.9185585,
+    "aliases": [
+      "ble1",
+      "bowen labs equipment 1"
+    ]
+  },
+  "BLSS": {
+    "full_name": "Bowen Labs Storage Shed",
+    "lat": 40.4095867,
+    "lng": -86.9184184,
+    "aliases": [
+      "blss",
+      "bowen labs storage shed"
+    ]
+  },
+  "BLE2": {
+    "full_name": "Bowen Labs Equipment 2",
+    "lat": 40.4095909,
+    "lng": -86.9182969,
+    "aliases": [
+      "ble2",
+      "bowen labs equipment 2"
+    ]
+  },
+  "BLE3": {
+    "full_name": "Bowen Labs Equipment 3",
+    "lat": 40.4097796,
+    "lng": -86.9184396,
+    "aliases": [
+      "ble3",
+      "bowen labs equipment 3"
+    ]
+  },
+  "HMMT": {
+    "full_name": "Hazardous Materials Management Trailer",
+    "lat": 40.4160218,
+    "lng": -86.9111727,
+    "aliases": [
+      "hmmt",
+      "lmst",
+      "hazardous materials management trailer"
+    ]
+  },
+  "LMST": {
+    "full_name": "Laboratory Material Storage Trailer",
+    "lat": 40.4159486,
+    "lng": -86.9110915,
+    "aliases": [
+      "lmst",
+      "hmmt",
+      "laboratory material storage trailer"
+    ]
+  },
+  "LYLE": {
+    "full_name": "Lyles-Porter Hall",
+    "lat": 40.4209328,
+    "lng": -86.9166536,
+    "aliases": [
+      "lyle",
+      "lyles-porter hall"
+    ]
+  },
+  "PGH": {
+    "full_name": "Harrison Street Parking Garage",
+    "lat": 40.4210406,
+    "lng": -86.917646,
+    "aliases": [
+      "pgh",
+      "harrison street parking garage"
+    ]
+  },
+  "DRUG": {
+    "full_name": "Drug Discovery Facility",
+    "lat": 40.4217804,
+    "lng": -86.9175893,
+    "aliases": [
+      "drug",
+      "drug discovery facility"
+    ]
+  },
+  "TH7": {
+    "full_name": "Tee-hangar No. 7",
+    "lat": 40.4156321,
+    "lng": -86.936156,
+    "aliases": [
+      "th7",
+      "tee-hangar no. 7"
+    ]
+  },
+  "WANG": {
+    "full_name": "Seng-Liang Wang Hall",
+    "lat": 40.4304593,
+    "lng": -86.9125456,
+    "aliases": [
+      "wang",
+      "seng-liang wang hall"
+    ]
+  },
+  "AQUA": {
+    "full_name": "Morgan J. Burke Boilermaker Aquatic Center",
+    "lat": 40.4281511,
+    "lng": -86.9234109,
+    "aliases": [
+      "aqua",
+      "morgan j. burke boilermaker aquatic center"
+    ]
+  },
+  "CREC": {
+    "full_name": "France A. C\u00f3rdova Recreational Sports Center",
+    "lat": 40.4282547,
+    "lng": -86.9222985,
+    "aliases": [
+      "crec",
+      "rsc",
+      "france a. c\u00f3rdova recreational sports center",
+      "co-rec",
+      "corec",
+      "the co-rec",
+      "rec center",
+      "the rec"
+    ]
+  },
+  "REMS": {
+    "full_name": "Radiological & Environ Mgmt Storage Bldg",
+    "lat": 40.4166714,
+    "lng": -86.922506,
+    "aliases": [
+      "rems",
+      "radiological & environ mgmt storage bldg"
+    ]
+  },
+  "SBCH": {
+    "full_name": "Purdue Softball Clubhouse",
+    "lat": 40.4365706,
+    "lng": -86.9399223,
+    "aliases": [
+      "sbch",
+      "purdue softball clubhouse"
+    ]
+  },
+  "SBPB": {
+    "full_name": "Purdue Softball Press Box",
+    "lat": 40.4363736,
+    "lng": -86.9404172,
+    "aliases": [
+      "sbpb",
+      "purdue softball press box"
+    ]
+  },
+  "FNR": {
+    "full_name": "Richard G. Lugar Forestry Farm",
+    "lat": 40.4289871,
+    "lng": -86.9538306,
+    "aliases": [
+      "fnr",
+      "richard g. lugar forestry farm"
+    ]
+  },
+  "KRCH": {
+    "full_name": "Krach Leadership Center",
+    "lat": 40.4275525,
+    "lng": -86.9212803,
+    "aliases": [
+      "krch",
+      "csel",
+      "krach leadership center",
+      "krach",
+      "krach center"
+    ]
+  },
+  "PRIX": {
+    "full_name": "Grand Prix Race Track Restroom Facilities",
+    "lat": 40.4373109,
+    "lng": -86.9441131,
+    "aliases": [
+      "prix",
+      "d",
+      "grand prix race track restroom facilities"
+    ]
+  },
+  "HCRS": {
+    "full_name": "Honors College Residence Hall South",
+    "lat": 40.4257271,
+    "lng": -86.9194746,
+    "aliases": [
+      "hcrs",
+      "honors college residence hall south"
+    ]
+  },
+  "WALC": {
+    "full_name": "Thomas S. and Harvey D. Wilmeth Active Learning Center",
+    "lat": 40.4274176,
+    "lng": -86.9132725,
+    "aliases": [
+      "walc",
+      "thomas s. and harvey d. wilmeth active learning center"
+    ]
+  },
+  "WH2": {
+    "full_name": "Well House #2",
+    "lat": 40.4275438,
+    "lng": -86.9232456,
+    "aliases": [
+      "wh2",
+      "well house #2"
+    ]
+  },
+  "ICSC": {
+    "full_name": "Indiana Corn and Soybean Innovation Center",
+    "lat": 40.470067,
+    "lng": -86.9945909,
+    "aliases": [
+      "icsc",
+      "acre",
+      "indiana corn and soybean innovation center"
+    ]
+  },
+  "FLEX": {
+    "full_name": "Flex Laboratories",
+    "lat": 40.4215377,
+    "lng": -86.9236595,
+    "aliases": [
+      "flex",
+      "flex laboratories"
+    ]
+  },
+  "LOLC": {
+    "full_name": "Land O Lakes Center for Experiential Learning and Purina Pavilion",
+    "lat": 40.4209443,
+    "lng": -86.9186396,
+    "aliases": [
+      "lolc",
+      "land o lakes center for experiential learning and purina pavilion"
+    ]
+  },
+  "ECEC": {
+    "full_name": "Purdue University Early Care & Education Center",
+    "lat": 40.4247968,
+    "lng": -86.9330955,
+    "aliases": [
+      "ecec",
+      "purdue university early care & education center"
+    ]
+  },
+  "BIDC": {
+    "full_name": "Bechtel Innovation Design Center",
+    "lat": 40.4274459,
+    "lng": -86.9188579,
+    "aliases": [
+      "bidc",
+      "bechtel innovation design center"
+    ]
+  },
+  "IMI": {
+    "full_name": "Indiana Manufacturing Institute",
+    "lat": 40.4712192,
+    "lng": -86.9254463,
+    "aliases": [
+      "imi",
+      "indiana manufacturing institute"
+    ]
+  },
+  "CRTN": {
+    "full_name": "Hobart and Russel Creighton Hall of Animal Sciences",
+    "lat": 40.4213361,
+    "lng": -86.9187988,
+    "aliases": [
+      "crtn",
+      "hobart and russel creighton hall of animal sciences"
+    ]
+  },
+  "LSR": {
+    "full_name": "Life Science Ranges",
+    "lat": 40.4226006,
+    "lng": -86.9188435,
+    "aliases": [
+      "lsr",
+      "life science ranges"
+    ]
+  },
+  "AAPF": {
+    "full_name": "Ag Alumni Seed Phenotyping Facility",
+    "lat": 40.4230209,
+    "lng": -86.9191416,
+    "aliases": [
+      "aapf",
+      "ag alumni seed phenotyping facility"
+    ]
+  },
+  "LSPS": {
+    "full_name": "Life Science Plant And Soils Laboratory",
+    "lat": 40.4231657,
+    "lng": -86.9187711,
+    "aliases": [
+      "lsps",
+      "life science plant and soils laboratory"
+    ]
+  },
+  "PMRI": {
+    "full_name": "Purdue Magnetic Resonance Imagin",
+    "lat": 40.4211933,
+    "lng": -86.9154603,
+    "aliases": [
+      "pmri",
+      "purdue magnetic resonance imagin"
+    ]
+  },
+  "HRSB": {
+    "full_name": "Horse Service Barn",
+    "lat": 40.4029082,
+    "lng": -86.9445117,
+    "aliases": [
+      "hrsb",
+      "horse service barn"
+    ]
+  },
+  "MPIG": {
+    "full_name": "Mini Pig Barn",
+    "lat": 40.4031186,
+    "lng": -86.9443554,
+    "aliases": [
+      "mpig",
+      "mini pig barn"
+    ]
+  },
+  "NOTO": {
+    "full_name": "Notobiotio Unit",
+    "lat": 40.4026634,
+    "lng": -86.9437435,
+    "aliases": [
+      "noto",
+      "notobiotio unit"
+    ]
+  },
+  "KURZ": {
+    "full_name": "Kurz Purdue Technology Center",
+    "lat": 40.4646031,
+    "lng": -86.9277023,
+    "aliases": [
+      "kurz",
+      "kurz purdue technology center"
+    ]
+  },
+  "PTCA": {
+    "full_name": "Purdue Technology Center Aerospace",
+    "lat": 40.4236637,
+    "lng": -86.9403403,
+    "aliases": [
+      "ptca",
+      "purdue technology center aerospace"
+    ]
+  },
+  "PAGE": {
+    "full_name": "Thomas A Page Pavilion",
+    "lat": 40.4110027,
+    "lng": -86.9159062,
+    "aliases": [
+      "page",
+      "thomas a page pavilion"
+    ]
+  },
+  "LCCP": {
+    "full_name": "Latino Cultural Center at Purdue",
+    "lat": 40.4290097,
+    "lng": -86.9176393,
+    "aliases": [
+      "lccp",
+      "426w",
+      "latino cultural center at purdue"
+    ]
+  },
+  "AACC": {
+    "full_name": "Asian American Resource and Cultural Center",
+    "lat": 40.4291294,
+    "lng": -86.9176554,
+    "aliases": [
+      "aacc",
+      "915f",
+      "asian american resource and cultural center"
+    ]
+  },
+  "NACC": {
+    "full_name": "Native American Educational and Cultural Center",
+    "lat": 40.4291106,
+    "lng": -86.9169972,
+    "aliases": [
+      "nacc",
+      "903f",
+      "native american educational and cultural center"
+    ]
+  },
+  "PR79": {
+    "full_name": "440\u00a0HARRISON\u00a0ST",
+    "lat": 40.4206311,
+    "lng": -86.9118144,
+    "aliases": [
+      "pr79",
+      "440\u00a0harrison\u00a0st"
+    ]
+  },
+  "SSWC": {
+    "full_name": "Self Storage Warehouse C",
+    "lat": 40.4117182,
+    "lng": -86.9182881,
+    "aliases": [
+      "sswc",
+      "self storage warehouse c"
+    ]
+  },
+  "WALD": {
+    "full_name": "Waldron Place II",
+    "lat": 40.4260011,
+    "lng": -86.9181459,
+    "aliases": [
+      "wald",
+      "waldron place ii"
+    ]
+  },
+  "414R": {
+    "full_name": "414R",
+    "lat": 40.4289788,
+    "lng": -86.9188494,
+    "aliases": [
+      "414r",
+      "414r"
+    ]
+  },
+  "PSF": {
+    "full_name": "Purdue Student Farm",
+    "lat": 40.440823,
+    "lng": -86.9346268,
+    "aliases": [
+      "psf",
+      "purdue student farm"
+    ]
+  },
+  "NWSB": {
+    "full_name": "Northwest Storage Barn",
+    "lat": 40.4399615,
+    "lng": -86.9363272,
+    "aliases": [
+      "nwsb",
+      "northwest storage barn"
+    ]
+  },
+  "MOLL": {
+    "full_name": "Mollenkopf Athletic Center",
+    "lat": 40.4353973,
+    "lng": -86.9168309,
+    "aliases": [
+      "moll",
+      "mollenkopf athletic center"
+    ]
+  },
+  "KFPC": {
+    "full_name": "Kozuch Football Performance Complex",
+    "lat": 40.4361979,
+    "lng": -86.91633,
+    "aliases": [
+      "kfpc",
+      "kozuch football performance complex"
+    ]
+  },
+  "AALL": {
+    "full_name": "Alton A. Lindsey Field Laboratory",
+    "lat": 40.4097704,
+    "lng": -87.0673415,
+    "aliases": [
+      "aall",
+      "alton a. lindsey field laboratory"
+    ]
+  },
+  "AEV": {
+    "full_name": "Airport Emergency Vehical Building",
+    "lat": 40.4140046,
+    "lng": -86.9237323,
+    "aliases": [
+      "aev",
+      "airport emergency vehical building"
+    ]
+  },
+  "GRVL": {
+    "full_name": "Gravil Pit Equipment Storage Building",
+    "lat": 40.4139787,
+    "lng": -86.923536,
+    "aliases": [
+      "grvl",
+      "gravil pit equipment storage building"
+    ]
+  },
+  "GPB": {
+    "full_name": "Grounds Pole Barn Construction",
+    "lat": 40.4086991,
+    "lng": -86.9452801,
+    "aliases": [
+      "gpb",
+      "grounds pole barn construction"
+    ]
+  },
+  "HARF": {
+    "full_name": "Hypersonics and Applied Research Facility",
+    "lat": 40.4159442,
+    "lng": -86.938883,
+    "aliases": [
+      "harf",
+      "hypersonics and applied research facility"
+    ]
+  },
+  "ZL9": {
+    "full_name": "High Speed Propulsion Lab",
+    "lat": 40.4152375,
+    "lng": -86.9404593,
+    "aliases": [
+      "zl9",
+      "high speed propulsion lab"
+    ]
+  },
+  "HCRN": {
+    "full_name": "Honors College Residence Hall North",
+    "lat": 40.4267284,
+    "lng": -86.9196457,
+    "aliases": [
+      "hcrn",
+      "honors college residence hall north"
+    ]
+  },
+  "PVAB": {
+    "full_name": "Purdue Village Administration Building",
+    "lat": 40.4202473,
+    "lng": -86.9240856,
+    "aliases": [
+      "pvab",
+      "purdue village administration building"
+    ]
+  },
+  "KPNR": {
+    "full_name": "Kepner Building",
+    "lat": 40.4023388,
+    "lng": -86.845561,
+    "aliases": [
+      "kpnr",
+      "kepner building"
+    ]
+  },
+  "PGSC": {
+    "full_name": "Purdue Graduate Student Center",
+    "lat": 40.4297436,
+    "lng": -86.911897,
+    "aliases": [
+      "pgsc",
+      "purdue graduate student center"
+    ]
+  },
+  "PDYE": {
+    "full_name": "New Pete Dye Clubhouse",
+    "lat": 40.4387637,
+    "lng": -86.9259727,
+    "aliases": [
+      "pdye",
+      "new pete dye clubhouse"
+    ]
+  },
+  "AET": {
+    "full_name": "Amelia Earhart Terminal",
+    "lat": 40.4162588,
+    "lng": -86.9316463,
+    "aliases": [
+      "aet",
+      "amelia earhart terminal"
+    ]
+  },
+  "SH": {
+    "full_name": "South Hall",
+    "lat": 40.4260508,
+    "lng": -86.9267275,
+    "aliases": [
+      "sh",
+      "south hall"
+    ]
+  },
+  "TH1": {
+    "full_name": "Tee-hangar No. 1",
+    "lat": 40.416606,
+    "lng": -86.9321114,
+    "aliases": [
+      "th1",
+      "tee-hangar no. 1"
+    ]
+  },
+  "ADPA": {
+    "full_name": "Aspire at Discovery Park Building A",
+    "lat": 40.4238351,
+    "lng": -86.9255144,
+    "aliases": [
+      "adpa",
+      "aspire at discovery park building a"
+    ]
+  },
+  "M04": {
+    "full_name": "Organic Storage Building",
+    "lat": 40.287908,
+    "lng": -86.8804474,
+    "aliases": [
+      "m04",
+      "organic storage building"
+    ]
+  },
+  "M05": {
+    "full_name": "Irrigation Motor & Well Pump 1",
+    "lat": 40.2881174,
+    "lng": -86.8837564,
+    "aliases": [
+      "m05",
+      "irrigation motor & well pump 1"
+    ]
+  },
+  "M03": {
+    "full_name": "Meigs Fuel Tanks",
+    "lat": 40.2874348,
+    "lng": -86.8835323,
+    "aliases": [
+      "m03",
+      "meigs fuel tanks"
+    ]
+  }
+}

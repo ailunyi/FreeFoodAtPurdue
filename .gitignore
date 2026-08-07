@@ -1,0 +1,34 @@
+# Environment
+.env
+*.env.local
+
+# Databases and generated data
+*.db
+*.db-wal
+*.db-shm
+*.npz
+
+# Poller state
+.groupme_last_id*.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.pytest_cache/
+
+# Xcode
+xcuserdata/
+*.xcuserstate
+DerivedData/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+*.log
+nohup.out

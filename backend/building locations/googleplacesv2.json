@@ -1,0 +1,6212 @@
+{
+  "meta": {
+    "description": "Google Places (student types + keyword searches for housing/Greek, 2.5 km). Names + coordinates. For footprints use OSM openstreetmap.json.",
+    "center": {
+      "lat": 40.4237,
+      "lng": -86.9212
+    },
+    "radius_m": 2500,
+    "keyword_searches": [
+      "fraternity",
+      "sorority",
+      "apartment",
+      "student housing",
+      "dormitory"
+    ],
+    "unique_places": 688
+  },
+  "results": [
+    {
+      "name": "120 Flats",
+      "geometry": {
+        "location": {
+          "lat": 40.4277362,
+          "lng": -86.9066664
+        }
+      }
+    },
+    {
+      "name": "1Bowl",
+      "geometry": {
+        "location": {
+          "lat": 40.426596,
+          "lng": -86.9231207
+        }
+      }
+    },
+    {
+      "name": "1st Source Bank",
+      "geometry": {
+        "location": {
+          "lat": 40.4189755,
+          "lng": -86.8926732
+        }
+      }
+    },
+    {
+      "name": "1st Source Bank Drive-Up Only",
+      "geometry": {
+        "location": {
+          "lat": 40.4212455,
+          "lng": -86.8926716
+        }
+      }
+    },
+    {
+      "name": "1st St & Jischke Dr (East Corner): BUS584NE",
+      "geometry": {
+        "location": {
+          "lat": 40.4253435,
+          "lng": -86.9218278
+        }
+      }
+    },
+    {
+      "name": "4UP Apartments @ Purdue",
+      "geometry": {
+        "location": {
+          "lat": 40.4272624,
+          "lng": -86.9084209
+        }
+      }
+    },
+    {
+      "name": "7 Sins Tattoo",
+      "geometry": {
+        "location": {
+          "lat": 40.4220357,
+          "lng": -86.8998557
+        }
+      }
+    },
+    {
+      "name": "7 Sins Vapor & Smoke Shop",
+      "geometry": {
+        "location": {
+          "lat": 40.4235,
+          "lng": -86.899836
+        }
+      }
+    },
+    {
+      "name": "A lot",
+      "geometry": {
+        "location": {
+          "lat": 40.4331809,
+          "lng": -86.9195152
+        }
+      }
+    },
+    {
+      "name": "A.H. Ismail Center for Preventive and Lifestyle Medicine",
+      "geometry": {
+        "location": {
+          "lat": 40.4206351,
+          "lng": -86.9163383
+        }
+      }
+    },
+    {
+      "name": "ADM Agricultural Innovation Center",
+      "geometry": {
+        "location": {
+          "lat": 40.4162812,
+          "lng": -86.9197058
+        }
+      }
+    },
+    {
+      "name": "AGR Purdue",
+      "geometry": {
+        "location": {
+          "lat": 40.430534,
+          "lng": -86.916885
+        }
+      }
+    },
+    {
+      "name": "AJ's - Burgers · Beef · Beer",
+      "geometry": {
+        "location": {
+          "lat": 40.4261022,
+          "lng": -86.9079936
+        }
+      }
+    },
+    {
+      "name": "Acacia Fraternity",
+      "geometry": {
+        "location": {
+          "lat": 40.4306021,
+          "lng": -86.9176316
+        }
+      }
+    },
+    {
+      "name": "Academy Park",
+      "geometry": {
+        "location": {
+          "lat": 40.425884,
+          "lng": -86.9119301
+        }
+      }
+    },
+    {
+      "name": "Accord Carpet Cleaning - The Most Affordable",
+      "geometry": {
+        "location": {
+          "lat": 40.4186786,
+          "lng": -86.8935044
+        }
+      }
+    },
+    {
+      "name": "Adorable Comfy 4Bd3Ba Cottage walk to Purdue with Game Arcade + Ping Pong Table!",
+      "geometry": {
+        "location": {
+          "lat": 40.4347725,
+          "lng": -86.9088974
+        }
+      }
+    },
+    {
+      "name": "Adorable Comfy 4Bd3Ba Cottage walk to Purdue with Game Arcade + Ping Pong Table!",
+      "geometry": {
+        "location": {
+          "lat": 40.4347687,
+          "lng": -86.9088898
+        }
+      }
+    },
+    {
+      "name": "Agricultural Sciences Education and Communication at Purdue",
+      "geometry": {
+        "location": {
+          "lat": 40.423476,
+          "lng": -86.9180072
+        }
+      }
+    },
+    {
+      "name": "Agricultural and Biological Engineering Department",
+      "geometry": {
+        "location": {
+          "lat": 40.4216539,
+          "lng": -86.9165251
+        }
+      }
+    },
+    {
+      "name": "Airport Rd & Halsey Dr (SE Corner): BUS754",
+      "geometry": {
+        "location": {
+          "lat": 40.420112,
+          "lng": -86.930434
+        }
+      }
+    },
+    {
+      "name": "Airport Rd & Halsey Dr (West): BUS755",
+      "geometry": {
+        "location": {
+          "lat": 40.4197778,
+          "lng": -86.9305214
+        }
+      }
+    },
+    {
+      "name": "All Fired Up! Paint-Your-Own Pottery Studio! & All Wined Down wine bar/art studio",
+      "geometry": {
+        "location": {
+          "lat": 40.4213884,
+          "lng": -86.9005683
+        }
+      }
+    },
+    {
+      "name": "All Wined Down!",
+      "geometry": {
+        "location": {
+          "lat": 40.421441,
+          "lng": -86.9006689
+        }
+      }
+    },
+    {
+      "name": "AllBeautybySelena",
+      "geometry": {
+        "location": {
+          "lat": 40.4177901,
+          "lng": -86.8943621
+        }
+      }
+    },
+    {
+      "name": "Alpha Chi Omega",
+      "geometry": {
+        "location": {
+          "lat": 40.4346431,
+          "lng": -86.9264458
+        }
+      }
+    },
+    {
+      "name": "Alpha Chi Rho",
+      "geometry": {
+        "location": {
+          "lat": 40.4250712,
+          "lng": -86.9193374
+        }
+      }
+    },
+    {
+      "name": "Alpha Chi on David Ross Rd: BUS554E",
+      "geometry": {
+        "location": {
+          "lat": 40.4343181,
+          "lng": -86.9256787
+        }
+      }
+    },
+    {
+      "name": "Alpha Chi on David Ross Rd: BUS554W",
+      "geometry": {
+        "location": {
+          "lat": 40.4344286,
+          "lng": -86.925735
+        }
+      }
+    },
+    {
+      "name": "Alpha Corporation of Phi Sigma Rho",
+      "geometry": {
+        "location": {
+          "lat": 40.4353705,
+          "lng": -86.9254691
+        }
+      }
+    },
+    {
+      "name": "Alpha Epsilon Pi - Pi Upsilon Chapter",
+      "geometry": {
+        "location": {
+          "lat": 40.4360247,
+          "lng": -86.9250417
+        }
+      }
+    },
+    {
+      "name": "Alpha Gamma Delta",
+      "geometry": {
+        "location": {
+          "lat": 40.4353721,
+          "lng": -86.9240095
+        }
+      }
+    },
+    {
+      "name": "Alpha Gamma Rho Fraternity",
+      "geometry": {
+        "location": {
+          "lat": 40.4305329,
+          "lng": -86.9170839
+        }
+      }
+    },
+    {
+      "name": "Alpha Omicron Pi",
+      "geometry": {
+        "location": {
+          "lat": 40.4206707,
+          "lng": -86.910048
+        }
+      }
+    },
+    {
+      "name": "Alpha Phi",
+      "geometry": {
+        "location": {
+          "lat": 40.4342623,
+          "lng": -86.9269084
+        }
+      }
+    },
+    {
+      "name": "Alpha Phi Omega (B050E)",
+      "geometry": {
+        "location": {
+          "lat": 40.4245495,
+          "lng": -86.912646
+        }
+      }
+    },
+    {
+      "name": "Alpha Tau Omega",
+      "geometry": {
+        "location": {
+          "lat": 40.4274486,
+          "lng": -86.9176843
+        }
+      }
+    },
+    {
+      "name": "Alpha Xi Delta",
+      "geometry": {
+        "location": {
+          "lat": 40.4296448,
+          "lng": -86.9171965
+        }
+      }
+    },
+    {
+      "name": "AlphaSigmaPhi",
+      "geometry": {
+        "location": {
+          "lat": 40.4350505,
+          "lng": -86.9256721
+        }
+      }
+    },
+    {
+      "name": "Am/Pm General Store",
+      "geometry": {
+        "location": {
+          "lat": 40.4240202,
+          "lng": -86.9073527
+        }
+      }
+    },
+    {
+      "name": "Amazon Store at Purdue University",
+      "geometry": {
+        "location": {
+          "lat": 40.427526,
+          "lng": -86.9209243
+        }
+      }
+    },
+    {
+      "name": "Ambition Sportswear",
+      "geometry": {
+        "location": {
+          "lat": 40.4249211,
+          "lng": -86.9245509
+        }
+      }
+    },
+    {
+      "name": "Amtrak Park and Ride Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.4197241,
+          "lng": -86.8957303
+        }
+      }
+    },
+    {
+      "name": "Amused Clothing",
+      "geometry": {
+        "location": {
+          "lat": 40.4240938,
+          "lng": -86.9087415
+        }
+      }
+    },
+    {
+      "name": "Ananda Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4356839,
+          "lng": -86.9052545
+        }
+      }
+    },
+    {
+      "name": "Another Broken Egg Cafe",
+      "geometry": {
+        "location": {
+          "lat": 40.4305573,
+          "lng": -86.9126942
+        }
+      }
+    },
+    {
+      "name": "Arise Revitalized Intuitive Massage & Wellness",
+      "geometry": {
+        "location": {
+          "lat": 40.4179177,
+          "lng": -86.893604
+        }
+      }
+    },
+    {
+      "name": "Armstrong Hall on Stadium Ave (@Shelter): BUS190",
+      "geometry": {
+        "location": {
+          "lat": 40.4313301,
+          "lng": -86.9153052
+        }
+      }
+    },
+    {
+      "name": "Ashley Manor Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.421567,
+          "lng": -86.9100221
+        }
+      }
+    },
+    {
+      "name": "Aspire Apts at Discovery Park: BUS011",
+      "geometry": {
+        "location": {
+          "lat": 40.4242,
+          "lng": -86.925359
+        }
+      }
+    },
+    {
+      "name": "Aspire at Discovery Park",
+      "geometry": {
+        "location": {
+          "lat": 40.423625,
+          "lng": -86.9246719
+        }
+      }
+    },
+    {
+      "name": "Auntie Anne's",
+      "geometry": {
+        "location": {
+          "lat": 40.4225397,
+          "lng": -86.9058222
+        }
+      }
+    },
+    {
+      "name": "Aviation Technology Bldg: BUS146",
+      "geometry": {
+        "location": {
+          "lat": 40.4165685,
+          "lng": -86.9298911
+        }
+      }
+    },
+    {
+      "name": "Aviation Technology Library",
+      "geometry": {
+        "location": {
+          "lat": 40.4164501,
+          "lng": -86.9308421
+        }
+      }
+    },
+    {
+      "name": "BRU Burger Bar Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.4188881,
+          "lng": -86.8956797
+        }
+      }
+    },
+    {
+      "name": "Baptist Student Foundation",
+      "geometry": {
+        "location": {
+          "lat": 40.4265022,
+          "lng": -86.9188282
+        }
+      }
+    },
+    {
+      "name": "Barbara J. Strasburger, RN",
+      "geometry": {
+        "location": {
+          "lat": 40.4294488,
+          "lng": -86.9157395
+        }
+      }
+    },
+    {
+      "name": "Beans",
+      "geometry": {
+        "location": {
+          "lat": 40.4293248,
+          "lng": -86.9126151
+        }
+      }
+    },
+    {
+      "name": "Beauty By JesC LLC",
+      "geometry": {
+        "location": {
+          "lat": 40.4194118,
+          "lng": -86.8937019
+        }
+      }
+    },
+    {
+      "name": "Beaux Cheveux Styling Salon",
+      "geometry": {
+        "location": {
+          "lat": 40.4263179,
+          "lng": -86.9088823
+        }
+      }
+    },
+    {
+      "name": "Beering Dr. and Tower Dr.",
+      "geometry": {
+        "location": {
+          "lat": 40.432584,
+          "lng": -86.919236
+        }
+      }
+    },
+    {
+      "name": "Beering Hall on University St (@Shelter): BUS389",
+      "geometry": {
+        "location": {
+          "lat": 40.4259026,
+          "lng": -86.9166141
+        }
+      }
+    },
+    {
+      "name": "Benchmark II Apartment Complex",
+      "geometry": {
+        "location": {
+          "lat": 40.4170195,
+          "lng": -86.9098793
+        }
+      }
+    },
+    {
+      "name": "Bernadette's Barbershop",
+      "geometry": {
+        "location": {
+          "lat": 40.4190204,
+          "lng": -86.894771
+        }
+      }
+    },
+    {
+      "name": "Bernadette's Third Street Barbershop",
+      "geometry": {
+        "location": {
+          "lat": 40.4186741,
+          "lng": -86.8944094
+        }
+      }
+    },
+    {
+      "name": "Beta Chi Theta",
+      "geometry": {
+        "location": {
+          "lat": 40.425565,
+          "lng": -86.9037091
+        }
+      }
+    },
+    {
+      "name": "Beta Sigma Psi",
+      "geometry": {
+        "location": {
+          "lat": 40.4300386,
+          "lng": -86.9169821
+        }
+      }
+    },
+    {
+      "name": "Beta Theta Pi",
+      "geometry": {
+        "location": {
+          "lat": 40.4238121,
+          "lng": -86.9041238
+        }
+      }
+    },
+    {
+      "name": "Beta Upsilon Chi",
+      "geometry": {
+        "location": {
+          "lat": 40.4319737,
+          "lng": -86.9270041
+        }
+      }
+    },
+    {
+      "name": "Better World Market (NO EBT)",
+      "geometry": {
+        "location": {
+          "lat": 40.4221629,
+          "lng": -86.8985551
+        }
+      }
+    },
+    {
+      "name": "Birck Boilermaker Golf Complex",
+      "geometry": {
+        "location": {
+          "lat": 40.4389262,
+          "lng": -86.9258541
+        }
+      }
+    },
+    {
+      "name": "Black Cultural Center Library",
+      "geometry": {
+        "location": {
+          "lat": 40.4274993,
+          "lng": -86.9195061
+        }
+      }
+    },
+    {
+      "name": "Blackbird Farms",
+      "geometry": {
+        "location": {
+          "lat": 40.4446793,
+          "lng": -86.9414365
+        }
+      }
+    },
+    {
+      "name": "Blind Pig",
+      "geometry": {
+        "location": {
+          "lat": 40.4201989,
+          "lng": -86.8940733
+        }
+      }
+    },
+    {
+      "name": "Bliss Esthetics LLC",
+      "geometry": {
+        "location": {
+          "lat": 40.4194118,
+          "lng": -86.8937019
+        }
+      }
+    },
+    {
+      "name": "Blocks from Purdue, Ross-Ade, Mackey, Samara House, Birck Golf Complex",
+      "geometry": {
+        "location": {
+          "lat": 40.4408836,
+          "lng": -86.9189987
+        }
+      }
+    },
+    {
+      "name": "Bobby T's Campus",
+      "geometry": {
+        "location": {
+          "lat": 40.4242392,
+          "lng": -86.9085407
+        }
+      }
+    },
+    {
+      "name": "Boiler Bistro",
+      "geometry": {
+        "location": {
+          "lat": 40.4244033,
+          "lng": -86.9169861
+        }
+      }
+    },
+    {
+      "name": "Boiler Up Bar",
+      "geometry": {
+        "location": {
+          "lat": 40.4249967,
+          "lng": -86.9105191
+        }
+      }
+    },
+    {
+      "name": "Boiler Upcycle",
+      "geometry": {
+        "location": {
+          "lat": 40.4231222,
+          "lng": -86.9015736
+        }
+      }
+    },
+    {
+      "name": "Boiler View Retreat - Your Purdue Campus Haven",
+      "geometry": {
+        "location": {
+          "lat": 40.4420738,
+          "lng": -86.9181518
+        }
+      }
+    },
+    {
+      "name": "Boilermaker Butcher Block",
+      "geometry": {
+        "location": {
+          "lat": 40.4210233,
+          "lng": -86.9185442
+        }
+      }
+    },
+    {
+      "name": "Boilermaker Market @ 3rd St",
+      "geometry": {
+        "location": {
+          "lat": 40.4275771,
+          "lng": -86.9202686
+        }
+      }
+    },
+    {
+      "name": "Boilermaker Market @ PMU",
+      "geometry": {
+        "location": {
+          "lat": 40.4247855,
+          "lng": -86.9107948
+        }
+      }
+    },
+    {
+      "name": "Brothers Bar",
+      "geometry": {
+        "location": {
+          "lat": 40.4240532,
+          "lng": -86.9084187
+        }
+      }
+    },
+    {
+      "name": "Building and Grounds Services, Purdue University",
+      "geometry": {
+        "location": {
+          "lat": 40.4208465,
+          "lng": -86.9191202
+        }
+      }
+    },
+    {
+      "name": "Burton D. Morgan Center for Entrepreneurship",
+      "geometry": {
+        "location": {
+          "lat": 40.4236751,
+          "lng": -86.9228334
+        }
+      }
+    },
+    {
+      "name": "Bus Stop- Wang Hall at Crosswalk",
+      "geometry": {
+        "location": {
+          "lat": 40.4293579,
+          "lng": -86.9117421
+        }
+      }
+    },
+    {
+      "name": "CHARMING NEIGHBORHOOD IN PURDUE'S BACKYARD",
+      "geometry": {
+        "location": {
+          "lat": 40.4454041,
+          "lng": -86.9227371
+        }
+      }
+    },
+    {
+      "name": "CVS",
+      "geometry": {
+        "location": {
+          "lat": 40.4331028,
+          "lng": -86.9148659
+        }
+      }
+    },
+    {
+      "name": "CVS Pharmacy",
+      "geometry": {
+        "location": {
+          "lat": 40.4330623,
+          "lng": -86.9148239
+        }
+      }
+    },
+    {
+      "name": "CVS Photo",
+      "geometry": {
+        "location": {
+          "lat": 40.4326562,
+          "lng": -86.9147827
+        }
+      }
+    },
+    {
+      "name": "Campus Edge on Pierce",
+      "geometry": {
+        "location": {
+          "lat": 40.4226988,
+          "lng": -86.9089503
+        }
+      }
+    },
+    {
+      "name": "Capo Wine Bar",
+      "geometry": {
+        "location": {
+          "lat": 40.4192691,
+          "lng": -86.8950522
+        }
+      }
+    },
+    {
+      "name": "Caretaker’s Cottage West Lafayette Local History Center",
+      "geometry": {
+        "location": {
+          "lat": 40.4406409,
+          "lng": -86.9090673
+        }
+      }
+    },
+    {
+      "name": "Carly Day",
+      "geometry": {
+        "location": {
+          "lat": 40.4332234,
+          "lng": -86.9157668
+        }
+      }
+    },
+    {
+      "name": "Cary Knight Spot Grill",
+      "geometry": {
+        "location": {
+          "lat": 40.4317648,
+          "lng": -86.9170053
+        }
+      }
+    },
+    {
+      "name": "Cary Quadrangle Residence Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.4320142,
+          "lng": -86.9179111
+        }
+      }
+    },
+    {
+      "name": "Caryn Brown Psych HSPP",
+      "geometry": {
+        "location": {
+          "lat": 40.4155706,
+          "lng": -86.8944526
+        }
+      }
+    },
+    {
+      "name": "Centennial Mall",
+      "geometry": {
+        "location": {
+          "lat": 40.4271733,
+          "lng": -86.913743
+        }
+      }
+    },
+    {
+      "name": "Centennial Station",
+      "geometry": {
+        "location": {
+          "lat": 40.4272625,
+          "lng": -86.9131378
+        }
+      }
+    },
+    {
+      "name": "Center for Global Trade Analysis",
+      "geometry": {
+        "location": {
+          "lat": 40.4237214,
+          "lng": -86.9108136
+        }
+      }
+    },
+    {
+      "name": "Centier Bank",
+      "geometry": {
+        "location": {
+          "lat": 40.4187245,
+          "lng": -86.8951423
+        }
+      }
+    },
+    {
+      "name": "Chapel in the Woods Trail",
+      "geometry": {
+        "location": {
+          "lat": 40.4263706,
+          "lng": -86.9365502
+        }
+      }
+    },
+    {
+      "name": "Chapel of the Good Shepherd",
+      "geometry": {
+        "location": {
+          "lat": 40.4343948,
+          "lng": -86.9134292
+        }
+      }
+    },
+    {
+      "name": "Char E. En, ACSW",
+      "geometry": {
+        "location": {
+          "lat": 40.4198216,
+          "lng": -86.8927173
+        }
+      }
+    },
+    {
+      "name": "Charming 1-bedroom building in marvelous West Lafayette with fitness room, AC",
+      "geometry": {
+        "location": {
+          "lat": 40.4311981,
+          "lng": -86.9057923
+        }
+      }
+    },
+    {
+      "name": "Charming 1-bedroom building in marvelous West Lafayette with fitness room, AC",
+      "geometry": {
+        "location": {
+          "lat": 40.4283599,
+          "lng": -86.9003296
+        }
+      }
+    },
+    {
+      "name": "Charming 2-bedroom 2 bath unit just steps away from Purdue's Chauncey Village!!",
+      "geometry": {
+        "location": {
+          "lat": 40.4197388,
+          "lng": -86.9030762
+        }
+      }
+    },
+    {
+      "name": "Charming 2-bedroom 2 bath unit just steps away from Purdue's Chauncey Village!!",
+      "geometry": {
+        "location": {
+          "lat": 40.4197311,
+          "lng": -86.9030685
+        }
+      }
+    },
+    {
+      "name": "Charming 3BR /1BA home in West Lafayette close to Purdue University",
+      "geometry": {
+        "location": {
+          "lat": 40.4363899,
+          "lng": -86.9012222
+        }
+      }
+    },
+    {
+      "name": "Charming 3BR/1BA home in West Lafayette close to Purdue University",
+      "geometry": {
+        "location": {
+          "lat": 40.4342346,
+          "lng": -86.9023514
+        }
+      }
+    },
+    {
+      "name": "Chartres Labyrinth On The Meyer's Bridge.",
+      "geometry": {
+        "location": {
+          "lat": 40.4194641,
+          "lng": -86.8977242
+        }
+      }
+    },
+    {
+      "name": "Chase Bank",
+      "geometry": {
+        "location": {
+          "lat": 40.423794,
+          "lng": -86.907517
+        }
+      }
+    },
+    {
+      "name": "Chauncey Square",
+      "geometry": {
+        "location": {
+          "lat": 40.424653,
+          "lng": -86.906678
+        }
+      }
+    },
+    {
+      "name": "Cheerful Spacious 4 bd Home Walks to Purdue, Sports, and Golf, & Game Arcade!",
+      "geometry": {
+        "location": {
+          "lat": 40.4411392,
+          "lng": -86.9208755
+        }
+      }
+    },
+    {
+      "name": "Cheerful Spacious 4 bd Home Walks to Purdue, Sports, and Golf, Game Arcade!",
+      "geometry": {
+        "location": {
+          "lat": 40.4442711,
+          "lng": -86.9178467
+        }
+      }
+    },
+    {
+      "name": "Chem-Dry of Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.4189755,
+          "lng": -86.8926732
+        }
+      }
+    },
+    {
+      "name": "Chi Omega - Chi Beta Chapter - Purdue University",
+      "geometry": {
+        "location": {
+          "lat": 40.4285097,
+          "lng": -86.9176606
+        }
+      }
+    },
+    {
+      "name": "Chi Psi Fraternity",
+      "geometry": {
+        "location": {
+          "lat": 40.4346151,
+          "lng": -86.9246431
+        }
+      }
+    },
+    {
+      "name": "Chic Modern Stay: The Perfect Boiler Up Stay!",
+      "geometry": {
+        "location": {
+          "lat": 40.4295463,
+          "lng": -86.904686
+        }
+      }
+    },
+    {
+      "name": "Chick-fil-A",
+      "geometry": {
+        "location": {
+          "lat": 40.4284648,
+          "lng": -86.9195296
+        }
+      }
+    },
+    {
+      "name": "Chipotle Mexican Grill",
+      "geometry": {
+        "location": {
+          "lat": 40.4236298,
+          "lng": -86.9071573
+        }
+      }
+    },
+    {
+      "name": "Christian Student Center",
+      "geometry": {
+        "location": {
+          "lat": 40.4258001,
+          "lng": -86.9181762
+        }
+      }
+    },
+    {
+      "name": "Cinnabon",
+      "geometry": {
+        "location": {
+          "lat": 40.4225397,
+          "lng": -86.9058222
+        }
+      }
+    },
+    {
+      "name": "Circle K",
+      "geometry": {
+        "location": {
+          "lat": 40.4318042,
+          "lng": -86.9139937
+        }
+      }
+    },
+    {
+      "name": "Circle K | Gas Station",
+      "geometry": {
+        "location": {
+          "lat": 40.431664,
+          "lng": -86.913966
+        }
+      }
+    },
+    {
+      "name": "Clear River Church",
+      "geometry": {
+        "location": {
+          "lat": 40.4223643,
+          "lng": -86.8941207
+        }
+      }
+    },
+    {
+      "name": "Cold Stone Creamery",
+      "geometry": {
+        "location": {
+          "lat": 40.4214412,
+          "lng": -86.9014906
+        }
+      }
+    },
+    {
+      "name": "College of Health and Human Sciences",
+      "geometry": {
+        "location": {
+          "lat": 40.4246149,
+          "lng": -86.9152204
+        }
+      }
+    },
+    {
+      "name": "College of Liberal Arts",
+      "geometry": {
+        "location": {
+          "lat": 40.4256116,
+          "lng": -86.9162659
+        }
+      }
+    },
+    {
+      "name": "College of Technology",
+      "geometry": {
+        "location": {
+          "lat": 40.4276516,
+          "lng": -86.911108
+        }
+      }
+    },
+    {
+      "name": "Collegiate Communities",
+      "geometry": {
+        "location": {
+          "lat": 40.4321431,
+          "lng": -86.9141547
+        }
+      }
+    },
+    {
+      "name": "Comfy 3Bd House with Arcade, Ping Pong, Fire Pit, Walk to Purdue, Golf, Sports!",
+      "geometry": {
+        "location": {
+          "lat": 40.439724,
+          "lng": -86.9232636
+        }
+      }
+    },
+    {
+      "name": "Comfy 3Bd House with Arcade, Ping Pong, Fire Pit, Walk to Purdue, Golf, Sports!",
+      "geometry": {
+        "location": {
+          "lat": 40.439724,
+          "lng": -86.9232636
+        }
+      }
+    },
+    {
+      "name": "Continuum Apartments West Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.4233413,
+          "lng": -86.9275343
+        }
+      }
+    },
+    {
+      "name": "Continuum Cafe",
+      "geometry": {
+        "location": {
+          "lat": 40.4197102,
+          "lng": -86.914225
+        }
+      }
+    },
+    {
+      "name": "Copymat Services Inc",
+      "geometry": {
+        "location": {
+          "lat": 40.4232215,
+          "lng": -86.9052936
+        }
+      }
+    },
+    {
+      "name": "Cozy One Bedroom Studio Close to Campus",
+      "geometry": {
+        "location": {
+          "lat": 40.4211273,
+          "lng": -86.9100342
+        }
+      }
+    },
+    {
+      "name": "Cravin's To Order",
+      "geometry": {
+        "location": {
+          "lat": 40.4454715,
+          "lng": -86.9203469
+        }
+      }
+    },
+    {
+      "name": "Crestview Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4267089,
+          "lng": -86.9032592
+        }
+      }
+    },
+    {
+      "name": "Crestview III",
+      "geometry": {
+        "location": {
+          "lat": 40.4177071,
+          "lng": -86.9073995
+        }
+      }
+    },
+    {
+      "name": "Crestview North",
+      "geometry": {
+        "location": {
+          "lat": 40.4269907,
+          "lng": -86.9022912
+        }
+      }
+    },
+    {
+      "name": "CrossFit West Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.423533,
+          "lng": -86.90207
+        }
+      }
+    },
+    {
+      "name": "Crossing at Chauncey HIll",
+      "geometry": {
+        "location": {
+          "lat": 40.4216074,
+          "lng": -86.9074778
+        }
+      }
+    },
+    {
+      "name": "Crosswalk Commons",
+      "geometry": {
+        "location": {
+          "lat": 40.4347217,
+          "lng": -86.9234607
+        }
+      }
+    },
+    {
+      "name": "Cypress Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4246556,
+          "lng": -86.9049045
+        }
+      }
+    },
+    {
+      "name": "Dairy Queen Grill & Chill",
+      "geometry": {
+        "location": {
+          "lat": 40.4246261,
+          "lng": -86.9295267
+        }
+      }
+    },
+    {
+      "name": "David Ross Memorial and Garden",
+      "geometry": {
+        "location": {
+          "lat": 40.4321672,
+          "lng": -86.9239089
+        }
+      }
+    },
+    {
+      "name": "Davidson School of Chemical Engineering",
+      "geometry": {
+        "location": {
+          "lat": 40.4294512,
+          "lng": -86.9139597
+        }
+      }
+    },
+    {
+      "name": "Day Early Learning at Purdue University Early Care and Education Center",
+      "geometry": {
+        "location": {
+          "lat": 40.424854,
+          "lng": -86.933067
+        }
+      }
+    },
+    {
+      "name": "Delta Chi Fraternity",
+      "geometry": {
+        "location": {
+          "lat": 40.4295212,
+          "lng": -86.9195006
+        }
+      }
+    },
+    {
+      "name": "Delta Delta Delta Sorority",
+      "geometry": {
+        "location": {
+          "lat": 40.433582,
+          "lng": -86.9238156
+        }
+      }
+    },
+    {
+      "name": "Delta Gamma",
+      "geometry": {
+        "location": {
+          "lat": 40.4275443,
+          "lng": -86.9181673
+        }
+      }
+    },
+    {
+      "name": "Delta Sigma Phi",
+      "geometry": {
+        "location": {
+          "lat": 40.426772,
+          "lng": -86.9093617
+        }
+      }
+    },
+    {
+      "name": "Delta Tau Delta Fraternity",
+      "geometry": {
+        "location": {
+          "lat": 40.4280592,
+          "lng": -86.9099453
+        }
+      }
+    },
+    {
+      "name": "Delta Upsilon",
+      "geometry": {
+        "location": {
+          "lat": 40.4318929,
+          "lng": -86.9261841
+        }
+      }
+    },
+    {
+      "name": "Delta Zeta",
+      "geometry": {
+        "location": {
+          "lat": 40.4339713,
+          "lng": -86.9232938
+        }
+      }
+    },
+    {
+      "name": "Department of Human Development and Family Science",
+      "geometry": {
+        "location": {
+          "lat": 40.4246814,
+          "lng": -86.9228791
+        }
+      }
+    },
+    {
+      "name": "Department of Management",
+      "geometry": {
+        "location": {
+          "lat": 40.4237214,
+          "lng": -86.9108136
+        }
+      }
+    },
+    {
+      "name": "Department of Mathematics",
+      "geometry": {
+        "location": {
+          "lat": 40.4262177,
+          "lng": -86.9157299
+        }
+      }
+    },
+    {
+      "name": "Department of Nutrition Science",
+      "geometry": {
+        "location": {
+          "lat": 40.4245399,
+          "lng": -86.9152187
+        }
+      }
+    },
+    {
+      "name": "Department of Technology Leadership and Innovation",
+      "geometry": {
+        "location": {
+          "lat": 40.4228144,
+          "lng": -86.9106722
+        }
+      }
+    },
+    {
+      "name": "Department of Youth Development and Agricultural Education",
+      "geometry": {
+        "location": {
+          "lat": 40.4234421,
+          "lng": -86.9143183
+        }
+      }
+    },
+    {
+      "name": "Design Nook Interiors",
+      "geometry": {
+        "location": {
+          "lat": 40.4201528,
+          "lng": -86.8932259
+        }
+      }
+    },
+    {
+      "name": "Destination Station - Three-Bedroom House",
+      "geometry": {
+        "location": {
+          "lat": 40.435421,
+          "lng": -86.914772
+        }
+      }
+    },
+    {
+      "name": "Devonshire Cooperative",
+      "geometry": {
+        "location": {
+          "lat": 40.4244495,
+          "lng": -86.9047473
+        }
+      }
+    },
+    {
+      "name": "Dick and Sandy Dauch Alumni Center",
+      "geometry": {
+        "location": {
+          "lat": 40.4219344,
+          "lng": -86.9107036
+        }
+      }
+    },
+    {
+      "name": "Digby's Pub and Patio",
+      "geometry": {
+        "location": {
+          "lat": 40.4188522,
+          "lng": -86.892952
+        }
+      }
+    },
+    {
+      "name": "Dimension 7: Sunshine Yoga's Health & Fitness Hub",
+      "geometry": {
+        "location": {
+          "lat": 40.4179177,
+          "lng": -86.893604
+        }
+      }
+    },
+    {
+      "name": "Disability Resource Center",
+      "geometry": {
+        "location": {
+          "lat": 40.4228144,
+          "lng": -86.9106722
+        }
+      }
+    },
+    {
+      "name": "Discount Den",
+      "geometry": {
+        "location": {
+          "lat": 40.4314716,
+          "lng": -86.9134179
+        }
+      }
+    },
+    {
+      "name": "Dog Park Association of Greater Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.408123,
+          "lng": -86.9030007
+        }
+      }
+    },
+    {
+      "name": "Domino's Pizza",
+      "geometry": {
+        "location": {
+          "lat": 40.4315802,
+          "lng": -86.9133754
+        }
+      }
+    },
+    {
+      "name": "Downtown City Loft",
+      "geometry": {
+        "location": {
+          "lat": 40.4185486,
+          "lng": -86.8925934
+        }
+      }
+    },
+    {
+      "name": "Dr. Charles W. Hewson, MD",
+      "geometry": {
+        "location": {
+          "lat": 40.4286549,
+          "lng": -86.9146041
+        }
+      }
+    },
+    {
+      "name": "Dr. Erik Zundo",
+      "geometry": {
+        "location": {
+          "lat": 40.445762,
+          "lng": -86.9219851
+        }
+      }
+    },
+    {
+      "name": "Dr. Gerald N. Maesaka, MD",
+      "geometry": {
+        "location": {
+          "lat": 40.4286549,
+          "lng": -86.9146041
+        }
+      }
+    },
+    {
+      "name": "Dr. Greg A. Rowdon, MD",
+      "geometry": {
+        "location": {
+          "lat": 40.4286549,
+          "lng": -86.9146041
+        }
+      }
+    },
+    {
+      "name": "Dr. Gregory Rowdon",
+      "geometry": {
+        "location": {
+          "lat": 40.4332234,
+          "lng": -86.9157668
+        }
+      }
+    },
+    {
+      "name": "Dr. Janet L. Hortin, MD",
+      "geometry": {
+        "location": {
+          "lat": 40.429089,
+          "lng": -86.914238
+        }
+      }
+    },
+    {
+      "name": "Dr. Julianne Stout, MD",
+      "geometry": {
+        "location": {
+          "lat": 40.4286549,
+          "lng": -86.9146041
+        }
+      }
+    },
+    {
+      "name": "Dr. Krystal Turner, DDS",
+      "geometry": {
+        "location": {
+          "lat": 40.4201869,
+          "lng": -86.8951706
+        }
+      }
+    },
+    {
+      "name": "Dr. Michael R. Stewart, MD",
+      "geometry": {
+        "location": {
+          "lat": 40.4286549,
+          "lng": -86.9146041
+        }
+      }
+    },
+    {
+      "name": "Dr. Sarah A. Sayger, MD",
+      "geometry": {
+        "location": {
+          "lat": 40.4303571,
+          "lng": -86.9160518
+        }
+      }
+    },
+    {
+      "name": "Dr. Steven C. Beering, MD",
+      "geometry": {
+        "location": {
+          "lat": 40.4250587,
+          "lng": -86.9111143
+        }
+      }
+    },
+    {
+      "name": "Dr. William Adair",
+      "geometry": {
+        "location": {
+          "lat": 40.4250933,
+          "lng": -86.929914
+        }
+      }
+    },
+    {
+      "name": "Dr. William R. Flanary, MD",
+      "geometry": {
+        "location": {
+          "lat": 40.429089,
+          "lng": -86.914238
+        }
+      }
+    },
+    {
+      "name": "Dr. maximino M. niven, DDS",
+      "geometry": {
+        "location": {
+          "lat": 40.426477,
+          "lng": -86.9079314
+        }
+      }
+    },
+    {
+      "name": "Duhme Residence Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.4254253,
+          "lng": -86.9206921
+        }
+      }
+    },
+    {
+      "name": "Dye Parking",
+      "geometry": {
+        "location": {
+          "lat": 40.421431,
+          "lng": -86.8946409
+        }
+      }
+    },
+    {
+      "name": "EVER West Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.4215518,
+          "lng": -86.9070455
+        }
+      }
+    },
+    {
+      "name": "Earhart Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.4257267,
+          "lng": -86.9248279
+        }
+      }
+    },
+    {
+      "name": "Earhart Hall on First St",
+      "geometry": {
+        "location": {
+          "lat": 40.4253921,
+          "lng": -86.9238079
+        }
+      }
+    },
+    {
+      "name": "East Spa",
+      "geometry": {
+        "location": {
+          "lat": 40.420367,
+          "lng": -86.893419
+        }
+      }
+    },
+    {
+      "name": "Eclectic Hair Salon -Campus",
+      "geometry": {
+        "location": {
+          "lat": 40.4244126,
+          "lng": -86.907035
+        }
+      }
+    },
+    {
+      "name": "Einstein Bros. Bagels",
+      "geometry": {
+        "location": {
+          "lat": 40.4249763,
+          "lng": -86.908156
+        }
+      }
+    },
+    {
+      "name": "Electrical Engineering (at Shelter): BUS538",
+      "geometry": {
+        "location": {
+          "lat": 40.428627,
+          "lng": -86.911277
+        }
+      }
+    },
+    {
+      "name": "Elite Fades",
+      "geometry": {
+        "location": {
+          "lat": 40.4316337,
+          "lng": -86.9129201
+        }
+      }
+    },
+    {
+      "name": "Elm House",
+      "geometry": {
+        "location": {
+          "lat": 40.4443435,
+          "lng": -86.9160233
+        }
+      }
+    },
+    {
+      "name": "Elmore Family School of Electrical and Computer Engineering",
+      "geometry": {
+        "location": {
+          "lat": 40.428876,
+          "lng": -86.9117702
+        }
+      }
+    },
+    {
+      "name": "Eloxite",
+      "geometry": {
+        "location": {
+          "lat": 40.4238729,
+          "lng": -86.9087945
+        }
+      }
+    },
+    {
+      "name": "EstheticallyPleasingDaySpa",
+      "geometry": {
+        "location": {
+          "lat": 40.4201813,
+          "lng": -86.8938041
+        }
+      }
+    },
+    {
+      "name": "Eta Kappa Nu (HKN) Lounge",
+      "geometry": {
+        "location": {
+          "lat": 40.4286429,
+          "lng": -86.9119188
+        }
+      }
+    },
+    {
+      "name": "Evans Matthew E OD",
+      "geometry": {
+        "location": {
+          "lat": 40.4247239,
+          "lng": -86.9105463
+        }
+      }
+    },
+    {
+      "name": "Evergreen Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4177574,
+          "lng": -86.9099334
+        }
+      }
+    },
+    {
+      "name": "Evergreen Campus Rentals",
+      "geometry": {
+        "location": {
+          "lat": 40.4255718,
+          "lng": -86.9073641
+        }
+      }
+    },
+    {
+      "name": "Evil Genius Tattoo Club",
+      "geometry": {
+        "location": {
+          "lat": 40.4191715,
+          "lng": -86.8922946
+        }
+      }
+    },
+    {
+      "name": "FUSE",
+      "geometry": {
+        "location": {
+          "lat": 40.4326307,
+          "lng": -86.9144615
+        }
+      }
+    },
+    {
+      "name": "Faith West Student Housing",
+      "geometry": {
+        "location": {
+          "lat": 40.447075,
+          "lng": -86.921519
+        }
+      }
+    },
+    {
+      "name": "Family Express",
+      "geometry": {
+        "location": {
+          "lat": 40.4454559,
+          "lng": -86.9203558
+        }
+      }
+    },
+    {
+      "name": "Family Medicine - Diane Begley MD",
+      "geometry": {
+        "location": {
+          "lat": 40.4202317,
+          "lng": -86.8952612
+        }
+      }
+    },
+    {
+      "name": "FarmHouse Fraternity, Purdue Chapter",
+      "geometry": {
+        "location": {
+          "lat": 40.4243804,
+          "lng": -86.9194801
+        }
+      }
+    },
+    {
+      "name": "Fiesta Mexican Grill",
+      "geometry": {
+        "location": {
+          "lat": 40.4243462,
+          "lng": -86.9067782
+        }
+      }
+    },
+    {
+      "name": "First Merchants Bank",
+      "geometry": {
+        "location": {
+          "lat": 40.4195917,
+          "lng": -86.8953308
+        }
+      }
+    },
+    {
+      "name": "First Street Towers",
+      "geometry": {
+        "location": {
+          "lat": 40.4249186,
+          "lng": -86.9245489
+        }
+      }
+    },
+    {
+      "name": "First Street Towers on Mitch Daniels Blvd: BUS898",
+      "geometry": {
+        "location": {
+          "lat": 40.424308,
+          "lng": -86.922719
+        }
+      }
+    },
+    {
+      "name": "First United Methodist Church",
+      "geometry": {
+        "location": {
+          "lat": 40.4260013,
+          "lng": -86.9367527
+        }
+      }
+    },
+    {
+      "name": "Fit4Ever Health & Wellness",
+      "geometry": {
+        "location": {
+          "lat": 40.4226472,
+          "lng": -86.8936792
+        }
+      }
+    },
+    {
+      "name": "Follett's Purdue West Bookstore",
+      "geometry": {
+        "location": {
+          "lat": 40.4240463,
+          "lng": -86.9252245
+        }
+      }
+    },
+    {
+      "name": "Ford Dining Court",
+      "geometry": {
+        "location": {
+          "lat": 40.4321089,
+          "lng": -86.9195574
+        }
+      }
+    },
+    {
+      "name": "Ford Hall on Stadium Ave: BUS567",
+      "geometry": {
+        "location": {
+          "lat": 40.4313729,
+          "lng": -86.9194154
+        }
+      }
+    },
+    {
+      "name": "Founders Park",
+      "geometry": {
+        "location": {
+          "lat": 40.4251887,
+          "lng": -86.9156885
+        }
+      }
+    },
+    {
+      "name": "Fowler Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4198216,
+          "lng": -86.892717
+        }
+      }
+    },
+    {
+      "name": "France A. Córdova Recreational Sports Center",
+      "geometry": {
+        "location": {
+          "lat": 40.4282417,
+          "lng": -86.9223556
+        }
+      }
+    },
+    {
+      "name": "Fratello Properties",
+      "geometry": {
+        "location": {
+          "lat": 40.424281,
+          "lng": -86.9090588
+        }
+      }
+    },
+    {
+      "name": "French Knot",
+      "geometry": {
+        "location": {
+          "lat": 40.4122836,
+          "lng": -86.897037
+        }
+      }
+    },
+    {
+      "name": "Freshëns",
+      "geometry": {
+        "location": {
+          "lat": 40.4285221,
+          "lng": -86.9220174
+        }
+      }
+    },
+    {
+      "name": "Frieda Parker Residence Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.428563,
+          "lng": -86.9193374
+        }
+      }
+    },
+    {
+      "name": "Friendly Market",
+      "geometry": {
+        "location": {
+          "lat": 40.4192919,
+          "lng": -86.8929381
+        }
+      }
+    },
+    {
+      "name": "Fuel West",
+      "geometry": {
+        "location": {
+          "lat": 40.4288652,
+          "lng": -86.9110427
+        }
+      }
+    },
+    {
+      "name": "GQT Wabash Landing 9",
+      "geometry": {
+        "location": {
+          "lat": 40.421855,
+          "lng": -86.901268
+        }
+      }
+    },
+    {
+      "name": "Gameday Spirit Fanstore",
+      "geometry": {
+        "location": {
+          "lat": 40.4207858,
+          "lng": -86.9005031
+        }
+      }
+    },
+    {
+      "name": "Gamma Phi Beta Sorority Inc",
+      "geometry": {
+        "location": {
+          "lat": 40.4336634,
+          "lng": -86.9257725
+        }
+      }
+    },
+    {
+      "name": "Ghost Coffee Roaster",
+      "geometry": {
+        "location": {
+          "lat": 40.4318999,
+          "lng": -86.9151263
+        }
+      }
+    },
+    {
+      "name": "Glenwood Cooperative",
+      "geometry": {
+        "location": {
+          "lat": 40.4293984,
+          "lng": -86.9170303
+        }
+      }
+    },
+    {
+      "name": "Golden Avenue Vintage",
+      "geometry": {
+        "location": {
+          "lat": 40.4123049,
+          "lng": -86.8969863
+        }
+      }
+    },
+    {
+      "name": "Golf Course Views! Ranch! Fire Pit ! Bring Pets!",
+      "geometry": {
+        "location": {
+          "lat": 40.4391213,
+          "lng": -86.9229507
+        }
+      }
+    },
+    {
+      "name": "Grace Church",
+      "geometry": {
+        "location": {
+          "lat": 40.4244387,
+          "lng": -86.9174153
+        }
+      }
+    },
+    {
+      "name": "Granite Student Living",
+      "geometry": {
+        "location": {
+          "lat": 40.4254816,
+          "lng": -86.9082118
+        }
+      }
+    },
+    {
+      "name": "Grant St & Harrison St (NW Corner): BUS322",
+      "geometry": {
+        "location": {
+          "lat": 40.4204202,
+          "lng": -86.910374
+        }
+      }
+    },
+    {
+      "name": "Grant St & Stadium Ave (NW Corner): 5971",
+      "geometry": {
+        "location": {
+          "lat": 40.4314107,
+          "lng": -86.9104735
+        }
+      }
+    },
+    {
+      "name": "Grant St & Williams St (NW Corner): BUS323",
+      "geometry": {
+        "location": {
+          "lat": 40.418631,
+          "lng": -86.910346
+        }
+      }
+    },
+    {
+      "name": "Grant St & Wood St (SE Corner): BUS320",
+      "geometry": {
+        "location": {
+          "lat": 40.4220255,
+          "lng": -86.9102707
+        }
+      }
+    },
+    {
+      "name": "Grant Street Parking Garage (PGG)",
+      "geometry": {
+        "location": {
+          "lat": 40.4252242,
+          "lng": -86.9097224
+        }
+      }
+    },
+    {
+      "name": "Grant Street Station",
+      "geometry": {
+        "location": {
+          "lat": 40.4195482,
+          "lng": -86.9099726
+        }
+      }
+    },
+    {
+      "name": "Grant Street Station Apts (@ Shelter): BUS294",
+      "geometry": {
+        "location": {
+          "lat": 40.4195893,
+          "lng": -86.9101552
+        }
+      }
+    },
+    {
+      "name": "Green Leaf Vietnamese Cuisine",
+      "geometry": {
+        "location": {
+          "lat": 40.4214567,
+          "lng": -86.9049861
+        }
+      }
+    },
+    {
+      "name": "Greyhouse Coffee & Supply Co. - Campus",
+      "geometry": {
+        "location": {
+          "lat": 40.4244739,
+          "lng": -86.918232
+        }
+      }
+    },
+    {
+      "name": "Greyhouse Coffee & Supply Co. - West Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.4241939,
+          "lng": -86.9077644
+        }
+      }
+    },
+    {
+      "name": "Grilled Chicken and Rice",
+      "geometry": {
+        "location": {
+          "lat": 40.4254113,
+          "lng": -86.9293669
+        }
+      }
+    },
+    {
+      "name": "Grissom Hall on Grant St (at Shelter): BUS184",
+      "geometry": {
+        "location": {
+          "lat": 40.4265182,
+          "lng": -86.9103069
+        }
+      }
+    },
+    {
+      "name": "HMMT 201 Ahlers Dr.",
+      "geometry": {
+        "location": {
+          "lat": 40.4160365,
+          "lng": -86.9111574
+        }
+      }
+    },
+    {
+      "name": "Hampton Inn & Suites West Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.4198147,
+          "lng": -86.901197
+        }
+      }
+    },
+    {
+      "name": "Happy China",
+      "geometry": {
+        "location": {
+          "lat": 40.4214012,
+          "lng": -86.9037206
+        }
+      }
+    },
+    {
+      "name": "Happy Hollow Park",
+      "geometry": {
+        "location": {
+          "lat": 40.4394561,
+          "lng": -86.9014063
+        }
+      }
+    },
+    {
+      "name": "Happy Hollow Park Dog Park",
+      "geometry": {
+        "location": {
+          "lat": 40.4366559,
+          "lng": -86.8998706
+        }
+      }
+    },
+    {
+      "name": "Harrison Grill",
+      "geometry": {
+        "location": {
+          "lat": 40.4249436,
+          "lng": -86.9265801
+        }
+      }
+    },
+    {
+      "name": "Harrison Residence Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.4248226,
+          "lng": -86.9266029
+        }
+      }
+    },
+    {
+      "name": "Harrison Street Parking Garage",
+      "geometry": {
+        "location": {
+          "lat": 40.4210844,
+          "lng": -86.9176527
+        }
+      }
+    },
+    {
+      "name": "Harry's Chocolate Shop",
+      "geometry": {
+        "location": {
+          "lat": 40.4237763,
+          "lng": -86.9090032
+        }
+      }
+    },
+    {
+      "name": "Hawkins Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.4228211,
+          "lng": -86.9117542
+        }
+      }
+    },
+    {
+      "name": "Hawkins Joyce A",
+      "geometry": {
+        "location": {
+          "lat": 40.4259606,
+          "lng": -86.913761
+        }
+      }
+    },
+    {
+      "name": "Hello Walk",
+      "geometry": {
+        "location": {
+          "lat": 40.4250261,
+          "lng": -86.9143249
+        }
+      }
+    },
+    {
+      "name": "Henni's Hairshop",
+      "geometry": {
+        "location": {
+          "lat": 40.424644,
+          "lng": -86.9081051
+        }
+      }
+    },
+    {
+      "name": "Hi-Vine Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4259614,
+          "lng": -86.9079704
+        }
+      }
+    },
+    {
+      "name": "Hidden View Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4020425,
+          "lng": -86.8984386
+        }
+      }
+    },
+    {
+      "name": "Hillenbrand Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.4268796,
+          "lng": -86.9264344
+        }
+      }
+    },
+    {
+      "name": "Hilltop Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4338794,
+          "lng": -86.9217225
+        }
+      }
+    },
+    {
+      "name": "Hilltop Resident Permit Parking Lot",
+      "geometry": {
+        "location": {
+          "lat": 40.4346639,
+          "lng": -86.9216206
+        }
+      }
+    },
+    {
+      "name": "Hilton Garden Inn West Lafayette Wabash Landing",
+      "geometry": {
+        "location": {
+          "lat": 40.4204755,
+          "lng": -86.9000215
+        }
+      }
+    },
+    {
+      "name": "Hockmeyer (Wayne T. and Mary T.) Hall of Structural Biology",
+      "geometry": {
+        "location": {
+          "lat": 40.4210465,
+          "lng": -86.9211649
+        }
+      }
+    },
+    {
+      "name": "Honors College and Residences - North",
+      "geometry": {
+        "location": {
+          "lat": 40.4271288,
+          "lng": -86.9194169
+        }
+      }
+    },
+    {
+      "name": "Honors College and Residences - South",
+      "geometry": {
+        "location": {
+          "lat": 40.4259945,
+          "lng": -86.9194037
+        }
+      }
+    },
+    {
+      "name": "Honors College on Russell St",
+      "geometry": {
+        "location": {
+          "lat": 40.4263722,
+          "lng": -86.9193113
+        }
+      }
+    },
+    {
+      "name": "Horizon Bank",
+      "geometry": {
+        "location": {
+          "lat": 40.4171061,
+          "lng": -86.8938207
+        }
+      }
+    },
+    {
+      "name": "Horticulture Park",
+      "geometry": {
+        "location": {
+          "lat": 40.4269908,
+          "lng": -86.9354012
+        }
+      }
+    },
+    {
+      "name": "Horticulture Park",
+      "geometry": {
+        "location": {
+          "lat": 40.4273334,
+          "lng": -86.9309986
+        }
+      }
+    },
+    {
+      "name": "HotBox Pizza",
+      "geometry": {
+        "location": {
+          "lat": 40.4260549,
+          "lng": -86.9078974
+        }
+      }
+    },
+    {
+      "name": "Hub Chauncey",
+      "geometry": {
+        "location": {
+          "lat": 40.424298,
+          "lng": -86.907839
+        }
+      }
+    },
+    {
+      "name": "Hub on Campus West Lafayette - State Street",
+      "geometry": {
+        "location": {
+          "lat": 40.4221345,
+          "lng": -86.9059529
+        }
+      }
+    },
+    {
+      "name": "Huddle, Cuddle, and Boiler Up - Steps from Purdue Campus",
+      "geometry": {
+        "location": {
+          "lat": 40.4424858,
+          "lng": -86.9139175
+        }
+      }
+    },
+    {
+      "name": "Hyderabad House",
+      "geometry": {
+        "location": {
+          "lat": 40.424559,
+          "lng": -86.9084376
+        }
+      }
+    },
+    {
+      "name": "Image Orthodontics",
+      "geometry": {
+        "location": {
+          "lat": 40.4446717,
+          "lng": -86.9200289
+        }
+      }
+    },
+    {
+      "name": "Imagination Station",
+      "geometry": {
+        "location": {
+          "lat": 40.4229353,
+          "lng": -86.8933423
+        }
+      }
+    },
+    {
+      "name": "Indian & International Grocery",
+      "geometry": {
+        "location": {
+          "lat": 40.4244948,
+          "lng": -86.9077856
+        }
+      }
+    },
+    {
+      "name": "Indian Eyebrows Threading",
+      "geometry": {
+        "location": {
+          "lat": 40.421503,
+          "lng": -86.90409
+        }
+      }
+    },
+    {
+      "name": "Indie Coffee Roasters",
+      "geometry": {
+        "location": {
+          "lat": 40.423793,
+          "lng": -86.9308034
+        }
+      }
+    },
+    {
+      "name": "Insomnia Cookies",
+      "geometry": {
+        "location": {
+          "lat": 40.4315727,
+          "lng": -86.9130013
+        }
+      }
+    },
+    {
+      "name": "Institute of Religion - The Church of Jesus Christ of Latter-day Saints",
+      "geometry": {
+        "location": {
+          "lat": 40.42478,
+          "lng": -86.917568
+        }
+      }
+    },
+    {
+      "name": "International Center",
+      "geometry": {
+        "location": {
+          "lat": 40.4301218,
+          "lng": -86.9195053
+        }
+      }
+    },
+    {
+      "name": "Intramural Gold Playing Fields",
+      "geometry": {
+        "location": {
+          "lat": 40.4294121,
+          "lng": -86.9279794
+        }
+      }
+    },
+    {
+      "name": "Islamic Society of Greater Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.4254612,
+          "lng": -86.918761
+        }
+      }
+    },
+    {
+      "name": "JL Records",
+      "geometry": {
+        "location": {
+          "lat": 40.422406,
+          "lng": -86.8994027
+        }
+      }
+    },
+    {
+      "name": "Jake's Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.4188096,
+          "lng": -86.8946155
+        }
+      }
+    },
+    {
+      "name": "Java House (ABE)",
+      "geometry": {
+        "location": {
+          "lat": 40.4216539,
+          "lng": -86.9165251
+        }
+      }
+    },
+    {
+      "name": "Java House (Vine Street)",
+      "geometry": {
+        "location": {
+          "lat": 40.4258858,
+          "lng": -86.9078052
+        }
+      }
+    },
+    {
+      "name": "Jeanette S. Leonard, MA",
+      "geometry": {
+        "location": {
+          "lat": 40.4259604,
+          "lng": -86.9137612
+        }
+      }
+    },
+    {
+      "name": "Jersey Mike's Subs",
+      "geometry": {
+        "location": {
+          "lat": 40.428475,
+          "lng": -86.919535
+        }
+      }
+    },
+    {
+      "name": "Jimmy John's",
+      "geometry": {
+        "location": {
+          "lat": 40.4237719,
+          "lng": -86.9084136
+        }
+      }
+    },
+    {
+      "name": "Jimmy John's",
+      "geometry": {
+        "location": {
+          "lat": 40.4325684,
+          "lng": -86.9141797
+        }
+      }
+    },
+    {
+      "name": "John Purdue Room",
+      "geometry": {
+        "location": {
+          "lat": 40.424578,
+          "lng": -86.916974
+        }
+      }
+    },
+    {
+      "name": "John W. Hicks Undergraduate Library",
+      "geometry": {
+        "location": {
+          "lat": 40.4245248,
+          "lng": -86.9126242
+        }
+      }
+    },
+    {
+      "name": "Johnson Hall of Nursing",
+      "geometry": {
+        "location": {
+          "lat": 40.4293937,
+          "lng": -86.915516
+        }
+      }
+    },
+    {
+      "name": "Jules Janick Horticulture Garden, Purdue University",
+      "geometry": {
+        "location": {
+          "lat": 40.421488,
+          "lng": -86.914123
+        }
+      }
+    },
+    {
+      "name": "K J Nutt & Friends",
+      "geometry": {
+        "location": {
+          "lat": 40.4221404,
+          "lng": -86.8928773
+        }
+      }
+    },
+    {
+      "name": "K-SW Square",
+      "geometry": {
+        "location": {
+          "lat": 40.426105,
+          "lng": -86.9096552
+        }
+      }
+    },
+    {
+      "name": "KINN Thai Eatery & Asian Bar",
+      "geometry": {
+        "location": {
+          "lat": 40.423514,
+          "lng": -86.9276304
+        }
+      }
+    },
+    {
+      "name": "Kappa Alpha Theta",
+      "geometry": {
+        "location": {
+          "lat": 40.4304814,
+          "lng": -86.9193869
+        }
+      }
+    },
+    {
+      "name": "Kappa Delta",
+      "geometry": {
+        "location": {
+          "lat": 40.4274681,
+          "lng": -86.9096374
+        }
+      }
+    },
+    {
+      "name": "Kappa Delta Rho",
+      "geometry": {
+        "location": {
+          "lat": 40.4366036,
+          "lng": -86.9149742
+        }
+      }
+    },
+    {
+      "name": "Kappa Kappa Gamma",
+      "geometry": {
+        "location": {
+          "lat": 40.4281325,
+          "lng": -86.9182528
+        }
+      }
+    },
+    {
+      "name": "Kappa Sigma",
+      "geometry": {
+        "location": {
+          "lat": 40.4260179,
+          "lng": -86.9091155
+        }
+      }
+    },
+    {
+      "name": "Kelly J. Murray, MSNP",
+      "geometry": {
+        "location": {
+          "lat": 40.4303571,
+          "lng": -86.9160518
+        }
+      }
+    },
+    {
+      "name": "Kimberly Smith, NP",
+      "geometry": {
+        "location": {
+          "lat": 40.4194768,
+          "lng": -86.8949466
+        }
+      }
+    },
+    {
+      "name": "Kirby Kristen F",
+      "geometry": {
+        "location": {
+          "lat": 40.4293937,
+          "lng": -86.915516
+        }
+      }
+    },
+    {
+      "name": "Klatch Ben Z MD",
+      "geometry": {
+        "location": {
+          "lat": 40.4393005,
+          "lng": -86.9163193
+        }
+      }
+    },
+    {
+      "name": "Krach Lawn",
+      "geometry": {
+        "location": {
+          "lat": 40.4280343,
+          "lng": -86.9210123
+        }
+      }
+    },
+    {
+      "name": "Krannert Grad School: BUS260",
+      "geometry": {
+        "location": {
+          "lat": 40.423931,
+          "lng": -86.911286
+        }
+      }
+    },
+    {
+      "name": "Krishnan Lata A",
+      "geometry": {
+        "location": {
+          "lat": 40.4259606,
+          "lng": -86.913761
+        }
+      }
+    },
+    {
+      "name": "Kylee Kove Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4195057,
+          "lng": -86.9083574
+        }
+      }
+    },
+    {
+      "name": "La Scala Italian Restaurant",
+      "geometry": {
+        "location": {
+          "lat": 40.4193794,
+          "lng": -86.893976
+        }
+      }
+    },
+    {
+      "name": "Lafayette Amtrak Station",
+      "geometry": {
+        "location": {
+          "lat": 40.4194336,
+          "lng": -86.8961551
+        }
+      }
+    },
+    {
+      "name": "Lafayette Business, Mortgage & Investment Center",
+      "geometry": {
+        "location": {
+          "lat": 40.4187603,
+          "lng": -86.8952009
+        }
+      }
+    },
+    {
+      "name": "Lafayette Carpet Cleaning",
+      "geometry": {
+        "location": {
+          "lat": 40.4188635,
+          "lng": -86.8925978
+        }
+      }
+    },
+    {
+      "name": "Lafayette Family YMCA Downtown",
+      "geometry": {
+        "location": {
+          "lat": 40.4193246,
+          "lng": -86.8945401
+        }
+      }
+    },
+    {
+      "name": "Lafayette Sound",
+      "geometry": {
+        "location": {
+          "lat": 40.419231,
+          "lng": -86.8944293
+        }
+      }
+    },
+    {
+      "name": "Lafayette Station",
+      "geometry": {
+        "location": {
+          "lat": 40.4197549,
+          "lng": -86.8957719
+        }
+      }
+    },
+    {
+      "name": "Lafayette, IN (Purdue University- Wiley Dining Court EAST - on Russell St. Address is 401 N. Russell St, approximately)",
+      "geometry": {
+        "location": {
+          "lat": 40.42855,
+          "lng": -86.91925
+        }
+      }
+    },
+    {
+      "name": "Lahr Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4188337,
+          "lng": -86.8917772
+        }
+      }
+    },
+    {
+      "name": "Lambert Fieldhouse on Stadium Ave: BUS111",
+      "geometry": {
+        "location": {
+          "lat": 40.4313904,
+          "lng": -86.9165712
+        }
+      }
+    },
+    {
+      "name": "Land O'Lakes Center for Experiential Learning",
+      "geometry": {
+        "location": {
+          "lat": 40.4208934,
+          "lng": -86.9183471
+        }
+      }
+    },
+    {
+      "name": "Lash Addiction",
+      "geometry": {
+        "location": {
+          "lat": 40.41879,
+          "lng": -86.8928005
+        }
+      }
+    },
+    {
+      "name": "Latea Bubble Tea and Coffee",
+      "geometry": {
+        "location": {
+          "lat": 40.4209833,
+          "lng": -86.900875
+        }
+      }
+    },
+    {
+      "name": "Launch Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4284074,
+          "lng": -86.9000074
+        }
+      }
+    },
+    {
+      "name": "Lavazza",
+      "geometry": {
+        "location": {
+          "lat": 40.4242943,
+          "lng": -86.916894
+        }
+      }
+    },
+    {
+      "name": "Leaps Coffee Shop",
+      "geometry": {
+        "location": {
+          "lat": 40.4250296,
+          "lng": -86.910685
+        }
+      }
+    },
+    {
+      "name": "Leslie D. Lester, MWNP",
+      "geometry": {
+        "location": {
+          "lat": 40.4304755,
+          "lng": -86.9161255
+        }
+      }
+    },
+    {
+      "name": "Levee Laundry",
+      "geometry": {
+        "location": {
+          "lat": 40.4236679,
+          "lng": -86.9015526
+        }
+      }
+    },
+    {
+      "name": "Levee Plaza",
+      "geometry": {
+        "location": {
+          "lat": 40.4231672,
+          "lng": -86.8998936
+        }
+      }
+    },
+    {
+      "name": "Library Of Engineering And Science",
+      "geometry": {
+        "location": {
+          "lat": 40.427258,
+          "lng": -86.9131944
+        }
+      }
+    },
+    {
+      "name": "Life Smiles Dentistry",
+      "geometry": {
+        "location": {
+          "lat": 40.4364167,
+          "lng": -86.9055366
+        }
+      }
+    },
+    {
+      "name": "Lilly Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.42406,
+          "lng": -86.91716
+        }
+      }
+    },
+    {
+      "name": "Lilly Hall of Life Sciences, Purdue University",
+      "geometry": {
+        "location": {
+          "lat": 40.423476,
+          "lng": -86.9180072
+        }
+      }
+    },
+    {
+      "name": "Lilly Hall on Mitch Daniels Blvd (shelter): BUS345",
+      "geometry": {
+        "location": {
+          "lat": 40.4240935,
+          "lng": -86.9172437
+        }
+      }
+    },
+    {
+      "name": "Lilly free table",
+      "geometry": {
+        "location": {
+          "lat": 40.4264627,
+          "lng": -86.9188781
+        }
+      }
+    },
+    {
+      "name": "Lincoln Park",
+      "geometry": {
+        "location": {
+          "lat": 40.4342309,
+          "lng": -86.9028462
+        }
+      }
+    },
+    {
+      "name": "Linwood Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4211272,
+          "lng": -86.9054572
+        }
+      }
+    },
+    {
+      "name": "Little Free Library",
+      "geometry": {
+        "location": {
+          "lat": 40.4228467,
+          "lng": -86.8917476
+        }
+      }
+    },
+    {
+      "name": "Live Well Dance Studio",
+      "geometry": {
+        "location": {
+          "lat": 40.4220599,
+          "lng": -86.9075028
+        }
+      }
+    },
+    {
+      "name": "Location. Location. Location. Only 15 minute walk to Mackey Arena.",
+      "geometry": {
+        "location": {
+          "lat": 40.4431381,
+          "lng": -86.9217835
+        }
+      }
+    },
+    {
+      "name": "Loeb Fountain",
+      "geometry": {
+        "location": {
+          "lat": 40.42501,
+          "lng": -86.9158405
+        }
+      }
+    },
+    {
+      "name": "Lucky Store",
+      "geometry": {
+        "location": {
+          "lat": 40.4255718,
+          "lng": -86.9073641
+        }
+      }
+    },
+    {
+      "name": "MAJÉ Sushi (West Lafayette)",
+      "geometry": {
+        "location": {
+          "lat": 40.4240174,
+          "lng": -86.9072491
+        }
+      }
+    },
+    {
+      "name": "MARQ",
+      "geometry": {
+        "location": {
+          "lat": 40.4188965,
+          "lng": -86.8956704
+        }
+      }
+    },
+    {
+      "name": "MacArthur Dr & 1st St (NE Shelter): BUS282NE",
+      "geometry": {
+        "location": {
+          "lat": 40.4255525,
+          "lng": -86.9256652
+        }
+      }
+    },
+    {
+      "name": "Mad Mushroom",
+      "geometry": {
+        "location": {
+          "lat": 40.4241002,
+          "lng": -86.9089859
+        }
+      }
+    },
+    {
+      "name": "Mahajan Rutu R MD",
+      "geometry": {
+        "location": {
+          "lat": 40.4286549,
+          "lng": -86.9146041
+        }
+      }
+    },
+    {
+      "name": "Marixa Beauty",
+      "geometry": {
+        "location": {
+          "lat": 40.4194118,
+          "lng": -86.8937019
+        }
+      }
+    },
+    {
+      "name": "Marquis Z. Hodes, MSc, MD, PhD",
+      "geometry": {
+        "location": {
+          "lat": 40.4303865,
+          "lng": -86.9160648
+        }
+      }
+    },
+    {
+      "name": "Maru Sushi",
+      "geometry": {
+        "location": {
+          "lat": 40.4245016,
+          "lng": -86.906796
+        }
+      }
+    },
+    {
+      "name": "Marwood Cooperative House",
+      "geometry": {
+        "location": {
+          "lat": 40.4234227,
+          "lng": -86.9043323
+        }
+      }
+    },
+    {
+      "name": "McCormick Rd & 3rd St: BUS501",
+      "geometry": {
+        "location": {
+          "lat": 40.42751,
+          "lng": -86.93075
+        }
+      }
+    },
+    {
+      "name": "McCormick Rd & Stadium Ave (NE Corner): BUS251E",
+      "geometry": {
+        "location": {
+          "lat": 40.430131,
+          "lng": -86.931639
+        }
+      }
+    },
+    {
+      "name": "McCutcheon Dr & 3rd St (SE Corner): 6025",
+      "geometry": {
+        "location": {
+          "lat": 40.4273721,
+          "lng": -86.9289494
+        }
+      }
+    },
+    {
+      "name": "McCutcheon Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.4246695,
+          "lng": -86.9280938
+        }
+      }
+    },
+    {
+      "name": "McCutcheon Hall on McCutcheon (@Shelter): BUS491E",
+      "geometry": {
+        "location": {
+          "lat": 40.425476,
+          "lng": -86.928858
+        }
+      }
+    },
+    {
+      "name": "McDonald's",
+      "geometry": {
+        "location": {
+          "lat": 40.431062,
+          "lng": -86.9131789
+        }
+      }
+    },
+    {
+      "name": "McDonald's",
+      "geometry": {
+        "location": {
+          "lat": 40.4225893,
+          "lng": -86.9047751
+        }
+      }
+    },
+    {
+      "name": "Melissa Newell",
+      "geometry": {
+        "location": {
+          "lat": 40.4210818,
+          "lng": -86.9167846
+        }
+      }
+    },
+    {
+      "name": "Memorial Mall",
+      "geometry": {
+        "location": {
+          "lat": 40.4250744,
+          "lng": -86.9143109
+        }
+      }
+    },
+    {
+      "name": "Meredith Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.4263027,
+          "lng": -86.9232639
+        }
+      }
+    },
+    {
+      "name": "Meredith South Residence Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.4255465,
+          "lng": -86.9233648
+        }
+      }
+    },
+    {
+      "name": "Milan Laser Hair Removal",
+      "geometry": {
+        "location": {
+          "lat": 40.4211916,
+          "lng": -86.9011314
+        }
+      }
+    },
+    {
+      "name": "Minority Engineering Program",
+      "geometry": {
+        "location": {
+          "lat": 40.427197,
+          "lng": -86.9114995
+        }
+      }
+    },
+    {
+      "name": "Miss Sugar Dessert/Jasmine Tea",
+      "geometry": {
+        "location": {
+          "lat": 40.4241522,
+          "lng": -86.907069
+        }
+      }
+    },
+    {
+      "name": "Mitch Daniels Blv & Russell St (NE Corner): BUS547",
+      "geometry": {
+        "location": {
+          "lat": 40.424234,
+          "lng": -86.918942
+        }
+      }
+    },
+    {
+      "name": "Mitch Daniels Blvd & Gates Rd (West of): BUS388",
+      "geometry": {
+        "location": {
+          "lat": 40.424201,
+          "lng": -86.923336
+        }
+      }
+    },
+    {
+      "name": "Mochaland",
+      "geometry": {
+        "location": {
+          "lat": 40.4246207,
+          "lng": -86.906793
+        }
+      }
+    },
+    {
+      "name": "Modern Spacious Retreat right next to Purdue & Nature, full size 14-game Arcade!",
+      "geometry": {
+        "location": {
+          "lat": 40.4251175,
+          "lng": -86.9451065
+        }
+      }
+    },
+    {
+      "name": "Modern Spacious Retreat right next to Purdue & Nature, full size 14-game Arcade!",
+      "geometry": {
+        "location": {
+          "lat": 40.4251175,
+          "lng": -86.9451065
+        }
+      }
+    },
+    {
+      "name": "Modern Spacious Retreat right next to Purdue Nature, full size 14-game Arcade!",
+      "geometry": {
+        "location": {
+          "lat": 40.4251099,
+          "lng": -86.9451065
+        }
+      }
+    },
+    {
+      "name": "Monon Place Apartment",
+      "geometry": {
+        "location": {
+          "lat": 40.4262653,
+          "lng": -86.8918673
+        }
+      }
+    },
+    {
+      "name": "Motorcycle Parking",
+      "geometry": {
+        "location": {
+          "lat": 40.424276,
+          "lng": -86.9148119
+        }
+      }
+    },
+    {
+      "name": "Muinzer Close to Campus",
+      "geometry": {
+        "location": {
+          "lat": 40.4205117,
+          "lng": -86.907769
+        }
+      }
+    },
+    {
+      "name": "N.I.T",
+      "geometry": {
+        "location": {
+          "lat": 40.4209413,
+          "lng": -86.8943045
+        }
+      }
+    },
+    {
+      "name": "Neon Cactus",
+      "geometry": {
+        "location": {
+          "lat": 40.4232614,
+          "lng": -86.9005057
+        }
+      }
+    },
+    {
+      "name": "New Apostolic Church",
+      "geometry": {
+        "location": {
+          "lat": 40.4219919,
+          "lng": -86.8932681
+        }
+      }
+    },
+    {
+      "name": "Nichols Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.418041,
+          "lng": -86.9085508
+        }
+      }
+    },
+    {
+      "name": "Nine Irish Brothers, West Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.4229068,
+          "lng": -86.9031982
+        }
+      }
+    },
+    {
+      "name": "Niswonger Aviation Technology Building",
+      "geometry": {
+        "location": {
+          "lat": 40.4162784,
+          "lng": -86.9293968
+        }
+      }
+    },
+    {
+      "name": "Nobb Hill Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4389944,
+          "lng": -86.8980086
+        }
+      }
+    },
+    {
+      "name": "Noodles & I",
+      "geometry": {
+        "location": {
+          "lat": 40.424212,
+          "lng": -86.90707
+        }
+      }
+    },
+    {
+      "name": "Noodles and Company",
+      "geometry": {
+        "location": {
+          "lat": 40.4240661,
+          "lng": -86.9067361
+        }
+      }
+    },
+    {
+      "name": "Northwestern Ave & Evergreen St(SE Corner): BUS105",
+      "geometry": {
+        "location": {
+          "lat": 40.432242,
+          "lng": -86.914828
+        }
+      }
+    },
+    {
+      "name": "Northwestern Ave & Meridian St(SE Corner): BUS284",
+      "geometry": {
+        "location": {
+          "lat": 40.4340002,
+          "lng": -86.9151376
+        }
+      }
+    },
+    {
+      "name": "Northwestern Ave & Stadium Ave (McDonalds): BUS530",
+      "geometry": {
+        "location": {
+          "lat": 40.431117,
+          "lng": -86.913622
+        }
+      }
+    },
+    {
+      "name": "Northwestern Ave & Wiggins St (NW of): BUS559",
+      "geometry": {
+        "location": {
+          "lat": 40.4270497,
+          "lng": -86.9095187
+        }
+      }
+    },
+    {
+      "name": "Northwestern Avenue Garage",
+      "geometry": {
+        "location": {
+          "lat": 40.4296188,
+          "lng": -86.9110454
+        }
+      }
+    },
+    {
+      "name": "O'Connor Ruth S MD",
+      "geometry": {
+        "location": {
+          "lat": 40.4303857,
+          "lng": -86.9160691
+        }
+      }
+    },
+    {
+      "name": "Office Of The Bursar Purdue",
+      "geometry": {
+        "location": {
+          "lat": 40.425019,
+          "lng": -86.9126427
+        }
+      }
+    },
+    {
+      "name": "Office of Professional Practice, Purdue University",
+      "geometry": {
+        "location": {
+          "lat": 40.4275307,
+          "lng": -86.9123469
+        }
+      }
+    },
+    {
+      "name": "Old National Bank",
+      "geometry": {
+        "location": {
+          "lat": 40.418372,
+          "lng": -86.8957153
+        }
+      }
+    },
+    {
+      "name": "Omega Psi Phi",
+      "geometry": {
+        "location": {
+          "lat": 40.4331081,
+          "lng": -86.9121846
+        }
+      }
+    },
+    {
+      "name": "On Deck Training",
+      "geometry": {
+        "location": {
+          "lat": 40.412394,
+          "lng": -86.8975008
+        }
+      }
+    },
+    {
+      "name": "Opening Session - Stewart Center",
+      "geometry": {
+        "location": {
+          "lat": 40.4250554,
+          "lng": -86.9129485
+        }
+      }
+    },
+    {
+      "name": "Osborne Ruth C MD",
+      "geometry": {
+        "location": {
+          "lat": 40.4303801,
+          "lng": -86.9160847
+        }
+      }
+    },
+    {
+      "name": "Our Saviour Lutheran Church",
+      "geometry": {
+        "location": {
+          "lat": 40.4278394,
+          "lng": -86.9084334
+        }
+      }
+    },
+    {
+      "name": "Outdoor Cover Warehouse",
+      "geometry": {
+        "location": {
+          "lat": 40.4258344,
+          "lng": -86.9441243
+        }
+      }
+    },
+    {
+      "name": "Outdoor chapel",
+      "geometry": {
+        "location": {
+          "lat": 40.4266052,
+          "lng": -86.9372388
+        }
+      }
+    },
+    {
+      "name": "Owen Residence Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.4322429,
+          "lng": -86.9207113
+        }
+      }
+    },
+    {
+      "name": "Palm Beach Tan",
+      "geometry": {
+        "location": {
+          "lat": 40.4236896,
+          "lng": -86.9016494
+        }
+      }
+    },
+    {
+      "name": "Panda Express",
+      "geometry": {
+        "location": {
+          "lat": 40.4246841,
+          "lng": -86.9077932
+        }
+      }
+    },
+    {
+      "name": "Panera Bread",
+      "geometry": {
+        "location": {
+          "lat": 40.4210975,
+          "lng": -86.9010215
+        }
+      }
+    },
+    {
+      "name": "Panera Bread",
+      "geometry": {
+        "location": {
+          "lat": 40.425488,
+          "lng": -86.92268
+        }
+      }
+    },
+    {
+      "name": "Papa Johns Pizza",
+      "geometry": {
+        "location": {
+          "lat": 40.4239873,
+          "lng": -86.9308974
+        }
+      }
+    },
+    {
+      "name": "Parking lot at Young hall",
+      "geometry": {
+        "location": {
+          "lat": 40.421137,
+          "lng": -86.9107061
+        }
+      }
+    },
+    {
+      "name": "Patti and Rusty Rueff School of Visual and Performing Arts",
+      "geometry": {
+        "location": {
+          "lat": 40.4224735,
+          "lng": -86.9125816
+        }
+      }
+    },
+    {
+      "name": "Paula R Woods Park",
+      "geometry": {
+        "location": {
+          "lat": 40.4325292,
+          "lng": -86.9084088
+        }
+      }
+    },
+    {
+      "name": "Pentecost International Worship Center - PIWC Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.4085706,
+          "lng": -86.9003342
+        }
+      }
+    },
+    {
+      "name": "Peppercorns Kitchen",
+      "geometry": {
+        "location": {
+          "lat": 40.421027,
+          "lng": -86.900905
+        }
+      }
+    },
+    {
+      "name": "Pet Friendly Bright & Spacious Perfect for Purdue Game Days",
+      "geometry": {
+        "location": {
+          "lat": 40.4309349,
+          "lng": -86.9030304
+        }
+      }
+    },
+    {
+      "name": "Pet Friendly Charming Neighborhood in Purdue's Backyard",
+      "geometry": {
+        "location": {
+          "lat": 40.4454041,
+          "lng": -86.9227371
+        }
+      }
+    },
+    {
+      "name": "Pharmacy Library",
+      "geometry": {
+        "location": {
+          "lat": 40.4245567,
+          "lng": -86.9126153
+        }
+      }
+    },
+    {
+      "name": "Phi Delta Theta",
+      "geometry": {
+        "location": {
+          "lat": 40.4236808,
+          "lng": -86.912644
+        }
+      }
+    },
+    {
+      "name": "Phi Gamma Delta",
+      "geometry": {
+        "location": {
+          "lat": 40.4311353,
+          "lng": -86.9186114
+        }
+      }
+    },
+    {
+      "name": "Phi Kappa Psi - Indiana Delta",
+      "geometry": {
+        "location": {
+          "lat": 40.432849,
+          "lng": -86.9268207
+        }
+      }
+    },
+    {
+      "name": "Phi Kappa Sigma",
+      "geometry": {
+        "location": {
+          "lat": 40.4256273,
+          "lng": -86.9030777
+        }
+      }
+    },
+    {
+      "name": "Phi Kappa Tau Fraternity",
+      "geometry": {
+        "location": {
+          "lat": 40.428227,
+          "lng": -86.906871
+        }
+      }
+    },
+    {
+      "name": "Phi Mu, Delta Epsilon Chapter",
+      "geometry": {
+        "location": {
+          "lat": 40.4264892,
+          "lng": -86.918238
+        }
+      }
+    },
+    {
+      "name": "Physics Building: BUS557",
+      "geometry": {
+        "location": {
+          "lat": 40.430362,
+          "lng": -86.913149
+        }
+      }
+    },
+    {
+      "name": "Pi Beta Phi",
+      "geometry": {
+        "location": {
+          "lat": 40.4245452,
+          "lng": -86.9187352
+        }
+      }
+    },
+    {
+      "name": "Pi Beta Phi (on Russell St): BUS540",
+      "geometry": {
+        "location": {
+          "lat": 40.4245481,
+          "lng": -86.9190979
+        }
+      }
+    },
+    {
+      "name": "Pi Kappa Phi Fraternity",
+      "geometry": {
+        "location": {
+          "lat": 40.4267118,
+          "lng": -86.9099545
+        }
+      }
+    },
+    {
+      "name": "Pi Tau Sigma Lounge",
+      "geometry": {
+        "location": {
+          "lat": 40.4282632,
+          "lng": -86.9128648
+        }
+      }
+    },
+    {
+      "name": "Pickett Memorial Park",
+      "geometry": {
+        "location": {
+          "lat": 40.4304411,
+          "lng": -86.9307973
+        }
+      }
+    },
+    {
+      "name": "Plant and Pest Diagnostic Laboratory, Purdue University",
+      "geometry": {
+        "location": {
+          "lat": 40.4234165,
+          "lng": -86.9179902
+        }
+      }
+    },
+    {
+      "name": "Pocha",
+      "geometry": {
+        "location": {
+          "lat": 40.4223323,
+          "lng": -86.9071183
+        }
+      }
+    },
+    {
+      "name": "Potbelly",
+      "geometry": {
+        "location": {
+          "lat": 40.4245199,
+          "lng": -86.9081027
+        }
+      }
+    },
+    {
+      "name": "Potter Engineering Center",
+      "geometry": {
+        "location": {
+          "lat": 40.4273195,
+          "lng": -86.9121142
+        }
+      }
+    },
+    {
+      "name": "Proactive MD Tippecanoe County Government Health Center",
+      "geometry": {
+        "location": {
+          "lat": 40.4179564,
+          "lng": -86.8945285
+        }
+      }
+    },
+    {
+      "name": "Provenance Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.423864,
+          "lng": -86.930808
+        }
+      }
+    },
+    {
+      "name": "Pullman Station Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4177398,
+          "lng": -86.8917247
+        }
+      }
+    },
+    {
+      "name": "Purdue Aviation, LLC",
+      "geometry": {
+        "location": {
+          "lat": 40.4142782,
+          "lng": -86.9344581
+        }
+      }
+    },
+    {
+      "name": "Purdue Bee Lab",
+      "geometry": {
+        "location": {
+          "lat": 40.4287027,
+          "lng": -86.9487888
+        }
+      }
+    },
+    {
+      "name": "Purdue Bell Tower views, Central WL location, Walk 2 Purdue",
+      "geometry": {
+        "location": {
+          "lat": 40.4378052,
+          "lng": -86.910347
+        }
+      }
+    },
+    {
+      "name": "Purdue CM",
+      "geometry": {
+        "location": {
+          "lat": 40.4291706,
+          "lng": -86.9176576
+        }
+      }
+    },
+    {
+      "name": "Purdue Christian Campus House",
+      "geometry": {
+        "location": {
+          "lat": 40.4244739,
+          "lng": -86.918232
+        }
+      }
+    },
+    {
+      "name": "Purdue College of Agriculture",
+      "geometry": {
+        "location": {
+          "lat": 40.4233951,
+          "lng": -86.9143581
+        }
+      }
+    },
+    {
+      "name": "Purdue Crew Boathouse",
+      "geometry": {
+        "location": {
+          "lat": 40.4230562,
+          "lng": -86.8980533
+        }
+      }
+    },
+    {
+      "name": "Purdue Cross Country Course",
+      "geometry": {
+        "location": {
+          "lat": 40.4348397,
+          "lng": -86.9399418
+        }
+      }
+    },
+    {
+      "name": "Purdue Drumline",
+      "geometry": {
+        "location": {
+          "lat": 40.428246,
+          "lng": -86.9143911
+        }
+      }
+    },
+    {
+      "name": "Purdue Extension",
+      "geometry": {
+        "location": {
+          "lat": 40.4234322,
+          "lng": -86.9144072
+        }
+      }
+    },
+    {
+      "name": "Purdue Extension - The Education Store",
+      "geometry": {
+        "location": {
+          "lat": 40.4142909,
+          "lng": -86.8948411
+        }
+      }
+    },
+    {
+      "name": "Purdue Football and Campus Only Steps Away",
+      "geometry": {
+        "location": {
+          "lat": 40.4430618,
+          "lng": -86.9161835
+        }
+      }
+    },
+    {
+      "name": "Purdue Institute for Cancer Research",
+      "geometry": {
+        "location": {
+          "lat": 40.4222664,
+          "lng": -86.917045
+        }
+      }
+    },
+    {
+      "name": "Purdue Mall",
+      "geometry": {
+        "location": {
+          "lat": 40.4287389,
+          "lng": -86.9138944
+        }
+      }
+    },
+    {
+      "name": "Purdue Material Sciences and Electrical Engineering Building",
+      "geometry": {
+        "location": {
+          "lat": 40.4292934,
+          "lng": -86.9123704
+        }
+      }
+    },
+    {
+      "name": "Purdue Mathematical Sciences Building",
+      "geometry": {
+        "location": {
+          "lat": 40.4261348,
+          "lng": -86.915642
+        }
+      }
+    },
+    {
+      "name": "Purdue Memorial Union (PMU) on MD Blvd: BUS271",
+      "geometry": {
+        "location": {
+          "lat": 40.4241123,
+          "lng": -86.9119471
+        }
+      }
+    },
+    {
+      "name": "Purdue Parking and Transportation",
+      "geometry": {
+        "location": {
+          "lat": 40.425019,
+          "lng": -86.9126427
+        }
+      }
+    },
+    {
+      "name": "Purdue Physics Building",
+      "geometry": {
+        "location": {
+          "lat": 40.4301241,
+          "lng": -86.9130782
+        }
+      }
+    },
+    {
+      "name": "Purdue Pi Kappa Alpha",
+      "geometry": {
+        "location": {
+          "lat": 40.4310504,
+          "lng": -86.9170218
+        }
+      }
+    },
+    {
+      "name": "Purdue Polytechnic",
+      "geometry": {
+        "location": {
+          "lat": 40.4278046,
+          "lng": -86.9111405
+        }
+      }
+    },
+    {
+      "name": "Purdue Polytechnic School of Applied and Creative Computing",
+      "geometry": {
+        "location": {
+          "lat": 40.4276516,
+          "lng": -86.911108
+        }
+      }
+    },
+    {
+      "name": "Purdue Skulls",
+      "geometry": {
+        "location": {
+          "lat": 40.425836,
+          "lng": -86.903868
+        }
+      }
+    },
+    {
+      "name": "Purdue Team Store",
+      "geometry": {
+        "location": {
+          "lat": 40.424752,
+          "lng": -86.9123311
+        }
+      }
+    },
+    {
+      "name": "Purdue Team Store - Black & Gold Mine",
+      "geometry": {
+        "location": {
+          "lat": 40.4321061,
+          "lng": -86.9143233
+        }
+      }
+    },
+    {
+      "name": "Purdue University",
+      "geometry": {
+        "location": {
+          "lat": 40.4237054,
+          "lng": -86.9211946
+        }
+      }
+    },
+    {
+      "name": "Purdue University",
+      "geometry": {
+        "location": {
+          "lat": 40.4195438,
+          "lng": -86.9147988
+        }
+      }
+    },
+    {
+      "name": "Purdue University - School of Mechanical Engineering",
+      "geometry": {
+        "location": {
+          "lat": 40.42818,
+          "lng": -86.9129255
+        }
+      }
+    },
+    {
+      "name": "Purdue University College of Education",
+      "geometry": {
+        "location": {
+          "lat": 40.4255511,
+          "lng": -86.9161449
+        }
+      }
+    },
+    {
+      "name": "Purdue University College of Veterinary Medicine",
+      "geometry": {
+        "location": {
+          "lat": 40.419404,
+          "lng": -86.914784
+        }
+      }
+    },
+    {
+      "name": "Purdue University Department of Agronomy",
+      "geometry": {
+        "location": {
+          "lat": 40.4235541,
+          "lng": -86.9181838
+        }
+      }
+    },
+    {
+      "name": "Purdue University Equine Hospital",
+      "geometry": {
+        "location": {
+          "lat": 40.4186338,
+          "lng": -86.9123567
+        }
+      }
+    },
+    {
+      "name": "Purdue University Galleries",
+      "geometry": {
+        "location": {
+          "lat": 40.422543,
+          "lng": -86.9129549
+        }
+      }
+    },
+    {
+      "name": "Purdue University Honors College",
+      "geometry": {
+        "location": {
+          "lat": 40.4260368,
+          "lng": -86.9194183
+        }
+      }
+    },
+    {
+      "name": "Purdue University Institute for Drug Discovery",
+      "geometry": {
+        "location": {
+          "lat": 40.4217665,
+          "lng": -86.9175589
+        }
+      }
+    },
+    {
+      "name": "Purdue University Libraries and School of Information",
+      "geometry": {
+        "location": {
+          "lat": 40.424507,
+          "lng": -86.912541
+        }
+      }
+    },
+    {
+      "name": "Purdue University Online - College of Engineering",
+      "geometry": {
+        "location": {
+          "lat": 40.430129,
+          "lng": -86.91226
+        }
+      }
+    },
+    {
+      "name": "Purdue University School of Aeronautics and Astronautics",
+      "geometry": {
+        "location": {
+          "lat": 40.431015,
+          "lng": -86.9148427
+        }
+      }
+    },
+    {
+      "name": "Purdue University School of Health Sciences",
+      "geometry": {
+        "location": {
+          "lat": 40.4302159,
+          "lng": -86.9147915
+        }
+      }
+    },
+    {
+      "name": "Purdue University Small Animal Hospital",
+      "geometry": {
+        "location": {
+          "lat": 40.4196039,
+          "lng": -86.9133033
+        }
+      }
+    },
+    {
+      "name": "Purdue University Student Farm",
+      "geometry": {
+        "location": {
+          "lat": 40.4406474,
+          "lng": -86.9349824
+        }
+      }
+    },
+    {
+      "name": "Purdue University Student Health Center",
+      "geometry": {
+        "location": {
+          "lat": 40.4304039,
+          "lng": -86.9160508
+        }
+      }
+    },
+    {
+      "name": "Purdue University Surplus Store",
+      "geometry": {
+        "location": {
+          "lat": 40.4155717,
+          "lng": -86.9170603
+        }
+      }
+    },
+    {
+      "name": "Purdue University: Management Undergraduate Programs",
+      "geometry": {
+        "location": {
+          "lat": 40.4235207,
+          "lng": -86.9109198
+        }
+      }
+    },
+    {
+      "name": "Purdue West on McCormick Rd: BUS504",
+      "geometry": {
+        "location": {
+          "lat": 40.427222,
+          "lng": -86.930559
+        }
+      }
+    },
+    {
+      "name": "Purdue West on Mitch Daniels Blvd (South): BUS566S",
+      "geometry": {
+        "location": {
+          "lat": 40.4242021,
+          "lng": -86.9293587
+        }
+      }
+    },
+    {
+      "name": "Purdue West on Mitch Daniels Blvd: BUS566",
+      "geometry": {
+        "location": {
+          "lat": 40.4243335,
+          "lng": -86.9294847
+        }
+      }
+    },
+    {
+      "name": "Purdue, Ross-Ade, and Mackey in your backyard!",
+      "geometry": {
+        "location": {
+          "lat": 40.4354019,
+          "lng": -86.914772
+        }
+      }
+    },
+    {
+      "name": "Pure Barre",
+      "geometry": {
+        "location": {
+          "lat": 40.421082,
+          "lng": -86.900542
+        }
+      }
+    },
+    {
+      "name": "QDOBA Mexican Eats",
+      "geometry": {
+        "location": {
+          "lat": 40.4263058,
+          "lng": -86.9232635
+        }
+      }
+    },
+    {
+      "name": "RISE on Chauncey",
+      "geometry": {
+        "location": {
+          "lat": 40.422671,
+          "lng": -86.9068693
+        }
+      }
+    },
+    {
+      "name": "Rankin Track and Field Complex",
+      "geometry": {
+        "location": {
+          "lat": 40.430426,
+          "lng": -86.9226734
+        }
+      }
+    },
+    {
+      "name": "Rawls Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.4237823,
+          "lng": -86.9099567
+        }
+      }
+    },
+    {
+      "name": "Razor's Edge",
+      "geometry": {
+        "location": {
+          "lat": 40.4232172,
+          "lng": -86.9052951
+        }
+      }
+    },
+    {
+      "name": "Ready Restoration & Roofing",
+      "geometry": {
+        "location": {
+          "lat": 40.4183302,
+          "lng": -86.8926382
+        }
+      }
+    },
+    {
+      "name": "Red Mango",
+      "geometry": {
+        "location": {
+          "lat": 40.4242379,
+          "lng": -86.9066443
+        }
+      }
+    },
+    {
+      "name": "Red Wok",
+      "geometry": {
+        "location": {
+          "lat": 40.4231255,
+          "lng": -86.908876
+        }
+      }
+    },
+    {
+      "name": "RedSeven Kitchen + Cocktail",
+      "geometry": {
+        "location": {
+          "lat": 40.4192594,
+          "lng": -86.8952699
+        }
+      }
+    },
+    {
+      "name": "Regency Springs",
+      "geometry": {
+        "location": {
+          "lat": 40.416259,
+          "lng": -86.8928852
+        }
+      }
+    },
+    {
+      "name": "Reifer",
+      "geometry": {
+        "location": {
+          "lat": 40.4165722,
+          "lng": -86.8931767
+        }
+      }
+    },
+    {
+      "name": "Renu Hair Studio",
+      "geometry": {
+        "location": {
+          "lat": 40.4315303,
+          "lng": -86.9129404
+        }
+      }
+    },
+    {
+      "name": "Research Center of Open Digital Innovation",
+      "geometry": {
+        "location": {
+          "lat": 40.421097,
+          "lng": -86.9222493
+        }
+      }
+    },
+    {
+      "name": "Revolution Tattoo & Body Modification",
+      "geometry": {
+        "location": {
+          "lat": 40.4264057,
+          "lng": -86.9089883
+        }
+      }
+    },
+    {
+      "name": "Rice Cafe",
+      "geometry": {
+        "location": {
+          "lat": 40.4231255,
+          "lng": -86.908876
+        }
+      }
+    },
+    {
+      "name": "Rideshare parking",
+      "geometry": {
+        "location": {
+          "lat": 40.4223797,
+          "lng": -86.9004747
+        }
+      }
+    },
+    {
+      "name": "Ridgewood Shoppes",
+      "geometry": {
+        "location": {
+          "lat": 40.4389551,
+          "lng": -86.9131787
+        }
+      }
+    },
+    {
+      "name": "Ritual",
+      "geometry": {
+        "location": {
+          "lat": 40.4193946,
+          "lng": -86.8953574
+        }
+      }
+    },
+    {
+      "name": "River Hair Care",
+      "geometry": {
+        "location": {
+          "lat": 40.4213027,
+          "lng": -86.9031916
+        }
+      }
+    },
+    {
+      "name": "Riverside Covenant Church",
+      "geometry": {
+        "location": {
+          "lat": 40.4454523,
+          "lng": -86.9153371
+        }
+      }
+    },
+    {
+      "name": "Riverside Skating Center",
+      "geometry": {
+        "location": {
+          "lat": 40.4208014,
+          "lng": -86.8988789
+        }
+      }
+    },
+    {
+      "name": "Rocco's River Hair Care",
+      "geometry": {
+        "location": {
+          "lat": 40.4213103,
+          "lng": -86.9032024
+        }
+      }
+    },
+    {
+      "name": "Ronald Shelton",
+      "geometry": {
+        "location": {
+          "lat": 40.4260518,
+          "lng": -86.9294497
+        }
+      }
+    },
+    {
+      "name": "Ross–Ade Stadium",
+      "geometry": {
+        "location": {
+          "lat": 40.434359,
+          "lng": -86.9184385
+        }
+      }
+    },
+    {
+      "name": "Russell St & 2nd (NW Corner): BUS804",
+      "geometry": {
+        "location": {
+          "lat": 40.426348,
+          "lng": -86.919227
+        }
+      }
+    },
+    {
+      "name": "Russell St & 4th St (NW Corner)",
+      "geometry": {
+        "location": {
+          "lat": 40.4283497,
+          "lng": -86.9192265
+        }
+      }
+    },
+    {
+      "name": "Ryan B. Helms, DDS, MSD",
+      "geometry": {
+        "location": {
+          "lat": 40.44467,
+          "lng": -86.920035
+        }
+      }
+    },
+    {
+      "name": "SKN + SOL",
+      "geometry": {
+        "location": {
+          "lat": 40.419687,
+          "lng": -86.895341
+        }
+      }
+    },
+    {
+      "name": "SPS Lounge",
+      "geometry": {
+        "location": {
+          "lat": 40.4301371,
+          "lng": -86.9133092
+        }
+      }
+    },
+    {
+      "name": "Sacred Grounds",
+      "geometry": {
+        "location": {
+          "lat": 40.4110233,
+          "lng": -86.898814
+        }
+      }
+    },
+    {
+      "name": "Salisbury Market",
+      "geometry": {
+        "location": {
+          "lat": 40.4347577,
+          "lng": -86.905537
+        }
+      }
+    },
+    {
+      "name": "Sample House Hair Design Inc",
+      "geometry": {
+        "location": {
+          "lat": 40.416038,
+          "lng": -86.894603
+        }
+      }
+    },
+    {
+      "name": "Saturday Society",
+      "geometry": {
+        "location": {
+          "lat": 40.4219499,
+          "lng": -86.9068044
+        }
+      }
+    },
+    {
+      "name": "Saxbys at Purdue University",
+      "geometry": {
+        "location": {
+          "lat": 40.4310341,
+          "lng": -86.9148741
+        }
+      }
+    },
+    {
+      "name": "Scenarios",
+      "geometry": {
+        "location": {
+          "lat": 40.4209063,
+          "lng": -86.8952387
+        }
+      }
+    },
+    {
+      "name": "School of Languages and Cultures",
+      "geometry": {
+        "location": {
+          "lat": 40.426385,
+          "lng": -86.9143183
+        }
+      }
+    },
+    {
+      "name": "Scowden's Antiques",
+      "geometry": {
+        "location": {
+          "lat": 40.416818,
+          "lng": -86.8945846
+        }
+      }
+    },
+    {
+      "name": "Serai's Clothing",
+      "geometry": {
+        "location": {
+          "lat": 40.4213006,
+          "lng": -86.9032272
+        }
+      }
+    },
+    {
+      "name": "Shariyoga",
+      "geometry": {
+        "location": {
+          "lat": 40.4252804,
+          "lng": -86.9064932
+        }
+      }
+    },
+    {
+      "name": "Shealy Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.4261379,
+          "lng": -86.9207374
+        }
+      }
+    },
+    {
+      "name": "Shreve Residence Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.427,
+          "lng": -86.9246772
+        }
+      }
+    },
+    {
+      "name": "Sigma Alpha Epsilon",
+      "geometry": {
+        "location": {
+          "lat": 40.428227,
+          "lng": -86.9019359
+        }
+      }
+    },
+    {
+      "name": "Sigma Chi Fraternity",
+      "geometry": {
+        "location": {
+          "lat": 40.4250036,
+          "lng": -86.9035317
+        }
+      }
+    },
+    {
+      "name": "Sigma Kappa Sorority",
+      "geometry": {
+        "location": {
+          "lat": 40.4290623,
+          "lng": -86.9194186
+        }
+      }
+    },
+    {
+      "name": "Sigma Nu Fraternity",
+      "geometry": {
+        "location": {
+          "lat": 40.4330392,
+          "lng": -86.9254788
+        }
+      }
+    },
+    {
+      "name": "Sigma Phi Epsilon",
+      "geometry": {
+        "location": {
+          "lat": 40.431021,
+          "lng": -86.917565
+        }
+      }
+    },
+    {
+      "name": "Sigma Pi Fraternity - Eta Chapter",
+      "geometry": {
+        "location": {
+          "lat": 40.4258543,
+          "lng": -86.9186722
+        }
+      }
+    },
+    {
+      "name": "Silver Dipper Ice Cream",
+      "geometry": {
+        "location": {
+          "lat": 40.4215798,
+          "lng": -86.9040098
+        }
+      }
+    },
+    {
+      "name": "Simpson Jennifer M",
+      "geometry": {
+        "location": {
+          "lat": 40.4259606,
+          "lng": -86.913761
+        }
+      }
+    },
+    {
+      "name": "SkinByCarrington",
+      "geometry": {
+        "location": {
+          "lat": 40.4179681,
+          "lng": -86.8935403
+        }
+      }
+    },
+    {
+      "name": "Society Yoga",
+      "geometry": {
+        "location": {
+          "lat": 40.4197751,
+          "lng": -86.8951017
+        }
+      }
+    },
+    {
+      "name": "Sol Toro",
+      "geometry": {
+        "location": {
+          "lat": 40.4251266,
+          "lng": -86.9113193
+        }
+      }
+    },
+    {
+      "name": "South Street Lofts",
+      "geometry": {
+        "location": {
+          "lat": 40.4171334,
+          "lng": -86.89363
+        }
+      }
+    },
+    {
+      "name": "Southfork Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4195144,
+          "lng": -86.9074594
+        }
+      }
+    },
+    {
+      "name": "Sparkletone DryCleaning",
+      "geometry": {
+        "location": {
+          "lat": 40.4216849,
+          "lng": -86.9029678
+        }
+      }
+    },
+    {
+      "name": "Speedway",
+      "geometry": {
+        "location": {
+          "lat": 40.4209623,
+          "lng": -86.9022366
+        }
+      }
+    },
+    {
+      "name": "Spitzer Court",
+      "geometry": {
+        "location": {
+          "lat": 40.4323896,
+          "lng": -86.917963
+        }
+      }
+    },
+    {
+      "name": "Squirrel Park",
+      "geometry": {
+        "location": {
+          "lat": 40.4234254,
+          "lng": -86.9301711
+        }
+      }
+    },
+    {
+      "name": "St Ann's Catholic Church & Shrine",
+      "geometry": {
+        "location": {
+          "lat": 40.4121748,
+          "lng": -86.8977698
+        }
+      }
+    },
+    {
+      "name": "St. Thomas Aquinas Catholic Church",
+      "geometry": {
+        "location": {
+          "lat": 40.423825,
+          "lng": -86.913453
+        }
+      }
+    },
+    {
+      "name": "Stadium Ave & Grant St (NE Corner): BUS634",
+      "geometry": {
+        "location": {
+          "lat": 40.4309753,
+          "lng": -86.9102569
+        }
+      }
+    },
+    {
+      "name": "Stadium University Book Store - Purdue",
+      "geometry": {
+        "location": {
+          "lat": 40.4328623,
+          "lng": -86.9149077
+        }
+      }
+    },
+    {
+      "name": "StarPoint LLC",
+      "geometry": {
+        "location": {
+          "lat": 40.4294802,
+          "lng": -86.9207075
+        }
+      }
+    },
+    {
+      "name": "Starbucks",
+      "geometry": {
+        "location": {
+          "lat": 40.4292833,
+          "lng": -86.9125695
+        }
+      }
+    },
+    {
+      "name": "Starbucks",
+      "geometry": {
+        "location": {
+          "lat": 40.4216342,
+          "lng": -86.9025844
+        }
+      }
+    },
+    {
+      "name": "Starbucks Coffee Company",
+      "geometry": {
+        "location": {
+          "lat": 40.42754,
+          "lng": -86.92042
+        }
+      }
+    },
+    {
+      "name": "Starbucks Coffee Company",
+      "geometry": {
+        "location": {
+          "lat": 40.42481,
+          "lng": -86.91155
+        }
+      }
+    },
+    {
+      "name": "Starr Associates",
+      "geometry": {
+        "location": {
+          "lat": 40.4162316,
+          "lng": -86.8945048
+        }
+      }
+    },
+    {
+      "name": "Steps From Campus Adorable 3-Bedroom /2 Bathroom Home West Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.4411316,
+          "lng": -86.9197312
+        }
+      }
+    },
+    {
+      "name": "Steps From Campus Adorable 3-Bedroom/2 Bathroom Home West Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.4401665,
+          "lng": -86.9219818
+        }
+      }
+    },
+    {
+      "name": "Steven Beering Dr & Tower Dr (SE of): BUS213",
+      "geometry": {
+        "location": {
+          "lat": 40.432896,
+          "lng": -86.919145
+        }
+      }
+    },
+    {
+      "name": "Stewart Cooperative",
+      "geometry": {
+        "location": {
+          "lat": 40.4336919,
+          "lng": -86.9148834
+        }
+      }
+    },
+    {
+      "name": "Stewart Newstand",
+      "geometry": {
+        "location": {
+          "lat": 40.4247222,
+          "lng": -86.9127778
+        }
+      }
+    },
+    {
+      "name": "Subway",
+      "geometry": {
+        "location": {
+          "lat": 40.4261309,
+          "lng": -86.9294441
+        }
+      }
+    },
+    {
+      "name": "Subway",
+      "geometry": {
+        "location": {
+          "lat": 40.4229732,
+          "lng": -86.9079679
+        }
+      }
+    },
+    {
+      "name": "Subway",
+      "geometry": {
+        "location": {
+          "lat": 40.4324904,
+          "lng": -86.9143068
+        }
+      }
+    },
+    {
+      "name": "Sushi Boss",
+      "geometry": {
+        "location": {
+          "lat": 40.4249979,
+          "lng": -86.9112275
+        }
+      }
+    },
+    {
+      "name": "TAU BETA SIGMA",
+      "geometry": {
+        "location": {
+          "lat": 40.4233938,
+          "lng": -86.8941125
+        }
+      }
+    },
+    {
+      "name": "Tapawingo Park",
+      "geometry": {
+        "location": {
+          "lat": 40.4206831,
+          "lng": -86.8988519
+        }
+      }
+    },
+    {
+      "name": "Target",
+      "geometry": {
+        "location": {
+          "lat": 40.4242312,
+          "lng": -86.9081857
+        }
+      }
+    },
+    {
+      "name": "Target Grocery",
+      "geometry": {
+        "location": {
+          "lat": 40.4242312,
+          "lng": -86.9081857
+        }
+      }
+    },
+    {
+      "name": "Tarkington Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.43082,
+          "lng": -86.920727
+        }
+      }
+    },
+    {
+      "name": "The Black Sparrow",
+      "geometry": {
+        "location": {
+          "lat": 40.4190488,
+          "lng": -86.8946814
+        }
+      }
+    },
+    {
+      "name": "The Bluffs Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4012182,
+          "lng": -86.894336
+        }
+      }
+    },
+    {
+      "name": "The Clapping Circle",
+      "geometry": {
+        "location": {
+          "lat": 40.4257859,
+          "lng": -86.9118749
+        }
+      }
+    },
+    {
+      "name": "The Delta Delta Chapter of Sigma Chi",
+      "geometry": {
+        "location": {
+          "lat": 40.4250093,
+          "lng": -86.9034654
+        }
+      }
+    },
+    {
+      "name": "The Eleventh House",
+      "geometry": {
+        "location": {
+          "lat": 40.4186393,
+          "lng": -86.8946049
+        }
+      }
+    },
+    {
+      "name": "The Ellsworth Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.417158,
+          "lng": -86.8921954
+        }
+      }
+    },
+    {
+      "name": "The Fountain Trust Company",
+      "geometry": {
+        "location": {
+          "lat": 40.4201972,
+          "lng": -86.8940774
+        }
+      }
+    },
+    {
+      "name": "The Gathering Place",
+      "geometry": {
+        "location": {
+          "lat": 40.4263207,
+          "lng": -86.9233258
+        }
+      }
+    },
+    {
+      "name": "The Gibson",
+      "geometry": {
+        "location": {
+          "lat": 40.4192499,
+          "lng": -86.8909291
+        }
+      }
+    },
+    {
+      "name": "The Humanities, Social Sciences and Education Library",
+      "geometry": {
+        "location": {
+          "lat": 40.4249648,
+          "lng": -86.9132606
+        }
+      }
+    },
+    {
+      "name": "The Landing Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4218607,
+          "lng": -86.9001222
+        }
+      }
+    },
+    {
+      "name": "The Lawrence Restaurant + Events",
+      "geometry": {
+        "location": {
+          "lat": 40.4230242,
+          "lng": -86.9300573
+        }
+      }
+    },
+    {
+      "name": "The Press",
+      "geometry": {
+        "location": {
+          "lat": 40.4196811,
+          "lng": -86.8905729
+        }
+      }
+    },
+    {
+      "name": "The Purdue Shop",
+      "geometry": {
+        "location": {
+          "lat": 40.4342726,
+          "lng": -86.9195707
+        }
+      }
+    },
+    {
+      "name": "The Roland G. Parrish Library of Management & Economics",
+      "geometry": {
+        "location": {
+          "lat": 40.4235207,
+          "lng": -86.9109198
+        }
+      }
+    },
+    {
+      "name": "The Spa at Union Club Hotel",
+      "geometry": {
+        "location": {
+          "lat": 40.4249967,
+          "lng": -86.9105191
+        }
+      }
+    },
+    {
+      "name": "The Spinning Axe",
+      "geometry": {
+        "location": {
+          "lat": 40.4170956,
+          "lng": -86.8934565
+        }
+      }
+    },
+    {
+      "name": "The Tap West Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.4230712,
+          "lng": -86.9068766
+        }
+      }
+    },
+    {
+      "name": "The UPS Store",
+      "geometry": {
+        "location": {
+          "lat": 40.4252259,
+          "lng": -86.9112995
+        }
+      }
+    },
+    {
+      "name": "The Union Club Hotel at Purdue University, Autograph Collection",
+      "geometry": {
+        "location": {
+          "lat": 40.4249442,
+          "lng": -86.9106786
+        }
+      }
+    },
+    {
+      "name": "The Villa",
+      "geometry": {
+        "location": {
+          "lat": 40.4225296,
+          "lng": -86.9057453
+        }
+      }
+    },
+    {
+      "name": "The dirty blonde",
+      "geometry": {
+        "location": {
+          "lat": 40.420117,
+          "lng": -86.8934237
+        }
+      }
+    },
+    {
+      "name": "Theta Chi Fraternity Alpha Delta Chapter",
+      "geometry": {
+        "location": {
+          "lat": 40.4335682,
+          "lng": -86.9263838
+        }
+      }
+    },
+    {
+      "name": "Theta Chi on Tower Dr: BUS562N",
+      "geometry": {
+        "location": {
+          "lat": 40.4332438,
+          "lng": -86.9261467
+        }
+      }
+    },
+    {
+      "name": "Thriveworks Counseling & Child Therapy Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.4194768,
+          "lng": -86.8949475
+        }
+      }
+    },
+    {
+      "name": "Tommy Johnston Neighborhood Park",
+      "geometry": {
+        "location": {
+          "lat": 40.4218028,
+          "lng": -86.9080149
+        }
+      }
+    },
+    {
+      "name": "Tower Dr & Hilltop Dr (NE Corner): BUS472N",
+      "geometry": {
+        "location": {
+          "lat": 40.4332774,
+          "lng": -86.923199
+        }
+      }
+    },
+    {
+      "name": "Tower Dr & Jischke Dr (SW Corner): BUS509SW",
+      "geometry": {
+        "location": {
+          "lat": 40.4329177,
+          "lng": -86.9216716
+        }
+      }
+    },
+    {
+      "name": "Town & Gown Bistro",
+      "geometry": {
+        "location": {
+          "lat": 40.4228599,
+          "lng": -86.9041671
+        }
+      }
+    },
+    {
+      "name": "Triangle Fraternity",
+      "geometry": {
+        "location": {
+          "lat": 40.4254288,
+          "lng": -86.9170166
+        }
+      }
+    },
+    {
+      "name": "Triple XXX Family Restaurant",
+      "geometry": {
+        "location": {
+          "lat": 40.4227285,
+          "lng": -86.9054049
+        }
+      }
+    },
+    {
+      "name": "Troy Julianna D MD",
+      "geometry": {
+        "location": {
+          "lat": 40.4286549,
+          "lng": -86.9146041
+        }
+      }
+    },
+    {
+      "name": "US AIR FORCE ROTC",
+      "geometry": {
+        "location": {
+          "lat": 40.4280311,
+          "lng": -86.9162573
+        }
+      }
+    },
+    {
+      "name": "US Postal Service Contract Agent",
+      "geometry": {
+        "location": {
+          "lat": 40.4242475,
+          "lng": -86.9100839
+        }
+      }
+    },
+    {
+      "name": "USPS COLLECTION BOX",
+      "geometry": {
+        "location": {
+          "lat": 40.4196987,
+          "lng": -86.8942323
+        }
+      }
+    },
+    {
+      "name": "USPS COLLECTION BOX",
+      "geometry": {
+        "location": {
+          "lat": 40.4199123,
+          "lng": -86.8931641
+        }
+      }
+    },
+    {
+      "name": "USPS Collection Box",
+      "geometry": {
+        "location": {
+          "lat": 40.4262399,
+          "lng": -86.9166708
+        }
+      }
+    },
+    {
+      "name": "USPS Collection Box",
+      "geometry": {
+        "location": {
+          "lat": 40.4315304,
+          "lng": -86.9129403
+        }
+      }
+    },
+    {
+      "name": "UnderGrounds",
+      "geometry": {
+        "location": {
+          "lat": 40.4245495,
+          "lng": -86.912646
+        }
+      }
+    },
+    {
+      "name": "Underground Printing",
+      "geometry": {
+        "location": {
+          "lat": 40.4241485,
+          "lng": -86.9086363
+        }
+      }
+    },
+    {
+      "name": "Union Rack and Roll",
+      "geometry": {
+        "location": {
+          "lat": 40.4247248,
+          "lng": -86.9105632
+        }
+      }
+    },
+    {
+      "name": "Unitarian Universalist Church, Tippecanoe County",
+      "geometry": {
+        "location": {
+          "lat": 40.4340044,
+          "lng": -86.9089366
+        }
+      }
+    },
+    {
+      "name": "United States Postal Service",
+      "geometry": {
+        "location": {
+          "lat": 40.4198679,
+          "lng": -86.8935484
+        }
+      }
+    },
+    {
+      "name": "University Book Store (PurdueU)",
+      "geometry": {
+        "location": {
+          "lat": 40.4242652,
+          "lng": -86.910217
+        }
+      }
+    },
+    {
+      "name": "University Lutheran Church",
+      "geometry": {
+        "location": {
+          "lat": 40.4289996,
+          "lng": -86.91109
+        }
+      }
+    },
+    {
+      "name": "University Street North Garage",
+      "geometry": {
+        "location": {
+          "lat": 40.4267505,
+          "lng": -86.9172859
+        }
+      }
+    },
+    {
+      "name": "Uptown West Apartment",
+      "geometry": {
+        "location": {
+          "lat": 40.4244287,
+          "lng": -86.8916031
+        }
+      }
+    },
+    {
+      "name": "VERVE II West Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.4215594,
+          "lng": -86.9070419
+        }
+      }
+    },
+    {
+      "name": "VERVE West Lafayette",
+      "geometry": {
+        "location": {
+          "lat": 40.4219499,
+          "lng": -86.9068044
+        }
+      }
+    },
+    {
+      "name": "Vantage Pointe Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4074262,
+          "lng": -86.8924681
+        }
+      }
+    },
+    {
+      "name": "Vault",
+      "geometry": {
+        "location": {
+          "lat": 40.4198209,
+          "lng": -86.8953334
+        }
+      }
+    },
+    {
+      "name": "Vet School Parking C",
+      "geometry": {
+        "location": {
+          "lat": 40.420987,
+          "lng": -86.9107583
+        }
+      }
+    },
+    {
+      "name": "Veterinary Medical Library",
+      "geometry": {
+        "location": {
+          "lat": 40.4199404,
+          "lng": -86.9141554
+        }
+      }
+    },
+    {
+      "name": "Victoria Levine Glam Hair & Makeup",
+      "geometry": {
+        "location": {
+          "lat": 40.4210408,
+          "lng": -86.8923935
+        }
+      }
+    },
+    {
+      "name": "Victory on Salisbury",
+      "geometry": {
+        "location": {
+          "lat": 40.4258269,
+          "lng": -86.9053132
+        }
+      }
+    },
+    {
+      "name": "Vienna Espresso Bar & Bakery",
+      "geometry": {
+        "location": {
+          "lat": 40.4240332,
+          "lng": -86.9075669
+        }
+      }
+    },
+    {
+      "name": "Village Bottle Shoppe #21",
+      "geometry": {
+        "location": {
+          "lat": 40.4265391,
+          "lng": -86.9079806
+        }
+      }
+    },
+    {
+      "name": "Village Bottle Shoppe #23",
+      "geometry": {
+        "location": {
+          "lat": 40.4237245,
+          "lng": -86.9026379
+        }
+      }
+    },
+    {
+      "name": "Village Bottle Shoppe#23",
+      "geometry": {
+        "location": {
+          "lat": 40.4456451,
+          "lng": -86.9208949
+        }
+      }
+    },
+    {
+      "name": "Village Nursery School",
+      "geometry": {
+        "location": {
+          "lat": 40.4253971,
+          "lng": -86.9366628
+        }
+      }
+    },
+    {
+      "name": "Village West",
+      "geometry": {
+        "location": {
+          "lat": 40.4471562,
+          "lng": -86.9391755
+        }
+      }
+    },
+    {
+      "name": "Vine St & Wiggins St (SW Corner): BUS950",
+      "geometry": {
+        "location": {
+          "lat": 40.426621,
+          "lng": -86.908275
+        }
+      }
+    },
+    {
+      "name": "Vintage Vault",
+      "geometry": {
+        "location": {
+          "lat": 40.4122899,
+          "lng": -86.8971546
+        }
+      }
+    },
+    {
+      "name": "Virginia Kelly Karnes Archives and Special Collections Research Center",
+      "geometry": {
+        "location": {
+          "lat": 40.4249712,
+          "lng": -86.912814
+        }
+      }
+    },
+    {
+      "name": "Von's Book Shop",
+      "geometry": {
+        "location": {
+          "lat": 40.4238526,
+          "lng": -86.9086293
+        }
+      }
+    },
+    {
+      "name": "Von's Cards & Beads",
+      "geometry": {
+        "location": {
+          "lat": 40.4238729,
+          "lng": -86.9087945
+        }
+      }
+    },
+    {
+      "name": "Von's Comics",
+      "geometry": {
+        "location": {
+          "lat": 40.4238716,
+          "lng": -86.9087136
+        }
+      }
+    },
+    {
+      "name": "Von's Records & Posters",
+      "geometry": {
+        "location": {
+          "lat": 40.4238616,
+          "lng": -86.908642
+        }
+      }
+    },
+    {
+      "name": "Vons Fashions",
+      "geometry": {
+        "location": {
+          "lat": 40.4238749,
+          "lng": -86.9088867
+        }
+      }
+    },
+    {
+      "name": "W Fowler Ave & Vine St (NW Corner): BUS949",
+      "geometry": {
+        "location": {
+          "lat": 40.4276554,
+          "lng": -86.9084918
+        }
+      }
+    },
+    {
+      "name": "W Stadium Ave & Garfield St (NE Corner): BUS530N",
+      "geometry": {
+        "location": {
+          "lat": 40.4314228,
+          "lng": -86.9130704
+        }
+      }
+    },
+    {
+      "name": "Wabash Heritage Trail",
+      "geometry": {
+        "location": {
+          "lat": 40.4270319,
+          "lng": -86.9006445
+        }
+      }
+    },
+    {
+      "name": "Wabash Landing Parking Garage",
+      "geometry": {
+        "location": {
+          "lat": 40.4210454,
+          "lng": -86.8998103
+        }
+      }
+    },
+    {
+      "name": "Wabash Landing Shopping Center",
+      "geometry": {
+        "location": {
+          "lat": 40.4215755,
+          "lng": -86.9013022
+        }
+      }
+    },
+    {
+      "name": "Waldron Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4278204,
+          "lng": -86.9176851
+        }
+      }
+    },
+    {
+      "name": "Waldron Square Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4310073,
+          "lng": -86.9183654
+        }
+      }
+    },
+    {
+      "name": "Walk-On's Sports Bistreaux - Purdue Restaurant",
+      "geometry": {
+        "location": {
+          "lat": 40.4247016,
+          "lng": -86.9110355
+        }
+      }
+    },
+    {
+      "name": "Waterfront Apartments/Sugarhill Managment",
+      "geometry": {
+        "location": {
+          "lat": 40.4242798,
+          "lng": -86.9005268
+        }
+      }
+    },
+    {
+      "name": "Wehr Gerald w MD",
+      "geometry": {
+        "location": {
+          "lat": 40.4286549,
+          "lng": -86.9146041
+        }
+      }
+    },
+    {
+      "name": "Weida Apartments",
+      "geometry": {
+        "location": {
+          "lat": 40.4259754,
+          "lng": -86.9078974
+        }
+      }
+    },
+    {
+      "name": "Wesley Foundation at Purdue University",
+      "geometry": {
+        "location": {
+          "lat": 40.4265219,
+          "lng": -86.918821
+        }
+      }
+    },
+    {
+      "name": "West Lafayette Intermediate School",
+      "geometry": {
+        "location": {
+          "lat": 40.4450324,
+          "lng": -86.9131847
+        }
+      }
+    },
+    {
+      "name": "West Lafayette Junior/Senior High School",
+      "geometry": {
+        "location": {
+          "lat": 40.436141,
+          "lng": -86.9118518
+        }
+      }
+    },
+    {
+      "name": "West Lafayette Parks Maintenance",
+      "geometry": {
+        "location": {
+          "lat": 40.4394455,
+          "lng": -86.9025859
+        }
+      }
+    },
+    {
+      "name": "West Lafayette Parks Maintenance",
+      "geometry": {
+        "location": {
+          "lat": 40.425325,
+          "lng": -86.906558
+        }
+      }
+    },
+    {
+      "name": "West Lafayette Public Library",
+      "geometry": {
+        "location": {
+          "lat": 40.4250486,
+          "lng": -86.9075167
+        }
+      }
+    },
+    {
+      "name": "West Lafayette Public Library Parking Garage",
+      "geometry": {
+        "location": {
+          "lat": 40.4246294,
+          "lng": -86.90733
+        }
+      }
+    },
+    {
+      "name": "Wetherill Hall of Chemistry",
+      "geometry": {
+        "location": {
+          "lat": 40.4264569,
+          "lng": -86.9130638
+        }
+      }
+    },
+    {
+      "name": "Where Else",
+      "geometry": {
+        "location": {
+          "lat": 40.4242392,
+          "lng": -86.9085407
+        }
+      }
+    },
+    {
+      "name": "Whistler Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.4230692,
+          "lng": -86.9155455
+        }
+      }
+    },
+    {
+      "name": "Wild Side Smoke Shop",
+      "geometry": {
+        "location": {
+          "lat": 40.4218084,
+          "lng": -86.9048726
+        }
+      }
+    },
+    {
+      "name": "Wiley Residence Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.4294753,
+          "lng": -86.9207055
+        }
+      }
+    },
+    {
+      "name": "Williams St & Grant St (NE Corner): BUS290",
+      "geometry": {
+        "location": {
+          "lat": 40.418553,
+          "lng": -86.91008
+        }
+      }
+    },
+    {
+      "name": "Williams St & Salisbury St (SW Corner): BUS523",
+      "geometry": {
+        "location": {
+          "lat": 40.4184032,
+          "lng": -86.9080914
+        }
+      }
+    },
+    {
+      "name": "Wilmeth Active Learning Center (WALC)",
+      "geometry": {
+        "location": {
+          "lat": 40.4273666,
+          "lng": -86.9131699
+        }
+      }
+    },
+    {
+      "name": "Windsor Dining Court",
+      "geometry": {
+        "location": {
+          "lat": 40.4270434,
+          "lng": -86.9210611
+        }
+      }
+    },
+    {
+      "name": "Windsor Halls",
+      "geometry": {
+        "location": {
+          "lat": 40.4266677,
+          "lng": -86.9204643
+        }
+      }
+    },
+    {
+      "name": "Windsor Residence Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.4263183,
+          "lng": -86.9209749
+        }
+      }
+    },
+    {
+      "name": "Winifred Parker Residence Hall",
+      "geometry": {
+        "location": {
+          "lat": 40.4278412,
+          "lng": -86.9201552
+        }
+      }
+    },
+    {
+      "name": "Wood Street Garage",
+      "geometry": {
+        "location": {
+          "lat": 40.422813,
+          "lng": -86.9100141
+        }
+      }
+    },
+    {
+      "name": "Young Hall on Grant St (East): BUS154",
+      "geometry": {
+        "location": {
+          "lat": 40.42314,
+          "lng": -86.9102895
+        }
+      }
+    },
+    {
+      "name": "Young Hall on Grant St (West): BUS153",
+      "geometry": {
+        "location": {
+          "lat": 40.4227671,
+          "lng": -86.9103861
+        }
+      }
+    },
+    {
+      "name": "Yugo West Lafayette River Market",
+      "geometry": {
+        "location": {
+          "lat": 40.4214107,
+          "lng": -86.9036148
+        }
+      }
+    },
+    {
+      "name": "Zen Poké",
+      "geometry": {
+        "location": {
+          "lat": 40.4251281,
+          "lng": -86.9113156
+        }
+      }
+    },
+    {
+      "name": "Zeta Beta Tau Fraternity",
+      "geometry": {
+        "location": {
+          "lat": 40.4343187,
+          "lng": -86.9253293
+        }
+      }
+    },
+    {
+      "name": "Zeta Tau Alpha",
+      "geometry": {
+        "location": {
+          "lat": 40.4257176,
+          "lng": -86.9176076
+        }
+      }
+    },
+    {
+      "name": "Zublet",
+      "geometry": {
+        "location": {
+          "lat": 40.4282735,
+          "lng": -86.9144565
+        }
+      }
+    },
+    {
+      "name": "Zundo Family Dentistry",
+      "geometry": {
+        "location": {
+          "lat": 40.4457693,
+          "lng": -86.9219932
+        }
+      }
+    },
+    {
+      "name": "[en] Russell St & 4th St (SE Corner); BUS810",
+      "geometry": {
+        "location": {
+          "lat": 40.4282278,
+          "lng": -86.9191215
+        }
+      }
+    },
+    {
+      "name": "iMechanic: We Repair it All",
+      "geometry": {
+        "location": {
+          "lat": 40.4212979,
+          "lng": -86.9032578
+        }
+      }
+    },
+    {
+      "name": "winksbyalice",
+      "geometry": {
+        "location": {
+          "lat": 40.4183715,
+          "lng": -86.892842
+        }
+      }
+    },
+    {
+      "name": "★Golf Course Views★ Ranch ★ Fire Pit ★Bring Pets!★",
+      "geometry": {
+        "location": {
+          "lat": 40.4393616,
+          "lng": -86.9185028
+        }
+      }
+    },
+    {
+      "name": "퍼듀제자교회 Disciples Korean United Methodist Church",
+      "geometry": {
+        "location": {
+          "lat": 40.4256193,
+          "lng": -86.9366542
+        }
+      }
+    },
+    {
+      "name": "Cute Modern Cottage 3 min from Purdue Campus!",
+      "geometry": {
+        "location": {
+          "lat": 40.4293861,
+          "lng": -86.9452896
+        }
+      }
+    }
+  ]
+}
