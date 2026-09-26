@@ -29,6 +29,23 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Food at Purdue uses your location to show nearby free food events on campus.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Food at Purdue uses your microphone for voice input when reporting food sightings.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Food at Purdue uses speech recognition to transcribe your food sighting descriptions.</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.rami.FoodAtPurdue</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>foodatpurdue</string>
+			</array>
+		</dict>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -51,5 +68,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>

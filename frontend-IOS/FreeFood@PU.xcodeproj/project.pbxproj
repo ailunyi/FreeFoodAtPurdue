@@ -6,25 +6,73 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AA000004AAAA000400000004 /* FoodAtPurdueWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AA000005AAAA000500000005 /* FoodAtPurdueWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D83FD20A2F96AE20001E8A1F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D83FD2092F96AE20001E8A1F /* Lottie */; };
+		D8C4C1CC2F875F35007923E4 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = D8C4C1CB2F875F35007923E4 /* MapboxMaps */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA000001AAAA000100000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D860F6662F7F297500D8301A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA000002AAAA000200000002;
+			remoteInfo = FoodAtPurdueWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AA000003AAAA000300000003 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AA000004AAAA000400000004 /* FoodAtPurdueWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		D860F66E2F7F297500D8301A /* FoodAtPurdue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodAtPurdue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA000005AAAA000500000005 /* FoodAtPurdueWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FoodAtPurdueWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D83FD1992F908FA9001E8A1F /* FreeFood@PU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "FreeFood@PU.entitlements"; sourceTree = "<group>"; };
+		D83FD19A2F908FC5001E8A1F /* FoodAtPurdueWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodAtPurdueWidgetExtension.entitlements; sourceTree = "<group>"; };
+		D860F66E2F7F297500D8301A /* FreeFood@PU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FreeFood@PU.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		D860F6812F7F297700D8301A /* Info.plist exception */ = {
+		AA000006AAAA000600000006 /* Exceptions for "FoodAtPurdueWidget" folder in "FoodAtPurdueWidgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = D860F66D2F7F297500D8301A /* FoodAtPurdue */;
+			target = AA000002AAAA000200000002 /* FoodAtPurdueWidgetExtension */;
+		};
+		D860F6812F7F297700D8301A /* Exceptions for "FoodAtPurdue" folder in "FreeFood@PU" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D860F66D2F7F297500D8301A /* FreeFood@PU */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		AA000007AAAA000700000007 /* FoodAtPurdueWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AA000006AAAA000600000006 /* Exceptions for "FoodAtPurdueWidget" folder in "FoodAtPurdueWidgetExtension" target */,
+			);
+			path = FoodAtPurdueWidget;
+			sourceTree = "<group>";
+		};
 		D860F6702F7F297500D8301A /* FoodAtPurdue */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				D860F6812F7F297700D8301A /* Info.plist exception */,
+				D860F6812F7F297700D8301A /* Exceptions for "FoodAtPurdue" folder in "FreeFood@PU" target */,
 			);
 			path = FoodAtPurdue;
 			sourceTree = "<group>";
@@ -32,10 +80,19 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AA000008AAAA000800000008 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D860F66B2F7F297500D8301A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C4C1CC2F875F35007923E4 /* MapboxMaps in Frameworks */,
+				D83FD20A2F96AE20001E8A1F /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +102,10 @@
 		D860F6652F7F297500D8301A = {
 			isa = PBXGroup;
 			children = (
+				D83FD19A2F908FC5001E8A1F /* FoodAtPurdueWidgetExtension.entitlements */,
+				D83FD1992F908FA9001E8A1F /* FreeFood@PU.entitlements */,
 				D860F6702F7F297500D8301A /* FoodAtPurdue */,
+				AA000007AAAA000700000007 /* FoodAtPurdueWidget */,
 				D860F66F2F7F297500D8301A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,7 +113,8 @@
 		D860F66F2F7F297500D8301A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D860F66E2F7F297500D8301A /* FoodAtPurdue.app */,
+				D860F66E2F7F297500D8301A /* FreeFood@PU.app */,
+				AA000005AAAA000500000005 /* FoodAtPurdueWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,26 +122,50 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D860F66D2F7F297500D8301A /* FoodAtPurdue */ = {
+		AA000002AAAA000200000002 /* FoodAtPurdueWidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D860F6792F7F297700D8301A /* Build configuration list for PBXNativeTarget "FoodAtPurdue" */;
+			buildConfigurationList = AA00000AAAAA000A0000000A /* Build configuration list for PBXNativeTarget "FoodAtPurdueWidgetExtension" */;
 			buildPhases = (
-				D860F66A2F7F297500D8301A /* Sources */,
-				D860F66B2F7F297500D8301A /* Frameworks */,
-				D860F66C2F7F297500D8301A /* Resources */,
+				AA00000BAAAA000B0000000B /* Sources */,
+				AA000008AAAA000800000008 /* Frameworks */,
+				AA00000CAAAA000C0000000C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				AA000007AAAA000700000007 /* FoodAtPurdueWidget */,
+			);
+			name = FoodAtPurdueWidgetExtension;
+			productName = FoodAtPurdueWidgetExtension;
+			productReference = AA000005AAAA000500000005 /* FoodAtPurdueWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		D860F66D2F7F297500D8301A /* FreeFood@PU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D860F6792F7F297700D8301A /* Build configuration list for PBXNativeTarget "FreeFood@PU" */;
+			buildPhases = (
+				D860F66A2F7F297500D8301A /* Sources */,
+				D860F66B2F7F297500D8301A /* Frameworks */,
+				D860F66C2F7F297500D8301A /* Resources */,
+				AA000003AAAA000300000003 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA000009AAAA000900000009 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
 				D860F6702F7F297500D8301A /* FoodAtPurdue */,
 			);
-			name = FoodAtPurdue;
+			name = "FreeFood@PU";
 			packageProductDependencies = (
+				D8C4C1CB2F875F35007923E4 /* MapboxMaps */,
+				D83FD2092F96AE20001E8A1F /* Lottie */,
 			);
 			productName = FoodAtPurdue;
-			productReference = D860F66E2F7F297500D8301A /* FoodAtPurdue.app */;
+			productReference = D860F66E2F7F297500D8301A /* FreeFood@PU.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -93,12 +178,15 @@
 				LastSwiftUpdateCheck = 2640;
 				LastUpgradeCheck = 2640;
 				TargetAttributes = {
+					AA000002AAAA000200000002 = {
+						CreatedOnToolsVersion = 26.4;
+					};
 					D860F66D2F7F297500D8301A = {
 						CreatedOnToolsVersion = 26.4;
 					};
 				};
 			};
-			buildConfigurationList = D860F6692F7F297500D8301A /* Build configuration list for PBXProject "FoodAtPurdue" */;
+			buildConfigurationList = D860F6692F7F297500D8301A /* Build configuration list for PBXProject "FreeFood@PU" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -107,17 +195,29 @@
 			);
 			mainGroup = D860F6652F7F297500D8301A;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D8C4C1CA2F875F35007923E4 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+				D83FD2082F96AE20001E8A1F /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D860F66F2F7F297500D8301A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D860F66D2F7F297500D8301A /* FoodAtPurdue */,
+				D860F66D2F7F297500D8301A /* FreeFood@PU */,
+				AA000002AAAA000200000002 /* FoodAtPurdueWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AA00000CAAAA000C0000000C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D860F66C2F7F297500D8301A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,6 +228,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AA00000BAAAA000B0000000B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D860F66A2F7F297500D8301A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,7 +244,73 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		AA000009AAAA000900000009 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA000002AAAA000200000002 /* FoodAtPurdueWidgetExtension */;
+			targetProxy = AA000001AAAA000100000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		AA00000DAAAA000D0000000D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = FoodAtPurdueWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B9DMUDCY2D;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FoodAtPurdueWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FoodAtPurdueWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rami.FoodAtPurdue.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA00000EAAAA000E0000000E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = FoodAtPurdueWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B9DMUDCY2D;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FoodAtPurdueWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FoodAtPurdueWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rami.FoodAtPurdue.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D860F6772F7F297700D8301A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -264,12 +437,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "FreeFood@PU.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B9DMUDCY2D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = FoodAtPurdue/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "FreeFood@PU";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,12 +468,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "FreeFood@PU.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B9DMUDCY2D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = FoodAtPurdue/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "FreeFood@PU";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,7 +497,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D860F6692F7F297500D8301A /* Build configuration list for PBXProject "FoodAtPurdue" */ = {
+		AA00000AAAAA000A0000000A /* Build configuration list for PBXNativeTarget "FoodAtPurdueWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA00000DAAAA000D0000000D /* Debug */,
+				AA00000EAAAA000E0000000E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D860F6692F7F297500D8301A /* Build configuration list for PBXProject "FreeFood@PU" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D860F6772F7F297700D8301A /* Debug */,
@@ -327,7 +515,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D860F6792F7F297700D8301A /* Build configuration list for PBXNativeTarget "FoodAtPurdue" */ = {
+		D860F6792F7F297700D8301A /* Build configuration list for PBXNativeTarget "FreeFood@PU" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D860F67A2F7F297700D8301A /* Debug */,
@@ -337,6 +525,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D83FD2082F96AE20001E8A1F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = exactVersion;
+				version = 4.6.0;
+			};
+		};
+		D8C4C1CA2F875F35007923E4 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios";
+			requirement = {
+				kind = exactVersion;
+				version = 11.26.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D83FD2092F96AE20001E8A1F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D83FD2082F96AE20001E8A1F /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		D8C4C1CB2F875F35007923E4 /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8C4C1CA2F875F35007923E4 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D860F6662F7F297500D8301A /* Project object */;
 }

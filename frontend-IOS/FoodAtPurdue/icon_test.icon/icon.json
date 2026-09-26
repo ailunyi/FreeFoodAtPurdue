@@ -1,0 +1,189 @@
+{
+  "fill" : {
+    "linear-gradient" : [
+      "extended-gray:1.00000,1.00000",
+      "extended-gray:1.00000,1.00000"
+    ],
+    "orientation" : {
+      "start" : {
+        "x" : 0.5,
+        "y" : 1
+      },
+      "stop" : {
+        "x" : 0.5,
+        "y" : 0.3
+      }
+    }
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "glass" : false,
+          "hidden" : true,
+          "image-name" : "Transparent Cropped Logo1.png",
+          "name" : "Transparent Cropped Logo1",
+          "position" : {
+            "scale" : 3.25,
+            "translation-in-points" : [
+              -1.625,
+              -21
+            ]
+          }
+        },
+        {
+          "glass" : true,
+          "hidden" : true,
+          "image-name" : "image-removebg-preview (5).svg",
+          "name" : "image-removebg-preview (5)",
+          "position" : {
+            "scale" : 3.4,
+            "translation-in-points" : [
+              -42.985010666044445,
+              -102.26125295815507
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "hidden" : false,
+      "layers" : [
+        {
+          "glass" : false,
+          "hidden" : false,
+          "image-name" : "Screenshot_2026-04-12_at_2.11.41_AM-removebg-preview.svg",
+          "name" : "Screenshot_2026-04-12_at_2.11.41_AM-removebg-preview",
+          "position" : {
+            "scale" : 1.2,
+            "translation-in-points" : [
+              378.542295517256,
+              75.96165535259888
+            ]
+          }
+        },
+        {
+          "glass" : false,
+          "image-name" : "pizza.svg",
+          "name" : "pizza",
+          "position" : {
+            "scale" : 3.5,
+            "translation-in-points" : [
+              -62.04538771631019,
+              -224.62860953415725
+            ]
+          }
+        },
+        {
+          "glass" : false,
+          "image-name" : "donut.svg",
+          "name" : "donut",
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [
+              -337.28983174139967,
+              206.34829015389641
+            ]
+          }
+        },
+        {
+          "glass" : false,
+          "hidden" : true,
+          "image-name" : "boba.svg",
+          "name" : "boba",
+          "position" : {
+            "scale" : 1.2,
+            "translation-in-points" : [
+              428.085086070696,
+              -111.97126362666222
+            ]
+          }
+        },
+        {
+          "glass" : false,
+          "image-name" : "background.svg",
+          "name" : "background",
+          "position" : {
+            "scale" : 5,
+            "translation-in-points" : [
+              -39.81670265378193,
+              -7.88255525177658
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "specular" : false,
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "hidden" : false,
+      "layers" : [
+        {
+          "hidden" : true,
+          "image-name" : "food-svgrepo-com 2.svg",
+          "name" : "food-svgrepo-com 2",
+          "position" : {
+            "scale" : 0.5,
+            "translation-in-points" : [
+              -272.10686414258885,
+              -261.10620815610514
+            ]
+          }
+        },
+        {
+          "hidden" : true,
+          "image-name" : "food-dinner-dish-plate-fork-svgrepo-com.svg",
+          "name" : "food-dinner-dish-plate-fork-svgrepo-com",
+          "position" : {
+            "scale" : 0.5,
+            "translation-in-points" : [
+              188.63636363636374,
+              303.444295194398
+            ]
+          }
+        },
+        {
+          "hidden" : true,
+          "image-name" : "alpha-p-svgrepo-com.svg",
+          "name" : "alpha-p-svgrepo-com",
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [
+              0,
+              -1.1368683772161603e-13
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}
