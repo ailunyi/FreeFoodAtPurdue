@@ -31,6 +31,7 @@ Fill in `.env`:
 | `GEMINI_QUOTA_COOLDOWN_SECONDS` | no | Pause after a Gemini quota error, default 600 |
 | `GEMINI_RATE_LIMIT_PER_MIN` | no | Per-IP limit on Gemini-backed endpoints, default 5 |
 | `VOTE_RATE_LIMIT_PER_MIN` | no | Per-IP limit on vote endpoints, default 30 |
+| `CORS_ALLOW_ORIGINS` | no | Comma-separated browser origins allowed to call the API, default `*` |
 | `FOOD_EVENTS_DB_PATH` | no | Override the events database location |
 | `MESSAGES_DB_PATH` | no | Override the messages database location |
 
@@ -53,6 +54,8 @@ The API on its own:
 uvicorn api:app --host 0.0.0.0 --port 8000
 ```
 
+Behind a reverse proxy, add `--proxy-headers --forwarded-allow-ips=<proxy address>` so rate limiting sees the real client IP. The API ignores `X-Forwarded-For` on its own, since clients can set it to anything.
+
 The GroupMe poller (also starts the BoilerLink poller in a background thread):
 
 ```bash
@@ -73,9 +76,13 @@ The Instagram poller is separate and optional: `python instagram_poller.py`.
 | `/events/validate` | POST | Pre-submit check that required fields are present |
 | `/events/{id}/going` | POST | Toggle an "I'm going" vote |
 | `/events/{id}/gone` | POST | Toggle a "food's gone" flag |
+| `/events/{id}/activity` | GET | Edit and merge history for an event, oldest first |
 | `/events/ingest_instagram` | POST | Bulk ingest, requires the `INGEST_API_KEY` bearer token |
 | `/dining/{abbr}` | GET | Dining court menu for today, proxied from Purdue's menu API |
 | `/otg/{abbr}` | GET | On-the-GO location menu for today |
+| `/dining/rankings` | GET | Today's dining court upvote leaderboard; pass `user_id` to see your own votes |
+| `/dining/{abbr}/vote` | POST | Toggle today's upvote for a dining court |
+| `/health` | GET | Liveness check that also touches the database |
 
 Endpoints that call Gemini are rate limited per IP and enforce size limits on text and images, so a public deployment does not turn into an open Gemini proxy.
 

@@ -116,3 +116,40 @@ def test_dining_cache_evicts_previous_days(api_module):
 def test_dining_unknown_abbr_404(client):
     assert client.get("/dining/NOPE").status_code == 404
     assert client.get("/otg/NOPE").status_code == 404
+
+
+def test_health(client):
+    r = client.get("/health")
+    assert r.status_code == 200
+    assert r.json() == {"status": "ok"}
+
+
+def test_rate_limit_ignores_spoofed_forwarded_for(client, api_module):
+    codes = [
+        client.post("/events/validate", json={"text": "pizza"},
+                    headers={"X-Forwarded-For": f"10.0.0.{i}"}).status_code
+        for i in range(api_module.GEMINI_RATE_LIMIT + 2)
+    ]
+    assert codes.count(429) >= 2
+
+
+def test_event_activity_endpoint(client, fresh_events_db):
+    event_id = fresh_events_db.insert_event(
+        message_id="act-api", building=None, building_abbr=None, room=None,
+        food_type=None, expires_at=None, confidence=0.9, lat=None, lng=None,
+    )
+    assert client.get(f"/events/{event_id}/activity").json() == []
+    client.post(f"/events/{event_id}/going", json={"user_id": "user-a"})
+    assert [a["kind"] for a in client.get(f"/events/{event_id}/activity").json()] == ["going"]
+
+
+def test_dining_vote_endpoints(client, fresh_events_db):
+    r = client.post("/dining/ford/vote", json={"user_id": "user-a"})
+    assert r.status_code == 200
+    assert r.json()["abbr"] == "FORD" and r.json()["voted"] is True and r.json()["votes"] == 1
+
+    rankings = client.get("/dining/rankings", params={"user_id": "user-a"}).json()["rankings"]
+    assert rankings[0]["abbr"] == "FORD" and rankings[0]["voted"] is True
+
+    assert client.post("/dining/LWSN/vote", json={"user_id": "user-a"}).status_code == 404
+    assert client.post("/dining/FORD/vote", json={}).status_code == 400

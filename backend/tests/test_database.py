@@ -90,3 +90,39 @@ def test_building_at_point_inside_near_and_far(scratch_dbs):
 
     far = db.building_at_point(40.5, -86.8, max_distance_m=50)
     assert far is None
+
+
+def test_update_event_logs_changed_fields_only(fresh_events_db):
+    db = fresh_events_db
+    event_id = _insert(db, "msg-act", room="100")
+    db.update_event(event_id, source="groupme", room="200", food_type="pizza", confidence=0.5)
+    activity = db.get_event_activity(event_id)
+    # food_type is unchanged and confidence is not tracked, so only room is logged.
+    assert [(a["kind"], a["field"], a["old_value"], a["new_value"], a["source"]) for a in activity] == [
+        ("updated", "room", "100", "200", "groupme"),
+    ]
+
+
+def test_vote_activity_is_removed_on_unvote(fresh_events_db):
+    db = fresh_events_db
+    event_id = _insert(db, "msg-act-vote")
+    db.increment_going(event_id, user_id="user-a")
+    assert [a["kind"] for a in db.get_event_activity(event_id)] == ["going"]
+    db.increment_going(event_id, user_id="user-a")
+    assert db.get_event_activity(event_id) == []
+
+
+def test_dining_vote_toggle_and_rankings(fresh_events_db):
+    db = fresh_events_db
+    courts = {"ERHT": "Earhart", "FORD": "Ford"}
+    assert db.toggle_dining_vote("user-a", "FORD", "2026-01-01") == (True, 1)
+    assert db.toggle_dining_vote("user-b", "FORD", "2026-01-01") == (True, 2)
+    assert db.toggle_dining_vote("user-a", "FORD", "2026-01-01") == (False, 1)
+
+    rankings = db.get_dining_rankings(courts, "2026-01-01", "user-b")
+    assert [(r["abbr"], r["votes"], r["voted"], r["rank"]) for r in rankings] == [
+        ("FORD", 1, True, 1),
+        ("ERHT", 0, False, 2),
+    ]
+    # A new day starts with an empty leaderboard.
+    assert all(r["votes"] == 0 for r in db.get_dining_rankings(courts, "2026-01-02", None))

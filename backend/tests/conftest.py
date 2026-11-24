@@ -87,4 +87,6 @@ def fresh_events_db(scratch_dbs):
         conn.execute("DELETE FROM events")
         conn.execute("DELETE FROM event_votes")
         conn.execute("DELETE FROM processed_ids")
+        conn.execute("DELETE FROM event_activity")
+        conn.execute("DELETE FROM dining_votes")
     return scratch_dbs
