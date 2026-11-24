@@ -445,6 +445,7 @@ def poll_group(
                         dietary_json = json.dumps(dietary) if dietary else None
                         update_event(
                             target_id,
+                            source=('testing' if is_testing else 'groupme'),
                             building=full_name, building_abbr=abbr,
                             room=event.get("room"), food_type=food_type,
                             name=name, description=description,

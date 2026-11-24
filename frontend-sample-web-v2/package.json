@@ -1,0 +1,27 @@
+{
+  "name": "free-food-at-purdue-v2",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Free Food at Purdue — v2 frontend (Vite + React + Express SEO)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node server.js",
+    "start:prod": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "mapbox-gl": "^3.10.0",
+    "node-fetch": "^3.3.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}

@@ -18,7 +18,9 @@ Extracted events are matched against a catalog of campus buildings (exact name l
 |---|---|
 | `backend/` | FastAPI server, source pollers, Gemini extraction, SQLite storage |
 | `frontend-IOS/` | SwiftUI iPhone app (map and event list) |
-| `frontend-sample-web/` | Single-page web demo of the map |
+| `frontend-sample-web/` | Original single-file web demo of the map |
+| `frontend-sample-web-v2/` | The live site at freefoodatpurdue.com: Vite + React client, Express server for per-event SEO pages |
+| `instagram-client/` | Script that fetches Instagram posts from a home machine and pushes them to the ingest endpoint |
 
 Each directory has its own README with setup instructions. The backend README is the place to start if you want to run the whole thing locally.
 

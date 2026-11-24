@@ -80,6 +80,43 @@ def init_db() -> None:
             )
         """)
 
+        conn.execute("""
+            CREATE TABLE IF NOT EXISTS event_activity (
+                id          INTEGER PRIMARY KEY AUTOINCREMENT,
+                event_id    INTEGER NOT NULL,
+                kind        TEXT NOT NULL,
+                field       TEXT,
+                old_value   TEXT,
+                new_value   TEXT,
+                source      TEXT,
+                user_id     TEXT,
+                created_at  TEXT DEFAULT (datetime('now'))
+            )
+        """)
+        conn.execute("CREATE INDEX IF NOT EXISTS idx_event_activity_event_id ON event_activity(event_id, id)")
+        # Additive migration for installs created before user_id existed.
+        act_cols = {r[1] for r in conn.execute("PRAGMA table_info(event_activity)").fetchall()}
+        if "user_id" not in act_cols:
+            conn.execute("ALTER TABLE event_activity ADD COLUMN user_id TEXT")
+
+        # Per-day, per-court upvotes for the dining-court rankings feature.
+        # PRIMARY KEY (user_id, court_abbr, date) means a fast double-click
+        # can't double-count, and a fresh `date` value each day implicitly
+        # resets the leaderboard at midnight.
+        conn.execute("""
+            CREATE TABLE IF NOT EXISTS dining_votes (
+                user_id     TEXT NOT NULL,
+                court_abbr  TEXT NOT NULL,
+                date        TEXT NOT NULL,
+                created_at  TEXT DEFAULT (datetime('now')),
+                PRIMARY KEY (user_id, court_abbr, date)
+            )
+        """)
+        conn.execute(
+            "CREATE INDEX IF NOT EXISTS idx_dining_votes_date_court "
+            "ON dining_votes(date, court_abbr)"
+        )
+
     with get_messages_conn() as conn:
         conn.execute("""
             CREATE TABLE IF NOT EXISTS messages (
@@ -248,16 +285,73 @@ def insert_event(
         return cur.lastrowid
 
 
-def update_event(event_id: int, **fields) -> None:
-    """Merge non-None fields into an existing event row."""
+# Fields whose changes are user-visible in the activity feed. Skipped: confidence,
+# name_confidence, lat, lng (noisy/internal), building_abbr (paired with building),
+# dietary_info (structured payload — handled elsewhere if needed).
+_ACTIVITY_TRACKED_FIELDS = {
+    'name', 'food_type', 'building', 'room', 'starts_at', 'expires_at',
+    'description', 'is_free', 'rsvp_required', 'rsvp_link',
+}
+
+
+def _activity_value(v) -> Optional[str]:
+    if v is None:
+        return None
+    if isinstance(v, (dict, list)):
+        return json.dumps(v)
+    return str(v)
+
+
+def _log_activity(conn, event_id: int, kind: str, *,
+                  field: Optional[str] = None,
+                  old_value=None, new_value=None,
+                  source: Optional[str] = None,
+                  user_id: Optional[str] = None) -> None:
+    conn.execute(
+        "INSERT INTO event_activity (event_id, kind, field, old_value, new_value, source, user_id) "
+        "VALUES (?, ?, ?, ?, ?, ?, ?)",
+        (event_id, kind, field, _activity_value(old_value), _activity_value(new_value), source, user_id),
+    )
+
+
+def get_event_activity(event_id: int) -> list[dict]:
+    """Activity log for an event, oldest first."""
+    with get_conn() as conn:
+        rows = conn.execute(
+            "SELECT id, kind, field, old_value, new_value, source, created_at "
+            "FROM event_activity WHERE event_id = ? ORDER BY id ASC",
+            (event_id,),
+        ).fetchall()
+    return [dict(r) for r in rows]
+
+
+def update_event(event_id: int, source: Optional[str] = None, **fields) -> None:
+    """Merge non-None fields into an existing event row.
+
+    Logs an `event_activity` row per tracked field whose value actually changes.
+    `source` is recorded against each logged change so the UI can attribute it.
+    """
     allowed = {'building', 'building_abbr', 'room', 'food_type', 'expires_at',
                'starts_at', 'confidence', 'lat', 'lng', 'is_free', 'name', 'description',
                'name_confidence', 'dietary_info', 'rsvp_required', 'rsvp_link'}
     updates = {k: v for k, v in fields.items() if k in allowed and v is not None}
     if not updates:
         return
-    set_clause = ", ".join(f"{k} = ?" for k in updates)
     with get_conn() as conn:
+        existing = conn.execute(
+            "SELECT * FROM events WHERE id = ?", (event_id,),
+        ).fetchone()
+        if existing is None:
+            return
+        for field, new_v in updates.items():
+            if field not in _ACTIVITY_TRACKED_FIELDS:
+                continue
+            old_v = existing[field] if field in existing.keys() else None
+            if _activity_value(old_v) == _activity_value(new_v):
+                continue
+            _log_activity(conn, event_id, 'updated',
+                          field=field, old_value=old_v, new_value=new_v, source=source)
+        set_clause = ", ".join(f"{k} = ?" for k in updates)
         conn.execute(
             f"UPDATE events SET {set_clause} WHERE id = ?",
             (*updates.values(), event_id),
@@ -277,6 +371,10 @@ def increment_going(event_id: int, user_id: Optional[str] = None) -> tuple[int, 
                     "DELETE FROM event_votes WHERE event_id = ? AND user_id = ? AND vote_type = 'going'",
                     (event_id, user_id),
                 )
+                conn.execute(
+                    "DELETE FROM event_activity WHERE event_id = ? AND kind = 'going' AND user_id = ?",
+                    (event_id, user_id),
+                )
                 conn.execute("UPDATE events SET going_count = MAX(going_count - 1, 0) WHERE id = ?", (event_id,))
                 row = conn.execute("SELECT going_count FROM events WHERE id = ?", (event_id,)).fetchone()
                 return (row["going_count"] if row else 0, False)
@@ -285,6 +383,7 @@ def increment_going(event_id: int, user_id: Optional[str] = None) -> tuple[int, 
                 (event_id, user_id),
             )
         conn.execute("UPDATE events SET going_count = going_count + 1 WHERE id = ?", (event_id,))
+        _log_activity(conn, event_id, 'going', user_id=user_id)
         row = conn.execute("SELECT going_count FROM events WHERE id = ?", (event_id,)).fetchone()
     return (row["going_count"] if row else 0, True)
 
@@ -302,6 +401,10 @@ def increment_gone(event_id: int, user_id: Optional[str] = None) -> tuple[int, b
                     "DELETE FROM event_votes WHERE event_id = ? AND user_id = ? AND vote_type = 'gone'",
                     (event_id, user_id),
                 )
+                conn.execute(
+                    "DELETE FROM event_activity WHERE event_id = ? AND kind = 'gone' AND user_id = ?",
+                    (event_id, user_id),
+                )
                 conn.execute("UPDATE events SET gone_count = MAX(gone_count - 1, 0) WHERE id = ?", (event_id,))
                 row = conn.execute("SELECT gone_count FROM events WHERE id = ?", (event_id,)).fetchone()
                 return (row["gone_count"] if row else 0, False)
@@ -310,6 +413,7 @@ def increment_gone(event_id: int, user_id: Optional[str] = None) -> tuple[int, b
                 (event_id, user_id),
             )
         conn.execute("UPDATE events SET gone_count = gone_count + 1 WHERE id = ?", (event_id,))
+        _log_activity(conn, event_id, 'gone', user_id=user_id)
         row = conn.execute("SELECT gone_count FROM events WHERE id = ?", (event_id,)).fetchone()
     return (row["gone_count"] if row else 0, True)
 
@@ -663,6 +767,30 @@ def merge_duplicate_event(
                 return new
             return new if len(str(new)) > len(str(old)) else old
 
+        new_values = {
+            'name':          _pick(row['name'], name),
+            'description':   _pick_longer(row['description'], description),
+            'food_type':     _pick(row['food_type'], food_type),
+            'starts_at':     _pick(row['starts_at'], starts_at),
+            'expires_at':    _pick(row['expires_at'], expires_at),
+            'building':      _pick(row['building'], building),
+            'building_abbr': _pick(row['building_abbr'], building_abbr),
+            'lat':           _pick(row['lat'], lat),
+            'lng':           _pick(row['lng'], lng),
+        }
+
+        # 'merged' marker — even when no fields change, we want the UI to show
+        # that an additional source corroborated this event.
+        _log_activity(conn, existing_id, 'merged', source=new_source)
+        for field, new_v in new_values.items():
+            if field not in _ACTIVITY_TRACKED_FIELDS:
+                continue
+            old_v = row[field]
+            if _activity_value(old_v) == _activity_value(new_v):
+                continue
+            _log_activity(conn, existing_id, 'updated',
+                          field=field, old_value=old_v, new_value=new_v, source=new_source)
+
         conn.execute("""
             UPDATE events SET
                 sources = ?,
@@ -678,14 +806,79 @@ def merge_duplicate_event(
             WHERE id = ?
         """, (
             json.dumps(existing_sources),
-            _pick(row['name'], name),
-            _pick_longer(row['description'], description),
-            _pick(row['food_type'], food_type),
-            _pick(row['starts_at'], starts_at),
-            _pick(row['expires_at'], expires_at),
-            _pick(row['building'], building),
-            _pick(row['building_abbr'], building_abbr),
-            _pick(row['lat'], lat),
-            _pick(row['lng'], lng),
+            new_values['name'],
+            new_values['description'],
+            new_values['food_type'],
+            new_values['starts_at'],
+            new_values['expires_at'],
+            new_values['building'],
+            new_values['building_abbr'],
+            new_values['lat'],
+            new_values['lng'],
             existing_id,
         ))
+
+
+# ── Dining-court daily rankings ────────────────────────────────────────────
+# Toggleable, anonymous upvotes keyed by (user_id, court_abbr, date) so the
+# leaderboard self-resets at midnight Indianapolis time.
+
+def toggle_dining_vote(user_id: str, court_abbr: str, date: str) -> tuple[bool, int]:
+    """Add or remove a vote. Returns (now_voted, total_votes_for_court_today)."""
+    with get_conn() as conn:
+        existing = conn.execute(
+            "SELECT 1 FROM dining_votes WHERE user_id=? AND court_abbr=? AND date=?",
+            (user_id, court_abbr, date),
+        ).fetchone()
+        if existing:
+            conn.execute(
+                "DELETE FROM dining_votes WHERE user_id=? AND court_abbr=? AND date=?",
+                (user_id, court_abbr, date),
+            )
+            voted = False
+        else:
+            conn.execute(
+                "INSERT INTO dining_votes (user_id, court_abbr, date) VALUES (?, ?, ?)",
+                (user_id, court_abbr, date),
+            )
+            voted = True
+        count = conn.execute(
+            "SELECT COUNT(*) FROM dining_votes WHERE court_abbr=? AND date=?",
+            (court_abbr, date),
+        ).fetchone()[0]
+        conn.commit()
+        return voted, count
+
+
+def get_dining_rankings(courts: dict, date: str, user_id: Optional[str]) -> list[dict]:
+    """Return one entry per court with vote count + per-user `voted` flag.
+
+    `courts` is the {abbr: name} mapping (lives in api.DINING_COURTS) — passed in
+    rather than imported to avoid a circular import.
+    """
+    with get_conn() as conn:
+        counts = {row[0]: row[1] for row in conn.execute(
+            "SELECT court_abbr, COUNT(*) FROM dining_votes "
+            "WHERE date=? GROUP BY court_abbr",
+            (date,),
+        ).fetchall()}
+        my_votes: set[str] = set()
+        if user_id:
+            my_votes = {row[0] for row in conn.execute(
+                "SELECT court_abbr FROM dining_votes WHERE user_id=? AND date=?",
+                (user_id, date),
+            ).fetchall()}
+
+    rows = [
+        {
+            "abbr": abbr,
+            "name": name,
+            "votes": int(counts.get(abbr, 0)),
+            "voted": abbr in my_votes,
+        }
+        for abbr, name in courts.items()
+    ]
+    rows.sort(key=lambda r: (-r["votes"], r["name"]))
+    for i, r in enumerate(rows):
+        r["rank"] = i + 1
+    return rows

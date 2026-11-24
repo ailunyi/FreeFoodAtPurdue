@@ -8,6 +8,7 @@ import time
 import uuid
 from collections import defaultdict, deque
 from typing import Optional
+from zoneinfo import ZoneInfo
 
 log = logging.getLogger(__name__)
 
@@ -36,9 +37,9 @@ VOTE_RATE_LIMIT = int(os.getenv("VOTE_RATE_LIMIT_PER_MIN", "30"))
 
 
 def _client_ip(request: Request) -> str:
-    fwd = request.headers.get("x-forwarded-for")
-    if fwd:
-        return fwd.split(",")[0].strip()
+    # Deliberately ignores X-Forwarded-For, which any client can set. Behind a
+    # reverse proxy, run uvicorn with --proxy-headers --forwarded-allow-ips=<proxy>
+    # so request.client is the real client address.
     return request.client.host if request.client else "unknown"
 
 
@@ -113,18 +114,21 @@ def _extraction_cache_put(key: str, raw: str) -> None:
             _EXTRACTION_CACHE.pop(next(iter(_EXTRACTION_CACHE)))
     _EXTRACTION_CACHE[key] = (now, raw)
 
-from database import init_db, get_active_events, get_campus_buildings, get_buildings_for_events, increment_going, increment_gone, insert_event, insert_message, building_at_point
+from database import init_db, get_active_events, get_campus_buildings, get_buildings_for_events, increment_going, increment_gone, insert_event, insert_message, building_at_point, get_conn, get_event_activity, toggle_dining_vote, get_dining_rankings
 from boilerlink_poller import fetch_boilerlink_events
 from backend import _init_shared_resources, EXTRACTION_PROMPT, _parse_gemini_response, send_groupme_message, APP_MESSAGE_MARKER
 
 app = FastAPI(title="Food at Purdue API")
 
+# Comma-separated list of browser origins allowed to call the API. Defaults to
+# "*" for local development; set it to your site's origin(s) in production.
+CORS_ALLOW_ORIGINS = [o.strip() for o in os.getenv("CORS_ALLOW_ORIGINS", "*").split(",") if o.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
-    expose_headers=["*"],
+    allow_origins=CORS_ALLOW_ORIGINS,
+    allow_methods=["GET", "POST"],
+    allow_headers=["Content-Type", "Authorization"],
     allow_credentials=False,
 )
 init_db()
@@ -163,6 +167,16 @@ def _dining_cache_put(cache_key: str, result: dict, today: str) -> None:
     for k in [k for k in _dining_cache if not k.endswith(f":{today}")]:
         del _dining_cache[k]
     _dining_cache[cache_key] = result
+
+
+@app.get("/health")
+def health():
+    try:
+        with get_conn() as conn:
+            conn.execute("SELECT 1").fetchone()
+    except Exception as e:
+        raise HTTPException(status_code=503, detail=f"db unhealthy: {e}")
+    return {"status": "ok"}
 
 
 @app.get("/food_events")
@@ -414,6 +428,45 @@ def event_going(event_id: int, body: VoteBody = VoteBody(), _rl: None = Depends(
 def event_gone(event_id: int, body: VoteBody = VoteBody(), _rl: None = Depends(vote_rate_limit)):
     new_count, is_active = increment_gone(event_id, body.user_id)
     return {"gone_count": new_count, "active": is_active}
+
+
+@app.get("/events/{event_id}/activity")
+def event_activity(event_id: int):
+    """Activity log for an event — field-level edits and source merges,
+    oldest first. Returns [] when no activity has been recorded yet."""
+    return get_event_activity(event_id)
+
+
+# ── Dining-court daily rankings ────────────────────────────────────────────
+# Per-day, anonymous, multi-vote (one per user per court per day, toggleable).
+# `today` is computed in Indianapolis-local time so an 11:59 PM vote can't
+# leak into the next day's bucket.
+
+LOCAL_TZ = ZoneInfo("America/Indiana/Indianapolis")
+
+def _today_local() -> str:
+    return datetime.datetime.now(LOCAL_TZ).date().isoformat()
+
+
+@app.get("/dining/rankings")
+def dining_rankings(user_id: Optional[str] = Query(default=None)):
+    today = _today_local()
+    return {
+        "date": today,
+        "rankings": get_dining_rankings(DINING_COURTS, today, user_id),
+    }
+
+
+@app.post("/dining/{abbr}/vote")
+def dining_vote(abbr: str, body: VoteBody = VoteBody(), _rl: None = Depends(vote_rate_limit)):
+    abbr_u = abbr.upper()
+    if abbr_u not in DINING_COURTS:
+        raise HTTPException(status_code=404, detail="Not a dining court")
+    if not body.user_id:
+        raise HTTPException(status_code=400, detail="user_id required")
+    today = _today_local()
+    voted, count = toggle_dining_vote(body.user_id, abbr_u, today)
+    return {"abbr": abbr_u, "voted": voted, "votes": count, "date": today}
 
 
 VALIDATION_PROMPT = """
