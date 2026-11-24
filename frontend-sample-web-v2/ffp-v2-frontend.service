@@ -1,0 +1,18 @@
+[Unit]
+Description=Free Food at Purdue v2 Frontend
+After=network.target food-api.service
+
+[Service]
+User=alanyi2006
+WorkingDirectory=/home/alanyi2006/FreeFoodAtPurdue/frontend-sample-web-v2
+Environment=NODE_ENV=production
+Environment=PORT=3000
+Environment=HOST=0.0.0.0
+Environment=API_BASE=https://api.freefoodatpurdue.com
+Environment=SITE_ORIGIN=https://freefoodatpurdue.com
+ExecStart=/usr/bin/node /home/alanyi2006/FreeFoodAtPurdue/frontend-sample-web-v2/server.js
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

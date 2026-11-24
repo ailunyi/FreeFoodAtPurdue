@@ -1,0 +1,951 @@
+/* Supplementary CSS that layers on top of styles.css.
+   Adds Mapbox marker styles, submit-modal styles, and adapts the v2 layout
+   for our flex-column body root. */
+
+/* Variables ember.css defined for the original site (Mapbox markers etc.) */
+:root {
+  --bg-loading:      #f5efe5;
+  --bg-map:          #e9e0d0;
+  --surface-card:    #f0e9da;
+  --surface-light:   #ede5d4;
+  --surface-hover:   #e5dbc8;
+  --surface-input:   #f5f0e6;
+  --border:          #ddd0b8;
+  --border-card:     #ddd0b8;
+  --border-light:    #e5dac6;
+  --border-btn:      #d4c4a8;
+  --border-input:    #c8b898;
+  --accent-strong:   #a03808;
+  --text-primary:    #2e1e0f;
+  --text-body:       #5a3e26;
+  --text-secondary:  #7a5c3a;
+  --text-muted:      #9a7d62;
+  --spinner-track:   #ddd0b8;
+  --spinner-head:    #C1440E;
+  --loading-text:    #7a5838;
+  --marker-count-bg: #C1440E;
+  --overlay-bg:      rgba(46,30,15,.5);
+  --fab-ghost-bg:    rgba(193,68,14,.25);
+  --fab-ghost-border:#C1440E;
+  --toast-bg:        rgba(240,233,218,.96);
+}
+
+html, body, #root { height: 100%; }
+body { margin: 0; font-family: 'Inter', system-ui, sans-serif; }
+
+/* Make the v2 .ffp-app fill the viewport height (styles.css uses height:100%). */
+#root > .ffp-app { height: 100vh; }
+
+/* Mapbox needs an explicit size on its container. */
+.ffp-mapwrap > .mapboxgl-map { width: 100%; height: 100%; }
+
+/* Mapbox user-location dot — preserved from original */
+.mapboxgl-user-location { z-index: 2 !important; }
+.mapboxgl-user-location-dot,
+.mapboxgl-user-location-dot::before {
+  width: 18px !important; height: 18px !important;
+  background-color: #0078FF !important;
+  border-radius: 50% !important;
+  display: block !important;
+}
+.mapboxgl-user-location-dot {
+  box-shadow: 0 0 0 4px rgba(0,120,255,.3) !important;
+  visibility: visible !important; opacity: 1 !important;
+}
+.mapboxgl-user-location-accuracy-circle {
+  display: block !important;
+  background-color: rgba(0,120,255,.1) !important;
+}
+
+/* Loading spinner — shown while events fetch */
+.ffp-loading {
+  position: fixed; inset: 0; z-index: 9999;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: var(--bg-loading);
+  transition: opacity .25s ease;
+}
+.ffp-loading.gone { opacity: 0; pointer-events: none; }
+.ffp-loading .ring {
+  width: 42px; height: 42px;
+  border: 3px solid var(--spinner-track);
+  border-top-color: var(--spinner-head);
+  border-radius: 50%;
+  animation: ffp-spin .8s linear infinite;
+}
+@keyframes ffp-spin { to { transform: rotate(360deg); } }
+.ffp-loading p { margin-top: 12px; color: var(--loading-text); font-size: .82rem; letter-spacing: .06em; }
+
+/* Custom Mapbox food markers — larger bubble with the emoji rendered inside,
+   plus an inline count appended when a building has multiple events. */
+.food-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  display: flex; flex-direction: column; align-items: center;
+}
+.food-marker .m-inner {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.food-marker .m-dot {
+  min-width: 28px; height: 28px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: var(--accent);
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  display: flex; align-items: center; justify-content: center; gap: 3px;
+  transition: transform .15s;
+}
+.food-marker .m-emoji {
+  font-size: 14px; line-height: 1;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,.35));
+}
+.food-marker .m-count-inline {
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+.food-marker.upcoming .m-dot   { background: #f4c430; border-color: #fff; }
+.food-marker.upcoming .m-count-inline { color: #2e1e0f; }
+.food-marker.expired  .m-dot   { background: #aaa090; border-color: #ece8e0; opacity: .55; }
+.food-marker.expired  .m-emoji { opacity: .55; }
+.food-marker.focused  .m-dot   { animation: ffp-pin-pulse 1.4s ease-in-out infinite; }
+@keyframes ffp-pin-pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.15); }
+}
+.food-marker .m-ring {
+  position: absolute;
+  width: 36px; height: 36px;
+  border-radius: 999px;
+  border: 2px solid var(--accent);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ffp-pulse-ring 2s ease-out infinite;
+  pointer-events: none;
+}
+@keyframes ffp-pulse-ring {
+  0%   { transform: translate(-50%,-50%) scale(1);   opacity: .7; }
+  100% { transform: translate(-50%,-50%) scale(2.4); opacity: 0;  }
+}
+
+/* Active-events chip variant of livecount, used in the header */
+.ffp-livecount.large { padding: 8px 14px; font-size: 13px; }
+
+/* Source badges inside cards — colored to match original site */
+.ffp-src {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 10.5px; font-weight: 600;
+  padding: 2px 7px; border-radius: 4px;
+  background: var(--surface); color: var(--muted);
+}
+.ffp-src.src-bl   { background: #fff3e0; color: #a06000; }
+.ffp-src.src-gm   { background: #e8f5e9; color: #2e7d32; }
+.ffp-src.src-user { background: #e3f2fd; color: #1565c0; }
+.ffp-src.src-test { background: #fff8e1; color: #b08000; }
+
+.ffp-boilerlink-link {
+  display: inline-block; margin: 6px 0;
+  font-size: 12px; color: var(--accent); text-decoration: none;
+}
+.ffp-boilerlink-link:hover { text-decoration: underline; }
+
+/* Toast (alternative to v2's so it can be queued) */
+.ffp-toast.queue + .ffp-toast.queue { display: none; }
+
+/* Small "share" + "copy link" buttons in detail */
+.ffp-share-row {
+  display: flex; gap: 6px; flex-wrap: wrap;
+  margin: 0 0 14px;
+}
+
+/* Small destructive secondary button for "Food's gone" */
+.ffp-btn-danger {
+  border-color: rgba(193, 68, 14, 0.4) !important;
+  color: var(--accent) !important;
+}
+.ffp-btn-danger.on {
+  background: var(--accent) !important;
+  color: #faf6ef !important;
+  border-color: var(--accent) !important;
+}
+
+/* Empty state for non-list panes */
+.ffp-error {
+  text-align: center; padding: 32px 22px; color: var(--muted); font-size: 13px;
+}
+.ffp-error b { color: var(--text); display: block; margin-bottom: 4px; }
+
+/* Mobile: ensure FAB stays clear of the bottom switch */
+@media (max-width: 760px) {
+  #spot-fab { bottom: 80px !important; }
+}
+
+/* ────────────────────────────────────────────────────────────────────
+   Building hover tooltip (ported from original) */
+#tip {
+  position: fixed; background: var(--surface); border: 1px solid var(--border);
+  border-radius: 8px; padding: 7px 11px; pointer-events: none;
+  z-index: 200; opacity: 0; transition: opacity .15s;
+  box-shadow: 0 3px 10px rgba(0,0,0,.1); max-width: 220px;
+}
+#tip.show { opacity: 1; }
+.tt-bldg { font-weight: 700; color: var(--text-primary); font-size: .82rem; margin-bottom: 1px; }
+.tt-sub  { color: var(--text-secondary); font-size: .72rem; margin-bottom: 2px; }
+.tt-hint { color: var(--text-muted); font-size: .69rem; font-style: italic; }
+.tt-badge { display: inline-block; padding: 2px 8px; border-radius: 999px;
+            font-size: .68rem; font-weight: 600; margin-top: 4px; }
+.tt-badge.active { background: #e8f8d8; color: #4a8020; border: 1px solid #b8d898; }
+
+/* ────────────────────────────────────────────────────────────────────
+   Map markers (dining / pantry / market / pmu / otg) — ported verbatim */
+.pantry-marker, .market-marker, .pmu-marker, .otg-marker, .dining-marker {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  margin-top: -6px;
+}
+.pantry-marker.all-closed .pm-pin,
+.market-marker.all-closed .mk-pin,
+.pmu-marker.all-closed .pmu-pin,
+.dining-marker.all-closed .dm-pin,
+.otg-marker.all-closed .otg-pin { opacity: .5; }
+.pantry-marker.all-closed .pm-stem,
+.market-marker.all-closed .mk-stem,
+.pmu-marker.all-closed .pmu-stem,
+.dining-marker.all-closed .dm-stem,
+.otg-marker.all-closed .otg-stem { opacity: .5; }
+
+/* Focused place marker — soft, expanding halo + gentle scale.
+   Matches the visual language of the live-event ring and building glow. */
+.dining-marker.focused .dm-pin,
+.pantry-marker.focused .pm-pin,
+.pmu-marker.focused    .pmu-pin,
+.otg-marker.focused    .otg-pin,
+.market-marker.focused .mk-pin {
+  animation: ffp-place-pulse 1.4s ease-in-out infinite;
+  z-index: 3;
+}
+@keyframes ffp-place-pulse {
+  0%, 100% { box-shadow: 0 0 0 0   rgba(193,68,14,0.55); transform: scale(1); }
+  50%      { box-shadow: 0 0 0 14px rgba(193,68,14,0);   transform: scale(1.10); }
+}
+
+.pantry-marker .pm-pin,
+.market-marker .mk-pin,
+.pmu-marker .pmu-pin,
+.dining-marker .dm-pin,
+.otg-marker .otg-pin {
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 3px 7px;
+  font-size: 13px; line-height: 1;
+  box-shadow: 0 2px 6px rgba(0,0,0,.18);
+  white-space: nowrap;
+}
+.pantry-marker .pm-stem,
+.market-marker .mk-stem,
+.pmu-marker .pmu-stem,
+.dining-marker .dm-stem,
+.otg-marker .otg-stem {
+  width: 2px; height: 6px; border-radius: 1px;
+}
+.pantry-marker .pm-pin   { border: 1.5px solid #6aa84f; }
+.pantry-marker .pm-stem  { background: #6aa84f; }
+.market-marker .mk-pin   { border: 1.5px solid #e67e22; }
+.market-marker .mk-stem  { background: #e67e22; }
+.pmu-marker .pmu-pin     { border: 1.5px solid #c0392b; }
+.pmu-marker .pmu-stem    { background: #c0392b; }
+.otg-marker .otg-pin     { border: 1.5px solid #8e44ad; }
+.otg-marker .otg-stem    { background: #8e44ad; }
+.dining-marker .dm-pin   { border: 1.5px solid var(--dining-border, #c8a870); }
+.dining-marker .dm-stem  { background: var(--dining-stem, #c8a870); }
+
+/* ────────────────────────────────────────────────────────────────────
+   Original Spot FAB and submit modal */
+#spot-fab {
+  position: fixed;
+  bottom: 110px; right: 24px;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--surface);
+  box-shadow: 0 3px 12px rgba(0,0,0,.22);
+  font-size: 1.4rem; line-height: 1;
+  cursor: grab;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 200;
+  transition: box-shadow .15s, transform .15s;
+  user-select: none;
+}
+#spot-fab:hover { box-shadow: 0 5px 18px rgba(0,0,0,.28); transform: scale(1.06); }
+#spot-fab.dragging { cursor: grabbing; opacity: .85; box-shadow: 0 8px 24px rgba(0,0,0,.32); }
+#spot-drop-ghost {
+  position: fixed;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--fab-ghost-bg);
+  border: 2px dashed var(--fab-ghost-border);
+  pointer-events: none;
+  display: none;
+  transform: translate(-50%, -50%);
+  z-index: 199;
+}
+.p-logo-icon {
+  background-image: url('/images/Transparent%20P%20Cropped.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+}
+
+#spot-overlay {
+  position: fixed; inset: 0; background: var(--overlay-bg);
+  z-index: 400; display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity .2s;
+}
+#spot-overlay.show { opacity: 1; pointer-events: all; }
+#spot-modal {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+  width: min(440px, 92vw);
+  box-shadow: 0 8px 32px rgba(0,0,0,.18);
+  transform: translateY(16px) scale(.97); transition: transform .2s;
+  padding: 20px 22px 18px;
+}
+#spot-overlay.show #spot-modal { transform: translateY(0) scale(1); }
+#spot-modal h2 { font-size: .95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; margin-top: 0; }
+#spot-modal .spot-hint { font-size: .73rem; color: var(--text-muted); margin-bottom: 14px; }
+#spot-modal .spot-hint .hint-name     { color: #1565c0; font-weight: 600; }
+#spot-modal .spot-hint .hint-location { color: #2e7d32; font-weight: 600; }
+#spot-modal .spot-hint .hint-foodType { color: #e65100; font-weight: 600; }
+#spot-modal .spot-hint .hint-time     { color: #7b1fa2; font-weight: 600; }
+#spot-modal .spot-hint .hint-missing  { text-decoration: underline wavy #d32f2f; }
+#spot-loc-hint { font-size: .7rem; color: var(--text-muted); margin-bottom: 12px; }
+#spot-text {
+  width: 100%; min-height: 80px; resize: vertical;
+  border: 1px solid var(--border-btn); border-radius: 8px;
+  padding: 9px 11px; font-size: .84rem; color: var(--text-primary);
+  background: var(--surface-input); font-family: inherit;
+  box-sizing: border-box; margin: 0;
+}
+#spot-text:focus { outline: none; border-color: var(--accent); }
+#spot-text-wrap { position: relative; margin-bottom: 10px; }
+#spot-highlighted {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  padding: 9px 11px;
+  border: 1px solid var(--accent); border-radius: 8px;
+  background: var(--surface-input); font-size: .84rem; line-height: 1.5;
+  color: var(--text-primary); cursor: text;
+  white-space: pre-wrap; word-wrap: break-word;
+  overflow-y: auto;
+}
+#spot-highlighted .hl-name     { background: #bbdefb; border-radius: 3px; padding: 0 3px; }
+#spot-highlighted .hl-location { background: #c8e6c9; border-radius: 3px; padding: 0 3px; }
+#spot-highlighted .hl-foodType { background: #ffe0b2; border-radius: 3px; padding: 0 3px; }
+#spot-highlighted .hl-time     { background: #e1bee7; border-radius: 3px; padding: 0 3px; }
+#spot-attach-row {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
+  width: 100%; box-sizing: border-box;
+}
+#spot-attach-row #spot-mic-btn { margin-left: auto; }
+#spot-image-label {
+  display: inline-block; cursor: pointer;
+  font-size: .74rem; color: var(--text-secondary);
+  border: 1px dashed var(--border-input); border-radius: 7px;
+  padding: 5px 12px; background: var(--surface-light);
+}
+#spot-image-label:hover { background: var(--surface-hover); }
+#spot-image-input { display: none; }
+#spot-image-preview { font-size: .72rem; color: var(--text-body); }
+#spot-mic-btn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 14px; border-radius: 7px;
+  border: 1px solid var(--border-btn); background: var(--surface-light);
+  color: var(--text-body); font-size: .78rem; font-weight: 600;
+  cursor: pointer; transition: background .15s, border-color .15s;
+  white-space: nowrap;
+}
+#spot-mic-btn:hover { background: var(--surface-hover); }
+#spot-mic-btn.listening {
+  background: #fdeee8; border-color: #f0b898; color: #a03010;
+  animation: micPulse 1.2s ease-in-out infinite;
+}
+@keyframes micPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(192,80,32,.3); }
+  50%      { box-shadow: 0 0 0 6px rgba(192,80,32,0); }
+}
+#spot-voice-status { font-size: .71rem; color: var(--text-muted); font-style: italic; flex: 1; }
+#spot-suggestion { font-size: .73rem; color: var(--text-muted); margin-top: 6px; font-style: italic; min-height: 1em; }
+#spot-loc-picker {
+  margin-top: 10px; padding: 10px 12px;
+  background: var(--surface-light); border-radius: 10px;
+  border: 1px solid var(--border-btn);
+}
+#spot-loc-picker .label { font-size: .8rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
+#spot-loc-picker .btns { display: flex; flex-direction: column; gap: 6px; }
+.loc-pick-btn {
+  background: var(--surface); border: 1.5px solid var(--border-btn); border-radius: 8px;
+  padding: 8px 12px; text-align: left; cursor: pointer; font-size: .82rem;
+  color: var(--text-primary); transition: background .15s, border-color .15s;
+}
+.loc-pick-btn:hover { background: var(--surface-hover); border-color: var(--accent); }
+.loc-pick-btn .loc-pick-score { font-size: .7rem; color: var(--text-muted); margin-left: 6px; }
+#spot-modal .spot-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 8px; }
+#spot-cancel {
+  background: none; border: 1px solid var(--border-btn); color: var(--text-secondary);
+  border-radius: 8px; padding: 7px 16px; font-size: .8rem; cursor: pointer;
+}
+#spot-cancel:hover { background: var(--surface-hover); }
+#spot-submit {
+  background: var(--accent); border: none; color: #fff;
+  border-radius: 8px; padding: 7px 20px; font-size: .8rem;
+  font-weight: 600; cursor: pointer;
+}
+#spot-submit:hover { filter: brightness(.93); }
+#spot-submit:disabled { opacity: .5; cursor: not-allowed; }
+
+/* "Remind me" trigger + offset popover. Lives next to the Interested button
+   on upcoming events. */
+.ffp-reminder-wrap { position: relative; display: inline-flex; }
+.ffp-btn.ffp-reminder.on {
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+.ffp-reminder-popover {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 30;
+  width: 220px;
+  background: var(--bg);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(46,30,15,0.18);
+  padding: 10px 12px;
+  font-size: 12.5px;
+  color: var(--text);
+}
+.ffp-reminder-pop-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.ffp-reminder-pop-list { display: flex; flex-direction: column; gap: 4px; }
+.ffp-reminder-pop-chip {
+  font: inherit;
+  font-size: 12.5px;
+  padding: 6px 10px;
+  border: 1px solid var(--hairline);
+  background: var(--surface-light);
+  color: var(--text);
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+  transition: background .12s, border-color .12s, color .12s;
+}
+.ffp-reminder-pop-chip:hover:not(:disabled) {
+  background: var(--accent);
+  color: #faf6ef;
+  border-color: var(--accent);
+}
+.ffp-reminder-pop-chip:disabled { opacity: 0.4; cursor: not-allowed; }
+.ffp-reminder-pop-note {
+  margin-top: 8px;
+  font-size: 11.5px;
+  color: var(--muted);
+  font-style: italic;
+}
+.ffp-reminder-pop-denied { color: var(--accent); font-style: normal; }
+.ffp-reminder-pop-hint {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--hairline);
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+/* Dietary multi-select dropdown trigger + popover. */
+.ffp-diet-wrap { position: relative; display: inline-flex; }
+.ffp-diet-trigger { display: inline-flex; align-items: center; gap: 4px; }
+.ffp-diet-count {
+  margin-left: 4px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 999px;
+  padding: 0 6px;
+  font-size: 10.5px;
+  font-weight: 700;
+  min-width: 16px;
+  text-align: center;
+}
+.ffp-diet-pop {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 30;
+  width: 220px;
+  background: var(--bg);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(46,30,15,0.18);
+  padding: 10px 12px;
+  display: flex; flex-direction: column; gap: 4px;
+  font-size: 13px;
+  color: var(--text);
+}
+.ffp-diet-section {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.ffp-diet-section:first-child { margin-top: 0; }
+.ffp-diet-row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 3px 2px;
+  cursor: pointer;
+  user-select: none;
+}
+.ffp-diet-row input { accent-color: var(--accent); }
+.ffp-diet-pop-foot {
+  display: flex; gap: 6px; justify-content: space-between;
+  margin-top: 8px; padding-top: 8px;
+  border-top: 1px solid var(--hairline);
+}
+.ffp-diet-clear, .ffp-diet-apply {
+  font: inherit;
+  font-size: 12px; font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background .12s, opacity .12s;
+}
+.ffp-diet-clear {
+  background: transparent;
+  border: 1px solid var(--hairline);
+  color: var(--text-secondary);
+}
+.ffp-diet-clear:hover:not(:disabled) { background: var(--surface-hover); }
+.ffp-diet-clear:disabled { opacity: 0.5; cursor: not-allowed; }
+.ffp-diet-apply {
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: #faf6ef;
+}
+.ffp-diet-apply:hover { filter: brightness(.95); }
+
+/* Dining tab — place sections (PMU, Boilermarkets, OTG, Pantries). */
+.ffp-place-section {
+  font-family: 'Fraunces', serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 18px 14px 6px;
+}
+.ffp-place-section:first-child { padding-top: 8px; }
+.ffp-place-section-highlighted {
+  color: var(--accent);
+  background: rgba(193,68,14,0.08);
+  border-radius: 6px;
+  padding-left: 8px; padding-right: 8px;
+  margin-left: 8px; margin-right: 8px;
+}
+
+/* ─── Dining-court daily rankings ─────────────────────────────────────── */
+
+/* "Today's rankings · Tue, Apr 28" banner above the dining-courts list. */
+.ffp-rank-banner {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 18px 8px;
+}
+.ffp-rank-banner-pill {
+  font-size: 10.5px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--accent);
+  padding: 3px 9px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+}
+.ffp-rank-banner-date { font-size: 11.5px; color: var(--muted); }
+
+/* Top-ranked court — gold border + soft yellow tint + animated crown.
+   The .has-leader class wraps the entire card; .is-leader paints the head. */
+.ffp-dcard.has-leader {
+  border-color: #f4c430;
+  box-shadow: 0 2px 14px rgba(244, 196, 48, 0.25);
+}
+.ffp-dcard-head.is-leader {
+  background: linear-gradient(180deg, rgba(244,196,48,0.16), rgba(244,196,48,0.06));
+}
+.ffp-dcard-crown {
+  display: inline-block;
+  font-size: 14px; line-height: 1;
+  filter: drop-shadow(0 1px 1px rgba(120,80,0,0.35));
+  animation: ffp-crown-bob 3.5s ease-in-out infinite;
+}
+@keyframes ffp-crown-bob {
+  0%,100% { transform: translateY(0)    rotate(-3deg); }
+  50%     { transform: translateY(-2px) rotate(3deg);  }
+}
+
+/* Right-side actions row (upvote + chevron). */
+.ffp-dcard-actions {
+  display: flex; align-items: center; gap: 8px;
+  flex-shrink: 0;
+}
+
+/* Upvote pill — sits next to the chevron. Stops click propagation so it
+   doesn't fight the card's expand toggle. */
+.ffp-dcard-upvote {
+  display: inline-flex; align-items: center; gap: 4px;
+  font: inherit; font-size: 12px; font-weight: 600;
+  padding: 4px 9px;
+  background: var(--surface-light);
+  border: 1px solid var(--hairline);
+  color: var(--muted);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .12s, color .12s, border-color .12s, transform .08s;
+  user-select: none;
+}
+.ffp-dcard-upvote:hover {
+  background: var(--surface-hover);
+  color: var(--text);
+  border-color: rgba(46,30,15,0.16);
+}
+.ffp-dcard-upvote:active { transform: scale(0.96); }
+.ffp-dcard-upvote.on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #faf6ef;
+}
+.ffp-place-card {
+  margin: 4px 12px;
+  padding: 10px 12px 9px;
+  background: var(--bg);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  transition: background .25s, box-shadow .25s;
+}
+/* Highlighted by a map-marker click — fades softly back to normal as the user
+   scrolls or interacts. */
+.ffp-place-card-highlighted {
+  background: rgba(193, 68, 14, 0.08);
+  box-shadow: 0 0 0 2px rgba(193, 68, 14, 0.35);
+}
+.ffp-place-head {
+  display: flex; gap: 10px; align-items: flex-start;
+}
+.ffp-place-emoji {
+  width: 28px; height: 28px; flex: 0 0 28px;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+}
+.ffp-place-name {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.2;
+}
+.ffp-place-sub {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 2px;
+  line-height: 1.3;
+}
+.ffp-place-status {
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 999px;
+  align-self: flex-start;
+}
+.ffp-place-desc {
+  font-size: 12px;
+  color: var(--text);
+  margin: 6px 0 0;
+  line-height: 1.4;
+}
+.ffp-place-tags {
+  display: flex; flex-wrap: wrap; gap: 4px;
+  margin-top: 6px;
+}
+
+/* Dining-court meal tabs (Breakfast / Lunch / Dinner / All meals). */
+.ffp-meal-tabs {
+  display: flex; gap: 6px; flex-wrap: wrap;
+  margin: 6px 0 10px;
+}
+.ffp-meal-tab {
+  font: inherit;
+  font-size: 12px; font-weight: 600;
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--hairline);
+  background: var(--surface-light);
+  color: var(--text);
+  cursor: pointer;
+  transition: background .12s, color .12s, border-color .12s;
+  text-transform: capitalize;
+}
+.ffp-meal-tab:hover { background: var(--surface-hover); }
+.ffp-meal-tab.on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #faf6ef;
+}
+.ffp-meal-tab.now:not(.on) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.ffp-meal-heading {
+  display: flex; align-items: baseline; gap: 8px;
+  font-family: 'Fraunces', serif;
+  font-size: 14px; font-weight: 600;
+  color: var(--text);
+  margin: 6px 0 4px;
+  text-transform: capitalize;
+}
+.ffp-meal-hours {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px; font-weight: 500;
+  color: var(--muted);
+}
+
+/* Header button to reopen the sidebar when it's collapsed. */
+.ffp-panel-open-btn {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  color: var(--text);
+  font: inherit;
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: background .12s, transform .12s;
+}
+.ffp-panel-open-btn:hover { background: var(--surface-hover); }
+
+/* Past-event cards: darker background, faded text — distinct from active. */
+.ffp-card.ffp-card-muted {
+  background: var(--surface);
+  border-color: var(--border);
+  opacity: 0.72;
+  filter: grayscale(0.25);
+}
+.ffp-card.ffp-card-muted:hover { opacity: 0.92; }
+.ffp-card.ffp-card-muted .ffp-card-title { color: var(--text-secondary); }
+.ffp-card.ffp-card-muted .ffp-emoji { filter: grayscale(0.4); }
+
+/* "Show past events" button at the bottom of the Today tab. */
+.ffp-show-past {
+  display: block;
+  width: calc(100% - 24px);
+  margin: 12px 12px 16px;
+  padding: 9px 0;
+  background: var(--surface-light);
+  border: 1px solid var(--border-btn);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background .12s;
+}
+.ffp-show-past:hover { background: var(--surface-hover); }
+.ffp-past-divider {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 14px 0 6px;
+  border-top: 1px solid var(--hairline);
+  margin: 6px 14px 0;
+}
+
+/* Building header card (Purdue Libraries info) — also the building view's
+   sole header (back arrow + image + name + abbr/year + fun fact). */
+.ffp-bldg-card {
+  position: relative;
+  margin: 10px 12px 14px;
+  background: var(--bg);
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.ffp-bldg-image-wrap {
+  position: relative;
+  width: 100%; height: 140px;
+  overflow: hidden;
+  background: var(--surface);
+}
+.ffp-bldg-image {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+
+/* Back arrow */
+.ffp-bldg-back {
+  width: 30px; height: 30px;
+  border-radius: 999px;
+  border: 1px solid var(--hairline);
+  background: var(--bg);
+  color: var(--text);
+  display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: background .12s, transform .12s;
+  flex-shrink: 0;
+}
+.ffp-bldg-back:hover { background: var(--surface-hover); }
+/* Floating variant — sits over the hero image at top-left. */
+.ffp-bldg-back-floating {
+  position: absolute;
+  top: 10px; left: 10px;
+  z-index: 2;
+  background: rgba(250, 246, 239, 0.92);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 8px rgba(46,30,15,0.18);
+}
+
+/* No-image fallback: small inline row with back arrow + icon. */
+.ffp-bldg-noimage-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px 0;
+}
+.ffp-bldg-icon {
+  width: 30px; height: 30px;
+  border-radius: 8px;
+  background: var(--surface);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+}
+.ffp-bldg-meta {
+  padding: 10px 14px 4px;
+}
+.ffp-bldg-fullname {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.25;
+}
+.ffp-bldg-year-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+.ffp-bldg-year {
+  flex: 1;
+  font-size: 11.5px;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+.ffp-bldg-fact {
+  position: relative;
+  padding: 8px 36px 10px 14px; /* leave room on the right for the × button */
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--text);
+}
+.ffp-bldg-fact-label {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.ffp-bldg-fact-close {
+  position: absolute;
+  top: 6px; right: 8px;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background .12s, color .12s;
+}
+.ffp-bldg-fact-close:hover { background: var(--surface-hover); color: var(--text); }
+
+/* Inline "See fun fact" button — sits on the right of the abbr/year row to
+   keep the unified building header compact. */
+.ffp-bldg-fact-show {
+  flex-shrink: 0;
+  padding: 2px 9px;
+  font: inherit;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .12s, color .12s;
+}
+.ffp-bldg-fact-show:hover { background: var(--accent); color: #faf6ef; }
+.ffp-bldg-source {
+  display: block;
+  padding: 0 14px 12px;
+  font-size: 11.5px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.ffp-bldg-source:hover { text-decoration: underline; }
+
+/* Subtle skeleton while the library info loads. */
+.ffp-bldg-card-skel { padding-bottom: 14px; }
+.ffp-bldg-skel-image {
+  position: relative;
+  width: 100%; height: 140px;
+  background: linear-gradient(90deg, var(--surface) 0%, var(--surface-hover) 50%, var(--surface) 100%);
+  background-size: 200% 100%;
+  animation: ffp-bldg-shimmer 1.2s ease-in-out infinite;
+}
+.ffp-bldg-skel-line {
+  height: 10px;
+  margin: 10px 14px 0;
+  background: var(--surface-hover);
+  border-radius: 5px;
+  opacity: 0.7;
+}
+@keyframes ffp-bldg-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Building card in side panel */
+.ffp-bldg-banner {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 18px 10px; border-bottom: 1px solid var(--hairline);
+}
+.ffp-bldg-banner .bldg-icon { font-size: 1.4rem; }
+.ffp-bldg-banner .bldg-info { flex: 1; min-width: 0; }
+.ffp-bldg-banner .bldg-name {
+  font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.1rem;
+  color: var(--text); line-height: 1.2;
+}
+.ffp-bldg-banner .bldg-abbr {
+  font-size: 11px; color: var(--muted); margin-top: 1px; letter-spacing: 0.04em;
+}
